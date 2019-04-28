@@ -117,8 +117,8 @@ fn agent_parser<'a>(input: &'a [u8]) -> IResult<&'a [u8], Agent<'a>> {
 
 #[derive(Debug, Serialize)]
 pub struct Skill<'a> {
-    id: u32,
-    name: &'a str,
+    pub id: u32,
+    pub name: &'a str,
 }
 
 fn skill_parser<'a>(input: &'a [u8]) -> IResult<&'a [u8], Skill<'a>> {

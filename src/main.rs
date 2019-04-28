@@ -30,23 +30,34 @@ enum BuffEvent {
 }
 
 #[derive(Debug, Serialize)]
+struct SkillCast {
+    id: u32,
+    start: u64,
+    end: u64,
+    fired: bool,
+}
+
 enum SkillEvent {
     Start(u64),
-    Cancel(u64),
-    Fire(u64),
+    End(u64, bool),
 }
 
 fn get_skill_event(event: &parser::Event) -> Option<SkillEvent> {
+    match event.combat_state_change {
+        parser::CombatStateChange::None => {},
+        _ => {
+            return None;
+        }
+    }
     match event.combat_activation {
         parser::CombatActivation::None => None,
         parser::CombatActivation::Normal |
         parser::CombatActivation::Quickness => Some(SkillEvent::Start(event.time)),
-        parser::CombatActivation::CancelCancel => Some(SkillEvent::Cancel(event.time)),
+        parser::CombatActivation::CancelCancel => Some(SkillEvent::End(event.time, false)),
         parser::CombatActivation::CancelFire |
-        parser::CombatActivation::Reset => Some(SkillEvent::Fire(event.time)),
+        parser::CombatActivation::Reset => Some(SkillEvent::End(event.time, true)),
         parser::CombatActivation::Unknown => None,
     }
-
 }
 
 fn get_buff_event(event: &parser::Event) -> Option<BuffEvent> {
@@ -77,15 +88,55 @@ fn main() -> std::io::Result<()> {
     };
     let (_, evtc) = parser::evtc_parser(&raw_evtc).map_err(|_| std::io::Error::new(std::io::ErrorKind::Other, "I don't care"))?;
 
+    let start = evtc.events[0].time;
+    let end = evtc.events[evtc.events.len() - 1].time;
     let mut buff_events: HashMap<u32, Vec<BuffEvent>> = HashMap::new();
-    let mut skill_events: HashMap<u32, Vec<SkillEvent>> = HashMap::new();
-    for event in &evtc.events {
-        if let Some(skill_event) = get_skill_event(&event) {
-            skill_events.entry(event.skill_id)
-                .or_insert(vec![])
-                .push(skill_event);
+    let mut pending_skills: HashMap<u32, Vec<u64>> = HashMap::new();
+    let mut casts: Vec<SkillCast> = vec![];
+
+    let mut player_id = 0;
+    for agent in &evtc.agents {
+        match agent.agent {
+            parser::AgentType::Player { .. } => {
+                player_id = agent.id;
+            }
+            _ => {}
         }
-        if let Some(buff_event) = get_buff_event(&event) {
+    }
+
+    for event in &evtc.events {
+        if event.src_agent_id != player_id {
+            continue;
+        }
+        // if event.skill_id == 5529 {
+        //     println!("ew: {:?}", event);
+        // }
+        if let Some(skill_event) = get_skill_event(&event) {
+            match skill_event {
+                SkillEvent::Start(time) => {
+                    pending_skills.entry(event.skill_id)
+                        .or_insert(vec![])
+                        .push(time);
+                },
+                SkillEvent::End(time, fired) => {
+                    let pending = pending_skills.entry(event.skill_id)
+                        .or_insert(vec![]);
+                    if pending.len() == 0 {
+                        continue;
+                    }
+                    // if event.skill_id == 5531 {
+                    //     println!("hmm: {} -> {:?}", event.skill_id, pending);
+                    // }
+                    let start_time = pending.remove(0);
+                    casts.push(SkillCast {
+                        id: event.skill_id,
+                        fired: fired,
+                        start: start_time,
+                        end: time
+                    });
+                },
+            }
+        } else if let Some(buff_event) = get_buff_event(&event) {
             if let Some(events) = buff_events.get_mut(&event.skill_id) {
                 events.push(buff_event);
             } else {
@@ -93,8 +144,14 @@ fn main() -> std::io::Result<()> {
             }
         }
     }
-    println!("const skills = {};", serde_json::to_string(&evtc.skills)?);
-    println!("const casts = {};", serde_json::to_string(&skill_events)?);
+    let mut skills: HashMap<u32, &str> = HashMap::new();
+    for skill in &evtc.skills {
+        skills.insert(skill.id, skill.name);
+    }
+    println!("const logStart = {};", start);
+    println!("const logEnd = {};", end);
+    println!("const skills = {};", serde_json::to_string(&skills)?);
+    println!("const casts = {};", serde_json::to_string(&casts)?);
     println!("const buffs = {};", serde_json::to_string(&buff_events)?);
     Ok(())
 }
