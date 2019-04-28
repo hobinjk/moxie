@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #010104;
+}
+
+.container {
+  /*
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+  gap: 24px;
+  */
+  padding: 24px;
+}
+
+.gameplay-video-container {
+  text-align: center;
+}
+
+.gameplay-video {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 60%;
+  overflow-x: scroll;
+}
+
+.buff {
+  opacity: 0.5;
+  fill: #77f;
+  stroke: none;
+}
+
+.cast.cancel {
+  opacity: 0.3;
+}
+
+.cast {
+  fill: #77f;
+  stroke: none;
+}
+
+.name {
+  font-family: sans-serif;
+  font-size: 12px;
+  fill: #fff;
+  stroke: none;
+  dominant-baseline: middle;
+}
+
+.needle {
+  stroke: none;
+  fill: #0ff;
+}
+
