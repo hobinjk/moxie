@@ -1,3 +1,5 @@
+/* global skills, buffs, casts, logStart, logEnd, generateReportCard */
+
 const width = 1920 * 4;
 const railHeight = 20;
 const railPad = 4;
@@ -85,7 +87,8 @@ for (const buffId of buffIds) {
   const rects = [];
   for (const event of buffs[buffId]) {
     if (event.Apply) {
-      const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      const rect = document.createElementNS('http://www.w3.org/2000/svg',
+                                            'rect');
       rect.setAttribute('x', timeToX(event.Apply));
       rect.setAttribute('y', (railHeight + railPad) * row);
       rect.setAttribute('height', railHeight);
@@ -96,7 +99,8 @@ for (const buffId of buffIds) {
       if (!rect) {
         continue;
       }
-      rect.setAttribute('width', timeToX(event.Remove) - rect.getAttribute('x'));
+      rect.setAttribute('width', timeToX(event.Remove) -
+                        rect.getAttribute('x'));
       rect.classList.add('buff');
       board.appendChild(rect);
     }
@@ -106,7 +110,7 @@ for (const buffId of buffIds) {
     rect.classList.add('buff');
     board.appendChild(rect);
   }
-  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text')
+  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   name.textContent = skills[buffId];
   name.setAttribute('x', 0);
   name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
@@ -124,7 +128,7 @@ async function getSkillData(id) {
     const res = await fetch(`api-cache/${id}.json`);
     const data = await res.json();
     skillData[id] = data;
-  } catch(e) {
+  } catch (e) {
     console.log('could not fetch', id);
   }
 }
@@ -143,7 +147,8 @@ function draw() {
   for (const cast of casts) {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    const title = document.createElementNS('http://www.w3.org/2000/svg',
+                                           'title');
     title.textContent = skills[cast.id] || cast.id;
 
     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -199,83 +204,11 @@ function draw() {
   board.appendChild(needle);
 
   video.addEventListener('timeupdate', function() {
-    needle.setAttribute('x', timeToX((video.currentTime - 1.555) * 1000) - timeToX(0));
+    needle.setAttribute('x', timeToX((video.currentTime - 1.555) * 1000) -
+                        timeToX(0));
   });
+
+  generateReportCard();
 }
 
 load();
-
-// Passes you need:
-//  - Auto chains
-//  - Rotation checking
-//  - Deadspace
-
-function checkAutoChains() {
-  const chains = [];
-
-  for (const cast of casts) {
-    if (!cast.fired) {
-      continue;
-    }
-    let data = skillData[cast.id];
-    if (data && data.slot) {
-      if (data.slot !== 'Weapon_1') {
-        continue;
-      }
-
-      if (!data.prev_chain && data.next_chain) {
-        chains.push([cast]);
-      }
-      if (data.prev_chain) {
-        chains[chains.length - 1].push(cast);
-      }
-    }
-  }
-  let wastedOne = 0;
-  let wastedTwo = 0;
-  for (let chain of chains) {
-    if (chain.length === 3) {
-      continue;
-    }
-    console.log('bad chain of length', chain.length);
-    if (chain.length === 1) {
-      wastedOne += chain[chain.length - 1].end - chain[0].start;
-    } else if (chain.length === 2) {
-      wastedTwo += chain[chain.length - 1].end - chain[0].start;
-    }
-  }
-  console.log('wastedOne', wastedOne);
-  console.log('wastedTwo', wastedTwo);
-  const dur = castsDuration();
-  console.log('eliminating one', 1 - (dur - wastedOne) / dur);
-  console.log('eliminating two', 1 - (dur - wastedTwo) / dur);
-}
-
-function castsDuration() {
-  return casts[casts.length - 1].end - casts[0].start;
-}
-
-function checkWasted() {
-  let deadspace = 0;
-  let cancels = 0;
-  let lastEnd = -1;
-  for (const cast of casts) {
-    if (lastEnd > 0) {
-      deadspace += cast.start - lastEnd;
-    }
-    if (!cast.fired) {
-      cancels += cast.end - cast.start;
-    }
-    lastEnd = cast.end;
-  }
-
-  console.log('deadspace', deadspace);
-  console.log('cancels', cancels);
-  let dur = lastEnd - casts[0].start;
-  console.log('out of', lastEnd - casts[0].start);
-  console.log('kills your deeps by', 1 - (dur - deadspace - cancels) / dur);
-}
-
-function checkPrimordialAttunements() {
-  // Overlap between fire/fire and primordial
-}
