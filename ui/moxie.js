@@ -3,6 +3,7 @@
 const width = (logEnd - logStart) / 20; // 20 ms = 1 pixel
 const railHeight = 20;
 const railPad = 4;
+const videoOffset = -1.555;
 
 const video = document.querySelector('.gameplay-video');
 const timeline = document.querySelector('.timeline');
@@ -205,7 +206,7 @@ function draw() {
     board.appendChild(g);
   }
 
-  const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
   needle.setAttribute('x', 0);
   needle.setAttribute('y', 0);
   needle.setAttribute('width', 2);
@@ -214,11 +215,18 @@ function draw() {
   board.appendChild(needle);
 
   video.addEventListener('timeupdate', function() {
-    needle.setAttribute('x', timeToX((video.currentTime - 1.555) * 1000) -
-                        timeToX(0));
+    scrollToLogTime((video.currentTime - videoOffset) * 1000);
   });
 
   generateReportCard();
+}
+
+let needle;
+let boardContainerWidth = window.innerWidth;
+function scrollToLogTime(logTime) {
+  const logX = timeToX(logTime) - timeToX(0);
+  needle.setAttribute('x', logX);
+  boardContainer.scrollLeft = logX - boardContainerWidth / 2;
 }
 
 load();
