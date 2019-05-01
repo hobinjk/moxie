@@ -6,8 +6,13 @@ const railPad = 4;
 
 const video = document.querySelector('.gameplay-video');
 const timeline = document.querySelector('.timeline');
+const boardContainer = document.createElement('div');
+boardContainer.classList.add('board-container');
 const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 board.style.width = width + 'px';
+
+const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+legend.classList.add('legend');
 
 let row = 0;
 function timeToX(time) {
@@ -39,6 +44,7 @@ const boringBuffs = {
   'Water Attunement': true,
   'Air Attunement': true,
   'Earth Attunement': true,
+  'The Light of Deldrimor': true,
 };
 
 const weaverBuffs = {
@@ -115,12 +121,16 @@ for (const buffId of buffIds) {
   name.setAttribute('x', 0);
   name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
   name.classList.add('name');
-  board.appendChild(name);
+  legend.appendChild(name);
   row += 1;
 }
 
 board.style.height = row * (railHeight + railPad) - railPad + 'px';
-timeline.appendChild(board);
+legend.style.height = row * (railHeight + railPad) - railPad + 'px';
+
+timeline.appendChild(legend);
+boardContainer.appendChild(board);
+timeline.appendChild(boardContainer);
 
 const skillData = {};
 async function getSkillData(id) {

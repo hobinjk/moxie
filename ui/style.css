@@ -25,8 +25,14 @@ body {
 }
 
 .timeline {
-  overflow-x: scroll;
+  position: relative;
   grid-column: 1/-1;
+  width: 100%;
+}
+
+.board-container {
+  overflow-x: scroll;
+  width: 100%;
 }
 
 .buff {
@@ -42,6 +48,13 @@ body {
 .cast {
   fill: #77f;
   stroke: none;
+}
+
+.legend {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 200px;
 }
 
 .name {
