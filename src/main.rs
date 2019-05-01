@@ -133,10 +133,7 @@ fn main() -> std::io::Result<()> {
                     if pending.len() == 0 {
                         continue;
                     }
-                    // if event.skill_id == 5531 {
-                    //     println!("hmm: {} -> {:?}", event.skill_id, pending);
-                    // }
-                    let start_time = pending.remove(0);
+                    let start_time = pending.remove(pending.len() - 1);
                     casts.push(SkillCast {
                         id: event.skill_id,
                         fired: fired,
