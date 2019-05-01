@@ -1,6 +1,6 @@
 /* global skills, buffs, casts, logStart, logEnd, generateReportCard */
 
-const width = 1920 * 4;
+const width = (logEnd - logStart) / 20; // 20 ms = 1 pixel
 const railHeight = 20;
 const railPad = 4;
 
