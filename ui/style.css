@@ -71,21 +71,31 @@ body {
 }
 
 .report-card {
-  border: 1px solid #f0f;
-  padding: 12px;
   color: white;
 }
 
 .report-card-items {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   line-height: 36px;
 }
 
+.report-card-item:first-child {
+  margin-top: 0;
+}
+
+.report-card-item {
+  border: 1px solid #aaf;
+  margin: 12px 0;
+}
+
 .grade {
   display: inline-block;
-  border: 1px solid black;
+  border-right: 1px solid black;
   position: relative;
-  width: 24px;
+  width: 32px;
+  margin-right: 4px;
   height: 24px;
   line-height: 24px;
   text-align: center;
@@ -107,6 +117,11 @@ body {
 }
 
 .grade-c {
+  border-color: #f70;
+  color: #f70;
+}
+
+.grade-d {
   border-color: #f00;
   color: #f00;
 }
