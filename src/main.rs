@@ -29,6 +29,15 @@ enum BuffEvent {
     Remove(u64),
 }
 
+impl BuffEvent {
+    fn time(&self) -> u64 {
+        match self {
+            BuffEvent::Apply(time) => *time,
+            BuffEvent::Remove(time) => *time,
+        }
+    }
+}
+
 #[derive(Debug, Serialize)]
 struct SkillCast {
     id: u32,
@@ -138,6 +147,13 @@ fn main() -> std::io::Result<()> {
             }
         } else if let Some(buff_event) = get_buff_event(&event) {
             if let Some(events) = buff_events.get_mut(&event.skill_id) {
+                if let Some(last_event) = events.last() {
+                    // Unsure how the events will actually be processed but so far the first event
+                    // to be read is the true event
+                    if last_event.time() == event.time {
+                        continue;
+                    }
+                }
                 events.push(buff_event);
             } else {
                 buff_events.insert(event.skill_id, vec![buff_event]);
@@ -153,5 +169,6 @@ fn main() -> std::io::Result<()> {
     println!("const skills = {};", serde_json::to_string(&skills)?);
     println!("const casts = {};", serde_json::to_string(&casts)?);
     println!("const buffs = {};", serde_json::to_string(&buff_events)?);
+
     Ok(())
 }
