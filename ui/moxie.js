@@ -160,7 +160,9 @@ function draw() {
 
     const title = document.createElementNS('http://www.w3.org/2000/svg',
                                            'title');
-    title.textContent = skills[cast.id] || cast.id;
+    let label = skills[cast.id] || cast.id;
+    label += ` (${((cast.start - logStart) / 1000).toFixed(2)}s)`;
+    title.textContent = label;
 
     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     rect.classList.add('cast');
