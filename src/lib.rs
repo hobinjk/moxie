@@ -6,11 +6,11 @@ extern crate serde_json;
 
 use wasm_bindgen::prelude::*;
 
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use std::io::Read;
 use serde::Serialize;
 
-mod parser;
+pub mod parser;
 
 fn to_io_result<A, B>(r: Result<A, B>) -> std::io::Result<A> {
     r.map_err(|_| std::io::Error::new(std::io::ErrorKind::Other, "I don't care"))
@@ -106,13 +106,20 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
         }
     }
 
+    let instants: HashSet<u32> = [40183, 5539].iter().cloned().collect();
+
     for event in &evtc.events {
         if event.src_agent_id != player_id {
             continue;
         }
-        // if event.skill_id == 5529 {
-        //     println!("ew: {:?}", event);
-        // }
+        if instants.contains(&event.skill_id) {
+            casts.push(SkillCast {
+                id: event.skill_id,
+                fired: true,
+                start: event.time,
+                end: event.time
+            });
+        }
         if let Some(skill_event) = get_skill_event(&event) {
             match skill_event {
                 SkillEvent::Start(time) => {
