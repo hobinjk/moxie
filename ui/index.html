@@ -4,17 +4,24 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <div class="container">
+    <div class="setup-container">
+      <input type="file" class="log-input">
+    </div>
+    <div class="container hidden">
       <div class="gameplay-video-container">
-        <video class="gameplay-video" controls width="1920">
+        <div class="gameplay-no-video">
+          <div class="no-video">No Footage</div>
+        </div>
+        <video class="gameplay-video hidden" controls width="1920">
           <source src="gameplay.mp4" type="video/mp4">
         </video>
       </div>
       <div class="report-card">
         <ul class="report-card-items"></ul>
       </div>
-      <div class="timeline"></div>
+      <div class="timeline">
+      </div>
     </div>
-    <script src="dist/moxie.js"></script>
+    <script src="moxie.js"></script>
   </body>
 </html>

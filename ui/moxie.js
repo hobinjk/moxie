@@ -1,157 +1,170 @@
 import generateReportCard from './passes';
-import log from './data';
 import SkillData from './SkillData';
+const rustLoad = import('../pkg/moxie');
 
-let rust = import('../pkg/moxie');
-rust.then(uh => {
-  console.log(uh);
-});
+const setupContainer = document.querySelector('.setup-container');
+setup();
 
+async function setup() {
+  let moxieParser = await rustLoad;
 
-const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
-const railHeight = 20;
-const railPad = 4;
-let videoOffset = 1.8;
-
-const video = document.querySelector('.gameplay-video');
-const timeline = document.querySelector('.timeline');
-const boardContainer = document.createElement('div');
-boardContainer.classList.add('board-container');
-const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-board.style.width = width + 'px';
-
-const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-legend.classList.add('legend');
-
-let row = 0;
-function timeToX(time) {
-  return width * (time - log.start) / (log.end - log.start);
+  let logInput = document.querySelector('.log-input');
+  logInput.addEventListener('change', function() {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      console.log(event.target.result);
+      const contents = new Uint8Array(event.target.result);
+      let log = moxieParser.generate_object(contents);
+      setupContainer.classList.add('hidden');
+      displayLog(log);
+    };
+    reader.readAsArrayBuffer(logInput.files[0]);
+  });
+  setupContainer.classList.remove('hidden');
 }
 
-const bonusSkills = {
-  43229: 'Fire/Air',
-  43470: 'Fire/Fire',
-  42811: 'Air/Fire',
-  42264: 'Air/Air',
-};
-
-for (const id in bonusSkills) {
-  log.skills[id] = bonusSkills[id];
-}
-
-
-row += 1;
-
-const boringBuffs = {
-  'Do Nothing Transformation Buff': true,
-  'Conjure Fire Attributes': true,
-  'Ride the Lightning': true,
-  'Signet of Restoration': true,
-  'Elemental Refreshment': true,
-  'Fire Aura': true,
-  'Fire Attunement': true,
-  'Water Attunement': true,
-  'Air Attunement': true,
-  'Earth Attunement': true,
-  'The Light of Deldrimor': true,
-};
-
-const weaverBuffs = {
-  'Fire/Fire': 0,
-  'Air/Fire': 1,
-  'Air/Air': 2,
-  'Fire/Air': 3,
-  // 'Fire Attunement': 0,
-  // 'Water Attunement': 1,
-  // 'Air Attunement': 2,
-  // 'Earth Attunement': 3,
-  'Elements of Rage': 4,
-  'Primordial Stance': 5,
-};
-
-const buffIds = Object.keys(log.buffs).sort((a, b) => {
-  let aName = log.skills[a];
-  let bName = log.skills[b];
-  if (weaverBuffs.hasOwnProperty(aName)) {
-    if (weaverBuffs.hasOwnProperty(bName)) {
-      return weaverBuffs[aName] - weaverBuffs[bName];
-    }
-    return -1;
-  } else if (weaverBuffs.hasOwnProperty(bName)) {
-    return 1;
-  }
-  return aName.localeCompare(bName);
-});
-
-for (const buffId of buffIds) {
-  // if (/^[+(12]/.test(skills[buffId])) {
-  //   continue;
-  // }
-  if (!/^[A-Z]/.test(log.skills[buffId])) {
-    continue;
+async function displayLog(log) {
+  console.log(log);
+  const usedSkills = {};
+  for (let cast of log.casts) {
+    usedSkills[cast.id] = true;
   }
 
-  if (log.skills[buffId].startsWith('Guild')) {
-    continue;
+  await SkillData.load(usedSkills);
+
+  document.querySelector('.container').classList.remove('hidden');
+  const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
+  const railHeight = 20;
+  const railPad = 4;
+  let videoOffset = 1.8;
+
+  const video = document.querySelector('.gameplay-video');
+  const timeline = document.querySelector('.timeline');
+  const boardContainer = document.createElement('div');
+  boardContainer.classList.add('board-container');
+  const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  board.style.width = width + 'px';
+
+  const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  legend.classList.add('legend');
+
+  let row = 0;
+  function timeToX(time) {
+    return width * (time - log.start) / (log.end - log.start);
   }
 
-  if (boringBuffs[log.skills[buffId]]) {
-    continue;
+  const bonusSkills = {
+    43229: 'Fire/Air',
+    43470: 'Fire/Fire',
+    42811: 'Air/Fire',
+    42264: 'Air/Air',
+  };
+
+  for (const id in bonusSkills) {
+    log.skills[id] = bonusSkills[id];
   }
 
-  const rects = [];
-  for (const event of log.buffs[buffId]) {
-    if (event.Apply) {
-      const rect = document.createElementNS('http://www.w3.org/2000/svg',
-                                            'rect');
-      rect.setAttribute('x', timeToX(event.Apply));
-      rect.setAttribute('y', (railHeight + railPad) * row);
-      rect.setAttribute('height', railHeight);
-      rects.push(rect);
-    }
-    if (event.Remove) {
-      const rect = rects.pop();
-      if (!rect) {
-        continue;
+  row += 1;
+
+  const boringBuffs = {
+    'Do Nothing Transformation Buff': true,
+    'Conjure Fire Attributes': true,
+    'Ride the Lightning': true,
+    'Signet of Restoration': true,
+    'Elemental Refreshment': true,
+    'Fire Aura': true,
+    'Fire Attunement': true,
+    'Water Attunement': true,
+    'Air Attunement': true,
+    'Earth Attunement': true,
+    'The Light of Deldrimor': true,
+  };
+
+  const weaverBuffs = {
+    'Fire/Fire': 0,
+    'Air/Fire': 1,
+    'Air/Air': 2,
+    'Fire/Air': 3,
+    // 'Fire Attunement': 0,
+    // 'Water Attunement': 1,
+    // 'Air Attunement': 2,
+    // 'Earth Attunement': 3,
+    'Elements of Rage': 4,
+    'Primordial Stance': 5,
+  };
+
+  const buffIds = Object.keys(log.buffs).sort((a, b) => {
+    let aName = log.skills[a];
+    let bName = log.skills[b];
+    if (weaverBuffs.hasOwnProperty(aName)) {
+      if (weaverBuffs.hasOwnProperty(bName)) {
+        return weaverBuffs[aName] - weaverBuffs[bName];
       }
-      rect.setAttribute('width', timeToX(event.Remove) -
-                        rect.getAttribute('x'));
+      return -1;
+    } else if (weaverBuffs.hasOwnProperty(bName)) {
+      return 1;
+    }
+    return aName.localeCompare(bName);
+  });
+
+  for (const buffId of buffIds) {
+    // if (/^[+(12]/.test(skills[buffId])) {
+    //   continue;
+    // }
+    if (!/^[A-Z]/.test(log.skills[buffId])) {
+      continue;
+    }
+
+    if (log.skills[buffId].startsWith('Guild')) {
+      continue;
+    }
+
+    if (boringBuffs[log.skills[buffId]]) {
+      continue;
+    }
+
+    const rects = [];
+    for (const event of log.buffs[buffId]) {
+      if (event.Apply) {
+        const rect = document.createElementNS('http://www.w3.org/2000/svg',
+                                              'rect');
+        rect.setAttribute('x', timeToX(event.Apply));
+        rect.setAttribute('y', (railHeight + railPad) * row);
+        rect.setAttribute('height', railHeight);
+        rects.push(rect);
+      }
+      if (event.Remove) {
+        const rect = rects.pop();
+        if (!rect) {
+          continue;
+        }
+        rect.setAttribute('width', timeToX(event.Remove) -
+                          rect.getAttribute('x'));
+        rect.classList.add('buff');
+        board.appendChild(rect);
+      }
+    }
+    for (const rect of rects.reverse()) {
+      rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
       rect.classList.add('buff');
       board.appendChild(rect);
     }
+    const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    name.textContent = log.skills[buffId];
+    name.setAttribute('x', 0);
+    name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
+    name.classList.add('name');
+    legend.appendChild(name);
+    row += 1;
   }
-  for (const rect of rects.reverse()) {
-    rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
-    rect.classList.add('buff');
-    board.appendChild(rect);
-  }
-  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  name.textContent = log.skills[buffId];
-  name.setAttribute('x', 0);
-  name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
-  name.classList.add('name');
-  legend.appendChild(name);
-  row += 1;
-}
 
-board.style.height = row * (railHeight + railPad) - railPad + 'px';
-legend.style.height = row * (railHeight + railPad) - railPad + 'px';
+  board.style.height = row * (railHeight + railPad) - railPad + 'px';
+  legend.style.height = row * (railHeight + railPad) - railPad + 'px';
 
-timeline.appendChild(legend);
-boardContainer.appendChild(board);
-timeline.appendChild(boardContainer);
+  timeline.appendChild(legend);
+  boardContainer.appendChild(board);
+  timeline.appendChild(boardContainer);
 
-const usedSkills = {};
-for (let cast of log.casts) {
-  usedSkills[cast.id] = true;
-}
-
-async function load() {
-  await SkillData.load(usedSkills);
-  draw();
-}
-
-function draw() {
   for (const cast of log.casts) {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
@@ -205,7 +218,7 @@ function draw() {
     board.appendChild(g);
   }
 
-  needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
   needle.setAttribute('x', 0);
   needle.setAttribute('y', 0);
   needle.setAttribute('width', 2);
@@ -218,14 +231,15 @@ function draw() {
   });
 
   generateReportCard(log);
-}
 
-let needle;
-let boardContainerWidth = window.innerWidth;
-function scrollToLogTime(logTime) {
-  const logX = timeToX(logTime) - timeToX(0);
-  needle.setAttribute('x', logX);
-  boardContainer.scrollLeft = logX - boardContainerWidth / 2;
-}
+  let boardContainerWidth = window.innerWidth;
+  function scrollToLogTime(logTime) {
+    const logX = timeToX(logTime) - timeToX(0);
+    needle.setAttribute('x', logX);
+    boardContainer.scrollLeft = logX - boardContainerWidth / 2;
+  }
 
-load();
+  board.addEventListener('click', function() {
+    // scroll to it
+  });
+}
