@@ -1,5 +1,6 @@
 import generateReportCard from './passes';
 import SkillData from './SkillData';
+import EIParser from './EIParser';
 const rustLoad = import('../pkg/moxie');
 
 const setupContainer = document.querySelector('.setup-container');
@@ -10,17 +11,44 @@ async function setup() {
 
   let logInput = document.querySelector('.log-input');
   logInput.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      console.log(event.target.result);
-      const contents = new Uint8Array(event.target.result);
-      let log = moxieParser.generate_object(contents);
-      setupContainer.classList.add('hidden');
-      displayLog(log);
-    };
-    reader.readAsArrayBuffer(logInput.files[0]);
+    let logLabel = document.querySelector('.log-input + label');
+    logLabel.textContent = 'Parsing...';
+
+    let file = logInput.files[0];
+
+    setTimeout(function() {
+      if (file.name.endsWith('.evtc') ||
+          file.name.endsWith('.zevtc') ||
+          file.name.endsWith('.evtc.zip')) {
+        loadEVTC(file, moxieParser);
+      } else {
+        loadEI(file);
+      }
+    }, 100);
   });
   setupContainer.classList.remove('hidden');
+}
+
+function loadEVTC(file, moxieParser) {
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    const contents = new Uint8Array(event.target.result);
+    let log = moxieParser.generate_object(contents);
+    setupContainer.classList.add('hidden');
+    displayLog(log);
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function loadEI(file) {
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    const contents = event.target.result;
+    let log = EIParser.parseHTML(contents);
+    setupContainer.classList.add('hidden');
+    displayLog(log);
+  };
+  reader.readAsText(file);
 }
 
 async function displayLog(log) {
@@ -79,6 +107,8 @@ async function displayLog(log) {
   const boringBuffs = {
     'Do Nothing Transformation Buff': true,
     'Conjure Fire Attributes': true,
+    'Conjure Fiery Greatsword': true,
+    'Number of Boons': true,
     'Ride the Lightning': true,
     'Signet of Restoration': true,
     'Elemental Refreshment': true,
