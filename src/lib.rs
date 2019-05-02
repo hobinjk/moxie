@@ -145,10 +145,16 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
         } else if let Some(buff_event) = get_buff_event(&event) {
             if let Some(events) = buff_events.get_mut(&event.skill_id) {
                 if let Some(last_event) = events.last() {
-                    // Unsure how the events will actually be processed but so far the first event
-                    // to be read is the true event
+                    // There may be a remove event at the same time as an apply event to show that
+                    // it removed the remainder of a 1-stack buff before the apply
                     if last_event.time() == event.time {
-                        continue;
+                        match (last_event, &buff_event) {
+                            (BuffEvent::Apply(_), BuffEvent::Remove(_)) => {
+                                events.insert(events.len() - 1, buff_event);
+                                continue;
+                            },
+                            _ => {},
+                        }
                     }
                 }
                 events.push(buff_event);
