@@ -1,3 +1,6 @@
+extern crate moxie;
+
+use std::io::Read;
 use std::fs::File;
 
 fn main() -> std::io::Result<()> {
@@ -10,7 +13,9 @@ fn main() -> std::io::Result<()> {
     let mut file = File::open(file_name)?;
     let mut contents = vec![];
     file.read_to_end(&mut contents)?;
-    moxie::generate_output(contents)
+    println!("{:?}", moxie::generate_output(contents)?);
+
+    Ok(())
 }
 
 

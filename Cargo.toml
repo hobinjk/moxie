@@ -2,10 +2,11 @@
 name = "moxie"
 version = "0.1.0"
 authors = ["James Hobin <hobinjk@gmail.com>"]
+license = "MIT"
 edition = "2018"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 nom = "^4.2"
