@@ -9,6 +9,51 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.setup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Adapted from https://benmarshall.me/styling-file-inputs/ */
+.log-input {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.log-input + label {
+  border: 1px solid #77f;
+  background: none;
+  color: #77f;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+  height: 32px;
+  padding: 16px;
+}
+
+.log-input:focus + label,
+.log-input + label:hover {
+  border-color: white;
+  color: white;
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }
 
 .container {
