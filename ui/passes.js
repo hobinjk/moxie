@@ -1,15 +1,15 @@
-/* global casts, skillData, Mishap, buffs, logEnd, logStart */
+import SkillData from './SkillData';
+import Mishap from './Mishap';
 
 const reportCardItems = document.querySelector('.report-card-items');
 
-/* eslint-disable-next-line */
-function generateReportCard() {
-  checkAutoChains();
-  checkWasted();
-  checkPrimordialAttunements();
-  checkArcaneBlasts();
-  checkAttunementTransitions();
-  checkElementsOfRageUptime();
+export default function generateReportCard(log) {
+  checkAutoChains(log);
+  checkWasted(log);
+  checkPrimordialAttunements(log);
+  checkArcaneBlasts(log);
+  checkAttunementTransitions(log);
+  checkElementsOfRageUptime(log);
 }
 
 function addReportCardItem(grade, explanation, mishaps) {
@@ -30,14 +30,14 @@ function addReportCardItem(grade, explanation, mishaps) {
   console.log('additional data', mishaps);
 }
 
-function checkAutoChains() {
+function checkAutoChains(log) {
   const chains = [];
 
-  for (const cast of casts) {
+  for (const cast of log.casts) {
     if (!cast.fired) {
       continue;
     }
-    let data = skillData[cast.id];
+    let data = SkillData.get(cast.id);
     if (data && data.slot) {
       if (data.slot !== 'Weapon_1') {
         continue;
@@ -71,7 +71,7 @@ function checkAutoChains() {
   }
   console.log('wastedOne', wastedOne);
   console.log('wastedTwo', wastedTwo);
-  const dur = castsDuration();
+  const dur = log.casts[log.casts.length - 1].end - log.casts[0].start;
   console.log('eliminating one', 1 - (dur - wastedOne.total) / dur);
   console.log('eliminating two', 1 - (dur - wastedTwo.total) / dur);
 
@@ -94,17 +94,13 @@ function checkAutoChains() {
   }));
 }
 
-function castsDuration() {
-  return casts[casts.length - 1].end - casts[0].start;
-}
-
-function checkWasted() {
+function checkWasted(log) {
   let deadspace = 0;
   let dsMishaps = [];
   let cancels = 0;
   let cancelMishaps = [];
   let lastEnd = -1;
-  for (const cast of casts) {
+  for (const cast of log.casts) {
     if (lastEnd > 0) {
       let wasted = cast.start - lastEnd;
       if (wasted < 0) {
@@ -123,8 +119,8 @@ function checkWasted() {
 
   console.log('deadspace', deadspace);
   console.log('cancels', cancels);
-  let dur = lastEnd - casts[0].start;
-  console.log('out of', lastEnd - casts[0].start);
+  let dur = lastEnd - log.casts[0].start;
+  console.log('out of', dur);
   console.log('kills your deeps by', 1 - (dur - deadspace - cancels) / dur);
 
   const dsSummary = `Did nothing for ${(deadspace / 1000).toFixed(2)} seconds`;
@@ -146,10 +142,10 @@ function checkWasted() {
   addReportCardItem(cancelGrade, cancelSummary, cancelMishaps);
 }
 
-function checkPrimordialAttunements() {
+function checkPrimordialAttunements(log) {
   // Overlap between fire/fire and primordial
-  const primordial = buffs[42086];
-  const fireFire = buffs[43470];
+  const primordial = log.buffs[42086];
+  const fireFire = log.buffs[43470];
 
   let lastFireFireProcessed = 0;
 
@@ -229,7 +225,7 @@ function checkPrimordialAttunements() {
   addReportCardItem(grade, summary, misaligns.map(a => a.mishap));
 }
 
-function checkArcaneBlasts() {
+function checkArcaneBlasts(_log) {
   // Make sure arcane blasts benefit from the +power of fire attunement and
   // ideally the +power of FGS
   // it's only a ~10%? reduction of 2.2% of your dps so uh maybe not worth it
@@ -237,13 +233,13 @@ function checkArcaneBlasts() {
   // with 3 at beginning
 }
 
-function checkAttunementTransitions() {
+function checkAttunementTransitions(_log) {
   // Pretty sure that every attunement swap that changes the primary element
   // should be accompanied by a non-weapon skill
 }
 
-function checkElementsOfRageUptime() {
-  const elements = buffs[42416];
+function checkElementsOfRageUptime(log) {
+  const elements = log.buffs[42416];
 
   let downtime = 0;
   let lastApply = -1;
@@ -268,7 +264,7 @@ function checkElementsOfRageUptime() {
   }
 
   const dropped = (downtime / 1000).toFixed(2);
-  const perc = Math.floor(100 * downtime / (logEnd - logStart));
+  const perc = Math.floor(100 * downtime / (log.end - log.start));
   const summary = `Dropped Elements of Rage for ${dropped} seconds (${perc}%)`;
   let grade = 'D';
   if (dropped < 1) {

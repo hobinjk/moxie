@@ -1,9 +1,17 @@
-/* global skills, buffs, casts, logStart, logEnd, generateReportCard */
+import generateReportCard from './passes';
+import log from './data';
+import SkillData from './SkillData';
 
-const width = (logEnd - logStart) / 20; // 20 ms = 1 pixel
+let rust = import('../pkg/moxie');
+rust.then(uh => {
+  console.log(uh);
+});
+
+
+const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
 const railHeight = 20;
 const railPad = 4;
-const videoOffset = -1.555;
+let videoOffset = 1.8;
 
 const video = document.querySelector('.gameplay-video');
 const timeline = document.querySelector('.timeline');
@@ -17,7 +25,7 @@ legend.classList.add('legend');
 
 let row = 0;
 function timeToX(time) {
-  return width * (time - logStart) / (logEnd - logStart);
+  return width * (time - log.start) / (log.end - log.start);
 }
 
 const bonusSkills = {
@@ -28,7 +36,7 @@ const bonusSkills = {
 };
 
 for (const id in bonusSkills) {
-  skills[id] = bonusSkills[id];
+  log.skills[id] = bonusSkills[id];
 }
 
 
@@ -61,9 +69,9 @@ const weaverBuffs = {
   'Primordial Stance': 5,
 };
 
-const buffIds = Object.keys(buffs).sort((a, b) => {
-  let aName = skills[a];
-  let bName = skills[b];
+const buffIds = Object.keys(log.buffs).sort((a, b) => {
+  let aName = log.skills[a];
+  let bName = log.skills[b];
   if (weaverBuffs.hasOwnProperty(aName)) {
     if (weaverBuffs.hasOwnProperty(bName)) {
       return weaverBuffs[aName] - weaverBuffs[bName];
@@ -79,20 +87,20 @@ for (const buffId of buffIds) {
   // if (/^[+(12]/.test(skills[buffId])) {
   //   continue;
   // }
-  if (!/^[A-Z]/.test(skills[buffId])) {
+  if (!/^[A-Z]/.test(log.skills[buffId])) {
     continue;
   }
 
-  if (skills[buffId].startsWith('Guild')) {
+  if (log.skills[buffId].startsWith('Guild')) {
     continue;
   }
 
-  if (boringBuffs[skills[buffId]]) {
+  if (boringBuffs[log.skills[buffId]]) {
     continue;
   }
 
   const rects = [];
-  for (const event of buffs[buffId]) {
+  for (const event of log.buffs[buffId]) {
     if (event.Apply) {
       const rect = document.createElementNS('http://www.w3.org/2000/svg',
                                             'rect');
@@ -113,12 +121,12 @@ for (const buffId of buffIds) {
     }
   }
   for (const rect of rects.reverse()) {
-    rect.setAttribute('width', timeToX(logEnd) - rect.getAttribute('x'));
+    rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
     rect.classList.add('buff');
     board.appendChild(rect);
   }
   const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  name.textContent = skills[buffId];
+  name.textContent = log.skills[buffId];
   name.setAttribute('x', 0);
   name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
   name.classList.add('name');
@@ -133,35 +141,24 @@ timeline.appendChild(legend);
 boardContainer.appendChild(board);
 timeline.appendChild(boardContainer);
 
-const skillData = {};
-async function getSkillData(id) {
-  try {
-    const res = await fetch(`api-cache/${id}.json`);
-    const data = await res.json();
-    skillData[id] = data;
-  } catch (e) {
-    console.log('could not fetch', id);
-  }
-}
-
 const usedSkills = {};
-for (let cast of casts) {
+for (let cast of log.casts) {
   usedSkills[cast.id] = true;
 }
 
 async function load() {
-  await Promise.all(Object.keys(usedSkills).map(getSkillData));
+  await SkillData.load(usedSkills);
   draw();
 }
 
 function draw() {
-  for (const cast of casts) {
+  for (const cast of log.casts) {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
     const title = document.createElementNS('http://www.w3.org/2000/svg',
                                            'title');
-    let label = skills[cast.id] || cast.id;
-    label += ` (${((cast.start - logStart) / 1000).toFixed(2)}s)`;
+    let label = log.skills[cast.id] || cast.id;
+    label += ` (${((cast.start - log.start) / 1000).toFixed(2)}s)`;
     title.textContent = label;
 
     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -172,13 +169,13 @@ function draw() {
 
     let text = null;
 
-    let data = skillData[cast.id];
+    let data = SkillData.get(cast.id);
     if (data && data.slot) {
       let content = '';
-      let matches = skillData[cast.id].slot.match(/Weapon_(\d)/);
+      let matches = data.slot.match(/Weapon_(\d)/);
       if (matches && matches.length > 0) {
         content = matches[1];
-        if (skillData[cast.id].prev_chain && !skillData[cast.id].next_chain) {
+        if (data.prev_chain && !data.next_chain) {
           content += 'f';
         }
       }
@@ -220,7 +217,7 @@ function draw() {
     scrollToLogTime((video.currentTime - videoOffset) * 1000);
   });
 
-  generateReportCard();
+  generateReportCard(log);
 }
 
 let needle;

@@ -1,5 +1,4 @@
-// eslint-disable-next-line
-class Mishap {
+export default class Mishap {
   constructor(start, end, label) {
     this.start = start;
     this.end = end;
