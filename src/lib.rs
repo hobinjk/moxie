@@ -1,10 +1,12 @@
 #[macro_use]
 extern crate nom;
 extern crate serde;
+#[macro_use]
 extern crate serde_json;
 
+use wasm_bindgen::prelude::*;
+
 use std::collections::HashMap;
-use std::fs::File;
 use std::io::Read;
 use serde::Serialize;
 
@@ -81,16 +83,7 @@ fn get_buff_event(event: &parser::Event) -> Option<BuffEvent> {
     }
 }
 
-fn main() -> std::io::Result<()> {
-    let args: Vec<String> = std::env::args().collect();
-    let file_name = if args.len() >= 2 {
-        &args[1]
-    } else {
-        "test.evtc"
-    };
-    let mut file = File::open(file_name)?;
-    let mut contents = vec![];
-    file.read_to_end(&mut contents)?;
+pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> {
     let raw_evtc = match contents[0] as char {
         'P' => unzip(&contents)?,
         _ => contents
@@ -161,11 +154,17 @@ fn main() -> std::io::Result<()> {
     for skill in &evtc.skills {
         skills.insert(skill.id, skill.name);
     }
-    println!("const logStart = {};", start);
-    println!("const logEnd = {};", end);
-    println!("const skills = {};", serde_json::to_string(&skills)?);
-    println!("const casts = {};", serde_json::to_string(&casts)?);
-    println!("const buffs = {};", serde_json::to_string(&buff_events)?);
 
-    Ok(())
+    Ok(json!({
+        "start": start,
+        "end": end,
+        "skills": skills,
+        "casts": casts,
+        "buffs": buff_events,
+    }))
+}
+
+#[wasm_bindgen]
+pub fn generate_object(contents: Vec<u8>) -> JsValue {
+    JsValue::from_serde(&generate_output(contents).unwrap()).unwrap()
 }
