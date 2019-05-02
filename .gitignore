@@ -2,3 +2,7 @@
 **/*.rs.bk
 *.swp
 .DS_Store
+node_modules/
+ui/**/*.mp4
+ui/**/*.evtc
+ui/**/*.evtc.zip
