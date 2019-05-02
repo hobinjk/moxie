@@ -12,7 +12,7 @@ export default function generateReportCard(log) {
   checkElementsOfRageUptime(log);
 }
 
-function addReportCardItem(grade, explanation, mishaps) {
+function addReportCardItem(log, grade, explanation, mishaps) {
   const item = document.createElement('li');
   item.classList.add('report-card-item');
   const gradeElt = document.createElement('span');
@@ -23,8 +23,13 @@ function addReportCardItem(grade, explanation, mishaps) {
   explanationElt.textContent = explanation;
   item.appendChild(gradeElt);
   item.appendChild(document.createTextNode(' '));
-  // item.textContent += ' ';
   item.appendChild(explanationElt);
+  const mishapList = document.createElement('ul');
+  mishapList.classList.add('mishap-list');
+  for (let mishap of mishaps) {
+    mishapList.appendChild(mishap.render(log));
+  }
+  item.appendChild(mishapList);
   reportCardItems.appendChild(item);
 
   console.log('additional data', mishaps);
@@ -89,7 +94,7 @@ function checkAutoChains(log) {
   if (wastedTwo.chains.length !== 1) {
     wtSummary += 's';
   }
-  addReportCardItem(wtGrade, wtSummary, wastedTwo.chains.map((chain) => {
+  addReportCardItem(log, wtGrade, wtSummary, wastedTwo.chains.map((chain) => {
     return new Mishap(chain[0].start, chain[chain.length - 1].end);
   }));
 }
@@ -130,7 +135,7 @@ function checkWasted(log) {
   } else if (deadspace < 10000) {
     dsGrade = 'A';
   }
-  addReportCardItem(dsGrade, dsSummary, dsMishaps);
+  addReportCardItem(log, dsGrade, dsSummary, dsMishaps);
 
   const cancelSummary = `Canceled skills for ${(cancels / 1000).toFixed(2)} seconds`;
   let cancelGrade = 'B';
@@ -222,7 +227,7 @@ function checkPrimordialAttunements(log) {
   } else if (misaligns.length < 6) {
     grade = 'C';
   }
-  addReportCardItem(grade, summary, misaligns.map(a => a.mishap));
+  addReportCardItem(log, grade, summary, misaligns.map(a => a.mishap));
 }
 
 function checkArcaneBlasts(_log) {
@@ -276,5 +281,5 @@ function checkElementsOfRageUptime(log) {
   } else if (dropped < 15) {
     grade = 'C';
   }
-  addReportCardItem(grade, summary, mishaps);
+  addReportCardItem(log, grade, summary, mishaps);
 }

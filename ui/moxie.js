@@ -53,6 +53,12 @@ async function displayLog(log) {
     return width * (time - log.start) / (log.end - log.start);
   }
 
+  function xToTime(x) {
+    return (x / width) * (log.end - log.start) + log.start;
+  }
+  window.timeToX = timeToX;
+  window.xToTime = xToTime;
+
   const bonusSkills = {
     43229: 'Fire/Air',
     43470: 'Fire/Fire',
@@ -232,14 +238,34 @@ async function displayLog(log) {
 
   generateReportCard(log);
 
-  let boardContainerWidth = window.innerWidth;
-  function scrollToLogTime(logTime) {
-    const logX = timeToX(logTime) - timeToX(0);
+
+  let boardContainerRect = boardContainer.getBoundingClientRect();
+  function scrollToLogTime(logTime, scrollVideo) {
+    const logX = timeToX(logTime);
     needle.setAttribute('x', logX);
-    boardContainer.scrollLeft = logX - boardContainerWidth / 2;
+    if (!scrollVideo || logX < boardContainer.scrollLeft ||
+        logX > boardContainer.scrollLeft + boardContainerRect.width) {
+      boardContainer.scrollLeft = logX - boardContainerRect.width / 2;
+    }
+    if (scrollVideo) {
+      video.currentTime = logTime / 1000 + videoOffset;
+    }
   }
 
-  board.addEventListener('click', function() {
-    // scroll to it
+  board.addEventListener('click', function(event) {
+    let totalX = event.clientX + boardContainer.scrollLeft -
+      boardContainerRect.left;
+    let logTime = xToTime(totalX);
+    scrollToLogTime(logTime, true);
+  });
+
+  document.body.addEventListener('click', function(event) {
+    if (event.target.classList.contains('time-link')) {
+      event.preventDefault();
+      let start = parseFloat(event.target.dataset.start);
+      if (start) {
+        scrollToLogTime(start, true);
+      }
+    }
   });
 }
