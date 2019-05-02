@@ -124,6 +124,11 @@ body {
   stroke: none;
 }
 
+.cast-instant {
+  fill: #fff;
+  opacity: 0.5;
+}
+
 .legend {
   position: absolute;
   top: 0;

@@ -106,6 +106,9 @@ function checkWasted(log) {
   let cancelMishaps = [];
   let lastEnd = -1;
   for (const cast of log.casts) {
+    if (cast.end === cast.start) {
+      continue;
+    }
     if (lastEnd > 0) {
       let wasted = cast.start - lastEnd;
       if (wasted < 0) {
@@ -144,14 +147,43 @@ function checkWasted(log) {
   } else if (cancels < 10000) {
     cancelGrade = 'A';
   }
-  addReportCardItem(cancelGrade, cancelSummary, cancelMishaps);
+  addReportCardItem(log, cancelGrade, cancelSummary, cancelMishaps);
 }
 
 function checkPrimordialAttunements(log) {
   // Overlap between fire/fire and primordial
-  const primordial = log.buffs[42086];
+  let primordial = log.buffs[42086];
   const fireFire = log.buffs[43470];
 
+  if (!primordial) {
+    primordial = [];
+    let tick = 1000;
+    let stanceDur = 5 * tick;
+    let lastPrimordial = log.start - stanceDur - tick;
+    for (const cast of log.casts) {
+      if (cast.id !== 40183) {
+        continue;
+      }
+      let primStart = cast.start - tick;
+      if (primStart - lastPrimordial < stanceDur) {
+        continue;
+      }
+      if (lastPrimordial > log.start) {
+        primordial.push({
+          Remove: Math.min(lastPrimordial + stanceDur, primStart - 1),
+        });
+      }
+      lastPrimordial = primStart;
+      primordial.push({
+        Apply: primStart,
+      });
+    }
+    if (lastPrimordial > log.start) {
+      primordial.push({
+        Remove: Math.min(lastPrimordial + stanceDur, log.end),
+      });
+    }
+  }
   let lastFireFireProcessed = 0;
 
   let stanceStart = -1;

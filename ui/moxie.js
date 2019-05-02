@@ -25,6 +25,10 @@ async function setup() {
 
 async function displayLog(log) {
   console.log(log);
+
+  log.casts.sort(function(a, b) {
+    return a.start - b.start;
+  });
   const usedSkills = {};
   for (let cast of log.casts) {
     usedSkills[cast.id] = true;
@@ -84,6 +88,10 @@ async function displayLog(log) {
     'Air Attunement': true,
     'Earth Attunement': true,
     'The Light of Deldrimor': true,
+  };
+
+  const boringSkills = {
+    40183: true, // Primordial Stance
   };
 
   const weaverBuffs = {
@@ -172,6 +180,9 @@ async function displayLog(log) {
   timeline.appendChild(boardContainer);
 
   for (const cast of log.casts) {
+    if (boringSkills[cast.id]) {
+      continue;
+    }
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
     const title = document.createElementNS('http://www.w3.org/2000/svg',
@@ -213,7 +224,13 @@ async function displayLog(log) {
 
     rect.setAttribute('x', timeToX(cast.start));
     rect.setAttribute('y', 0);
-    rect.setAttribute('width', timeToX(cast.end) - timeToX(cast.start));
+    if (cast.end - cast.start > 0) {
+      rect.setAttribute('width', timeToX(cast.end) - timeToX(cast.start));
+    } else {
+      rect.setAttribute('width', 2);
+      rect.classList.add('cast-instant');
+    }
+
     rect.setAttribute('height', railHeight);
 
     g.appendChild(title);
