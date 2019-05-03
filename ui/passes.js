@@ -21,9 +21,24 @@ function addReportCardItem(log, grade, explanation, mishaps) {
   const explanationElt = document.createElement('span');
   explanationElt.classList.add('explanation');
   explanationElt.textContent = explanation;
+  const expander = document.createElement('div');
+  expander.classList.add('report-card-item-expander');
+  expander.textContent = 'Show Mishaps';
+  expander.addEventListener('click', function() {
+    if (item.classList.contains('open')) {
+      expander.textContent = 'Show Mishaps';
+      item.classList.remove('open');
+      item.parentNode.classList.remove('single');
+    } else {
+      expander.textContent = 'Hide Mishaps';
+      item.classList.add('open');
+      item.parentNode.classList.add('single');
+    }
+  });
   item.appendChild(gradeElt);
   item.appendChild(document.createTextNode(' '));
   item.appendChild(explanationElt);
+  item.appendChild(expander);
   const mishapList = document.createElement('ul');
   mishapList.classList.add('mishap-list');
   for (let mishap of mishaps) {
@@ -115,12 +130,19 @@ function checkWasted(log) {
         console.log('WHAT', cast);
       } else {
         deadspace += wasted;
-        dsMishaps.push(new Mishap(lastEnd, cast.start));
+
+        // Nobody's frame-perfect
+        if (wasted > 30) {
+          dsMishaps.push(new Mishap(lastEnd, cast.start));
+        }
       }
     }
     if (!cast.fired) {
       cancels += cast.end - cast.start;
-      cancelMishaps.push(new Mishap(cast.start, cast.end));
+      // Nobody's frame-perfect
+      if (cast.end - cast.start > 30) {
+        cancelMishaps.push(new Mishap(cast.start, cast.end));
+      }
     }
     lastEnd = cast.end;
   }
@@ -287,7 +309,10 @@ function checkElementsOfRageUptime(log) {
     if (event.Apply) {
       if (lastApply < 0) {
         if (lastRemove > 0) {
-          mishaps.push(new Mishap(lastRemove, event.Apply));
+          // Nobody's frame-perfect
+          if (event.Apply - lastRemove > 30) {
+            mishaps.push(new Mishap(lastRemove, event.Apply));
+          }
           downtime += event.Apply - lastRemove;
         }
         lastApply = event.Apply;

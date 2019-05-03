@@ -165,10 +165,28 @@ input[type="file"] + label:hover {
 }
 
 .report-card-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
   line-height: 36px;
+}
+
+.report-card-items.single > .report-card-item {
+  display: none;
+}
+
+.report-card-items.single > .report-card-item.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0;
 }
 
 .report-card-item:first-child {
@@ -187,13 +205,23 @@ input[type="file"] + label:hover {
   overflow: show;
 }
 
+.report-card-item-expander {
+  float: right;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #77f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.report-card-item-expander:hover {
+  color: #fff;
+}
+
 .mishap-list {
   list-style-type: none;
   font-size: 12px;
-  line-height: 16px;
-}
-
-.mishap {
+  line-height: 18px;
 }
 
 .time-link {
