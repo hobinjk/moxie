@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #010104;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .setup-container {
@@ -40,7 +40,7 @@ input[type="file"] + label {
   border: 1px solid #77f;
   background: none;
   color: #77f;
-  font-family: sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: lighter;
   font-size: 24px;
   height: 32px;
@@ -100,6 +100,7 @@ input[type="file"] + label:hover {
   display: none;
   border: 1px solid #aaf;
   color: #77f;
+  font-family: 'Poiret One', sans-serif;
 }
 .gameplay-video-container.no-video > .gameplay-no-video {
   display: block;
@@ -160,7 +161,6 @@ input[type="file"] + label:hover {
 }
 
 .name {
-  font-family: sans-serif;
   font-size: 12px;
   fill: #fff;
   stroke: none;
