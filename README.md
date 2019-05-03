@@ -9,6 +9,7 @@ all of Maguuma.
 
 ## Usage
 
+- [Go to the site](https://hobinjk.github.io/moxie/ui/dist/)
 - Click upload
 - Select EVTC file of a benchmark attempt on local hardrive
 - Wait for parsing
