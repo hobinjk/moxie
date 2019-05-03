@@ -12,7 +12,7 @@ async function setup() {
   let logInput = document.getElementById('log-input');
   logInput.addEventListener('change', function() {
     let logLabel = document.querySelector('#log-input + label');
-    logLabel.textContent = 'Parsing...';
+    logLabel.textContent = 'Parsing';
 
     let file = logInput.files[0];
 
@@ -27,6 +27,38 @@ async function setup() {
     }, 100);
   });
   setupContainer.classList.remove('hidden');
+
+  let videoContainer = document.querySelector('.gameplay-video-container');
+  let video = document.querySelector('.gameplay-video');
+  let videoInput = document.getElementById('video-input');
+  videoInput.addEventListener('change', function() {
+    let logLabel = document.querySelector('#video-input + label');
+    logLabel.textContent = 'Uploading';
+
+    let file = videoInput.files[0];
+
+    setTimeout(function() {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        console.log('woot');
+        let source = document.createElement('source');
+        source.src = event.target.result;
+        source.type = file.type;
+
+        video.appendChild(source);
+
+        videoContainer.classList.remove('no-video');
+      };
+      reader.onprogress = function(event) {
+        if (event.lengthComputable) {
+          let percent = Math.floor(100 * event.loaded / event.total) + '%';
+          logLabel.textContent = 'Uploading ' + percent;
+        }
+      };
+
+      reader.readAsDataURL(file);
+    }, 100);
+  });
 }
 
 function loadEVTC(file, moxieParser) {
@@ -280,7 +312,7 @@ async function displayLog(log) {
   board.appendChild(needle);
 
   video.addEventListener('timeupdate', function() {
-    scrollToLogTime((video.currentTime - videoOffset) * 1000);
+    scrollToLogTime((video.currentTime - videoOffset) * 1000 + log.start);
   });
 
   generateReportCard(log);
@@ -295,7 +327,7 @@ async function displayLog(log) {
       boardContainer.scrollLeft = logX - boardContainerRect.width / 2;
     }
     if (scrollVideo) {
-      video.currentTime = logTime / 1000 + videoOffset;
+      video.currentTime = (logTime - log.start) / 1000 + videoOffset;
     }
   }
 
