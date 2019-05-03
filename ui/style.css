@@ -21,18 +21,22 @@ body {
 }
 
 /* Adapted from https://benmarshall.me/styling-file-inputs/ */
-.log-input {
+input[type="file"] {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
   overflow: hidden;
   padding: 0;
-  position: absolute !important;
+  position: absolute;
   white-space: nowrap;
   width: 1px;
 }
 
-.log-input + label {
+#video-input {
+  top: 8px;
+}
+
+input[type="file"] + label {
   border: 1px solid #77f;
   background: none;
   color: #77f;
@@ -43,8 +47,14 @@ body {
   padding: 16px;
 }
 
-.log-input:focus + label,
-.log-input + label:hover {
+#video-input + label {
+  font-size: 16px;
+  height: 24px;
+  padding: 12px;
+}
+
+input[type="file"]:focus + label,
+input[type="file"] + label:hover {
   border-color: white;
   color: white;
   outline: none;
@@ -74,6 +84,7 @@ body {
 .gameplay-video-container {
   position: relative;
   text-align: center;
+  min-height: 480px;
 }
 
 .gameplay-no-video {
@@ -83,7 +94,7 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid #aaf;
-  color: #aaf;
+  color: #77f;
 }
 
 .no-video {

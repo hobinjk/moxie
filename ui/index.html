@@ -6,7 +6,7 @@
   <body>
     <div class="setup-container">
       <div class="setup">
-        <input type="file" class="log-input" id="log-input">
+        <input type="file" id="log-input">
         <label for="log-input">Select your log</label>
       </div>
       <img src="icon.png" class="icon"/>
@@ -14,10 +14,13 @@
     <div class="container hidden">
       <div class="gameplay-video-container">
         <div class="gameplay-no-video">
-          <div class="no-video">No Footage</div>
+          <div class="no-video">
+            <p>No Footage</p>
+            <input type="file" id="video-input">
+            <label for="video-input">Upload</label>
+          </div>
         </div>
         <video class="gameplay-video hidden" controls width="1920">
-          <source src="gameplay.mp4" type="video/mp4">
         </video>
       </div>
       <div class="report-card">

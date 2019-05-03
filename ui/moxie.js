@@ -9,9 +9,9 @@ setup();
 async function setup() {
   let moxieParser = await rustLoad;
 
-  let logInput = document.querySelector('.log-input');
+  let logInput = document.getElementById('log-input');
   logInput.addEventListener('change', function() {
-    let logLabel = document.querySelector('.log-input + label');
+    let logLabel = document.querySelector('#log-input + label');
     logLabel.textContent = 'Parsing...';
 
     let file = logInput.files[0];
