@@ -284,17 +284,62 @@ function checkPrimordialAttunements(log) {
   addReportCardItem(log, grade, summary, misaligns.map(a => a.mishap));
 }
 
-function checkArcaneBlasts(_log) {
+function checkArcaneBlasts(log) {
   // Make sure arcane blasts benefit from the +power of fire attunement and
   // ideally the +power of FGS
   // it's only a ~10%? reduction of 2.2% of your dps so uh maybe not worth it
   // also make sure it's being used enough -> 1 charge every 20 / 1.25 seconds
   // with 3 at beginning
+
+  const recharge = 16000;
+  let nextCharge = log.start + recharge;
+  let charges = 3;
+  let overcaps = 0;
+  const mishaps = [];
+  for (const cast of log.casts) {
+    if (cast.id === 5539) {
+      let mishapStart = -1;
+      while (cast.start > nextCharge && nextCharge >= 0) {
+        if (charges < 3) {
+          charges += 1;
+        } else {
+          overcaps += 1;
+          mishapStart = Math.min(mishapStart, nextCharge);
+        }
+        nextCharge += recharge;
+      }
+      if (mishapStart > 0) {
+        mishaps.push(new Mishap(mishapStart, cast.start));
+      }
+
+      charges -= 1;
+      if (nextCharge < 0) {
+        nextCharge = cast.start + recharge;
+      }
+    }
+  }
+  if (nextCharge < log.end) {
+    overcaps += Math.floor((log.end - nextCharge) / recharge);
+    mishaps.push(new Mishap(nextCharge, log.end));
+  }
+  let grade = 'D';
+  if (overcaps < 1) {
+    grade = 'S';
+  } else if (overcaps < 2) {
+    grade = 'A';
+  } else if (overcaps < 2) {
+    grade = 'B';
+  } else if (overcaps < 4) {
+    grade = 'C';
+  }
+  const chargePlural = overcaps === 1 ? 'charge' : 'charges';
+  const summary = `Lost ${overcaps} ${chargePlural} of Arcane Blast`;
+  addReportCardItem(log, grade, summary, mishaps);
 }
 
 function checkAttunementTransitions(_log) {
   // Pretty sure that every attunement swap that changes the primary element
-  // should be accompanied by a non-weapon skill
+  // should be accompanied by a skill with a long cast time
 }
 
 function checkElementsOfRageUptime(log) {
