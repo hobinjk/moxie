@@ -293,8 +293,8 @@ input[type="file"] + label:hover {
 }
 
 .grade-b {
-  border-color: #0ff;
-  color: #0ff;
+  border-color: #ff0;
+  color: #ff0;
 }
 
 .grade-c {
