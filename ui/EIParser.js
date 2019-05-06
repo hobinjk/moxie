@@ -1,17 +1,15 @@
 function parseHTML(html) {
   console.log(html);
-  let eiData = JSON.parse(/var logData = (.+);\r/.exec(html)[1]);
+  let eiData = JSON.parse(/var logData = (.+?);/.exec(html)[1]);
   let player0Details = JSON.parse(
-    /logData\.players\[0\]\.details = (.+);\r/.exec(html)[1]);
+    /logData\.players\[0\]\.details = (.+?);/.exec(html)[1]);
   eiData.players[0].details = player0Details;
 
-  console.log('wah', /var usedSkills = (.*);\r/.exec(html)[1]);
+  console.log('wah', /var usedSkills = (.+?);/.exec(html)[1]);
   const usedSkills = JSON.parse(
     /var usedSkills = (.+?);/.exec(html)[1]);
   const usedBoons = JSON.parse(
     /var usedBoons = (.+?);/.exec(html)[1]);
-  const _usedDamageMods = JSON.parse(
-    /var usedDamageMods = (.+?);/.exec(html)[1]);
 
   const usedStuff = usedSkills.concat(usedBoons);
 
