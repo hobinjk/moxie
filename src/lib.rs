@@ -97,10 +97,14 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
     let mut casts: Vec<SkillCast> = vec![];
 
     let mut player_id = 0;
+    let profession_ele = 6;
+    let spec_weaver = 56;
     for agent in &evtc.agents {
         match agent.agent {
-            parser::AgentType::Player { .. } => {
-                player_id = agent.id;
+            parser::AgentType::Player { profession, spec } => {
+                if profession == profession_ele && spec == spec_weaver {
+                    player_id = agent.id;
+                }
             }
             _ => {}
         }
