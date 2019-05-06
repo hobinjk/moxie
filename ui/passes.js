@@ -327,9 +327,9 @@ function checkArcaneBlasts(log) {
     grade = 'S';
   } else if (overcaps < 2) {
     grade = 'A';
-  } else if (overcaps < 2) {
-    grade = 'B';
   } else if (overcaps < 4) {
+    grade = 'B';
+  } else if (overcaps < 6) {
     grade = 'C';
   }
   if (nextCharge >= 0) {
@@ -341,9 +341,64 @@ function checkArcaneBlasts(log) {
   }
 }
 
-function checkAttunementTransitions(_log) {
+function checkAttunementTransitions(log) {
   // Pretty sure that every attunement swap that changes the primary element
   // should be accompanied by a skill with a long cast time
+  // fire/fire -> air/fire is fire 2 alwaaays-ish
+  // air/air -> fire/air is air 3
+  const usualTransitions = {
+    45313: true, // Flame Uprising
+    43803: true, // Quantum Strike
+    5736: true, // Fire Storm
+  };
+
+  const mishaps = [];
+
+  const fireFire =
+    log.buffs[43470].filter(event => event.hasOwnProperty('Remove')).values();
+  const airAir =
+    log.buffs[42264].filter(event => event.hasOwnProperty('Remove')).values();
+
+  let ff = fireFire.next();
+  let aa = fireFire.next();
+
+  for (const cast of log.casts) {
+    while (ff.value && ff.value.Remove < cast.start) {
+      ff = fireFire.next();
+    }
+    while (aa.value && aa.value.Remove < cast.start) {
+      aa = airAir.next();
+    }
+
+    if (ff.value && ff.value.Remove < cast.end) {
+      console.log('ff transition', cast, log.skills[cast.id]);
+      if (!usualTransitions[cast.id]) {
+        mishaps.push(new Mishap(cast.start, cast.end, log.skills[cast.id]));
+      }
+    }
+    if (aa.value && aa.value.Remove < cast.end) {
+      console.log('aa transition', cast, log.skills[cast.id]);
+      if (!usualTransitions[cast.id]) {
+        mishaps.push(new Mishap(cast.start, cast.end, log.skills[cast.id]));
+      }
+    }
+  }
+
+  let grade = 'D';
+  if (mishaps.length < 1) {
+    grade = 'S';
+  } else if (mishaps.length < 3) {
+    grade = 'A';
+  } else if (mishaps.length < 6) {
+    grade = 'B';
+  } else if (mishaps.length < 14) {
+    grade = 'C';
+  }
+  let summary = `Switched attunements during ${mishaps.length} unsafe skill`;
+  if (mishaps.length !== 1) {
+    summary += 's';
+  }
+  addReportCardItem(log, grade, summary, mishaps);
 }
 
 function checkElementsOfRageUptime(log) {
