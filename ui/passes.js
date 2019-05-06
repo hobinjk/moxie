@@ -332,9 +332,13 @@ function checkArcaneBlasts(log) {
   } else if (overcaps < 4) {
     grade = 'C';
   }
-  const chargePlural = overcaps === 1 ? 'charge' : 'charges';
-  const summary = `Lost ${overcaps} ${chargePlural} of Arcane Blast`;
-  addReportCardItem(log, grade, summary, mishaps);
+  if (nextCharge >= 0) {
+    const chargePlural = overcaps === 1 ? 'charge' : 'charges';
+    const summary = `Lost ${overcaps} ${chargePlural} of Arcane Blast`;
+    addReportCardItem(log, grade, summary, mishaps);
+  } else {
+    addReportCardItem(log, 'S', 'Missing Arcane Blast casts', []);
+  }
 }
 
 function checkAttunementTransitions(_log) {
