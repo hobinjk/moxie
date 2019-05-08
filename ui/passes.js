@@ -454,20 +454,20 @@ function checkFGSTiming(log) {
     if (isFirstFGS) {
       // Conjure FGS
       if (cast.id === 5516) {
-        firstStart = cast.start - log.start;
+        firstStart = cast.start;
       }
       // Firestorm (FGS 5)
       if (cast.id === 5531) {
-        firstEnd = cast.end - log.start;
+        firstEnd = cast.end;
         isFirstFGS = false;
       }
     } else {
       // Fiery rush (fgs 4)
       if (cast.id === 5517) {
-        secondStart = cast.start - log.start;
+        secondStart = cast.start;
       }
       if (cast.id === 5531) {
-        secondEnd = cast.end - log.start;
+        secondEnd = cast.end;
       }
     }
   }
@@ -486,9 +486,9 @@ function checkFGSTiming(log) {
   const benchSecondStart = 16840;
   const benchSecondDur = (17810 + 620) - benchSecondStart;
 
-  const diff = (firstStart - benchFirstStart) +
+  const diff = (firstStart - log.start - benchFirstStart) +
     (firstDur - benchFirstDur) +
-    (secondStart - benchSecondStart) +
+    (secondStart - log.start - benchSecondStart) +
     (secondDur - benchSecondDur);
 
   console.log('fgs diff', diff, firstStart, firstEnd, secondStart, secondEnd);
