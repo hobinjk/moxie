@@ -1,6 +1,10 @@
 import generateReportCard from './passes';
 import SkillData from './SkillData';
 import EIParser from './EIParser';
+import benchmark from './benchmark';
+import drawCastTimeline from './drawCastTimeline';
+import drawBuffTimeline from './drawBuffTimeline';
+
 const rustLoad = import('../pkg/moxie');
 
 const setupContainer = document.querySelector('.setup-container');
@@ -112,7 +116,6 @@ async function displayLog(log) {
   const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   legend.classList.add('legend');
 
-  let row = 0;
   function timeToX(time) {
     return width * (time - log.start) / (log.end - log.start);
   }
@@ -134,180 +137,41 @@ async function displayLog(log) {
     log.skills[id] = bonusSkills[id];
   }
 
-  row += 1;
-
-  const boringBuffs = {
-    'Do Nothing Transformation Buff': true,
-    'Conjure Fire Attributes': true,
-    'Conjure Fiery Greatsword': true,
-    'Number of Boons': true,
-    'Ride the Lightning': true,
-    'Signet of Restoration': true,
-    'Elemental Refreshment': true,
-    'Fire Aura': true,
-    'Fire Attunement': true,
-    'Water Attunement': true,
-    'Air Attunement': true,
-    'Earth Attunement': true,
-    'The Light of Deldrimor': true,
+  const dimensions = {
+    railHeight,
+    railPad,
+    timeToX,
   };
 
-  const boringSkills = {
-    40183: true, // Primordial Stance
-  };
-
-  const weaverBuffs = {
-    'Fire/Fire': 0,
-    'Air/Fire': 1,
-    'Air/Air': 2,
-    'Fire/Air': 3,
-    // 'Fire Attunement': 0,
-    // 'Water Attunement': 1,
-    // 'Air Attunement': 2,
-    // 'Earth Attunement': 3,
-    'Elements of Rage': 4,
-    'Primordial Stance': 5,
-  };
-
-  const buffIds = Object.keys(log.buffs).sort((a, b) => {
-    let aName = log.skills[a];
-    let bName = log.skills[b];
-    if (weaverBuffs.hasOwnProperty(aName)) {
-      if (weaverBuffs.hasOwnProperty(bName)) {
-        return weaverBuffs[aName] - weaverBuffs[bName];
-      }
-      return -1;
-    } else if (weaverBuffs.hasOwnProperty(bName)) {
-      return 1;
-    }
-    return aName.localeCompare(bName);
-  });
-
-  for (const buffId of buffIds) {
-    // if (/^[+(12]/.test(skills[buffId])) {
-    //   continue;
-    // }
-    if (!/^[A-Z]/.test(log.skills[buffId])) {
-      continue;
-    }
-
-    if (log.skills[buffId].startsWith('Guild')) {
-      continue;
-    }
-
-    if (boringBuffs[log.skills[buffId]]) {
-      continue;
-    }
-
-    const rects = [];
-    for (const event of log.buffs[buffId]) {
-      if (event.Apply) {
-        const rect = document.createElementNS('http://www.w3.org/2000/svg',
-                                              'rect');
-        rect.setAttribute('x', timeToX(event.Apply));
-        rect.setAttribute('y', (railHeight + railPad) * row);
-        rect.setAttribute('height', railHeight);
-        rects.push(rect);
-      }
-      if (event.Remove) {
-        const rect = rects.pop();
-        if (!rect) {
-          continue;
-        }
-        rect.setAttribute('width', timeToX(event.Remove) -
-                          rect.getAttribute('x'));
-        rect.classList.add('buff');
-        board.appendChild(rect);
-      }
-    }
-    for (const rect of rects.reverse()) {
-      rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
-      rect.classList.add('buff');
-      board.appendChild(rect);
-    }
-    const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    name.textContent = log.skills[buffId];
-    name.setAttribute('x', 0);
-    name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
-    name.classList.add('name');
-    legend.appendChild(name);
-    row += 1;
+  // Normalization, should be in other direction but that's difficult
+  for (const cast of benchmark) {
+    cast.start += log.start;
+    cast.end += log.start;
   }
+  drawCastTimeline(board, log, benchmark, 0, dimensions);
+  drawCastTimeline(board, log, log.casts, 1, dimensions);
+  const buffCount = drawBuffTimeline(board, legend, log, 2, dimensions);
 
-  board.style.height = row * (railHeight + railPad) - railPad + 'px';
-  legend.style.height = row * (railHeight + railPad) - railPad + 'px';
+  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  name.textContent = 'Benchmark';
+  name.setAttribute('x', 0);
+  name.setAttribute('y', railHeight / 2);
+  name.classList.add('name');
+  legend.appendChild(name);
+
+  const rowCount = buffCount + 2;
+  board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
+  legend.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
 
   timeline.appendChild(legend);
   boardContainer.appendChild(board);
   timeline.appendChild(boardContainer);
 
-  for (const cast of log.casts) {
-    if (boringSkills[cast.id]) {
-      continue;
-    }
-    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-
-    const title = document.createElementNS('http://www.w3.org/2000/svg',
-                                           'title');
-    let label = log.skills[cast.id] || cast.id;
-    label += ` (${((cast.start - log.start) / 1000).toFixed(2)}s)`;
-    title.textContent = label;
-
-    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    rect.classList.add('cast');
-    if (!cast.fired) {
-      rect.classList.add('cancel');
-    }
-
-    let text = null;
-
-    let data = SkillData.get(cast.id);
-    if (data && data.slot) {
-      let content = '';
-      let matches = data.slot.match(/Weapon_(\d)/);
-      if (matches && matches.length > 0) {
-        content = matches[1];
-        if (data.prev_chain && !data.next_chain) {
-          content += 'f';
-        }
-      }
-      if (data.slot === 'Elite') {
-        content = 'E';
-      } else if (data.slot === 'Utility') {
-        content = 'U';
-      }
-
-      text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      text.setAttribute('x', timeToX(cast.start));
-      text.setAttribute('y', railHeight / 2);
-      text.classList.add('name');
-      text.textContent = content;
-    }
-
-    rect.setAttribute('x', timeToX(cast.start));
-    rect.setAttribute('y', 0);
-    if (cast.end - cast.start > 0) {
-      rect.setAttribute('width', timeToX(cast.end) - timeToX(cast.start));
-    } else {
-      rect.setAttribute('width', 2);
-      rect.classList.add('cast-instant');
-    }
-
-    rect.setAttribute('height', railHeight);
-
-    g.appendChild(title);
-    g.appendChild(rect);
-    if (text) {
-      g.appendChild(text);
-    }
-    board.appendChild(g);
-  }
-
   const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
   needle.setAttribute('x', 0);
   needle.setAttribute('y', 0);
   needle.setAttribute('width', 2);
-  needle.setAttribute('height', row * (railHeight + railPad) - railPad);
+  needle.setAttribute('height', rowCount * (railHeight + railPad) - railPad);
   needle.classList.add('needle');
   board.appendChild(needle);
 
@@ -316,7 +180,6 @@ async function displayLog(log) {
   });
 
   generateReportCard(log);
-
 
   let boardContainerRect = boardContainer.getBoundingClientRect();
   function scrollToLogTime(logTime, scrollVideo) {
