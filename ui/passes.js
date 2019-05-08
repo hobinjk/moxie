@@ -351,6 +351,8 @@ function checkAttunementTransitions(log) {
     45313: true, // Flame Uprising
     43803: true, // Quantum Strike
     5736: true, // Fire Storm
+    // Fire Grab, slightly worse than Flame Uprising but as good as QS so w/e
+    5557: true,
   };
 
   const mishaps = [];
