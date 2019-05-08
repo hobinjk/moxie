@@ -187,6 +187,10 @@ input[type="file"] + label:hover {
   pointer-events: none;
 }
 
+.legend .name {
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+
 .name {
   font-size: 12px;
   fill: #fff;
