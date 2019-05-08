@@ -89,7 +89,7 @@ function loadEI(file) {
 
 async function displayLog(log) {
   console.log(log);
-  let drawBenchmark = false;
+  const toggleBenchmark = document.querySelector('.toggle-benchmark');
 
   log.casts.sort(function(a, b) {
     return a.start - b.start;
@@ -145,26 +145,24 @@ async function displayLog(log) {
   };
 
   let row = 0;
-  if (drawBenchmark) {
-    // Normalization, should be in other direction but that's difficult
-    for (const cast of benchmark) {
-      cast.start += log.start;
-      cast.end += log.start;
-    }
-    drawCastTimeline(board, log, benchmark, 0, dimensions);
-    row += 1;
+
+  // Normalization, should be in other direction but that's difficult
+  for (const cast of benchmark) {
+    cast.start += log.start;
+    cast.end += log.start;
   }
+  drawCastTimeline(board, log, benchmark, 0, dimensions);
+  row += 1;
+
   drawCastTimeline(board, log, log.casts, row, dimensions);
   const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions);
 
-  if (drawBenchmark) {
-    const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    name.textContent = 'Benchmark';
-    name.setAttribute('x', 0);
-    name.setAttribute('y', railHeight / 2);
-    name.classList.add('name');
-    legend.appendChild(name);
-  }
+  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  name.textContent = 'Benchmark';
+  name.setAttribute('x', 0);
+  name.setAttribute('y', railHeight / 2);
+  name.classList.add('name');
+  legend.appendChild(name);
 
   const rowCount = buffCount + 1 + row;
   board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
@@ -216,5 +214,12 @@ async function displayLog(log) {
         scrollToLogTime(start, true);
       }
     }
+  });
+
+  toggleBenchmark.addEventListener('click', function() {
+    boardContainer.classList.toggle('show-benchmark');
+    legend.classList.toggle('show-benchmark');
+    const showOrHide = legend.classList.contains('show-benchmark') ? '-' : '+';
+    toggleBenchmark.textContent = showOrHide;
   });
 }

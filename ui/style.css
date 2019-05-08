@@ -149,15 +149,39 @@ input[type="file"] + label:hover {
   display: none;
 }
 
-.timeline {
-  position: relative;
+.timeline-container {
   grid-column: 1/-1;
+  position: relative;
   width: 100%;
 }
 
+.timeline {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.toggle-benchmark {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 4px);
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  cursor: pointer;
+}
+
 .board-container {
+  position: relative;
   overflow-x: scroll;
   width: 100%;
+  top: -24px;
+}
+
+.board-container.show-benchmark {
+  top: 0;
 }
 
 .buff {
@@ -182,9 +206,14 @@ input[type="file"] + label:hover {
 
 .legend {
   position: absolute;
-  top: 0;
+  top: -24px;
   left: 4px;
   pointer-events: none;
+  z-index: 10;
+}
+
+.legend.show-benchmark {
+  top: 0;
 }
 
 .legend .name {
