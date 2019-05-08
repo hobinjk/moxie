@@ -10,6 +10,7 @@ export default function generateReportCard(log) {
   checkArcaneBlasts(log);
   checkAttunementTransitions(log);
   checkElementsOfRageUptime(log);
+  checkFGSTiming(log);
 }
 
 function addReportCardItem(log, grade, explanation, mishaps) {
@@ -443,4 +444,69 @@ function checkElementsOfRageUptime(log) {
     grade = 'C';
   }
   addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkFGSTiming(log) {
+  let firstStart = -1, firstEnd;
+  let secondStart = -1, secondEnd;
+  let isFirstFGS = true;
+  for (const cast of log.casts) {
+    if (isFirstFGS) {
+      // Conjure FGS
+      if (cast.id === 5516) {
+        firstStart = cast.start - log.start;
+      }
+      // Firestorm (FGS 5)
+      if (cast.id === 5531) {
+        firstEnd = cast.end - log.start;
+        isFirstFGS = false;
+      }
+    } else {
+      // Fiery rush (fgs 4)
+      if (cast.id === 5517) {
+        secondStart = cast.start - log.start;
+      }
+      if (cast.id === 5531) {
+        secondEnd = cast.end - log.start;
+      }
+    }
+  }
+  if (firstStart < 0) {
+    addReportCardItem(log, 'D', 'Didn\'t use FGS at all', []);
+    return;
+  }
+  if (secondStart < 0) {
+    addReportCardItem(log, 'D', 'Didn\'t pick up second FGS', []);
+    return;
+  }
+  const firstDur = firstEnd - firstStart;
+  const secondDur = secondEnd - secondStart;
+  const benchFirstStart = 2280;
+  const benchFirstDur = (4370 + 670) - benchFirstStart;
+  const benchSecondStart = 16840;
+  const benchSecondDur = (17810 + 620) - benchSecondStart;
+
+  const diff = (firstStart - benchFirstStart) +
+    (firstDur - benchFirstDur) +
+    (secondStart - benchSecondStart) +
+    (secondDur - benchSecondDur);
+
+  console.log('fgs diff', diff, firstStart, firstEnd, secondStart, secondEnd);
+
+  let grade = 'D';
+  if (diff < 500) {
+    grade = 'S';
+  } else if (diff < 1000) {
+    grade = 'A';
+  } else if (diff < 2000) {
+    grade = 'B';
+  } else if (diff < 4000) {
+    grade = 'C';
+  }
+
+  const mishaps = [
+    new Mishap(firstStart, firstEnd, 'First FGS'),
+    new Mishap(secondStart, secondEnd, 'Second FGS'),
+  ];
+  addReportCardItem(log, grade, `Goofed around with FGS for ${(diff / 1000).toPrecision(2)} seconds`, mishaps);
 }
