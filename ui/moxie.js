@@ -99,6 +99,13 @@ async function displayLog(log) {
     usedSkills[cast.id] = true;
   }
 
+  for (let id in log.skills) {
+    if (!/^[A-Z]/.test(log.skills[id])) {
+      continue;
+    }
+    usedSkills[id] = true;
+  }
+
   await SkillData.load(usedSkills);
 
   document.querySelector('.container').classList.remove('hidden');
