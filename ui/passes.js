@@ -15,6 +15,7 @@ export default function generateReportCard(log) {
   checkAttunementTransitions(log);
   checkElementsOfRageUptime(log);
   checkFGSTiming(log);
+  checkSkillUsage(log, 5736);
 }
 
 function addReportCardItem(log, grade, explanation, mishaps) {
@@ -515,4 +516,50 @@ function checkFGSTiming(log) {
     new Mishap(secondStart, secondEnd, 'Second FGS (bench is 16.84s-18.43s)'),
   ];
   addReportCardItem(log, grade, `Goofed around with FGS for ${(diff / 1000).toPrecision(2)} seconds`, mishaps);
+}
+
+function checkSkillUsage(log, skillId) {
+  // Use on cooldown after first use
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+
+  let recharge;
+  for (let fact of skillData.facts) {
+    if (fact.type === 'Recharge') {
+      recharge = fact.value * 1000 / 1.25;
+    }
+  }
+  if (!recharge) {
+    console.warn('Missing skill recharge', skillId, skillData);
+    return;
+  }
+
+  let nextCast = log.start + recharge;
+  let wastedTime = 0;
+  const mishaps = [];
+  for (const cast of log.casts) {
+    if (cast.id === skillId) {
+      if (cast.start > nextCast) {
+        wastedTime += cast.start - nextCast;
+        nextCast = cast.end + recharge;
+      }
+    }
+  }
+  const wastedCasts = Math.floor(wastedTime / recharge);
+  let grade = 'D';
+  if (wastedCasts < 1) {
+    grade = 'S';
+  } else if (wastedCasts < 2) {
+    grade = 'A';
+  } else if (wastedCasts < 4) {
+    grade = 'B';
+  } else if (wastedCasts < 6) {
+    grade = 'C';
+  }
+  const castPlural = wastedCasts === 1 ? 'cast' : 'casts';
+  const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name}`;
+  addReportCardItem(log, grade, summary, mishaps);
 }
