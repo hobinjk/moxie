@@ -507,8 +507,8 @@ function checkFGSTiming(log) {
   }
 
   const mishaps = [
-    new Mishap(firstStart, firstEnd, 'First FGS'),
-    new Mishap(secondStart, secondEnd, 'Second FGS'),
+    new Mishap(firstStart, firstEnd, 'First FGS (bench is 2.28s-5.04s)'),
+    new Mishap(secondStart, secondEnd, 'Second FGS (bench is 16.84s-18.43s)'),
   ];
   addReportCardItem(log, grade, `Goofed around with FGS for ${(diff / 1000).toPrecision(2)} seconds`, mishaps);
 }
