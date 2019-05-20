@@ -4,6 +4,10 @@ import Mishap from './Mishap';
 const reportCardItems = document.querySelector('.report-card-items');
 
 export default function generateReportCard(log) {
+  if (log.casts.length === 0) {
+    console.warn('Log has no casts');
+    return;
+  }
   checkAutoChains(log);
   checkWasted(log);
   checkPrimordialAttunements(log);
