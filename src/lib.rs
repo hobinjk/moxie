@@ -104,6 +104,8 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
             parser::AgentType::Player { profession, spec } => {
                 if profession == profession_ele && spec == spec_weaver {
                     player_id = agent.id;
+                } else if player_id == 0 {
+                    player_id = agent.id;
                 }
             }
             _ => {}
