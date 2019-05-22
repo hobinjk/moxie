@@ -1,5 +1,6 @@
 import generateReportCard from './passes';
 import SkillData from './SkillData';
+import SkillIds from './SkillIds';
 import EIParser from './EIParser';
 import benchmark from './benchmark';
 import drawCastTimeline from './drawCastTimeline';
@@ -135,10 +136,10 @@ async function displayLog(log) {
   window.xToTime = xToTime;
 
   const bonusSkills = {
-    43229: 'Fire/Air',
-    43470: 'Fire/Fire',
-    42811: 'Air/Fire',
-    42264: 'Air/Air',
+    [SkillIds.ATTUNEMENT_FIRE_AIR]: 'Fire/Air',
+    [SkillIds.ATTUNEMENT_FIRE_FIRE]: 'Fire/Fire',
+    [SkillIds.ATTUNEMENT_AIR_FIRE]: 'Air/Fire',
+    [SkillIds.ATTUNEMENT_AIR_AIR]: 'Air/Air',
   };
 
   for (const id in bonusSkills) {

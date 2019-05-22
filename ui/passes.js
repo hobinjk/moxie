@@ -1,4 +1,5 @@
 import SkillData from './SkillData';
+import SkillIds from './SkillIds';
 import Mishap from './Mishap';
 
 const reportCardItems = document.querySelector('.report-card-items');
@@ -15,7 +16,7 @@ export default function generateReportCard(log) {
   checkAttunementTransitions(log);
   checkElementsOfRageUptime(log);
   checkFGSTiming(log);
-  checkSkillUsage(log, 5736);
+  checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
 }
 
 function addReportCardItem(log, grade, explanation, mishaps) {
@@ -180,8 +181,8 @@ function checkWasted(log) {
 
 function checkPrimordialAttunements(log) {
   // Overlap between fire/fire and primordial
-  let primordial = log.buffs[42086];
-  const fireFire = log.buffs[43470];
+  let primordial = log.buffs[SkillIds.PRIMORDIAL_STANCE];
+  const fireFire = log.buffs[SkillIds.ATTUNEMENT_FIRE_FIRE];
 
   if (!primordial) {
     primordial = [];
@@ -189,7 +190,7 @@ function checkPrimordialAttunements(log) {
     let stanceDur = 5 * tick;
     let lastPrimordial = log.start - stanceDur - tick;
     for (const cast of log.casts) {
-      if (cast.id !== 40183) {
+      if (cast.id !== SkillIds.PRIMORDIAL_STANCE_EFFECT) {
         continue;
       }
       let primStart = cast.start - tick;
@@ -303,7 +304,7 @@ function checkArcaneBlasts(log) {
   let overcaps = 0;
   const mishaps = [];
   for (const cast of log.casts) {
-    if (cast.id === 5539) {
+    if (cast.id === SkillIds.ARCANE_BLAST) {
       let mishapStart = -1;
       while (cast.start > nextCharge && nextCharge >= 0) {
         if (charges < 3) {
@@ -353,19 +354,21 @@ function checkAttunementTransitions(log) {
   // fire/fire -> air/fire is fire 2 alwaaays-ish
   // air/air -> fire/air is air 3
   const usualTransitions = {
-    45313: true, // Flame Uprising
-    43803: true, // Quantum Strike
-    5736: true, // Fire Storm
+    [SkillIds.FLAME_UPRISING]: true, // Flame Uprising
+    [SkillIds.QUANTUM_STRIKE]: true, // Quantum Strike
+    [SkillIds.GLYPH_OF_STORMS_FIRE]: true, // Fire Storm
     // Fire Grab, slightly worse than Flame Uprising but as good as QS so w/e
-    5557: true,
+    [SkillIds.FIRE_GRAB]: true,
   };
 
   const mishaps = [];
 
   const fireFire =
-    log.buffs[43470].filter(event => event.hasOwnProperty('Remove')).values();
+    log.buffs[SkillIds.ATTUNEMENT_FIRE_FIRE]
+      .filter(event => event.hasOwnProperty('Remove')).values();
   const airAir =
-    log.buffs[42264].filter(event => event.hasOwnProperty('Remove')).values();
+    log.buffs[SkillIds.ATTUNEMENT_AIR_AIR]
+      .filter(event => event.hasOwnProperty('Remove')).values();
 
   let ff = fireFire.next();
   let aa = fireFire.next();
@@ -410,7 +413,7 @@ function checkAttunementTransitions(log) {
 }
 
 function checkElementsOfRageUptime(log) {
-  const elements = log.buffs[42416];
+  const elements = log.buffs[SkillIds.ELEMENTS_OF_RAGE];
 
   let downtime = 0;
   let lastApply = -1;
@@ -460,20 +463,20 @@ function checkFGSTiming(log) {
   for (const cast of log.casts) {
     if (isFirstFGS) {
       // Conjure FGS
-      if (cast.id === 5516) {
+      if (cast.id === SkillIds.CONJURE_FIERY_GREATSWORD) {
         firstStart = cast.start;
       }
       // Firestorm (FGS 5)
-      if (cast.id === 5531) {
+      if (cast.id === SkillIds.FIERY_GREATSWORD_FIRESTORM) {
         firstEnd = cast.end;
         isFirstFGS = false;
       }
     } else {
       // Fiery rush (fgs 4)
-      if (cast.id === 5517) {
+      if (cast.id === SkillIds.FIERY_GREATSWORD_FIERY_RUSH) {
         secondStart = cast.start;
       }
-      if (cast.id === 5531) {
+      if (cast.id === SkillIds.FIERY_GREATSWORD_FIRESTORM) {
         secondEnd = cast.end;
       }
     }

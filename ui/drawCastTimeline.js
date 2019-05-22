@@ -1,7 +1,8 @@
 import SkillData from './SkillData';
+import SkillIds from './SkillIds';
 
 const boringSkills = {
-  40183: true, // Primordial Stance
+  [SkillIds.PRIMORDIAL_STANCE_EFFECT]: true, // Primordial Stance
 };
 
 function drawCasts(board, log, casts, row, dimensions) {
