@@ -63,7 +63,39 @@ fn boss_parser<'a>(input: &'a [u8]) -> IResult<&'a [u8], Boss<'a>> {
 pub enum AgentType {
     Gadget {id: u32},
     NPC {id: u32},
-    Player {profession: u32, spec: u32},
+    Player {prof_spec: ProfSpec},
+}
+
+#[derive(Debug, Serialize, PartialEq)]
+pub enum ProfSpec {
+    Guardian,
+    Dragonhunter,
+    Firebrand,
+    Warrior,
+    Berserker,
+    Spellbreaker,
+    Engineer,
+    Scrapper,
+    Holosmith,
+    Ranger,
+    Druid,
+    Soulbeast,
+    Thief,
+    Daredevil,
+    Deadeye,
+    Elementalist,
+    Tempest,
+    Weaver,
+    Mesmer,
+    Chronomancer,
+    Mirage,
+    Necromancer,
+    Reaper,
+    Scourge,
+    Revenant,
+    Herald,
+    Renegade,
+    Unknown,
 }
 
 #[derive(Debug, Serialize)]
@@ -84,9 +116,38 @@ fn agent_type_parser(profession: u32, is_elite: u32) -> AgentType {
             AgentType::NPC {id: profession & 0xffffu32}
         }
     } else {
+        let ps = match (profession, is_elite) {
+            (1, 0) => ProfSpec::Guardian,
+            (1, 62) => ProfSpec::Firebrand,
+            (1, _) => ProfSpec::Dragonhunter,
+            (2, 0) => ProfSpec::Warrior,
+            (2, 61) => ProfSpec::Spellbreaker,
+            (2, _) => ProfSpec::Berserker,
+            (3, 0) => ProfSpec::Engineer,
+            (3, 57) => ProfSpec::Holosmith,
+            (3, _) => ProfSpec::Scrapper,
+            (4, 0) => ProfSpec::Ranger,
+            (4, 55) => ProfSpec::Soulbeast,
+            (4, 5) => ProfSpec::Druid,
+            (5, 0) => ProfSpec::Thief,
+            (5, 58) => ProfSpec::Deadeye,
+            (5, 7) => ProfSpec::Daredevil,
+            (6, 0) => ProfSpec::Elementalist,
+            (6, 56) => ProfSpec::Weaver,
+            (6, _) => ProfSpec::Tempest,
+            (7, 0) => ProfSpec::Mesmer,
+            (7, 59) => ProfSpec::Mirage,
+            (7, 40) => ProfSpec::Chronomancer,
+            (8, 0) => ProfSpec::Necromancer,
+            (8, 60) => ProfSpec::Scourge,
+            (8, _) => ProfSpec::Reaper,
+            (9, 0) => ProfSpec::Revenant,
+            (9, 63) => ProfSpec::Renegade,
+            (9, _) => ProfSpec::Herald,
+            _ => ProfSpec::Unknown,
+        };
         AgentType::Player {
-            profession: profession,
-            spec: is_elite
+            prof_spec: ps,
         }
     }
 }

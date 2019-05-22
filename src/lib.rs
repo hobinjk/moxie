@@ -83,11 +83,15 @@ fn get_buff_event(event: &parser::Event) -> Option<BuffEvent> {
     }
 }
 
+pub fn generate_raw_evtc<'a>(contents: Vec<u8>) -> std::io::Result<Vec<u8>> {
+    match contents[0] as char {
+        'P' => unzip(&contents),
+        _ => Ok(contents)
+    }
+}
+
 pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> {
-    let raw_evtc = match contents[0] as char {
-        'P' => unzip(&contents)?,
-        _ => contents
-    };
+    let raw_evtc = generate_raw_evtc(contents)?;
     let (_, evtc) = parser::evtc_parser(&raw_evtc).map_err(|_| std::io::Error::new(std::io::ErrorKind::Other, "I don't care"))?;
 
     let start = evtc.events[0].time;
@@ -97,12 +101,10 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
     let mut casts: Vec<SkillCast> = vec![];
 
     let mut player_id = 0;
-    let profession_ele = 6;
-    let spec_weaver = 56;
     for agent in &evtc.agents {
         match agent.agent {
-            parser::AgentType::Player { profession, spec } => {
-                if profession == profession_ele && spec == spec_weaver {
+            parser::AgentType::Player { ref prof_spec } => {
+                if *prof_spec == parser::ProfSpec::Weaver {
                     player_id = agent.id;
                 } else if player_id == 0 {
                     player_id = agent.id;
