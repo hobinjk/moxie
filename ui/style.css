@@ -32,7 +32,7 @@ body {
   color: #aaf;
 }
 
-.setup-container {
+.setup-container, .target-select-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,11 +40,26 @@ body {
   height: 100%;
 }
 
-.setup {
+.setup, .target-select {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.target-select {
+  color: #77f;
+  padding: 16px;
+  text-align: center;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+.target-select-boss-label {
+  border-bottom: 1px solid #77f;
+  padding-bottom: 2px;
+  margin-bottom: 16px;
 }
 
 /* Adapted from https://benmarshall.me/styling-file-inputs/ */
@@ -63,7 +78,7 @@ input[type="file"] {
   top: 8px;
 }
 
-input[type="file"] + label {
+input[type="file"] + label, .target-select-submit, .target-select-player-select {
   border: 1px solid #77f;
   background: none;
   color: #77f;
@@ -73,6 +88,30 @@ input[type="file"] + label {
   height: 32px;
   padding: 16px;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.target-select-submit {
+  height: auto;
+}
+
+.target-select-player-select {
+  -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+  display: block;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 2px;
+  padding-right: 48px;
+  background-image: url(caret.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  height: auto;
+  margin-bottom: 16px;
+  text-transform: none;
 }
 
 #video-input + label {
@@ -82,7 +121,9 @@ input[type="file"] + label {
 }
 
 input[type="file"]:focus + label,
-input[type="file"] + label:hover {
+input[type="file"] + label:hover,
+.target-select-submit:hover,
+.target-select-player-select:hover {
   border-color: white;
   color: white;
   outline: none;

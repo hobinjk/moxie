@@ -1,6 +1,7 @@
 import generateReportCard from './passes';
 import SkillData from './SkillData';
 import SkillIds from './SkillIds';
+import TargetSelect from './TargetSelect';
 import EIParser from './EIParser';
 import benchmark from './benchmark';
 import drawCastTimeline from './drawCastTimeline';
@@ -72,7 +73,7 @@ function loadEVTC(file, moxieParser) {
     const contents = new Uint8Array(event.target.result);
     let log = moxieParser.generate_object(contents);
     setupContainer.classList.add('hidden');
-    displayLog(log);
+    displayHeader(log);
   };
   reader.readAsArrayBuffer(file);
 }
@@ -83,9 +84,18 @@ function loadEI(file) {
     const contents = event.target.result;
     let log = EIParser.parseHTML(contents);
     setupContainer.classList.add('hidden');
-    displayLog(log);
+    displayHeader(log);
   };
   reader.readAsText(file);
+}
+
+function displayHeader(log) {
+  console.log('log', log);
+  let targetSelect = new TargetSelect(log);
+  targetSelect.listener = function(selectedPlayer) {
+    displayLog(log, selectedPlayer);
+  };
+  targetSelect.render();
 }
 
 async function displayLog(log) {
