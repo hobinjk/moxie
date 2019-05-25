@@ -12,6 +12,16 @@ const boringBuffs = {
   'Air Attunement': true,
   'Earth Attunement': true,
   'The Light of Deldrimor': true,
+  'Hylek Language Effect': true,
+  'Incoming!': true,
+  'Jump Mushroom Knowledge': true,
+  'Mushroom Tracking Knowledge': true,
+  'Nuhoch Alchemy': true,
+  'Radiant Attunement': true,
+  'Speed Mushroom Knowledge': true,
+  'Solar Beam': true,
+  'Stealth Gliding': true,
+  'Xera\'s Fury': true,
 };
 
 const weaverBuffs = {
