@@ -116,18 +116,16 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
 
     let start = evtc.events[0].time;
     let end = evtc.events[evtc.events.len() - 1].time;
-    let mut buff_events: HashMap<u32, Vec<BuffEvent>> = HashMap::new();
+    let mut buff_events_players: HashMap<u64, HashMap<u32, Vec<BuffEvent>>> = HashMap::new();
     let mut pending_skills: HashMap<u32, Vec<u64>> = HashMap::new();
-    let mut casts: Vec<SkillCast> = vec![];
+    let mut casts: HashMap<u64, Vec<SkillCast>> = HashMap::new();
 
-    let mut player_id = 0;
+    let mut player_ids: HashSet<u64> = HashSet::new();
     for agent in &evtc.agents {
         match agent.agent {
             parser::AgentType::Player { ref prof_spec } => {
-                if *prof_spec == parser::ProfSpec::Weaver {
-                    player_id = agent.id;
-                } else if player_id == 0 {
-                    player_id = agent.id;
+                if *prof_spec == parser::ProfSpec::Weaver || *prof_spec == parser::ProfSpec::Daredevil {
+                    player_ids.insert(agent.id);
                 }
             }
             _ => {}
@@ -137,11 +135,13 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
     let instants: HashSet<u32> = [40183, 5539].iter().cloned().collect();
 
     for event in &evtc.events {
-        if event.src_agent_id != player_id {
+        if !player_ids.contains(&event.src_agent_id) {
             continue;
         }
         if instants.contains(&event.skill_id) {
-            casts.push(SkillCast {
+            casts.entry(event.src_agent_id)
+                .or_insert(vec![])
+                .push(SkillCast {
                 id: event.skill_id,
                 fired: true,
                 start: event.time,
@@ -162,7 +162,9 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
                         continue;
                     }
                     let start_time = pending.remove(pending.len() - 1);
-                    casts.push(SkillCast {
+                    casts.entry(event.src_agent_id)
+                        .or_insert(vec![])
+                        .push(SkillCast {
                         id: event.skill_id,
                         fired: fired,
                         start: start_time,
@@ -171,6 +173,9 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
                 },
             }
         } else if let Some(buff_event) = get_buff_event(&event) {
+            let buff_events = buff_events_players
+                .entry(event.src_agent_id)
+                .or_insert(HashMap::new());
             if let Some(events) = buff_events.get_mut(&event.skill_id) {
                 if let Some(last_event) = events.last() {
                     // There may be a remove event at the same time as an apply event to show that
@@ -215,7 +220,7 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
         "end": end,
         "skills": skills,
         "casts": casts,
-        "buffs": buff_events,
+        "buffs": buff_events_players,
     }))
 }
 

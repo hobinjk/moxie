@@ -99,7 +99,10 @@ function displayHeader(log) {
 }
 
 async function displayLog(log, selectedPlayer) {
-  console.log(log);
+  console.log(selectedPlayer, log);
+  log.casts = log.casts[selectedPlayer.id];
+  log.buffs = log.buffs[selectedPlayer.id];
+
   const toggleBenchmark = document.querySelector('.toggle-benchmark');
 
   log.casts.sort(function(a, b) {
