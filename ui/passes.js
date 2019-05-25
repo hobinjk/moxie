@@ -4,19 +4,35 @@ import Mishap from './Mishap';
 
 const reportCardItems = document.querySelector('.report-card-items');
 
-export default function generateReportCard(log) {
+export default function generateReportCard(log, selectedPlayer) {
   if (log.casts.length === 0) {
     console.warn('Log has no casts');
     return;
   }
-  checkAutoChains(log);
-  checkWasted(log);
-  checkPrimordialAttunements(log);
-  checkArcaneBlasts(log);
-  checkAttunementTransitions(log);
-  checkElementsOfRageUptime(log);
-  checkFGSTiming(log);
-  checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
+  const spec = selectedPlayer.agent.Player.prof_spec;
+  switch (spec) {
+    case 'Weaver':
+      checkAutoChains(log);
+      checkWasted(log);
+      checkPrimordialAttunements(log);
+      checkArcaneBlasts(log);
+      checkAttunementTransitions(log);
+      checkBuffUptime(log, SkillIds.ELEMENTS_OF_RAGE, 100);
+      checkFGSTiming(log);
+      checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
+      break;
+    case 'Daredevil':
+      checkAutoChains(log);
+      checkWasted(log);
+      checkBuffUptime(log, SkillIds.ASSASSINS_SIGNET_ACTIVE, 30);
+      checkBuffUptime(log, SkillIds.BOUNDING_DODGER, 65);
+      // checkSkillUsage(log, SkillIds.steal);
+      checkSkillUsage(log, SkillIds.FIST_FLURRY);
+      break;
+    default:
+      alert('Unsupported spec', spec);
+      break;
+  }
 }
 
 function addReportCardItem(log, grade, explanation, mishaps) {
@@ -412,8 +428,8 @@ function checkAttunementTransitions(log) {
   addReportCardItem(log, grade, summary, mishaps);
 }
 
-function checkElementsOfRageUptime(log) {
-  const elements = log.buffs[SkillIds.ELEMENTS_OF_RAGE];
+function checkBuffUptime(log, buffId, targetPerc) {
+  const elements = log.buffs[buffId];
 
   let downtime = 0;
   let lastApply = -1;
@@ -441,16 +457,18 @@ function checkElementsOfRageUptime(log) {
   }
 
   const dropped = (downtime / 1000).toFixed(2);
-  const perc = Math.floor(100 * downtime / (log.end - log.start));
-  const summary = `Dropped Elements of Rage for ${dropped} seconds (${perc}%)`;
+  const perc = 100 - Math.floor(100 * downtime / (log.end - log.start));
+  const name = log.skills[buffId];
+  const summary = `${perc}% uptime on ${name} (dropped for ${dropped}s, target ${targetPerc}%)`;
   let grade = 'D';
-  if (dropped < 1) {
+  const percDiff = (targetPerc - perc) / targetPerc;
+  if (percDiff < 0.02) {
     grade = 'S';
-  } else if (dropped < 3) {
+  } else if (percDiff < 0.05) {
     grade = 'A';
-  } else if (dropped < 8) {
+  } else if (percDiff < 0.1) {
     grade = 'B';
-  } else if (dropped < 15) {
+  } else if (percDiff < 0.25) {
     grade = 'C';
   }
   addReportCardItem(log, grade, summary, mishaps);

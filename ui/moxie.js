@@ -98,7 +98,7 @@ function displayHeader(log) {
   targetSelect.render();
 }
 
-async function displayLog(log) {
+async function displayLog(log, selectedPlayer) {
   console.log(log);
   const toggleBenchmark = document.querySelector('.toggle-benchmark');
 
@@ -202,7 +202,7 @@ async function displayLog(log) {
     scrollToLogTime((video.currentTime - videoOffset) * 1000 + log.start);
   });
 
-  generateReportCard(log);
+  generateReportCard(log, selectedPlayer);
 
   let boardContainerRect = boardContainer.getBoundingClientRect();
   function scrollToLogTime(logTime, scrollVideo) {
