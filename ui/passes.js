@@ -365,6 +365,10 @@ function checkArcaneBlasts(log) {
 }
 
 function checkAttunementTransitions(log) {
+  if (!log.buffs.hasOwnProperty(SkillIds.ATTUNEMENT_FIRE_FIRE)) {
+    // Old EI html log
+    return;
+  }
   // Pretty sure that every attunement swap that changes the primary element
   // should be accompanied by a skill with a long cast time
   // fire/fire -> air/fire is fire 2 alwaaays-ish

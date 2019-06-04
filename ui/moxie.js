@@ -3,7 +3,7 @@ import SkillData from './SkillData';
 import SkillIds from './SkillIds';
 import TargetSelect from './TargetSelect';
 import EIParser from './EIParser';
-import benchmark from './benchmark';
+import benchmark from './benchmarks/btth-small';
 import drawCastTimeline from './drawCastTimeline';
 import drawBuffTimeline from './drawBuffTimeline';
 
