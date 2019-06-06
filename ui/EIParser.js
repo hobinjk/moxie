@@ -11,12 +11,26 @@ function parseHTML(html) {
     }
   }
 
-  const usedSkills = JSON.parse(
-    /var usedSkills = (.+?);/.exec(html)[1]);
-  const usedBoons = JSON.parse(
-    /var usedBoons = (.+?);/.exec(html)[1]);
+  let usedStuff = [];
+  try {
+    const usedSkills = JSON.parse(
+      /var usedSkills = (.+?);/.exec(html)[1]);
+    const usedBoons = JSON.parse(
+      /var usedBoons = (.+?);/.exec(html)[1]);
 
-  const usedStuff = usedSkills.concat(usedBoons);
+    usedStuff = usedSkills.concat(usedBoons);
+  } catch (e) {
+    if (eiData.skillMap) {
+      for (const skillKey in eiData.skillMap) {
+        usedStuff.push(eiData.skillMap[skillKey]);
+      }
+    }
+    if (eiData.buffMap) {
+      for (const buffKey in eiData.buffMap) {
+        usedStuff.push(eiData.buffMap[buffKey]);
+      }
+    }
+  }
 
   return eiLogDataToLog(eiData, usedStuff);
 }
