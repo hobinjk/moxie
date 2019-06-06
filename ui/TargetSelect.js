@@ -1,6 +1,7 @@
 const validSpecs = {
   Daredevil: true,
   Weaver: true,
+  Mirage: true,
 };
 
 export default class TargetSelect {

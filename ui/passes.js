@@ -29,6 +29,15 @@ export default function generateReportCard(log, selectedPlayer) {
       // checkSkillUsage(log, SkillIds.steal);
       checkSkillUsage(log, SkillIds.FIST_FLURRY);
       break;
+    case 'Mirage':
+      checkAutoChains(log);
+      checkWasted(log);
+      checkSkillCount(log, SkillIds.IMAGINARY_AXES, 42);
+      checkSkillCount(log, SkillIds.AXES_OF_SYMMETRY, 16);
+      checkSkillUsage(log, SkillIds.THE_PRESTIGE);
+      checkSkillUsage(log, SkillIds.MAGIC_BULLET);
+      checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
+      break;
     default:
       alert('Unsupported spec', spec);
       break;
@@ -588,4 +597,33 @@ function checkSkillUsage(log, skillId) {
   const castPlural = wastedCasts === 1 ? 'cast' : 'casts';
   const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name}`;
   addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkSkillCount(log, skillId, expectedCasts) {
+  // Use on cooldown after first use
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+
+  let casts = 0;
+  for (const cast of log.casts) {
+    if (cast.id === skillId) {
+      casts += 1;
+    }
+  }
+  let grade = 'D';
+  if (expectedCasts - casts < 1) {
+    grade = 'S';
+  } else if (expectedCasts - casts < 2) {
+    grade = 'A';
+  } else if (expectedCasts - casts < 4) {
+    grade = 'B';
+  } else if (expectedCasts - casts < 6) {
+    grade = 'C';
+  }
+  const timePlural = casts === 1 ? 'time' : 'times';
+  const summary = `Cast ${skillData.name} ${casts}/${expectedCasts} ${timePlural}`;
+  addReportCardItem(log, grade, summary, []);
 }
