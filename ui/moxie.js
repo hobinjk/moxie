@@ -3,7 +3,7 @@ import SkillData from './SkillData';
 import SkillIds from './SkillIds';
 import TargetSelect from './TargetSelect';
 import EIParser from './EIParser';
-import benchmark from './benchmarks/btth-small';
+import getBenchmarkForPlayer from './benchmark';
 import drawCastTimeline from './drawCastTimeline';
 import drawBuffTimeline from './drawBuffTimeline';
 
@@ -167,6 +167,7 @@ async function displayLog(log, selectedPlayer) {
 
   let row = 0;
 
+  let benchmark = getBenchmarkForPlayer(log, selectedPlayer);
   // Normalization, should be in other direction but that's difficult
   for (const cast of benchmark) {
     cast.start += log.start;
