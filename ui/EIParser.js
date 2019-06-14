@@ -20,23 +20,24 @@ function parseHTML(html) {
 
     usedStuff = usedSkills.concat(usedBoons);
   } catch (e) {
-    if (eiData.skillMap) {
-      for (const skillKey in eiData.skillMap) {
-        usedStuff.push(eiData.skillMap[skillKey]);
-      }
-    }
-    if (eiData.buffMap) {
-      for (const buffKey in eiData.buffMap) {
-        usedStuff.push(eiData.buffMap[buffKey]);
-      }
-    }
+    console.warn('new EI format', e);
   }
 
   return eiLogDataToLog(eiData, usedStuff);
 }
 
 function eiLogDataToLog(eiData, usedStuff) {
-  console.log('you need thihs', eiData);
+  if (eiData.skillMap) {
+    for (const skillKey in eiData.skillMap) {
+      usedStuff.push(eiData.skillMap[skillKey]);
+    }
+  }
+  if (eiData.buffMap) {
+    for (const buffKey in eiData.buffMap) {
+      usedStuff.push(eiData.buffMap[buffKey]);
+    }
+  }
+
   let allBuffs = {};
   let allCasts = {};
   let players = eiData.players.map((player, i) => {
