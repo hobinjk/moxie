@@ -32,8 +32,8 @@ export default function generateReportCard(log, selectedPlayer) {
     case 'Mirage':
       checkAutoChains(log);
       checkWasted(log);
-      checkSkillCount(log, SkillIds.IMAGINARY_AXES, 42);
-      checkSkillCount(log, SkillIds.AXES_OF_SYMMETRY, 16);
+      checkSkillFrequency(log, SkillIds.IMAGINARY_AXES, 42 / 144);
+      checkSkillFrequency(log, SkillIds.AXES_OF_SYMMETRY, 16 / 144);
       checkSkillUsage(log, SkillIds.THE_PRESTIGE);
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
@@ -599,7 +599,7 @@ function checkSkillUsage(log, skillId) {
   addReportCardItem(log, grade, summary, mishaps);
 }
 
-function checkSkillCount(log, skillId, expectedCasts) {
+function checkSkillFrequency(log, skillId, expectedCastsPerSecond) {
   // Use on cooldown after first use
   const skillData = SkillData.get(skillId);
   if (!skillData) {
@@ -614,6 +614,7 @@ function checkSkillCount(log, skillId, expectedCasts) {
     }
   }
   let grade = 'D';
+  const expectedCasts = Math.floor(expectedCastsPerSecond * (log.end - log.start) / 1000);
   if (expectedCasts - casts < 1) {
     grade = 'S';
   } else if (expectedCasts - casts < 2) {
