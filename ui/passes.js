@@ -472,7 +472,7 @@ function checkBuffUptime(log, buffId, targetPerc) {
   const dropped = (downtime / 1000).toFixed(2);
   const perc = 100 - Math.floor(100 * downtime / (log.end - log.start));
   const name = log.skills[buffId];
-  const summary = `${perc}% uptime on ${name} (dropped for ${dropped}s, target ${targetPerc}%)`;
+  const summary = `Had ${perc}% uptime on ${name} (dropped for ${dropped}s, target ${targetPerc}%)`;
   let grade = 'D';
   const percDiff = (targetPerc - perc) / targetPerc;
   if (percDiff < 0.02) {

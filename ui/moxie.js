@@ -6,6 +6,7 @@ import EIParser from './EIParser';
 import getBenchmarkForPlayer from './benchmark';
 import drawCastTimeline from './drawCastTimeline';
 import drawBuffTimeline from './drawBuffTimeline';
+import EasterEgg from './EasterEgg';
 
 const rustLoad = import('../pkg/moxie');
 
@@ -244,4 +245,6 @@ async function displayLog(log, selectedPlayer) {
     const showOrHide = legend.classList.contains('show-benchmark') ? '-' : '+';
     toggleBenchmark.textContent = showOrHide;
   });
+
+  EasterEgg.attach();
 }
