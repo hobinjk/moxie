@@ -2,10 +2,11 @@
 
 > "I guide others to a treasure I cannot possess"
 
-Tells you some of what you're doing wrong as a [Bolt to the Heart small hitbox
-sword weaver](https://snowcrows.com/raids/elementalist/weaver/sword/). Only
-tested on Firefox. This is pre-alpha code guaranteed to contain more bugs than
-all of Maguuma.
+Tells you some of what you're doing wrong as a [Bolt to the Heart
+sword weaver](https://snowcrows.com/raids/elementalist/weaver/sword/),
+[Axe Mirage](https://snowcrows.com/raids/builds/mesmer/mirage/condition/), or
+[Power Daredevil](https://snowcrows.com/raids/builds/thief/daredevil/power/).
+This is pre-alpha code guaranteed to contain more bugs than all of Maguuma.
 
 ## Usage
 
