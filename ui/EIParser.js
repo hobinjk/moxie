@@ -1,3 +1,9 @@
+async function getJson(permalink) {
+  const res = await fetch(`https://dps.report/getJson?permalink=${permalink}`);
+  const json = await res.json();
+  return eiLogDataToLog(json, []);
+}
+
 function parseHTML(html) {
   console.log(html);
   let eiData = JSON.parse(/var logData = (.+?);/.exec(html)[1]);
@@ -29,12 +35,20 @@ function parseHTML(html) {
 function eiLogDataToLog(eiData, usedStuff) {
   if (eiData.skillMap) {
     for (const skillKey in eiData.skillMap) {
-      usedStuff.push(eiData.skillMap[skillKey]);
+      const skill = eiData.skillMap[skillKey];
+      if (!skill.id) {
+        skill.id = skillKey.substr(1);
+      }
+      usedStuff.push(skill);
     }
   }
   if (eiData.buffMap) {
     for (const buffKey in eiData.buffMap) {
-      usedStuff.push(eiData.buffMap[buffKey]);
+      const buff = eiData.buffMap[buffKey];
+      if (!buff.id) {
+        buff.id = buffKey.substr(1);
+      }
+      usedStuff.push(buff);
     }
   }
 
@@ -52,29 +66,59 @@ function eiLogDataToLog(eiData, usedStuff) {
     };
   });
 
+  let apiMode = false;
   for (let i = 0; i < eiData.players.length; i++) {
-    if (!eiData.players[i].hasOwnProperty('details')) {
-      continue;
+    if (eiData.players[i].hasOwnProperty('details')) {
+      let {buffs, casts} = parseHtmlData(eiData.players[i].details);
+      allBuffs[i] = buffs;
+      allCasts[i] = casts;
+    } else {
+      let {buffs, casts} = parseApiData(eiData.players[i]);
+      apiMode = true;
+      allBuffs[i] = buffs;
+      allCasts[i] = casts;
     }
-    let details = eiData.players[i].details;
+  }
 
+  let skills = {};
 
-    let buffs = {};
-    for (let boon of details.boonGraph[0]) {
-      buffs[boon.id] = [];
-      for (let state of boon.states) {
-        let time = state[0] * 1000;
-        let stacks = state[1];
-        // TODO care about stack numbers
-        if (stacks === 0) {
-          buffs[boon.id].push({Remove: time});
-        } else {
-          buffs[boon.id].push({Apply: time});
-        }
+  for (let usedThing of usedStuff) {
+    skills[usedThing.id] = usedThing.name;
+  }
+
+  let timeMul = apiMode ? 1 : 1000;
+  return {
+    boss: eiData.fightName,
+    players,
+    start: eiData.phases[0].start * timeMul,
+    end: eiData.phases[0].end * timeMul,
+    skills,
+    casts: allCasts,
+    buffs: allBuffs,
+  };
+}
+
+function parseHtmlData(details) {
+  let buffs = {};
+  for (let boon of details.boonGraph[0]) {
+    buffs[boon.id] = [];
+    for (let state of boon.states) {
+      let time = state[0] * 1000;
+      let stacks = state[1];
+      // TODO care about stack numbers
+      if (stacks === 0) {
+        buffs[boon.id].push({Remove: time});
+      } else {
+        buffs[boon.id].push({Apply: time});
       }
     }
+  }
 
-    let casts = [];
+  let casts = [];
+  for (let rotation of details.rotation) {
+    if (!rotation[0]) {
+      continue;
+    }
     for (let cast of details.rotation[0]) {
       let time = cast[0] * 1000;
       let id = cast[1];
@@ -88,28 +132,46 @@ function eiLogDataToLog(eiData, usedStuff) {
         fired: endEvent !== 2,
       });
     }
-
-    allBuffs[i] = buffs;
-    allCasts[i] = casts;
   }
 
-  let skills = {};
+  return {buffs, casts};
+}
 
-  for (let usedThing of usedStuff) {
-    skills[usedThing.id] = usedThing.name;
+function parseApiData(player) {
+  let buffs = {};
+  let casts = [];
+
+  for (let buff of player.buffUptimes) {
+    buffs[buff.id] = [];
+    for (let state of buff.states) {
+      let [time, stacks] = state;
+      if (stacks === 0) {
+        buffs[buff.id].push({Remove: time});
+      } else {
+        buffs[buff.id].push({Apply: time});
+      }
+    }
   }
 
-  return {
-    boss: eiData.fightName,
-    players,
-    start: 0,
-    end: eiData.phases[0].end * 1000,
-    skills,
-    casts: allCasts,
-    buffs: allBuffs,
-  };
+  for (let skill of player.rotation) {
+    let id = skill.id;
+    for (let cast of skill.skills) {
+      let start = cast.castTime;
+      let end = start + cast.duration;
+      let fired = cast.duration + cast.timeGained >= 0;
+      casts.push({
+        id,
+        start,
+        end,
+        fired,
+      });
+    }
+  }
+
+  return {buffs, casts};
 }
 
 export default {
   parseHTML,
+  getJson,
 };

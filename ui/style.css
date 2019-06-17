@@ -47,6 +47,16 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.setup {
+  text-align: center;
+}
+
+.separator {
+  color: #77f;
+  padding-bottom: 16px;
+  margin: 16px;
+}
+
 .target-select {
   color: #77f;
   padding: 16px;
@@ -78,7 +88,8 @@ input[type="file"] {
   top: 8px;
 }
 
-input[type="file"] + label, .target-select-submit, .target-select-player-select {
+input[type="file"] + label, .target-select-submit,
+.target-select-player-select, .dpsreport-text, .dpsreport-submit {
   border: 1px solid #77f;
   background: none;
   color: #77f;
@@ -91,11 +102,11 @@ input[type="file"] + label, .target-select-submit, .target-select-player-select 
   cursor: pointer;
 }
 
-.target-select-submit {
+.target-select-submit, .dpsreport-submit {
   height: auto;
 }
 
-.target-select-player-select {
+.target-select-player-select, .dpsreport-text {
   -moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -105,13 +116,24 @@ input[type="file"] + label, .target-select-submit, .target-select-player-select 
   border-left: none;
   border-right: none;
   padding: 2px;
+  height: auto;
+  margin-bottom: 16px;
+  text-transform: none;
+}
+
+.target-select-player-select {
   padding-right: 48px;
   background-image: url(caret.svg);
   background-position: right;
   background-repeat: no-repeat;
-  height: auto;
-  margin-bottom: 16px;
-  text-transform: none;
+}
+
+.dpsreport-text {
+  font-size: 16px;
+  width: calc(16px * 23);
+  display: inline-block;
+  margin-right: 16px;
+  cursor: auto;
 }
 
 #video-input + label {

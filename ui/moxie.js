@@ -16,6 +16,21 @@ setup();
 async function setup() {
   let moxieParser = await rustLoad;
 
+  const dpsReportText = document.querySelector('.dpsreport-text');
+  const dpsReportSubmit = document.querySelector('.dpsreport-submit');
+
+  dpsReportSubmit.addEventListener('click', function dpsReportListener() {
+    let urlText = dpsReportText.value.trim();
+    if (!/^https:\/\/dps\.report\/[^/]+$/.test(urlText)) {
+      alert('Paste in format https://dps.report/Sosx-20180802-193036_cairn');
+      return;
+    }
+    let url = new URL(urlText);
+    dpsReportText.textContent = 'Fetching';
+    dpsReportSubmit.removeEventListener('click', dpsReportListener);
+    loadDpsReport(url.pathname.substr(1));
+  });
+
   let logInput = document.getElementById('log-input');
   logInput.addEventListener('change', function() {
     let logLabel = document.querySelector('#log-input + label');
@@ -88,6 +103,13 @@ function loadEI(file) {
     displayHeader(log);
   };
   reader.readAsText(file);
+}
+
+function loadDpsReport(slug) {
+  EIParser.getJson(slug).then(function(log) {
+    setupContainer.classList.add('hidden');
+    displayHeader(log);
+  });
 }
 
 function displayHeader(log) {
