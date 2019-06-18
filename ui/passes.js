@@ -614,7 +614,8 @@ function checkSkillFrequency(log, skillId, expectedCastsPerSecond) {
     }
   }
   let grade = 'D';
-  const expectedCasts = Math.floor(expectedCastsPerSecond * (log.end - log.start) / 1000);
+  const expectedCasts =
+    Math.floor(expectedCastsPerSecond * (log.end - log.start) / 1000);
   if (expectedCasts - casts < 1) {
     grade = 'S';
   } else if (expectedCasts - casts < 2) {
