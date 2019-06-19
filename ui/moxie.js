@@ -19,17 +19,27 @@ async function setup() {
   const dpsReportText = document.querySelector('.dpsreport-text');
   const dpsReportSubmit = document.querySelector('.dpsreport-submit');
 
-  dpsReportSubmit.addEventListener('click', function dpsReportListener() {
+  function dpsReportListener() {
     let urlText = dpsReportText.value.trim();
     if (!/^https:\/\/dps\.report\/[^/]+$/.test(urlText)) {
       alert('Paste in format https://dps.report/Sosx-20180802-193036_cairn');
       return;
     }
     let url = new URL(urlText);
-    dpsReportText.textContent = 'Fetching';
+    dpsReportSubmit.value = 'Fetching';
     dpsReportSubmit.removeEventListener('click', dpsReportListener);
+    dpsReportSubmit.removeEventListener('keypress', dpsTextListener);
     loadDpsReport(url.pathname.substr(1));
-  });
+  }
+
+  function dpsTextListener(event) {
+    if (event.key === 'Enter') {
+      dpsReportListener();
+    }
+  }
+
+  dpsReportSubmit.addEventListener('click', dpsReportListener);
+  dpsReportText.addEventListener('keypress', dpsTextListener);
 
   let logInput = document.getElementById('log-input');
   logInput.addEventListener('change', function() {
@@ -107,8 +117,14 @@ function loadEI(file) {
 
 function loadDpsReport(slug) {
   EIParser.getJson(slug).then(function(log) {
+    if (!log) {
+      // TODO: should reset state of app
+      return;
+    }
     setupContainer.classList.add('hidden');
     displayHeader(log);
+  }).catch(_ => {
+    alert('failed to fetch that log, typo maybe?');
   });
 }
 

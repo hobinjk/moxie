@@ -1,6 +1,11 @@
 async function getJson(permalink) {
   const res = await fetch(`https://dps.report/getJson?permalink=${permalink}`);
   const json = await res.json();
+
+  if (json.hasOwnProperty('error')) {
+    alert(`failed to fetch that log, message from dps.report: "${json.error}"`);
+    return;
+  }
   return eiLogDataToLog(json, []);
 }
 
