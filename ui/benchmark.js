@@ -2,6 +2,7 @@ import benchmarkDaredevil from './benchmarks/daredevil';
 import benchmarkMirage from './benchmarks/mirage';
 import benchmarkBtthSmall from './benchmarks/btth-small';
 import benchmarkBtthLarge from './benchmarks/btth-large';
+import benchmarkChronoDomi from './benchmarks/chrono-domi-two-clone';
 import SkillIds from './SkillIds';
 
 export default function(log, selectedPlayer) {
@@ -21,6 +22,9 @@ export default function(log, selectedPlayer) {
   }
   if (spec === 'Mirage') {
     return benchmarkMirage;
+  }
+  if (spec === 'Chronomancer') {
+    return benchmarkChronoDomi;
   }
 
   return [];

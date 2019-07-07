@@ -44,6 +44,8 @@ function drawCasts(board, log, casts, row, dimensions) {
         content = 'E';
       } else if (data.slot === 'Utility') {
         content = 'U';
+      } else if (data.slot === 'Heal') {
+        content = 'H';
       }
 
       text = document.createElementNS('http://www.w3.org/2000/svg', 'text');

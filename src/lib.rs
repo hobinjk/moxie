@@ -126,6 +126,7 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
             parser::AgentType::Player { ref prof_spec } => {
                 if *prof_spec == parser::ProfSpec::Weaver ||
                    *prof_spec == parser::ProfSpec::Daredevil ||
+                   *prof_spec == parser::ProfSpec::Chronomancer ||
                    *prof_spec == parser::ProfSpec::Mirage {
                     player_ids.insert(agent.id);
                 }

@@ -38,6 +38,18 @@ export default function generateReportCard(log, selectedPlayer) {
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
       break;
+    case 'Chronomancer': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSigLeni);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
+      checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
+      break;
+    }
     default:
       alert('Unsupported spec', spec);
       break;
@@ -553,7 +565,7 @@ function checkFGSTiming(log) {
   addReportCardItem(log, grade, `Goofed around with FGS for ${(diff / 1000).toFixed(2)} seconds`, mishaps);
 }
 
-function checkSkillUsage(log, skillId) {
+function checkSkillUsage(log, skillId, options = {}) {
   // Use on cooldown after first use
   const skillData = SkillData.get(skillId);
   if (!skillData) {
@@ -575,16 +587,26 @@ function checkSkillUsage(log, skillId) {
   let nextCast = log.start + recharge;
   let wastedTime = 0;
   const mishaps = [];
+  let resets = options.resets;
   for (const cast of log.casts) {
+    if (resets && resets.has(cast.id)) {
+      nextCast = cast.end;
+    }
     if (cast.id === skillId) {
       if (cast.start > nextCast) {
-        wastedTime += cast.start - nextCast;
-        nextCast = cast.end + recharge;
+        let wasted = cast.start - nextCast;
+        if (wasted > 200) {
+          mishaps.push(new Mishap(nextCast, cast.start));
+        }
+        wastedTime += wasted;
       }
+      nextCast = cast.end + recharge;
     }
   }
-  const wastedCasts = Math.floor(wastedTime / recharge);
+  let wastedCasts = Math.floor(wastedTime / recharge);
   let grade = 'D';
+  const leniency = options.leniency || 0;
+  wastedCasts -= leniency;
   if (wastedCasts < 1) {
     grade = 'S';
   } else if (wastedCasts < 2) {
@@ -594,6 +616,7 @@ function checkSkillUsage(log, skillId) {
   } else if (wastedCasts < 6) {
     grade = 'C';
   }
+  wastedCasts += leniency;
   const castPlural = wastedCasts === 1 ? 'cast' : 'casts';
   const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name}`;
   addReportCardItem(log, grade, summary, mishaps);
