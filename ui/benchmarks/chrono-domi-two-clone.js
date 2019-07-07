@@ -1,3 +1,4 @@
+// Thanks to [CnD] Lunar. Video: https://www.youtube.com/watch?v=klYdqWc9gLc
 export default [
   {
     "id": 10173,

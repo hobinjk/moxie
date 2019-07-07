@@ -1,3 +1,4 @@
+// Thanks to Vitarain/L E F T. Video: https://www.youtube.com/watch?v=a5af0R1ae7E
 export default [
   {
     "id": 29911,

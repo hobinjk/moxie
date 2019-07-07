@@ -1,3 +1,4 @@
+// Thanks to [SC] Baguette. Video: https://www.youtube.com/watch?v=s-JEUOI0Lis
 export default [
   {
     "id": 10285,

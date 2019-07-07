@@ -1,3 +1,4 @@
+// Thanks to [cL] Trace. Video: https://www.youtube.com/watch?v=Q5ER-QS1dWo
 export default [
   {
     "id": 10333,
