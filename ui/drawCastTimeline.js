@@ -28,7 +28,7 @@ function drawCasts(board, log, casts, row, dimensions) {
       rect.classList.add('cancel');
     }
 
-    let text = null;
+    let skillLabel = null;
 
     let data = SkillData.get(cast.id);
     if (data && data.slot) {
@@ -47,12 +47,18 @@ function drawCasts(board, log, casts, row, dimensions) {
       } else if (data.slot === 'Heal') {
         content = 'H';
       }
+      skillLabel = content;
+    } else if (log.skills[cast.id] === 'Dodge') {
+      skillLabel = 'D';
+    }
 
+    let text = null;
+    if (skillLabel) {
       text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('x', timeToX(cast.start));
       text.setAttribute('y', (railHeight + railPad) * row + railHeight / 2);
       text.classList.add('name');
-      text.textContent = content;
+      text.textContent = skillLabel;
     }
 
     rect.setAttribute('x', timeToX(cast.start));
