@@ -3,6 +3,8 @@ import benchmarkMirage from './benchmarks/mirage';
 import benchmarkBtthSmall from './benchmarks/btth-small';
 import benchmarkBtthLarge from './benchmarks/btth-large';
 import benchmarkChronoDomi from './benchmarks/chrono-domi-two-clone';
+import benchmarkRenKalla from './benchmarks/renegade-condi-kalla.js';
+import benchmarkRenShiro from './benchmarks/renegade-condi-shiro.js';
 import SkillIds from './SkillIds';
 
 export default function(log, selectedPlayer) {
@@ -25,6 +27,13 @@ export default function(log, selectedPlayer) {
   }
   if (spec === 'Chronomancer') {
     return benchmarkChronoDomi;
+  }
+  if (spec === 'Renegade') {
+    if (log.buffs.hasOwnProperty(SkillIds.LEGENDARY_ASSASSIN_STANCE)) {
+      return benchmarkRenShiro;
+    } else {
+      return benchmarkRenKalla;
+    }
   }
 
   return [];

@@ -3,6 +3,7 @@ const validSpecs = {
   Weaver: true,
   Mirage: true,
   Chronomancer: true,
+  Renegade: true,
 };
 
 export default class TargetSelect {

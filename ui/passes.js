@@ -50,6 +50,12 @@ export default function generateReportCard(log, selectedPlayer) {
       checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
       break;
     }
+    case 'Renegade': {
+      // Energy simulation time :flex:
+      checkAutoChains(log);
+      checkWasted(log);
+      break;
+    }
     default:
       alert('Unsupported spec', spec);
       break;
