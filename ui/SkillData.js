@@ -1,7 +1,15 @@
+const DEBUG = false;
+
 class SkillData {
   constructor() {
     this.loadSkill = this.loadSkill.bind(this);
     this.data = {};
+    if (DEBUG) {
+      this.failuresLog = document.createElement('div');
+      this.failuresLog.style.display = 'none';
+      this.failuresLog.id = 'failures-log';
+      document.body.appendChild(this.failuresLog);
+    }
   }
 
   load(skills) {
@@ -15,6 +23,9 @@ class SkillData {
       this.data[id] = data;
     } catch (e) {
       console.log('could not fetch', id);
+      if (DEBUG) {
+        this.failuresLog.innerHTML += `curl https://api.guildwars2.com/v2/skills/${id} > ${id}.json<br/>\n`;
+      }
     }
   }
 
