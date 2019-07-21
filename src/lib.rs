@@ -123,13 +123,8 @@ pub fn generate_output(contents: Vec<u8>) -> std::io::Result<serde_json::Value> 
     let mut player_ids: HashSet<u64> = HashSet::new();
     for agent in &evtc.agents {
         match agent.agent {
-            parser::AgentType::Player { ref prof_spec } => {
-                if *prof_spec == parser::ProfSpec::Weaver ||
-                   *prof_spec == parser::ProfSpec::Daredevil ||
-                   *prof_spec == parser::ProfSpec::Chronomancer ||
-                   *prof_spec == parser::ProfSpec::Mirage {
-                    player_ids.insert(agent.id);
-                }
+            parser::AgentType::Player { .. } => {
+                player_ids.insert(agent.id);
             }
             _ => {}
         }
