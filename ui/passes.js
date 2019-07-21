@@ -22,7 +22,7 @@ export default function generateReportCard(log, selectedPlayer) {
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
       break;
     case 'Daredevil':
-      checkAutoChains(log);
+      checkAutoChains(log, true);
       checkWasted(log);
       checkBuffUptime(log, SkillIds.ASSASSINS_SIGNET_ACTIVE, 30);
       checkBuffUptime(log, SkillIds.BOUNDING_DODGER, 65);
@@ -94,7 +94,7 @@ function addReportCardItem(log, grade, explanation, mishaps) {
   console.log('additional data', mishaps);
 }
 
-function checkAutoChains(log) {
+function checkAutoChains(log, strict) {
   const chains = [];
 
   for (const cast of log.casts) {
@@ -138,6 +138,31 @@ function checkAutoChains(log) {
   const dur = log.casts[log.casts.length - 1].end - log.casts[0].start;
   console.log('eliminating one', 1 - (dur - wastedOne.total) / dur);
   console.log('eliminating two', 1 - (dur - wastedTwo.total) / dur);
+
+
+  if (strict) {
+    let woGrade = '';
+    if (wastedOne.chains.length === 0) {
+      woGrade = 'S';
+    } else if (wastedOne.chains.length < 3) {
+      woGrade = 'A';
+    } else if (wastedOne.chains.length < 7) {
+      woGrade = 'B';
+    } else if (wastedOne.chains.length < 15) {
+      woGrade = 'C';
+    } else {
+      woGrade = 'D';
+    }
+
+    let attacks = 'attack';
+    if (wastedOne.chains.length !== 1) {
+      attacks += 's';
+    }
+    let woSummary = `Let ${wastedOne.chains.length} single auto ${attacks} happen`;
+    addReportCardItem(log, woGrade, woSummary, wastedOne.chains.map((chain) => {
+      return new Mishap(chain[0].start, chain[chain.length - 1].end);
+    }));
+  }
 
   let wtGrade = '';
   if (wastedTwo.chains.length === 0) {
