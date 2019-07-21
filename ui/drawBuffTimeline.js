@@ -24,17 +24,33 @@ const boringBuffs = {
   'Xera\'s Fury': true,
 };
 
-const weaverBuffs = {
+const profSpecificBuffs = {
+  // Weaver
   'Fire/Fire': 0,
   'Air/Fire': 1,
   'Air/Air': 2,
   'Fire/Air': 3,
-  // 'Fire Attunement': 0,
-  // 'Water Attunement': 1,
-  // 'Air Attunement': 2,
-  // 'Earth Attunement': 3,
   'Elements of Rage': 4,
   'Primordial Stance': 5,
+  // Chrono
+  'Fencer\'s Finess': 0,
+  'Time Anchored': 1,
+  'Signet of the Ether': 2,
+  // Daredevil
+  'Assassin\'s Signet (Passive)': 0,
+  'Assassin\'s Signet (Active)': 1,
+  'Bounding Dodger': 2,
+  Revealed: 3,
+  // Mirage
+  'Mirage Cloak': 0,
+  // Renegade
+  'Legendary Demon Stance': 0,
+  'Legendary Assassin Stance': 1,
+  'Legendary Renegade Stance': 2,
+  'Embrace the Darkness': 3,
+  'Impossible Odds': 4,
+  'Razorclaw\'s Rage': 5,
+  'Improved Kalla\'s Fervor': 6,
 };
 
 function draw(board, legend, log, startRow, dimensions) {
@@ -43,12 +59,12 @@ function draw(board, legend, log, startRow, dimensions) {
   const buffIds = Object.keys(log.buffs).sort((a, b) => {
     let aName = log.skills[a];
     let bName = log.skills[b];
-    if (weaverBuffs.hasOwnProperty(aName)) {
-      if (weaverBuffs.hasOwnProperty(bName)) {
-        return weaverBuffs[aName] - weaverBuffs[bName];
+    if (profSpecificBuffs.hasOwnProperty(aName)) {
+      if (profSpecificBuffs.hasOwnProperty(bName)) {
+        return profSpecificBuffs[aName] - profSpecificBuffs[bName];
       }
       return -1;
-    } else if (weaverBuffs.hasOwnProperty(bName)) {
+    } else if (profSpecificBuffs.hasOwnProperty(bName)) {
       return 1;
     }
     return aName.localeCompare(bName);
