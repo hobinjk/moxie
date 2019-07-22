@@ -171,11 +171,13 @@ async function displayLog(log, selectedPlayer) {
   const timeline = document.querySelector('.timeline');
   const boardContainer = document.createElement('div');
   boardContainer.classList.add('board-container');
+  boardContainer.classList.add('show-benchmark');
   const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   board.style.width = width + 'px';
 
   const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   legend.classList.add('legend');
+  legend.classList.add('show-benchmark');
 
   function timeToX(time) {
     return width * (time - log.start) / (log.end - log.start);
