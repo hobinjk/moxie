@@ -117,6 +117,10 @@ function checkAutoChains(log, strict) {
         chains.push([cast]);
       }
       if (data.prev_chain) {
+        if (!chains[chains.length - 1]) {
+          console.warn('Phantom chain!', cast);
+          continue;
+        }
         chains[chains.length - 1].push(cast);
       }
     }
