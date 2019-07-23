@@ -9,32 +9,8 @@ async function getJson(permalink) {
   return eiLogDataToLog(json, []);
 }
 
-function parseHTML(html) {
-  console.log(html);
-  let eiData = JSON.parse(/var logData = (.+?);/.exec(html)[1]);
-
-  for (let i = 0; i < eiData.players.length; i++) {
-    let playerRe = new RegExp(`logData\\.players\\[${i}\\]\\.details = (.+?);`);
-    let detailsRaw = playerRe.exec(html);
-    if (detailsRaw && detailsRaw.length > 1) {
-      let details = JSON.parse(detailsRaw[1]);
-      eiData.players[i].details = details;
-    }
-  }
-
-  let usedStuff = [];
-  try {
-    const usedSkills = JSON.parse(
-      /var usedSkills = (.+?);/.exec(html)[1]);
-    const usedBoons = JSON.parse(
-      /var usedBoons = (.+?);/.exec(html)[1]);
-
-    usedStuff = usedSkills.concat(usedBoons);
-  } catch (e) {
-    console.warn('new EI format', e);
-  }
-
-  return eiLogDataToLog(eiData, usedStuff);
+function parseJson(json) {
+  return eiLogDataToLog(json, []);
 }
 
 function eiLogDataToLog(eiData, usedStuff) {
@@ -59,6 +35,8 @@ function eiLogDataToLog(eiData, usedStuff) {
 
   let allBuffs = {};
   let allCasts = {};
+  let targetDamage1S = {};
+
   let players = eiData.players.map((player, i) => {
     return {
       id: i,
@@ -83,6 +61,10 @@ function eiLogDataToLog(eiData, usedStuff) {
       allBuffs[i] = buffs;
       allCasts[i] = casts;
     }
+    const tdps = eiData.players[i].targetDamage1S;
+    if (tdps && tdps[0]) {
+      targetDamage1S[i] = tdps[0][0];
+    }
   }
 
   let skills = {};
@@ -90,6 +72,7 @@ function eiLogDataToLog(eiData, usedStuff) {
   for (let usedThing of usedStuff) {
     skills[usedThing.id] = usedThing.name;
   }
+
 
   let timeMul = apiMode ? 1 : 1000;
   return {
@@ -100,6 +83,7 @@ function eiLogDataToLog(eiData, usedStuff) {
     skills,
     casts: allCasts,
     buffs: allBuffs,
+    targetDamage1S,
   };
 }
 
@@ -177,6 +161,6 @@ function parseApiData(player) {
 }
 
 export default {
-  parseHTML,
+  parseJson,
   getJson,
 };

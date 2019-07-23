@@ -6,6 +6,7 @@ import EIParser from './EIParser';
 import getBenchmarkForPlayer from './benchmark';
 import drawCastTimeline from './drawCastTimeline';
 import drawBuffTimeline from './drawBuffTimeline';
+import drawDpsGraph from './drawDpsGraph';
 import EasterEgg from './EasterEgg';
 
 const setupContainer = document.querySelector('.setup-container');
@@ -45,7 +46,7 @@ async function setup() {
     let file = logInput.files[0];
 
     setTimeout(function() {
-      loadEIJSON(file);
+      loadEIJson(file);
     }, 100);
   });
   setupContainer.classList.remove('hidden');
@@ -83,12 +84,12 @@ async function setup() {
   });
 }
 
-function loadEIJSON(file) {
+function loadEIJson(file) {
   const reader = new FileReader();
   reader.onload = function(event) {
     try {
       const contents = event.target.result;
-      let log = EIParser.fromJson(JSON.parse(contents));
+      let log = EIParser.parseJson(JSON.parse(contents));
       setupContainer.classList.add('hidden');
       displayHeader(log);
     } catch (_e) {
@@ -124,6 +125,7 @@ async function displayLog(log, selectedPlayer) {
   console.log(selectedPlayer, log);
   log.casts = log.casts[selectedPlayer.id];
   log.buffs = log.buffs[selectedPlayer.id];
+  log.targetDamage1S = log.targetDamage1S[selectedPlayer.id];
 
   const toggleBenchmark = document.querySelector('.toggle-benchmark');
 
@@ -186,29 +188,42 @@ async function displayLog(log, selectedPlayer) {
   const dimensions = {
     railHeight,
     railPad,
+    width,
     timeToX,
   };
 
-  let row = 0;
+  let row = 3;
 
   let benchmark = getBenchmarkForPlayer(log, selectedPlayer);
+  drawDpsGraph(board, log, benchmark, dimensions);
+
   // Normalization, should be in other direction but that's difficult
-  for (const cast of benchmark) {
+  for (const cast of benchmark.casts) {
     cast.start += log.start;
     cast.end += log.start;
   }
-  drawCastTimeline(board, log, benchmark, 0, dimensions);
+  drawCastTimeline(board, log, benchmark.casts, row, dimensions);
+
+  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  name.textContent = 'Benchmark';
+  name.setAttribute('x', 0);
+  name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
+  name.classList.add('name');
+  legend.appendChild(name);
+
   row += 1;
 
   drawCastTimeline(board, log, log.casts, row, dimensions);
   const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions);
 
-  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  name.textContent = 'Benchmark';
-  name.setAttribute('x', 0);
-  name.setAttribute('y', railHeight / 2);
-  name.classList.add('name');
-  legend.appendChild(name);
+  const dpsGraphLabel = document.createElementNS('http://www.w3.org/2000/svg',
+                                                 'text');
+  dpsGraphLabel.textContent = 'Damage per 10s';
+  dpsGraphLabel.setAttribute('x', 0);
+  dpsGraphLabel.setAttribute('y', railHeight / 2);
+  dpsGraphLabel.classList.add('name');
+  legend.appendChild(dpsGraphLabel);
+
 
   const rowCount = buffCount + 1 + row;
   board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';

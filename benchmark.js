@@ -36,5 +36,8 @@ export default function(log, selectedPlayer) {
     }
   }
 
-  return [];
+  return {
+    targetDamage10S: [],
+    casts: [],
+  };
 }

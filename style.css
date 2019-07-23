@@ -212,6 +212,12 @@ input[type="file"] + label:hover,
   display: none;
 }
 
+.dps-graph-container {
+  grid-column: 1/-1;
+  position: relative;
+  width: 100%;
+}
+
 .timeline-container {
   grid-column: 1/-1;
   position: relative;
@@ -401,4 +407,9 @@ input[type="file"] + label:hover,
 .grade-d {
   border-color: #f00;
   color: #f00;
+}
+
+.dps-path {
+  fill: none;
+  stroke: #77f;
 }
