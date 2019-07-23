@@ -5,7 +5,7 @@ const boringSkills = {
   [SkillIds.PRIMORDIAL_STANCE_EFFECT]: true, // Primordial Stance
 };
 
-function drawCasts(board, log, casts, row, dimensions) {
+function drawCasts(board, log, casts, row, dimensions, rectClass) {
   const {railHeight, railPad, timeToX} = dimensions;
 
   for (const cast of casts) {
@@ -26,6 +26,9 @@ function drawCasts(board, log, casts, row, dimensions) {
     rect.classList.add('cast');
     if (!cast.fired) {
       rect.classList.add('cancel');
+    }
+    if (rectClass) {
+      rect.classList.add(rectClass);
     }
 
     let skillLabel = null;

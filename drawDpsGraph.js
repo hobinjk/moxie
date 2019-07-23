@@ -28,7 +28,7 @@ function getPath(log, dps10s, max, dimensions) {
     } else {
       points += 'L';
     }
-    points += Math.floor(x) + ' ' + Math.floor(y) + ' ';
+    points += x + ' ' + y + ' ';
   }
   const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
@@ -46,7 +46,7 @@ function draw(graph, log, benchmark, dimensions) {
 
   let path = getPath(log, dps10s, realMax, dimensions);
   let benchPath = getPath(log, benchDps10s, realMax, dimensions);
-  benchPath.classList.add('dps-path-bench');
+  benchPath.classList.add('dps-path-benchmark');
 
   graph.appendChild(path);
   graph.appendChild(benchPath);

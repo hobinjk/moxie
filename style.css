@@ -273,6 +273,11 @@ input[type="file"] + label:hover,
   opacity: 0.5;
 }
 
+.cast.benchmark {
+  fill: #5a5;
+  stroke: none;
+}
+
 .legend {
   position: absolute;
   top: -24px;
@@ -412,4 +417,9 @@ input[type="file"] + label:hover,
 .dps-path {
   fill: none;
   stroke: #77f;
+}
+
+.dps-path-benchmark {
+  fill: none;
+  stroke: #7f7;
 }

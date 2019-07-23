@@ -202,7 +202,7 @@ async function displayLog(log, selectedPlayer) {
     cast.start += log.start;
     cast.end += log.start;
   }
-  drawCastTimeline(board, log, benchmark.casts, row, dimensions);
+  drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark');
 
   const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   name.textContent = 'Benchmark';
