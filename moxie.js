@@ -8,14 +8,10 @@ import drawCastTimeline from './drawCastTimeline';
 import drawBuffTimeline from './drawBuffTimeline';
 import EasterEgg from './EasterEgg';
 
-const rustLoad = import('../pkg/moxie');
-
 const setupContainer = document.querySelector('.setup-container');
 setup();
 
 async function setup() {
-  let moxieParser = await rustLoad;
-
   const dpsReportText = document.querySelector('.dpsreport-text');
   const dpsReportSubmit = document.querySelector('.dpsreport-submit');
 
@@ -49,13 +45,7 @@ async function setup() {
     let file = logInput.files[0];
 
     setTimeout(function() {
-      if (file.name.endsWith('.evtc') ||
-          file.name.endsWith('.zevtc') ||
-          file.name.endsWith('.evtc.zip')) {
-        loadEVTC(file, moxieParser);
-      } else {
-        loadEI(file);
-      }
+      loadEIJSON(file);
     }, 100);
   });
   setupContainer.classList.remove('hidden');
@@ -93,24 +83,17 @@ async function setup() {
   });
 }
 
-function loadEVTC(file, moxieParser) {
+function loadEIJSON(file) {
   const reader = new FileReader();
   reader.onload = function(event) {
-    const contents = new Uint8Array(event.target.result);
-    let log = moxieParser.generate_object(contents);
-    setupContainer.classList.add('hidden');
-    displayHeader(log);
-  };
-  reader.readAsArrayBuffer(file);
-}
-
-function loadEI(file) {
-  const reader = new FileReader();
-  reader.onload = function(event) {
-    const contents = event.target.result;
-    let log = EIParser.parseHTML(contents);
-    setupContainer.classList.add('hidden');
-    displayHeader(log);
+    try {
+      const contents = event.target.result;
+      let log = EIParser.fromJson(JSON.parse(contents));
+      setupContainer.classList.add('hidden');
+      displayHeader(log);
+    } catch (_e) {
+      alert('Failed to parse log file, should be JSON blob');
+    }
   };
   reader.readAsText(file);
 }
