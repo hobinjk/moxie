@@ -159,6 +159,7 @@ async function displayLog(log, selectedPlayer) {
   boardContainer.classList.add('show-benchmark');
   const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   board.style.width = width + 'px';
+  boardContainer.appendChild(board);
 
   const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   legend.classList.add('legend');
@@ -190,6 +191,7 @@ async function displayLog(log, selectedPlayer) {
     railPad,
     width,
     timeToX,
+    xToTime,
   };
 
   let row = 3;
@@ -230,7 +232,6 @@ async function displayLog(log, selectedPlayer) {
   legend.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
 
   timeline.appendChild(legend);
-  boardContainer.appendChild(board);
   timeline.appendChild(boardContainer);
 
   const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');

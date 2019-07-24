@@ -290,7 +290,7 @@ input[type="file"] + label:hover,
   top: 0;
 }
 
-.legend .name {
+.legend .name, .tooltip-explanation {
   filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
 
@@ -417,9 +417,30 @@ input[type="file"] + label:hover,
 .dps-path {
   fill: none;
   stroke: #77f;
+  stroke-width: 2px;
 }
 
 .dps-path-benchmark {
   fill: none;
-  stroke: #7f7;
+  stroke: #5a5;
 }
+
+.tooltip {
+}
+
+.tooltip-hidden {
+  display: none;
+}
+
+.tooltip-path {
+  stroke: #fff;
+}
+
+.tooltip-explanation {
+  font-size: 12px;
+  fill: #fff;
+  stroke: none;
+  dominant-baseline: middle;
+  background: rgba(0, 0, 0, 0.5);
+}
+
