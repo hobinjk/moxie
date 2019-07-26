@@ -444,3 +444,15 @@ input[type="file"] + label:hover,
   background: rgba(0, 0, 0, 0.5);
 }
 
+.control-panel {
+  border: 1px solid #77f;
+  background: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/-1;
+}
+
+.control-panel-item {
+  padding: 24px;
+}

@@ -53,10 +53,21 @@ const profSpecificBuffs = {
   'Improved Kalla\'s Fervor': 6,
 };
 
-function draw(board, legend, log, startRow, dimensions) {
+function draw(board, legend, log, startRow, dimensions, showBoring) {
   const {railHeight, railPad, timeToX} = dimensions;
 
-  const buffIds = Object.keys(log.buffs).sort((a, b) => {
+  let buffs = log.buffs;
+  if (!showBoring) {
+    buffs = {};
+    for (const id in log.buffs) {
+      const buffName = log.skills[id];
+      if (profSpecificBuffs.hasOwnProperty(buffName)) {
+        buffs[id] = log.buffs[id];
+      }
+    }
+  }
+
+  const buffIds = Object.keys(buffs).sort((a, b) => {
     let aName = log.skills[a];
     let bName = log.skills[b];
     if (profSpecificBuffs.hasOwnProperty(aName)) {
@@ -88,7 +99,7 @@ function draw(board, legend, log, startRow, dimensions) {
     }
 
     const rects = [];
-    for (const event of log.buffs[buffId]) {
+    for (const event of buffs[buffId]) {
       if (event.Apply) {
         const rect = document.createElementNS('http://www.w3.org/2000/svg',
                                               'rect');

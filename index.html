@@ -45,27 +45,26 @@
       </div>
       <div class="dps-graph"></div>
       <div class="timeline-container">
-        <div class="toggle-benchmark">-</div>
         <div class="timeline">
         </div>
       </div>
       <div class="control-panel open">
-        <div>
+        <div class="control-panel-item">
           <input type="checkbox" id="show-benchmark"/>
           <label for="show-benchmark">Show Benchmark</label>
         </div>
-        <div>
+        <div class="control-panel-item">
           <input type="checkbox" id="show-dps"/>
           <label for="show-dps">Show DPS per 10s</label>
         </div>
-        <div>
+        <div class="control-panel-item">
           <input type="checkbox" id="show-boring-buffs"/>
           <label for="show-boring-buffs">Show Boring Buffs</label>
         </div>
-        <div>
+        <div class="control-panel-item" style="display: none">
           <select id="cast-label-type">
-            <option>Text</option>
-            <option>Icons</option>
+            <option value="text">Text</option>
+            <option value="icons">Icons</option>
           </select>
         </div>
     </div>

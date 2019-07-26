@@ -127,8 +127,6 @@ async function displayLog(log, selectedPlayer) {
   log.buffs = log.buffs[selectedPlayer.id];
   log.targetDamage1S = log.targetDamage1S[selectedPlayer.id];
 
-  const toggleBenchmark = document.querySelector('.toggle-benchmark');
-
   log.casts.sort(function(a, b) {
     return a.start - b.start;
   });
@@ -150,20 +148,30 @@ async function displayLog(log, selectedPlayer) {
   const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
   const railHeight = 20;
   const railPad = 4;
-  let videoOffset = 1.8;
 
-  const video = document.querySelector('.gameplay-video');
   const timeline = document.querySelector('.timeline');
+  const video = document.querySelector('.gameplay-video');
   const boardContainer = document.createElement('div');
   boardContainer.classList.add('board-container');
   boardContainer.classList.add('show-benchmark');
   const board = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   board.style.width = width + 'px';
+  board.classList.add('board');
   boardContainer.appendChild(board);
 
   const legend = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   legend.classList.add('legend');
   legend.classList.add('show-benchmark');
+
+  const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  needle.setAttribute('x', 0);
+  needle.setAttribute('y', 0);
+  needle.setAttribute('width', 2);
+  needle.classList.add('needle');
+  board.appendChild(needle);
+
+  timeline.appendChild(legend);
+  timeline.appendChild(boardContainer);
 
   function timeToX(time) {
     return width * (time - log.start) / (log.end - log.start);
@@ -172,8 +180,6 @@ async function displayLog(log, selectedPlayer) {
   function xToTime(x) {
     return (x / width) * (log.end - log.start) + log.start;
   }
-  window.timeToX = timeToX;
-  window.xToTime = xToTime;
 
   const bonusSkills = {
     [SkillIds.ATTUNEMENT_FIRE_AIR]: 'Fire/Air',
@@ -186,6 +192,13 @@ async function displayLog(log, selectedPlayer) {
     log.skills[id] = bonusSkills[id];
   }
 
+  let benchmark = getBenchmarkForPlayer(log, selectedPlayer);
+  // Normalization, should be in other direction but that's difficult
+  for (const cast of benchmark.casts) {
+    cast.start += log.start;
+    cast.end += log.start;
+  }
+
   const dimensions = {
     railHeight,
     railPad,
@@ -194,61 +207,40 @@ async function displayLog(log, selectedPlayer) {
     xToTime,
   };
 
-  let row = 3;
+  const options = {
+    showBenchmark: true,
+    showDps: true,
+    showBoringBuffs: false,
+    videoOffset: 1.8,
+    castLabelType: 'icons',
+  };
+  const showBenchmark = document.getElementById('show-benchmark');
+  showBenchmark.checked = options.showBenchmark;
+  const showDps = document.getElementById('show-dps');
+  showDps.checked = options.showDps;
+  const showBoringBuffs = document.getElementById('show-boring-buffs');
+  showBoringBuffs.checked = options.showBoringBuffs;
+  const castLabelType = document.getElementById('cast-label-type');
+  castLabelType.value = options.castLabelType;
 
-  let benchmark = getBenchmarkForPlayer(log, selectedPlayer);
-  drawDpsGraph(board, log, benchmark, dimensions);
-
-  // Normalization, should be in other direction but that's difficult
-  for (const cast of benchmark.casts) {
-    cast.start += log.start;
-    cast.end += log.start;
+  function onChange(key) {
+    return function(event) {
+      console.log('onchange', key, event, event.target);
+      options[key] = event.target.checked;
+      drawBoard(log, benchmark, selectedPlayer, dimensions, options);
+    };
   }
-  drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark');
-
-  const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  name.textContent = 'Benchmark';
-  name.setAttribute('x', 0);
-  name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
-  name.classList.add('name');
-  legend.appendChild(name);
-
-  row += 1;
-
-  drawCastTimeline(board, log, log.casts, row, dimensions);
-  const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions);
-
-  const dpsGraphLabel = document.createElementNS('http://www.w3.org/2000/svg',
-                                                 'text');
-  dpsGraphLabel.textContent = 'Damage per 10s';
-  dpsGraphLabel.setAttribute('x', 0);
-  dpsGraphLabel.setAttribute('y', railHeight / 2);
-  dpsGraphLabel.classList.add('name');
-  legend.appendChild(dpsGraphLabel);
-
-
-  const rowCount = buffCount + 1 + row;
-  board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
-  legend.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
-
-  timeline.appendChild(legend);
-  timeline.appendChild(boardContainer);
-
-  const needle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  needle.setAttribute('x', 0);
-  needle.setAttribute('y', 0);
-  needle.setAttribute('width', 2);
-  needle.setAttribute('height', rowCount * (railHeight + railPad) - railPad);
-  needle.classList.add('needle');
-  board.appendChild(needle);
-
-  video.addEventListener('timeupdate', function() {
-    scrollToLogTime((video.currentTime - videoOffset) * 1000 + log.start);
+  showBenchmark.addEventListener('change', onChange('showBenchmark'));
+  showDps.addEventListener('change', onChange('showDps'));
+  showBoringBuffs.addEventListener('change', onChange('showBoringBuffs'));
+  castLabelType.addEventListener('change', function() {
+    options.castLabelType = castLabelType.value;
   });
 
-  generateReportCard(log, selectedPlayer);
+  drawBoard(log, benchmark, selectedPlayer, dimensions, options);
 
   let boardContainerRect = boardContainer.getBoundingClientRect();
+
   function scrollToLogTime(logTime, scrollVideo) {
     const logX = timeToX(logTime);
     needle.setAttribute('x', logX);
@@ -257,7 +249,7 @@ async function displayLog(log, selectedPlayer) {
       boardContainer.scrollLeft = logX - boardContainerRect.width / 2;
     }
     if (scrollVideo) {
-      video.currentTime = (logTime - log.start) / 1000 + videoOffset;
+      video.currentTime = (logTime - log.start) / 1000 + options.videoOffset;
     }
   }
 
@@ -278,12 +270,61 @@ async function displayLog(log, selectedPlayer) {
     }
   });
 
-  toggleBenchmark.addEventListener('click', function() {
-    boardContainer.classList.toggle('show-benchmark');
-    legend.classList.toggle('show-benchmark');
-    const showOrHide = legend.classList.contains('show-benchmark') ? '-' : '+';
-    toggleBenchmark.textContent = showOrHide;
+  video.addEventListener('timeupdate', function() {
+    scrollToLogTime((video.currentTime - options.videoOffset) * 1000 +
+                    log.start);
   });
 
+  generateReportCard(log, selectedPlayer);
+
   EasterEgg.attach();
+}
+
+function drawBoard(log, benchmark, player, dimensions, options) {
+  const {railHeight, railPad} = dimensions;
+
+  const board = document.querySelector('.board');
+  const legend = document.querySelector('.legend');
+  const needle = document.querySelector('.needle');
+  board.innerHTML = '';
+  legend.innerHTML = '';
+
+  let row = 0;
+
+  if (options.showDps) {
+    drawDpsGraph(board, log, benchmark, dimensions);
+    const dpsGraphLabel = document.createElementNS('http://www.w3.org/2000/svg',
+                                                   'text');
+    dpsGraphLabel.textContent = 'Damage per 10s';
+    dpsGraphLabel.setAttribute('x', 0);
+    dpsGraphLabel.setAttribute('y', railHeight / 2);
+    dpsGraphLabel.classList.add('name');
+    legend.appendChild(dpsGraphLabel);
+
+    row += 3;
+  }
+
+  if (options.showBenchmark) {
+    drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark');
+
+    const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    name.textContent = 'Benchmark';
+    name.setAttribute('x', 0);
+    name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
+    name.classList.add('name');
+    legend.appendChild(name);
+
+    row += 1;
+  }
+
+  drawCastTimeline(board, log, log.casts, row, dimensions);
+  const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions,
+                                     options.showBoringBuffs);
+
+  const rowCount = buffCount + 1 + row;
+  board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
+  legend.style.height = rowCount * (railHeight + railPad) - railPad + 'px';
+
+  needle.setAttribute('height', rowCount * (railHeight + railPad) - railPad);
+  board.appendChild(needle);
 }
