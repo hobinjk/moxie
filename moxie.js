@@ -186,10 +186,12 @@ async function displayLog(log, selectedPlayer) {
   }
 
   const bonusSkills = {
-    [SkillIds.ATTUNEMENT_FIRE_AIR]: 'Fire/Air',
     [SkillIds.ATTUNEMENT_FIRE_FIRE]: 'Fire/Fire',
-    [SkillIds.ATTUNEMENT_AIR_FIRE]: 'Air/Fire',
     [SkillIds.ATTUNEMENT_AIR_AIR]: 'Air/Air',
+    [SkillIds.ATTUNEMENT_AIR_WATER]: 'Air/Water',
+    [SkillIds.ATTUNEMENT_AIR_FIRE]: 'Air/Fire',
+    [SkillIds.ATTUNEMENT_WATER_FIRE]: 'Water/Fire',
+    [SkillIds.ATTUNEMENT_FIRE_AIR]: 'Fire/Air',
   };
 
   for (const id in bonusSkills) {
