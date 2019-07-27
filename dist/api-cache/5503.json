@@ -1,0 +1,39 @@
+{
+  "name": "Signet of Restoration",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 3275,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing per Cast",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 202,
+      "target": "Healing"
+    }
+  ],
+  "description": "Signet Passive: Grants health every time you cast a spell. \nSignet Active: Heal yourself.",
+  "icon": "https://render.guildwars2.com/file/3FA4D3DCA80A06036E7F6C77E84D94466D157766/103321.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 5503,
+  "chat_link": "[&Bn8VAAA=]",
+  "categories": [
+    "Signet"
+  ]
+}

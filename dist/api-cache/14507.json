@@ -1,0 +1,61 @@
+{
+  "name": "Counterblow",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 2
+    },
+    {
+      "text": "Adrenaline If Not Attacked",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+      "value": 6
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 8,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 10
+    }
+  ],
+  "description": "Block the next attack. Counter with an attack if you are in melee range. Gain adrenaline if not attacked.",
+  "icon": "https://render.guildwars2.com/file/92C19D3798F16AC716CAC7A5C044E4CFC251E4A2/102986.png",
+  "type": "Weapon",
+  "weapon_type": "Mace",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_2",
+  "flip_skill": 14548,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14507,
+  "chat_link": "[&Bqs4AAA=]",
+  "traited_facts": [
+    {
+      "text": "Reflects Missiles",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "requires_trait": 1376
+    }
+  ]
+}

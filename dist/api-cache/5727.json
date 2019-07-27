@@ -1,0 +1,39 @@
+{
+  "name": "Static Swing",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 150
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Chain. Strike your foe again.",
+  "icon": "https://render.guildwars2.com/file/33C2E0E10F440C64564B022BBFC947599A5D0610/103390.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [],
+  "slot": "Weapon_1",
+  "next_chain": 5728,
+  "prev_chain": 5726,
+  "flip_skill": 5728,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5727,
+  "chat_link": "[&Bl8WAAA=]",
+  "categories": []
+}

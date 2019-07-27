@@ -1,0 +1,74 @@
+{
+  "name": "Soulcleave's Summit",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 3
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 360
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/CFD1582E6B180CA2DE6AD205981CBBAFC7480294/1770589.png",
+      "duration": 0,
+      "status": "Soulcleave's Summit",
+      "description": "Your outgoing strikes deal additional damage and restore your health.",
+      "apply_count": 1
+    },
+    {
+      "text": "Life Siphon Damage",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 325,
+      "target": "Power"
+    },
+    {
+      "text": "Life Siphon Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 386,
+      "target": "Healing"
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Fire"
+    }
+  ],
+  "description": "Legendary Renegade. Summon Lieutenant Ofela Soulcleave to grant your allies' strikes incredible bloodthirst, inflicting damage and restoring health.\nLieutenant Soulcleave can only empower players.",
+  "icon": "https://render.guildwars2.com/file/CFD1582E6B180CA2DE6AD205981CBBAFC7480294/1770589.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Elite",
+  "cost": 10,
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "specialization": 63,
+  "id": 45773,
+  "chat_link": "[&Bs2yAAA=]"
+}

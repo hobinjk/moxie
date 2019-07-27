@@ -1,0 +1,76 @@
+{
+  "name": "Hilt Bash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 300
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.72
+    },
+    {
+      "text": "Daze",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/07B6122FBF169A2124A23FBCB06A3B7991A35179/156658.png",
+      "duration": 2
+    },
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/143F46DEF466062F01C52B69922FFCEF73DCA801/156668.png",
+      "duration": 2
+    }
+  ],
+  "description": "Daze your foe with a hilt bash. Stun them if you hit from behind, and refresh your Maul ability.",
+  "icon": "https://render.guildwars2.com/file/C5A7760DF1E93EFDCC5761C005CF34526801129B/103985.png",
+  "type": "Weapon",
+  "weapon_type": "Greatsword",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 12475,
+  "chat_link": "[&BrswAAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1047,
+      "hit_count": 1,
+      "dmg_multiplier": 0.525,
+      "overrides": 2
+    },
+    {
+      "text": "Daze",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/07B6122FBF169A2124A23FBCB06A3B7991A35179/156658.png",
+      "duration": 2,
+      "requires_trait": 1070,
+      "overrides": 3
+    },
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/143F46DEF466062F01C52B69922FFCEF73DCA801/156668.png",
+      "duration": 2,
+      "requires_trait": 1070,
+      "overrides": 4
+    }
+  ]
+}

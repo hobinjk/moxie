@@ -1,0 +1,59 @@
+{
+  "name": "Shield of Wrath",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 35
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 2.5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/C2065BFF78BB134197076A2C7450013EE390E409/103634.png",
+      "duration": 4,
+      "status": "Shield of Wrath",
+      "description": "Block attacks. Explodes when it ends.",
+      "apply_count": 3
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Blast"
+    }
+  ],
+  "description": "Create a shield to block the next three attacks. If the shield is not destroyed, it explodes and damages nearby foes.",
+  "icon": "https://render.guildwars2.com/file/C2065BFF78BB134197076A2C7450013EE390E409/103634.png",
+  "type": "Weapon",
+  "weapon_type": "Focus",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9082,
+  "chat_link": "[&BnojAAA=]"
+}

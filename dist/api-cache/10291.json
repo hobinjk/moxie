@@ -1,0 +1,43 @@
+{
+  "name": "Ether Clone",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.75
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 9,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to moving foes. Stacks intensity.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Clone. Deliver a damaging attack directly to your target. Summon a clone that casts Ether Bolt. Inflict torment instead if you have the maximum number of illusions.",
+  "icon": "https://render.guildwars2.com/file/66D5114144D3A271C72F48A124CCB70E040F3EE6/103771.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10291,
+  "chat_link": "[&BjMoAAA=]",
+  "categories": [
+    "Clone"
+  ]
+}

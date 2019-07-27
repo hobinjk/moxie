@@ -1,0 +1,64 @@
+{
+  "name": "Sun Ripper",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.93
+    },
+    {
+      "text": "<c=@abilitytype>Damage Increase above 50% Heat</c>",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 10
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 10,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Strike your foe again and inflict vulnerability. This attack deals more damage based on your heat level.",
+  "icon": "https://render.guildwars2.com/file/004244480A0828CE033FB575C8FA3A566A016C58/1770406.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 45979,
+  "prev_chain": 43476,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 57,
+  "id": 45581,
+  "chat_link": "[&Bg2yAAA=]",
+  "traited_facts": [
+    {
+      "text": "<c=@abilitytype>Damage Increase above 100% Heat</c>",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 20,
+      "requires_trait": 2137
+    }
+  ]
+}

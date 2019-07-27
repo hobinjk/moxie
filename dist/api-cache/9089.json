@@ -1,0 +1,40 @@
+{
+  "name": "Zealot's Fire",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 2.25
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 3,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 3
+    }
+  ],
+  "description": "Throw your Zealot's Flame to damage the targeted foe.",
+  "icon": "https://render.guildwars2.com/file/537D1557E29B42B95D07A1DB01493C7B63C4E402/103637.png",
+  "type": "Weapon",
+  "weapon_type": "Torch",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9089,
+  "chat_link": "[&BoEjAAA=]"
+}

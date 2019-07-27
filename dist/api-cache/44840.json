@@ -1,0 +1,50 @@
+{
+  "name": "Ethereal Chop",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.55
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 2,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to moving foes. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Inflict Torment on your target.",
+  "icon": "https://render.guildwars2.com/file/257AE20DBC1F5BB232D8F37FED4443065ED10346/1770501.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 41164,
+  "prev_chain": 44791,
+  "flip_skill": 41164,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 59,
+  "id": 44840,
+  "chat_link": "[&BiivAAA=]"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Precision Swipe",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.96
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 5,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Deliver a blow to your foe. Your pet gains might for each foe struck.",
+  "icon": "https://render.guildwars2.com/file/CECBFA1662D837E8A526E475A1E701679A2662BA/103125.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 12472,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 12473,
+  "chat_link": "[&BrkwAAA=]"
+}

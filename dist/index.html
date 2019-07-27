@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moxie</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <a href="./" class="title">
+        Moxie
+      </a>
+      <div class="links">
+        <a href="https://github.com/hobinjk/moxie/blob/master/README.md">readme</a>
+        <a href="https://github.com/hobinjk/moxie/issues">issues</a>
+      </div>
+    </div>
+    <div class="target-select-container">
+    </div>
+    <div class="setup-container hidden">
+      <div class="setup">
+        <input type="text" class="dpsreport-text" placeholder="https://dps.report/OFMj-20180908-200556_cairn">
+        <input type="button" class="dpsreport-submit" value="Fetch Log">
+        <div style="display: none">
+          <div class="separator">or</div>
+          <input type="file" id="log-input">
+          <label for="log-input">Upload Local Log</label>
+        </div>
+      </div>
+      <img src="icon.svg" class="icon"/>
+    </div>
+    <div class="container hidden">
+      <div class="gameplay-video-container no-video">
+        <div class="gameplay-no-video">
+          <div class="gameplay-no-video-label">
+            <p>No Footage</p>
+            <input type="file" id="video-input" accept="video/*">
+            <label for="video-input">Upload</label>
+          </div>
+        </div>
+        <video class="gameplay-video" controls width="1920">
+        </video>
+      </div>
+      <div class="report-card">
+        <ul class="report-card-items"></ul>
+      </div>
+      <div class="dps-graph"></div>
+      <div class="timeline-container">
+        <div class="timeline">
+        </div>
+      </div>
+      <div class="control-panel open">
+        <div class="control-panel-item">
+          <p id="benchmark-name"></p>
+        </div>
+        <div class="control-panel-item">
+          <input type="checkbox" class="control-panel-checkbox" id="show-benchmark"/>
+          <label for="show-benchmark" class="control-panel-label">Show Benchmark</label>
+        </div>
+        <div class="control-panel-item">
+          <input type="checkbox" class="control-panel-checkbox" id="show-dps"/>
+          <label for="show-dps" class="control-panel-label">Show DPS per 10s</label>
+        </div>
+        <div class="control-panel-item">
+          <input type="checkbox" class="control-panel-checkbox" id="show-boring-buffs"/>
+          <label for="show-boring-buffs" class="control-panel-label">Show Boring Buffs</label>
+        </div>
+        <div class="control-panel-item" style="display: none">
+          <select id="cast-label-type">
+            <option value="text">Text</option>
+            <option value="icons">Icons</option>
+          </select>
+        </div>
+    </div>
+    <script src="moxie.js"></script>
+  </body>
+</html>

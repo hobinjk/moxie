@@ -1,0 +1,59 @@
+{
+  "name": "Vital Shot",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.575
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 4,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 20,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Bleed your foe with a shot to the vitals.",
+  "icon": "https://render.guildwars2.com/file/DF44613E8041055BFB17D5F0E93C67F23EA4320D/103252.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 13115,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13084,
+  "chat_link": "[&BhwzAAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1299,
+      "hit_count": 1,
+      "dmg_multiplier": 0.54625,
+      "overrides": 1
+    }
+  ]
+}

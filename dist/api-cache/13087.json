@@ -1,0 +1,46 @@
+{
+  "name": "Wild Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.65
+    },
+    {
+      "text": "Endurance Gain",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 10
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Chain. Strike your foe again. Gain endurance with a successful strike.",
+  "icon": "https://render.guildwars2.com/file/6CA8D360E77E37AE42ACB8610EA0E2744E3BF87B/104095.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 13108,
+  "prev_chain": 13004,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13087,
+  "chat_link": "[&Bh8zAAA=]",
+  "categories": []
+}

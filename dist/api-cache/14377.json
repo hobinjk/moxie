@@ -1,0 +1,41 @@
+{
+  "name": "Mace Bash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.8
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Chain. Bash your foe.",
+  "icon": "https://render.guildwars2.com/file/61EE97EF77FE27CB0A2A36AECD0769E334551645/102764.png",
+  "type": "Weapon",
+  "weapon_type": "Mace",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 14378,
+  "prev_chain": 14376,
+  "flip_skill": 14378,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14377,
+  "chat_link": "[&Bik4AAA=]",
+  "categories": []
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Groundwork Gouge",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 4,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Swipe past your foe's defenses, exposing their vulnerability.",
+  "icon": "https://render.guildwars2.com/file/043E152903A33B09DAD74AA85F559062FC72EA0B/1770553.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 40301,
+  "flip_skill": 40301,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 55,
+  "id": 45426,
+  "chat_link": "[&BnKxAAA=]"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Pommel Bash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Daze",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/07B6122FBF169A2124A23FBCB06A3B7991A35179/156658.png",
+      "duration": 1
+    }
+  ],
+  "description": "Daze your foe with a brutal pommel bash.",
+  "icon": "https://render.guildwars2.com/file/F069CFD79FE89D70F612901FE5FAD70451732E02/103208.png",
+  "type": "Weapon",
+  "weapon_type": "Mace",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14503,
+  "chat_link": "[&Bqc4AAA=]"
+}

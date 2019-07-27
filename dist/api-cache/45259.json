@@ -1,0 +1,45 @@
+{
+  "name": "Polaric Slash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.88
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+      "duration": 2,
+      "status": "Swiftness",
+      "description": "Movement speed increased by 33%; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Deliver a second strike, gaining swiftness.",
+  "icon": "https://render.guildwars2.com/file/CAB0C907C03A00540849085DE2ACAB54BF0156DE/1770356.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 45216,
+  "prev_chain": 44681,
+  "flip_skill": 45216,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 45259,
+  "chat_link": "[&BsuwAAA=]"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Illusionary Riposte",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 2
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Block Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Evade",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/9F19DB1D3E1629390F2360F2D866651BBC0F6155/1938788.png",
+      "duration": 1
+    }
+  ],
+  "description": "Clone. Block your foe and create an illusion when attacked.",
+  "icon": "https://render.guildwars2.com/file/AED869739FD016F10AEFE4520B155DEE731005A0/103767.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_4",
+  "flip_skill": 10358,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10280,
+  "chat_link": "[&BigoAAA=]",
+  "categories": [
+    "Clone"
+  ]
+}

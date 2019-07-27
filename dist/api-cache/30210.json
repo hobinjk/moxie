@@ -1,0 +1,44 @@
+{
+  "name": "Hook Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.65
+    },
+    {
+      "text": "Knockdown",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/61A6A8A161FB7124336A6ED1FBAF9B1E030166A6/156664.png",
+      "duration": 2
+    }
+  ],
+  "description": "Attack your foes with stealth, knocking enemies down.",
+  "icon": "https://render.guildwars2.com/file/24CD7E636FADCB6F0CFE07F0B0CA21010FD223E6/1058623.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 7,
+  "id": 30210,
+  "chat_link": "[&BgJ2AAA=]"
+}

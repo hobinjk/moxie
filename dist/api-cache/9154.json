@@ -1,0 +1,36 @@
+{
+  "name": "Renewed Focus",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 90
+    },
+    {
+      "text": "Duration",
+      "type": "Duration",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Prevents Capture-Point Contribution",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    }
+  ],
+  "description": "Meditation. Focus, making yourself invulnerable and recharging your virtues.",
+  "icon": "https://render.guildwars2.com/file/344C7EEC3F6FE10568720E4F75EF91C37A58C43C/103665.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Elite",
+  "flags": [],
+  "id": 9154,
+  "chat_link": "[&BsIjAAA=]",
+  "categories": [
+    "Meditation"
+  ]
+}

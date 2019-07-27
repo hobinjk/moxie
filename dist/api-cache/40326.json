@@ -1,0 +1,42 @@
+{
+  "name": "Fire Swipe",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.77
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Heat your sword a second time and strike your enemies for increased damage.",
+  "icon": "https://render.guildwars2.com/file/515620A36869D978A1E66FA135446D77A3C94F50/1770362.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 43657,
+  "prev_chain": 39964,
+  "flip_skill": 43657,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 40326,
+  "chat_link": "[&BoadAAA=]"
+}

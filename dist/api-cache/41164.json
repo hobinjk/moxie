@@ -1,0 +1,57 @@
+{
+  "name": "Mirror Strikes",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 2,
+      "dmg_multiplier": 0.55
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 6,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 6,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to moving foes. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Inflict bleeding and torment on your target.",
+  "icon": "https://render.guildwars2.com/file/44E70008A846C1A03343996F1F10031966E41F0D/1770502.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 44840,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 59,
+  "id": 41164,
+  "chat_link": "[&BsygAAA=]"
+}

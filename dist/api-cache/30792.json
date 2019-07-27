@@ -1,0 +1,24 @@
+{
+  "name": "Reaper's Shroud",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    }
+  ],
+  "description": "Assume the form of a reaper and gain new skills, turning your life force into health.",
+  "icon": "https://render.guildwars2.com/file/795CD8A855B81908E6D37DFE039DE25762DAAAE9/1012930.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Profession_1",
+  "cost": 10,
+  "flip_skill": 30961,
+  "flags": [],
+  "id": 30792,
+  "chat_link": "[&Bkh4AAA=]"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Pulmonary Impact",
+  "facts": [
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 3.28
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 2
+    }
+  ],
+  "description": "Physical. Cause a rupture that deals massive damage when this skill ends. This ability cannot critically hit.",
+  "icon": "https://render.guildwars2.com/file/96580AB413D9791D53D45093063F54CD9F56C513/1058634.png",
+  "flags": [],
+  "id": 30770,
+  "chat_link": "[&BjJ4AAA=]",
+  "categories": [
+    "Physical"
+  ]
+}

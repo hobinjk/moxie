@@ -1,0 +1,48 @@
+{
+  "name": "Seiche",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.33
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 66,
+      "target": "Healing"
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Imbue your blade with water, healing yourself for each target you strike.",
+  "icon": "https://render.guildwars2.com/file/042718CC3B0C533D6DF4BFC103E901B6A90B13E2/1770364.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 45983,
+  "flip_skill": 45983,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 41052,
+  "chat_link": "[&BlygAAA=]"
+}

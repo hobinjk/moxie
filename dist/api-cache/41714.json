@@ -1,0 +1,33 @@
+{
+  "name": "Mantra of Solace",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Number of Casts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Mantra. Prepare to heal yourself and grant allies aegis.  \nThe final charge of this ability is more powerful.",
+  "icon": "https://render.guildwars2.com/file/9E64514AF3280620040C0DBC61A7AABB0F765E54/1770463.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Heal",
+  "flip_skill": 41475,
+  "flags": [],
+  "specialization": 62,
+  "id": 41714,
+  "chat_link": "[&BvKiAAA=]",
+  "categories": [
+    "Mantra"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Bleeding Edge",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 2,
+      "dmg_multiplier": 0.36
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 1,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 2
+    }
+  ],
+  "description": "Slice through your foe again, physically and magically, as your weapon is heating up.",
+  "icon": "https://render.guildwars2.com/file/490E143D431FCBDC9BD7E60ED875F5710DBEE43F/1770456.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 43826,
+  "prev_chain": 45047,
+  "flip_skill": 43826,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 62,
+  "id": 44602,
+  "chat_link": "[&BjquAAA=]"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Sword Arc",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.725
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Chain. Slash your foe again.",
+  "icon": "https://render.guildwars2.com/file/C3446A6CD8E81B1A4B3E945DED582AD506ABEDC9/103647.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 9227,
+  "prev_chain": 9105,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9106,
+  "chat_link": "[&BpIjAAA=]",
+  "categories": []
+}

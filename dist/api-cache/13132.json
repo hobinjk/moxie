@@ -1,0 +1,63 @@
+{
+  "name": "Basilisk Venom",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 40
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/535F5CFC1D9C09F437A3B05F39CFD044434CDDBC/104109.png",
+      "duration": 30,
+      "status": "Basilisk Venom",
+      "description": "Your attacks turn foes to stone.",
+      "apply_count": 1
+    },
+    {
+      "text": "Stone Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/143F46DEF466062F01C52B69922FFCEF73DCA801/156668.png",
+      "duration": 2
+    },
+    {
+      "text": "Venom Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Unblockable",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    }
+  ],
+  "description": "Venom. Your attacks are unblockable and turn foes to stone.",
+  "icon": "https://render.guildwars2.com/file/535F5CFC1D9C09F437A3B05F39CFD044434CDDBC/104109.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Elite",
+  "flags": [],
+  "id": 13132,
+  "chat_link": "[&BkwzAAA=]",
+  "categories": [
+    "Venom"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Core Cleave",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 2,
+      "dmg_multiplier": 0.36
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 1,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 2
+    }
+  ],
+  "description": "Cleave at your enemy with a physical and a magical axe.",
+  "icon": "https://render.guildwars2.com/file/B6900CCBA53BD1189D0E09C10C43AB08AE64016B/1770455.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 44602,
+  "flip_skill": 44602,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 62,
+  "id": 45047,
+  "chat_link": "[&BvevAAA=]"
+}

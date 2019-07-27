@@ -1,0 +1,44 @@
+{
+  "name": "Crippling Thrust",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.7
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+      "duration": 2,
+      "status": "Crippled",
+      "description": "Movement speed decreased by 50%; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Chain. Stab your foe, crippling them for a short time.",
+  "icon": "https://render.guildwars2.com/file/AD43D7CDEBF83C23B799E94A649794181F6208DA/103124.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 12473,
+  "prev_chain": 12471,
+  "flip_skill": 12473,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 12472,
+  "chat_link": "[&BrgwAAA=]",
+  "categories": []
+}

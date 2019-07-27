@@ -1,0 +1,40 @@
+{
+  "name": "Discharge Lightning",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.8
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 10,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 2
+    }
+  ],
+  "description": "Blast your foe with lightning.",
+  "icon": "https://render.guildwars2.com/file/05A829F09171E079265B474B73650F59732EF471/103322.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Downed_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5504,
+  "chat_link": "[&BoAVAAA=]"
+}

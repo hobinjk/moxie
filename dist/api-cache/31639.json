@@ -1,0 +1,47 @@
+{
+  "name": "Lightning Assault",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 480
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.6
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Lightning"
+    },
+    {
+      "text": "Launch",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/CB330EF25C62C05F1800A1C507B6AE4944551746/156653.png",
+      "distance": 0
+    }
+  ],
+  "description": "Beast. Charge forward, headbutting foes and electrifying its destination.",
+  "icon": "https://render.guildwars2.com/file/B35FA64E076A65E11A2F03E61DD2373F5A20CEFD/1128616.png",
+  "type": "Pet",
+  "weapon_type": "None",
+  "professions": [],
+  "slot": "Pet",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 31639,
+  "chat_link": "[&Bpd7AAA=]"
+}

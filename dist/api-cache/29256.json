@@ -1,0 +1,49 @@
+{
+  "name": "Brutal Blade",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.8
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 6,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 2
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Slice foes, damaging them and inflicting vulnerability.",
+  "icon": "https://render.guildwars2.com/file/A3E65AA00621DE0915C6607BB6E9084D0B480CCC/1013001.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 28964,
+  "prev_chain": 29057,
+  "flip_skill": 28964,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 29256,
+  "chat_link": "[&BkhyAAA=]"
+}

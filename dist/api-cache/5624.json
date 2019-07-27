@@ -1,0 +1,56 @@
+{
+  "name": "Conjure Lightning Hammer",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 60
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/C3DA6AC980062B0A0EEA14CE51393748CFAE01CA/103369.png",
+      "duration": 0,
+      "status": "Conjure Lightning Attributes",
+      "description": "Increased precision and ferocity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    }
+  ],
+  "description": "Conjure. Manifest a lightning hammer in your hands and at the target location. Wielders of this weapon gain increased precision and ferocity.",
+  "icon": "https://render.guildwars2.com/file/C3DA6AC980062B0A0EEA14CE51393748CFAE01CA/103369.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Utility",
+  "bundle_skills": [
+    5726,
+    5625,
+    5733,
+    5725,
+    5732
+  ],
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "id": 5624,
+  "chat_link": "[&BvgVAAA=]",
+  "categories": [
+    "Conjure"
+  ]
+}

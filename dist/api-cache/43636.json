@@ -1,0 +1,47 @@
+{
+  "name": "Head Toss",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 180
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.11
+    },
+    {
+      "text": "Launch",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/CB330EF25C62C05F1800A1C507B6AE4944551746/156653.png",
+      "distance": 80
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 1
+    }
+  ],
+  "description": "Beast. Toss your foe into the air.",
+  "icon": "https://render.guildwars2.com/file/313824ACD4211D7E76011D07B7B814C1B995E9CA/1770560.png",
+  "type": "Pet",
+  "weapon_type": "None",
+  "professions": [],
+  "slot": "Pet",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 43636,
+  "chat_link": "[&BnSqAAA=]"
+}

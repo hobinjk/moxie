@@ -1,0 +1,31 @@
+{
+  "name": "Terrify",
+  "facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/30307A6E766D74B6EB09EDA12A4A2DE50E4D76F4/102869.png",
+      "duration": 1,
+      "status": "Fear",
+      "description": "Involuntary retreat; unable to act; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 360
+    }
+  ],
+  "description": "Shroud. Detonate your armor to make foes around you flee in fear.",
+  "icon": "https://render.guildwars2.com/file/780206747069014A400CE6D9922AF5E81EAAA52C/1012936.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Downed_3",
+  "flags": [],
+  "id": 29709,
+  "chat_link": "[&Bg10AAA=]"
+}

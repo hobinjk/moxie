@@ -1,0 +1,42 @@
+{
+  "name": "Ether Bolt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 2,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to moving foes. Stacks intensity.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Chain. Shoot a bolt of energy at your target.",
+  "icon": "https://render.guildwars2.com/file/D86BE93CF7CF021ABF757410EC52E038B15F1BB8/103770.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 10290,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10289,
+  "chat_link": "[&BjEoAAA=]",
+  "categories": []
+}

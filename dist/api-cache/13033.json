@@ -1,0 +1,47 @@
+{
+  "name": "Smoke Bomb",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3BD4670638470439F3325B444FAF7D5FA620CCE5/62777.png",
+      "duration": 1,
+      "status": "Stealth",
+      "description": "Currently invisible. Ends if you deal damage.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Drop a smoke bomb and vanish in stealth.",
+  "icon": "https://render.guildwars2.com/file/DBCF4AC1BBD20F70069415F6D9CE495292A540AF/104071.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Downed_3",
+  "dual_wield": "None",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13033,
+  "chat_link": "[&BukyAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3BD4670638470439F3325B444FAF7D5FA620CCE5/62777.png",
+      "duration": 2,
+      "status": "Stealth",
+      "description": "Currently invisible. Ends if you deal damage.",
+      "apply_count": 1,
+      "requires_trait": 1136,
+      "overrides": 1
+    }
+  ]
+}
