@@ -1,0 +1,51 @@
+{
+  "name": "Earth Attunement",
+  "description": "Attune to earth, gaining superior damage-over-time and defensive abilities.",
+  "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Profession_4",
+  "flip_skill": 29618,
+  "flags": [],
+  "id": 5495,
+  "chat_link": "[&BncVAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/22F1BDACFBEBC8FF2BF77B22B3E535D2BA03D140/1012302.png",
+      "duration": 0,
+      "status": "Stone Heart",
+      "description": "You cannot be critically hit while attuned to earth.",
+      "apply_count": 1,
+      "requires_trait": 1674
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+      "duration": 5,
+      "status": "Protection",
+      "description": "Incoming strike damage decreased by 33%; stacks duration.",
+      "apply_count": 1,
+      "requires_trait": 264
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5,
+      "requires_trait": 264
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240,
+      "requires_trait": 264
+    }
+  ]
+}

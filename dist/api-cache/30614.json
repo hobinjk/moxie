@@ -1,0 +1,40 @@
+{
+  "name": "Staff Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.666
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Strike your enemies with your staff.",
+  "icon": "https://render.guildwars2.com/file/3BBEF12B9DA30A070D6D09B3946E279FC9505407/1058624.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 30135,
+  "flip_skill": 30135,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 7,
+  "id": 30614,
+  "chat_link": "[&BpZ3AAA=]"
+}

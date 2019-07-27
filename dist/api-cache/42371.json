@@ -1,0 +1,110 @@
+{
+  "name": "Tome of Courage",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 75
+    },
+    {
+      "text": "StunBreak",
+      "type": "StunBreak",
+      "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+      "value": true
+    },
+    {
+      "text": "Pages",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/DFB4D1B50AE4D6A275B349E15B179261EE3EB0AF/102854.png",
+      "duration": 0,
+      "status": "Aegis",
+      "description": "Block the next incoming attack; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Time to Trigger Passive",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 40
+    }
+  ],
+  "description": "Virtue: Gain aegis periodically. \nActivate:Conjure a mystic tome containing stories about the heroes of Istan.\nEach tome skill use consumes a page.",
+  "icon": "https://render.guildwars2.com/file/49B3D2E829962602205B09619770E1650BF07108/1770466.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Profession_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 62,
+  "id": 42371,
+  "chat_link": "[&BoOlAAA=]",
+  "categories": [
+    "Virtue"
+  ],
+  "traited_facts": [
+    {
+      "text": "Pages",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 8,
+      "requires_trait": 2086,
+      "overrides": 2
+    },
+    {
+      "text": "Time to Trigger Passive",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30,
+      "requires_trait": 612,
+      "overrides": 4
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+      "duration": 5,
+      "status": "Protection",
+      "description": "Incoming strike damage decreased by 33%; stacks duration.",
+      "apply_count": 1,
+      "requires_trait": 621
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/D104A6B9344A2E2096424A3C300E46BC2926E4D7/2440718.png",
+      "duration": 3,
+      "status": "Resolution",
+      "description": "Incoming condition damage decreased by 33%; stacks duration.",
+      "apply_count": 1,
+      "requires_trait": 604
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+      "duration": 4,
+      "status": "Stability",
+      "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+      "apply_count": 3,
+      "requires_trait": 612
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600,
+      "requires_trait": 612
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Devouring Cut",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    }
+  ],
+  "description": "Channel twisted energy to launch yourself at your foe, damaging nearby enemies on impact.\n\n\n\nIf you are at or above the Blight threshold when you activate this skill, consume that amount of Blight to double the damage and torment struck foes.",
+  "icon": "https://render.guildwars2.com/file/F4A01998B419F5A3B2EA7010107ED64AAE119369/2479392.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Downed_3",
+  "flags": [],
+  "id": 62672,
+  "chat_link": "[&BtD0AAA=]"
+}

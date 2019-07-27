@@ -1,0 +1,85 @@
+{
+  "name": "Static Shot",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+      "duration": 3,
+      "status": "Blinded",
+      "description": "Next outgoing attack misses; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 5,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 3
+    },
+    {
+      "text": "Number of Bounces",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 4
+    }
+  ],
+  "description": "Discharge a lightning shot that bounces between multiple foes, blinding and confusing them.",
+  "icon": "https://render.guildwars2.com/file/CBC5740B8092A6474595F8BFB2394D145D3AB0E8/103406.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5829,
+  "chat_link": "[&BsUWAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+      "duration": 4,
+      "status": "Blinded",
+      "description": "Next outgoing attack misses; stacks duration.",
+      "apply_count": 1,
+      "requires_trait": 1878,
+      "overrides": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 5,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 3,
+      "requires_trait": 1878,
+      "overrides": 4
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Exit Reaper's Shroud",
+  "description": "Leave Reaper's Shroud and return to your normal form.",
+  "icon": "https://render.guildwars2.com/file/7D70A5084CD7BE0F90A016E159AAF1A2F8BD0AB4/1024104.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "id": 30961,
+  "chat_link": "[&BvF4AAA=]"
+}

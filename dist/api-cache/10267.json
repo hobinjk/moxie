@@ -1,0 +1,115 @@
+{
+  "name": "Phantasmal Disenchanter",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage without Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Damage with Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Damage without Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Damage with Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.2
+    },
+    {
+      "text": "Boons Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Bounces",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 4
+    }
+  ],
+  "description": "Phantasm. Summon an illusion that removes boons from targets it hits. This attack deals increased damage against foes without boons.",
+  "icon": "https://render.guildwars2.com/file/9B227C21B3AFF40C222C9031EBE00995F9B43423/103764.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 10267,
+  "chat_link": "[&BhsoAAA=]",
+  "categories": [
+    "Phantasm"
+  ],
+  "traited_facts": [
+    {
+      "text": "Damage without Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 682,
+      "hit_count": 1,
+      "dmg_multiplier": 1.15,
+      "overrides": 3
+    },
+    {
+      "text": "Damage with Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 682,
+      "hit_count": 1,
+      "dmg_multiplier": 0.46,
+      "overrides": 4
+    },
+    {
+      "text": "Damage without Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 682,
+      "hit_count": 1,
+      "dmg_multiplier": 0.575,
+      "overrides": 5
+    },
+    {
+      "text": "Damage with Boons",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 682,
+      "hit_count": 1,
+      "dmg_multiplier": 0.23,
+      "overrides": 6
+    }
+  ]
+}

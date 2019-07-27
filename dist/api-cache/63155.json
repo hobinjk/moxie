@@ -1,0 +1,66 @@
+{
+  "name": "Enter Shadow Shroud",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Total Shadow Shroud Health at Maximum Energy",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "percent": 150
+    },
+    {
+      "text": "Barrier",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/357922487919E8E84B914EAC13D5796DDDC42D14/1770209.png",
+      "value": 1428,
+      "target": "Healing"
+    },
+    {
+      "text": "Shroud Degeneration Rate",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 4
+    },
+    {
+      "text": "Shroud Degeneration Rate",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 2
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 1200
+    },
+    {
+      "text": "Maximum Stacks",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    }
+  ],
+  "description": "Ally Target: Enter shadow shroud and tether a targeted or previously siphoned ally, granting them barrier. If no target is selected, one will be chosen randomly in the indicated radius.",
+  "icon": "https://render.guildwars2.com/file/0A93EB27CFAE0291F0D009E15B4545DD7D054A28/2503737.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Profession_2",
+  "flags": [],
+  "specialization": 71,
+  "id": 63155,
+  "chat_link": "[&BrP2AAA=]"
+}

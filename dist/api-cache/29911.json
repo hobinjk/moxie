@@ -1,0 +1,79 @@
+{
+  "name": "Weakening Charge",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 450
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 3,
+      "dmg_multiplier": 0.84
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 2,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Whirl"
+    }
+  ],
+  "description": "Deliver multiple strikes, weakening foes.",
+  "icon": "https://render.guildwars2.com/file/EDBECD6ACE170F25312C15C3056006FA1170F654/1058625.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_2",
+  "initiative": 3,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 7,
+  "id": 29911,
+  "chat_link": "[&Btd0AAA=]",
+  "traited_facts": [
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 306,
+      "requires_trait": 1238,
+      "target": "Healing"
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 6,
+      "requires_trait": 1884
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3,
+      "requires_trait": 1884
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Mantra of Potence",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Number of Casts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Mantra. Recite a hymn from the annals of Turai to hasten yourself and allies.\nThe final charge of this ability is more powerful.",
+  "icon": "https://render.guildwars2.com/file/B4CB1901D4577CCCBBD315D833FE02C7B748BBC3/1770490.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Utility",
+  "flip_skill": 42983,
+  "flags": [],
+  "specialization": 62,
+  "id": 40915,
+  "chat_link": "[&BtOfAAA=]",
+  "categories": [
+    "Mantra"
+  ]
+}

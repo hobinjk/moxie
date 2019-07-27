@@ -1,0 +1,50 @@
+{
+  "name": "Transmute Lightning",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/1999B9DB355005D2DD19F66DFFBAA6D466057508/522727.png",
+      "duration": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Cause your shocking aura to violently explode, stunning enemies who are struck by it.",
+  "icon": "https://render.guildwars2.com/file/469DCE91CAE2697309EE0BE616B70FBF6D03CC67/2029298.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 51662,
+  "chat_link": "[&Bs7JAAA=]"
+}

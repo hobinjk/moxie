@@ -1,0 +1,60 @@
+{
+  "name": "Gleam Saber",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    },
+    {
+      "text": "<c=@abilitytype>Damage Increase above 50% Heat</c>",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 10
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Recharge Time Reduced",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 3
+    }
+  ],
+  "description": "Unleash a burst of stored energy with your sword and recharge your other sword skills. This attack deals more damage based on your heat level.",
+  "icon": "https://render.guildwars2.com/file/DA9AC63DCF633A5D2806C37EB5C0E105C01DD7AC/1770407.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 45581,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 57,
+  "id": 45979,
+  "chat_link": "[&BpuzAAA=]",
+  "traited_facts": [
+    {
+      "text": "<c=@abilitytype>Damage Increase above 100% Heat</c>",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 20,
+      "requires_trait": 2137
+    }
+  ]
+}

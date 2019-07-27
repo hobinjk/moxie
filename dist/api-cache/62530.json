@@ -1,0 +1,34 @@
+{
+  "name": "Elixir of Risk",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    }
+  ],
+  "description": "Elixir. Infuse the magical essence of risk into an elixir, gaining might and fury, and then toss the elixir at the targeted area, inflicting weakness on foes. If you are in the splash area of the elixir, gain Blight.\n\nIf you are at or above the Blight threshold when you activate this skill, consume that amount of Blight to double the damage and condition duration.",
+  "icon": "https://render.guildwars2.com/file/0022CA7F9E786F947BB0B06B42292C5851B27DD5/2479399.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Utility",
+  "flags": [
+    "GroundTargeted"
+  ],
+  "specialization": 64,
+  "id": 62530,
+  "chat_link": "[&BkL0AAA=]",
+  "categories": [
+    "Elixir"
+  ]
+}

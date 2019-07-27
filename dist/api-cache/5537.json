@@ -1,0 +1,51 @@
+{
+  "name": "Cone of Cold",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 400
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 4,
+      "dmg_multiplier": 0.6
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 236,
+      "target": "Healing"
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Spray an icy blast in a cone that damages foes and heals allies.",
+  "icon": "https://render.guildwars2.com/file/069C46F135A34A5E3F15270E3B086A25FA790D92/102780.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5537,
+  "chat_link": "[&BqEVAAA=]"
+}

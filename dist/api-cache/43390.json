@@ -1,0 +1,80 @@
+{
+  "name": "Deadeye's Mark",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1500
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    },
+    {
+      "text": "Maximum Malice",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/5E50F7555EC3E9D7373B35C5FC73F24E74573459/1983628.png",
+      "value": 5
+    },
+    {
+      "text": "Malice Gained upon Hit",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/5E50F7555EC3E9D7373B35C5FC73F24E74573459/1983628.png",
+      "value": 1
+    },
+    {
+      "text": "Malice Gained upon Critical Hit",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/5E50F7555EC3E9D7373B35C5FC73F24E74573459/1983628.png",
+      "value": 1
+    }
+  ],
+  "description": "Mark a target, causing your initiative attacks to generate malice when they hit or critically hit your mark. Lose all malice when the mark ends or when this skill is recast on a new target.\nMalice is only gained once per skill use.",
+  "icon": "https://render.guildwars2.com/file/3ECEA70D0DCDAF65E0069263D005507ADBF95A62/1770609.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "specialization": 58,
+  "id": 43390,
+  "chat_link": "[&Bn6pAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 10,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 5,
+      "requires_trait": 1169
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5,
+      "requires_trait": 1163
+    },
+    {
+      "text": "Maximum Malice",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/5E50F7555EC3E9D7373B35C5FC73F24E74573459/1983628.png",
+      "value": 7,
+      "requires_trait": 2111,
+      "overrides": 3
+    }
+  ]
+}

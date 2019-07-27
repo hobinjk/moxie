@@ -1,0 +1,62 @@
+{
+  "name": "Surge of the Mists",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 9,
+      "dmg_multiplier": 0.36
+    },
+    {
+      "text": "Knockback",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/9A6A02DCA260929CD14B4A4402266006981FF51B/648509.png",
+      "distance": 120
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 8
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Evade",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/9F19DB1D3E1629390F2360F2D866651BBC0F6155/1938788.png",
+      "duration": 1
+    }
+  ],
+  "description": "Charge forward, knocking back enemies that cross your path.",
+  "icon": "https://render.guildwars2.com/file/F4355F2FB422A7C316EDCBF6E897EC9A72C4D26D/1012999.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Weapon_5",
+  "cost": 15,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 28978,
+  "chat_link": "[&BjJxAAA=]"
+}

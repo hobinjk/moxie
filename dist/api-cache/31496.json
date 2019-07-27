@@ -1,0 +1,51 @@
+{
+  "name": "Sublime Conversion",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 162,
+      "target": "Healing"
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 5
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Water"
+    }
+  ],
+  "description": "Summon an energy barrier that causes enemy projectiles to heal upon impact.",
+  "icon": "https://render.guildwars2.com/file/CB54A104F1B64FD26D24F3F55C05DDD2631619D5/1128627.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "specialization": 5,
+  "id": 31496,
+  "chat_link": "[&Bgh7AAA=]"
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Icy Coil",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 18
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/4CEE16E97EF99A6C4DEF356CE8650DB73B062A04/2491583.png",
+      "duration": 15,
+      "status": "Icy Coil",
+      "description": "Reduced incoming condition damage.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 6,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.001
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Summon a projectile of ice that circles around you, striking enemies that it passes through. While this projectile is active, you take reduced damage from conditions. Summoning a circular projectile refreshes the duration of all other circular projectiles.",
+  "icon": "https://render.guildwars2.com/file/4CEE16E97EF99A6C4DEF356CE8650DB73B062A04/2491583.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 67,
+  "id": 62834,
+  "chat_link": "[&BnL1AAA=]"
+}

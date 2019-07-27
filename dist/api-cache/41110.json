@@ -1,0 +1,92 @@
+{
+  "name": "Skull Crack",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    },
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/1999B9DB355005D2DD19F66DFFBAA6D466057508/522727.png",
+      "duration": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    }
+  ],
+  "description": "Burst. Stun your foe with a skull crack. Effect increases with adrenaline level.",
+  "icon": "https://render.guildwars2.com/file/F4F19D3AA21DD174389D01ACD9D76433750CE9DF/103280.png",
+  "type": "Profession",
+  "weapon_type": "Mace",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Profession_1",
+  "cost": 10,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 61,
+  "id": 41110,
+  "chat_link": "[&BpagAAA=]",
+  "categories": [
+    "Burst"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/A795EE78B8DAA836F3C0650CFC037BB71D3517BA/1012816.png",
+      "duration": 15,
+      "status": "Berserker's Power",
+      "description": "7% increased strike damage per stack.",
+      "apply_count": 1,
+      "requires_trait": 1437
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1657,
+      "hit_count": 1,
+      "dmg_multiplier": 1.605,
+      "overrides": 2
+    },
+    {
+      "text": "Conditions Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 1,
+      "requires_trait": 1649
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1657,
+      "hit_count": 1,
+      "dmg_multiplier": 0.0107,
+      "overrides": 4
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "False Oasis",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Pulses",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/58E92EBAF0DB4DA7C4AC04D9B22BCA5ECF0100DE/102843.png",
+      "duration": 5,
+      "status": "Vigor",
+      "description": "Endurance regeneration increased by 50%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1620,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1215,
+      "target": "Healing"
+    },
+    {
+      "text": "Mirage Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    }
+  ],
+  "description": "Deception. Create a mirage at your current location and heal over time. When the mirage expires, it spawns a mirage mirror.",
+  "icon": "https://render.guildwars2.com/file/CAF16BD2E1C1D1E263B46E702FD3AF9821C59FED/1770506.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Heal",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 59,
+  "id": 40200,
+  "chat_link": "[&BgidAAA=]",
+  "categories": [
+    "Deception"
+  ]
+}

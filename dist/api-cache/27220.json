@@ -1,0 +1,60 @@
+{
+  "name": "Facet of Light",
+  "facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/1F723B516AC5B614943543EECE6938E13349B90E/1012991.png",
+      "duration": 0,
+      "status": "Facet of Light",
+      "description": "Pulse regeneration to nearby allies every few seconds.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+      "duration": 4,
+      "status": "Regeneration",
+      "description": "Gain health every second; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    }
+  ],
+  "description": "Legendary Dragon. Facet. Place the Facet of Light on yourself to grant nearby allies regeneration every few seconds.",
+  "icon": "https://render.guildwars2.com/file/1F723B516AC5B614943543EECE6938E13349B90E/1012991.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Heal",
+  "flip_skill": 27228,
+  "flags": [],
+  "specialization": 52,
+  "id": 27220,
+  "chat_link": "[&BlRqAAA=]"
+}

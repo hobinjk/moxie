@@ -1,0 +1,53 @@
+{
+  "name": "Deactivate Photon Forge",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 6
+    },
+    {
+      "text": "Cooling Delay",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Heat Lost per Second",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "percent": 5
+    },
+    {
+      "text": "Improved Heat Lost per Second",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "percent": 10
+    }
+  ],
+  "description": "Cancel Photon Forge and begin cooling after a delay. Cooling effectiveness increases over time.",
+  "icon": "https://render.guildwars2.com/file/2B65387C32A4AE09D67AF9D438BA4B4C09A24EE4/1770389.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Profession_5",
+  "flags": [],
+  "specialization": 57,
+  "id": 41123,
+  "chat_link": "[&BqOgAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/19FE5C016ACFF174DE03752D40D202F9B75FB0C2/1769929.png",
+      "duration": 4,
+      "status": "Afterburner",
+      "description": "Your next attack sets the target on fire.",
+      "apply_count": 2,
+      "requires_trait": 2106
+    }
+  ]
+}

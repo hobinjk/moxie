@@ -1,0 +1,60 @@
+{
+  "name": "Facet of Darkness",
+  "facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/15A4F87D0E05936FF96B60F8745ADB513C5308E3/1013011.png",
+      "duration": 0,
+      "status": "Facet of Darkness",
+      "description": "Pulse fury to nearby allies every few seconds.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 3,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    }
+  ],
+  "description": "Legendary Dragon. Facet. Place the Facet of Darkness on yourself to grant nearby allies fury every few seconds.",
+  "icon": "https://render.guildwars2.com/file/15A4F87D0E05936FF96B60F8745ADB513C5308E3/1013011.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Utility",
+  "flip_skill": 27080,
+  "flags": [],
+  "specialization": 52,
+  "id": 28379,
+  "chat_link": "[&BttuAAA=]"
+}

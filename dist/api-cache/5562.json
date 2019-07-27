@@ -1,0 +1,49 @@
+{
+  "name": "Gale",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 40
+    },
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Knockdown",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7632087376D36B0D100F1B07BE53F154BC337D7C/2440716.png",
+      "duration": 3
+    },
+    {
+      "text": "Knockdown",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7632087376D36B0D100F1B07BE53F154BC337D7C/2440716.png",
+      "duration": 4
+    }
+  ],
+  "description": "Knock down your foe with a charged wind blast.",
+  "icon": "https://render.guildwars2.com/file/54C5B6544376D03C1205955030300318E922083A/103345.png",
+  "type": "Weapon",
+  "weapon_type": "Focus",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 5562,
+  "chat_link": "[&BroVAAA=]"
+}

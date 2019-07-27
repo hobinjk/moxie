@@ -1,0 +1,24 @@
+{
+  "name": "Unsheathe Gunsaber",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    }
+  ],
+  "description": "Unsheathe your gunsaber to gain new skills. Changes to your weapon recharge rate affect this skill.",
+  "icon": "https://render.guildwars2.com/file/2FD1530306F002EF08D729182822917BC477BEED/2491643.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Profession_1",
+  "flip_skill": 62861,
+  "flags": [],
+  "specialization": 68,
+  "id": 62745,
+  "chat_link": "[&Bhn1AAA=]"
+}

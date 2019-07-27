@@ -1,0 +1,72 @@
+{
+  "name": "Repeater",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 5,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 4,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 5
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 20,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Blast your foe with rapid fire from your pistol.",
+  "icon": "https://render.guildwars2.com/file/9B4E1B72A86C0F3FCB0B9E272E2A2AEC45669E92/103878.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_3",
+  "dual_wield": "Nothing",
+  "flip_skill": 59526,
+  "initiative": 2,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13111,
+  "chat_link": "[&BjczAAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1299,
+      "hit_count": 1,
+      "dmg_multiplier": 0.285,
+      "overrides": 1
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 204,
+      "requires_trait": 1238,
+      "target": "Healing"
+    }
+  ],
+  "categories": [
+    "DualWield"
+  ]
+}

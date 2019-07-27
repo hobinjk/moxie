@@ -1,0 +1,15 @@
+{
+  "name": "Exit Shadow Shroud",
+  "description": "Exit your shadow shroud, breaking the tether between you and your ally.",
+  "icon": "https://render.guildwars2.com/file/44F8D2065727B25C7DA9D5E52065D1A86CC6330F/2503739.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Profession_2",
+  "flags": [],
+  "specialization": 71,
+  "id": 63251,
+  "chat_link": "[&BhP3AAA=]"
+}

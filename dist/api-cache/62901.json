@@ -1,0 +1,44 @@
+{
+  "name": "Tactical Reload",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Ammo Reloaded",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B106D2281F245403F23CD2C2E766D39A05400916/2491632.png",
+      "duration": 10,
+      "status": "Tactical Reload",
+      "description": "Your next Dragon Trigger charges more quickly.",
+      "apply_count": 1
+    },
+    {
+      "text": "Additional Charges per Interval",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 1
+    }
+  ],
+  "description": "Armament. Reload ammo on all of your profession skills. Your next Dragon Trigger generates more charges per interval.",
+  "icon": "https://render.guildwars2.com/file/B106D2281F245403F23CD2C2E766D39A05400916/2491632.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Elite",
+  "flags": [],
+  "specialization": 68,
+  "id": 62901,
+  "chat_link": "[&BrX1AAA=]"
+}

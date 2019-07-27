@@ -1,0 +1,34 @@
+{
+  "name": "Counterattack",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/AD43D7CDEBF83C23B799E94A649794181F6208DA/103124.png",
+      "duration": 5,
+      "status": "Counter Ready",
+      "description": "Counterattack with a powerful kick.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Block incoming attacks. If an attack is blocked, Counterattack Kick can be used.",
+  "icon": "https://render.guildwars2.com/file/16D60B57A2F495EE963811A305079790AC090E1B/104000.png",
+  "type": "Weapon",
+  "weapon_type": "Greatsword",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_4",
+  "flip_skill": 12523,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 12522,
+  "chat_link": "[&BuowAAA=]"
+}

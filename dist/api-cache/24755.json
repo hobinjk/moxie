@@ -1,0 +1,72 @@
+{
+  "name": "Thousand Cuts",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 60
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 10,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 5
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Blade",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/D6CAECEA0FD5FADE04DD6970384ADC5DE309C506/2229322.png"
+    },
+    {
+      "text": "Pierces",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/F833590B593E0C2D4948DFFE9951B91655250052/1770207.png"
+    },
+    {
+      "text": "Unblockable",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/BA65F2F5A073EB4BCC79085916B978DC0B096A0B/2248876.png"
+    }
+  ],
+  "description": "Psionic. Open a portal that devastates targets in a line in front of you with a flurry of blades.",
+  "icon": "https://render.guildwars2.com/file/1AF971BFF051CE34DE34437D1A0E0991A92155F4/2479389.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Elite",
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "specialization": 66,
+  "id": 24755,
+  "chat_link": "[&BrNgAAA=]"
+}

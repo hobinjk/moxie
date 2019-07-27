@@ -1,0 +1,24 @@
+{
+  "name": "Flamethrower",
+  "description": "Engineering Kit. Arm yourself with a flamethrower that replaces your weapon skills.",
+  "icon": "https://render.guildwars2.com/file/573A10BFC3310A694740092B91E40C953EE80A03/103435.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Utility",
+  "toolbelt_skill": 5977,
+  "bundle_skills": [
+    5928,
+    5931,
+    5930,
+    5929,
+    6159
+  ],
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5927,
+  "chat_link": "[&BicXAAA=]"
+}

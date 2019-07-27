@@ -1,0 +1,58 @@
+{
+  "name": "Keen Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.85
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 5,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 5,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Chain. Strike your foe and gain might. Gain additional might on critical hit.",
+  "icon": "https://render.guildwars2.com/file/CDD5AA0442ACA973E250B90BD004375006E15607/1770654.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 40560,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 61,
+  "id": 40275,
+  "chat_link": "[&BlOdAAA=]",
+  "categories": []
+}

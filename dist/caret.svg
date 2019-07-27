@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="13px" viewBox="0 0 24 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>caret</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="caret" transform="translate(11.696699, 6.696699) rotate(-180.000000) translate(-11.696699, -6.696699) translate(-0.803301, -0.803301)" stroke="#7777FF">
+            <path d="M10.3137085,7.5 L26.3137085,7.5" id="Line" transform="translate(18.313708, 7.500000) rotate(-135.000000) translate(-18.313708, -7.500000) "></path>
+            <path d="M7,-0.5 L7,15.5" id="Line" transform="translate(7.000000, 7.500000) rotate(-135.000000) translate(-7.000000, -7.500000) "></path>
+        </g>
+    </g>
+</svg>

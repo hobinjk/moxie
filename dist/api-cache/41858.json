@@ -1,0 +1,25 @@
+{
+  "name": "Legendary Renegade Stance",
+  "facts": [
+    {
+      "text": "StunBreak",
+      "type": "StunBreak",
+      "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+      "value": true
+    }
+  ],
+  "description": "Invoke the power of the legendary charr renegade, Kalla Scorchrazor.",
+  "icon": "https://render.guildwars2.com/file/6B3205EF5ED0802DB74BBF7F0CAE04FAA2089B74/1770592.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 63,
+  "id": 41858,
+  "chat_link": "[&BoKjAAA=]"
+}

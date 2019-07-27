@@ -1,0 +1,37 @@
+{
+  "name": "Glacial Heart",
+  "facts": [
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "duration": 2,
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Cannot Critical Hit",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/63015872E20761F5E76F803A90666FBE4E262BC9/536051.png"
+    }
+  ],
+  "description": "Unleash a blast of ice that chills foes.",
+  "icon": "https://render.guildwars2.com/file/0C5DAC290C007C490454612A2EAE61047DE6FDC8/104825.png",
+  "flags": [],
+  "id": 21795,
+  "chat_link": "[&BiNVAAA=]"
+}

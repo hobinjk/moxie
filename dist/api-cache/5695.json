@@ -1,0 +1,40 @@
+{
+  "name": "Rock Barrier",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/C5CB69247473AE2DEB35DB5F952A0C3832CC14F2/102858.png",
+      "duration": 30,
+      "status": "Rock Barrier",
+      "apply_count": 1
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    }
+  ],
+  "description": "Envelop yourself in a stony barrier that improves toughness.",
+  "icon": "https://render.guildwars2.com/file/C5CB69247473AE2DEB35DB5F952A0C3832CC14F2/102858.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "attunement": "Earth",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flip_skill": 5780,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5695,
+  "chat_link": "[&Bj8WAAA=]"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Triple Bolt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Fire three missiles that hinder foes and help allies.",
+  "icon": "https://render.guildwars2.com/file/C505F1FEF4DAFA05126CF14D1B0CDC2511F8CEEB/2503749.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 71,
+  "id": 63134,
+  "chat_link": "[&Bp72AAA=]"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Siphon",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 18
+    }
+  ],
+  "description": "Steal.",
+  "icon": "https://render.guildwars2.com/file/C6D7F7A40A041D52D15E595D3DA59F24B8B1A6E9/2503748.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "specialization": 71,
+  "id": 63067,
+  "chat_link": "[&Blv2AAA=]",
+  "traited_facts": [
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5,
+      "requires_trait": 1163
+    }
+  ]
+}

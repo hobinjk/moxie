@@ -1,0 +1,31 @@
+{
+  "name": "Throw Rock",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    }
+  ],
+  "description": "Throw a rock at your target.",
+  "icon": "https://render.guildwars2.com/file/CFD7D9CCAC2BAEB1AE98E9180B1B21CACA6206A5/103593.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Downed_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14390,
+  "chat_link": "[&BjY4AAA=]"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Legendary Dwarf Stance",
+  "description": "Invoke the power of the legendary dwarf King Jalis Ironhammer.",
+  "icon": "https://render.guildwars2.com/file/03C66FA8A89697A0C4D309484172080E3A1141EF/961410.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "id": 28419,
+  "chat_link": "[&BgNvAAA=]"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Elixir of Promise",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    }
+  ],
+  "description": "Elixir. Infuse an elixir with the promise of good health, healing yourself and gaining regeneration, and then toss the elixir at the targeted area, poisoning foes. If you are in the splash area of the elixir, gain Blight.\n\nIf you are at or above the Blight threshold when you activate this skill, consume that amount of Blight to double damage and condition duration.",
+  "icon": "https://render.guildwars2.com/file/140E800A089A0CE7487E615006C02AAB9A944DA4/2479398.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Heal",
+  "flags": [
+    "GroundTargeted"
+  ],
+  "specialization": 64,
+  "id": 62667,
+  "chat_link": "[&Bsv0AAA=]",
+  "categories": [
+    "Elixir"
+  ]
+}

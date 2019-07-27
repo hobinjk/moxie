@@ -1,0 +1,74 @@
+{
+  "name": "Winds of Chaos",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 3,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 5,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 5,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to foes that aren't moving. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 5,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Bounces",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 2
+    }
+  ],
+  "description": "Bounce an orb of energy between foes and allies. The first hit applies torment, while subsequent hits to enemies apply confusion. Allies that the orb bounces to gain fury and might.",
+  "icon": "https://render.guildwars2.com/file/0C9C043BFFC0773E390D19462444ABEB02FD4C01/103100.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 40184,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10273,
+  "chat_link": "[&BiEoAAA=]"
+}

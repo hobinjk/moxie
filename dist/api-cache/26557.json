@@ -1,0 +1,62 @@
+{
+  "name": "Vengeful Hammers",
+  "facts": [
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.2
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 53,
+      "target": "Healing"
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/04E220E8A8B4BD682B6A7D780D98B80FEDF5B410/961436.png",
+      "duration": 0,
+      "status": "Vengeful Hammers",
+      "description": "You take reduced physical and condition damage.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Hammers",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 180
+    }
+  ],
+  "description": "Legendary Dwarf. Invoke hammers to circle around you, damaging foes.",
+  "icon": "https://render.guildwars2.com/file/04E220E8A8B4BD682B6A7D780D98B80FEDF5B410/961436.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Utility",
+  "cost": 5,
+  "flip_skill": 26956,
+  "flags": [],
+  "id": 26557,
+  "chat_link": "[&Br1nAAA=]",
+  "categories": [
+    "LegendaryDwarf"
+  ]
+}

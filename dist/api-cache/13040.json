@@ -1,0 +1,68 @@
+{
+  "name": "Shadow Shot",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.3125
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+      "duration": 5,
+      "status": "Blinded",
+      "description": "Next outgoing attack misses; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Dual Wield. Fire an unblockable shot at your foe, which blinds them, and then shadowstep to them for a dagger strike.",
+  "icon": "https://render.guildwars2.com/file/C76C05F10629244C6337F24E913D0C45A315ED4F/103209.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_3",
+  "dual_wield": "Pistol",
+  "initiative": 4,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13040,
+  "chat_link": "[&BvAyAAA=]",
+  "categories": [
+    "DualWield"
+  ],
+  "traited_facts": [
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 407,
+      "requires_trait": 1238,
+      "target": "Healing"
+    }
+  ]
+}

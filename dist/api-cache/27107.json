@@ -1,0 +1,62 @@
+{
+  "name": "Impossible Odds",
+  "facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.45
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.55
+    },
+    {
+      "text": "Strike Delay",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 0
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 0
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/D5479F5A43B3A1550EC0F457AA4ED79F93EF9A22/1013014.png",
+      "duration": 0,
+      "status": "Impossible Odds",
+      "description": "Your attacks gain a follow-up strike.",
+      "apply_count": 1
+    },
+    {
+      "text": "Movement Speed Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 50
+    }
+  ],
+  "description": "Legendary Assassin. Empower yourself with Shiro's incredible speed and destructive prowess, gaining great movement speed and striking foes an additional time when you hit them. This effect can occur once per interval.",
+  "icon": "https://render.guildwars2.com/file/D5479F5A43B3A1550EC0F457AA4ED79F93EF9A22/1013014.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Utility",
+  "cost": 5,
+  "flip_skill": 28382,
+  "flags": [],
+  "id": 27107,
+  "chat_link": "[&BuNpAAA=]",
+  "categories": [
+    "LegendaryAssassin"
+  ]
+}

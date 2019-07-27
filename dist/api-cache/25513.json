@@ -1,0 +1,28 @@
+{
+  "name": "Phantasmal Blade",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.7
+    },
+    {
+      "text": "Blade",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/D6CAECEA0FD5FADE04DD6970384ADC5DE309C506/2229322.png"
+    }
+  ],
+  "description": "Shoots a blade at the phantasm's current target.",
+  "icon": "https://render.guildwars2.com/file/F59775A05108441C09AC03C30CAD98CC049CCC28/2175058.png",
+  "flags": [],
+  "id": 25513,
+  "chat_link": "[&BqljAAA=]"
+}

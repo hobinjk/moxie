@@ -1,0 +1,59 @@
+{
+  "name": "Facet of Elements",
+  "facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/C1EC3E559DFB120A41FD3750DABD616BBA9172F9/1013012.png",
+      "duration": 0,
+      "status": "Facet of Elements",
+      "description": "Pulse swiftness to nearby allies every few seconds.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+      "duration": 3,
+      "status": "Swiftness",
+      "description": "Movement speed increased by 33%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    }
+  ],
+  "description": "Legendary Dragon. Facet. Place the Facet of Elements on yourself to grant nearby allies swiftness every few seconds.",
+  "icon": "https://render.guildwars2.com/file/C1EC3E559DFB120A41FD3750DABD616BBA9172F9/1013012.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 52,
+  "id": 27014,
+  "chat_link": "[&BoZpAAA=]"
+}

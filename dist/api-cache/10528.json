@@ -1,0 +1,49 @@
+{
+  "name": "Ghastly Claws",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 8,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Life Force",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 12
+    },
+    {
+      "text": "Bonus damage per vulnerability stack",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 1
+    }
+  ],
+  "description": "Summon spectral claws to slash your foe in a quick flurry of strikes, gaining life force per strike. This attack deals increased damage per stack of vulnerability on your target.",
+  "icon": "https://render.guildwars2.com/file/96100F58946716DF6E23E975287AA9680BD144FA/103799.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10528,
+  "chat_link": "[&BiApAAA=]"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Mace Smash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.2
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 5,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 2
+    }
+  ],
+  "description": "Smash your target with a heavy blow from your mace, inflicting confusion.",
+  "icon": "https://render.guildwars2.com/file/6FB7E71DFAA30995F3A9587A4BD17656EDA2A34B/2503671.png",
+  "type": "Weapon",
+  "weapon_type": "Mace",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 63174,
+  "prev_chain": 63186,
+  "flip_skill": 63174,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 70,
+  "id": 63077,
+  "chat_link": "[&BmX2AAA=]"
+}

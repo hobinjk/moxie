@@ -1,0 +1,42 @@
+{
+  "name": "Singeing Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 3,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.6
+    }
+  ],
+  "description": "Singe your foes by unleashing a burst of flame from your hammer.",
+  "icon": "https://render.guildwars2.com/file/00BEB69094655BD530E92C5805D22E954EA82934/2491574.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 67,
+  "id": 62925,
+  "chat_link": "[&Bs31AAA=]"
+}

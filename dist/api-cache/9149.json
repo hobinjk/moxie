@@ -1,0 +1,37 @@
+{
+  "name": "Wrath",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 5,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Focus a wrathful light ray on your foe.",
+  "icon": "https://render.guildwars2.com/file/DF5E50F51A3558C4A76B350F0ED373EF68084F09/103661.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Downed_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9149,
+  "chat_link": "[&Br0jAAA=]"
+}

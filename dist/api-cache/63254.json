@@ -1,0 +1,40 @@
+{
+  "name": "Twilight Combo",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    }
+  ],
+  "description": "Dual Wield. Fire a slow-moving projectile, then fire a quick shot that accelerates the first.",
+  "icon": "https://render.guildwars2.com/file/FB0F9FF5A67F57F8E8B0D8B20F0F53D0CEBDF317/2503751.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_3",
+  "dual_wield": "Dagger",
+  "initiative": 4,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 71,
+  "id": 63254,
+  "chat_link": "[&Bhb3AAA=]",
+  "categories": [
+    "DualWield"
+  ],
+  "traited_facts": [
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 407,
+      "requires_trait": 1238,
+      "target": "Healing"
+    }
+  ]
+}

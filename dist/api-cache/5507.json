@@ -1,0 +1,44 @@
+{
+  "name": "Ether Renewal",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 18
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 663,
+      "target": "Healing"
+    },
+    {
+      "text": "Conditions Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 1
+    },
+    {
+      "text": "Pulses",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 8
+    }
+  ],
+  "description": "Cantrip. Cure a condition and heal yourself with every pulse.",
+  "icon": "https://render.guildwars2.com/file/024A09E8342E54AEB9EDE624E4123138D21639D8/103038.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 5507,
+  "chat_link": "[&BoMVAAA=]",
+  "categories": [
+    "Cantrip"
+  ]
+}

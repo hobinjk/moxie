@@ -1,0 +1,49 @@
+{
+  "name": "Life Leech",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 20,
+      "dmg_multiplier": 0.225
+    },
+    {
+      "text": "Pulse Heal",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 358,
+      "target": "Healing"
+    }
+  ],
+  "description": "Leech a foe's health to heal yourself.",
+  "icon": "https://render.guildwars2.com/file/E4FC11FDB8E5AE310ED5AEC0A4AD0F3DDC5F0AE4/103763.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Downed_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10560,
+  "chat_link": "[&BkApAAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 915,
+      "hit_count": 20,
+      "dmg_multiplier": 0.281,
+      "overrides": 1
+    }
+  ]
+}

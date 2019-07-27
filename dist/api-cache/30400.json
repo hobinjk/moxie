@@ -1,0 +1,60 @@
+{
+  "name": "Channeled Vigor",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Heal if Endurance is Full",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 2440,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1840,
+      "target": "Healing"
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 15
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 25
+    },
+    {
+      "text": "Pulses",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Physical. Channel your energy to gain endurance and health per pulse. Heal for more if your endurance is full.",
+  "icon": "https://render.guildwars2.com/file/AA5F2B2C68423A9A2CACFD6DFB74F05228E0A2B2/1058620.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Heal",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 7,
+  "id": 30400,
+  "chat_link": "[&BsB2AAA=]",
+  "categories": [
+    "Physical"
+  ]
+}

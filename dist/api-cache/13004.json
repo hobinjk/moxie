@@ -1,0 +1,40 @@
+{
+  "name": "Double Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 2,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Chain. Strike your foe twice.",
+  "icon": "https://render.guildwars2.com/file/3BC8295208902CAB3046C27A6C46A4E1CC6EFAFA/104065.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 13087,
+  "flip_skill": 13087,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 13004,
+  "chat_link": "[&BswyAAA=]",
+  "categories": []
+}

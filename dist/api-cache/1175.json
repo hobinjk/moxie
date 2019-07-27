@@ -1,0 +1,30 @@
+{
+  "name": "Bandage",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 5
+    }
+  ],
+  "description": "Call your allies for help. Restores health while you channel it.",
+  "icon": "https://render.guildwars2.com/file/D2D7D11874060D68760BFD519CFC77B6DF14981F/102928.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian",
+    "Warrior",
+    "Engineer",
+    "Ranger",
+    "Thief",
+    "Elementalist",
+    "Mesmer",
+    "Necromancer",
+    "Revenant"
+  ],
+  "slot": "Downed_4",
+  "flags": [],
+  "id": 1175,
+  "chat_link": "[&BpcEAAA=]"
+}

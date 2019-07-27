@@ -1,0 +1,125 @@
+{
+  "name": "Facet of Nature",
+  "facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/590F7657AB11171A35304E5DDA6FDA5B2EC70350/1058606.png",
+      "duration": 0,
+      "status": "Facet of Nature",
+      "description": "Pulse your invoked legend's Facet of Nature to nearby allies every few seconds.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/062166FE1CB799959E5500E64E45D3E85356666C/2029307.png",
+      "duration": 0,
+      "status": "Facet of Nature—Assassin",
+      "description": "Grant allies the ability to steal life with their strikes.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/67CDD35F6BC3072E0837715A5E0A90646529BAA2/1030005.png",
+        "status": "Legendary Assassin Stance",
+        "description": "Currently invoking the power of Shiro Tagachi."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/EB6BADC7C64C676C6D57A73FF9EF3D37E802646C/2029308.png",
+      "duration": 0,
+      "status": "Facet of Nature—Centaur",
+      "description": "Heal nearby allies every few seconds.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/0E091B41C047DD5A1BCA6B9193C73E6B29524C5D/1983636.png",
+        "status": "Legendary Centaur Stance",
+        "description": "Currently invoking the power of Ventari."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/1BE9B54B18229A4B5478A713DDBE5D9B54145D26/2029309.png",
+      "duration": 0,
+      "status": "Facet of Nature—Demon",
+      "description": "Transfer a condition from nearby allies to yourself every few seconds.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1A1407F7D34E5ED41B59A25F39EBF728CC926423/961413.png",
+        "status": "Legendary Demon Stance",
+        "description": "Currently invoking the power of Mallyx the Unyielding."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/F21B64BCC298B12206D24F68AEBF1B546F78990B/2029311.png",
+      "duration": 0,
+      "status": "Facet of Nature—Dwarf",
+      "description": "Reduce incoming damage to allies.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/03C66FA8A89697A0C4D309484172080E3A1141EF/961410.png",
+        "status": "Legendary Dwarf Stance",
+        "description": "Currently invoking the power of King Jalis Ironhammer."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/BFDF3638C59906229A30B2D6B91D2EFB72999C33/2029310.png",
+      "duration": 0,
+      "status": "Facet of Nature—Dragon",
+      "description": "Increase the duration of boons applied to allies.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/32F8A52E3D27E3B404976092AFD7585533B7E77E/1983635.png",
+        "status": "Legendary Dragon Stance",
+        "description": "Currently invoking the power of Glint."
+      }
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 10
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    }
+  ],
+  "description": "Legendary Dragon. Facet. Place the Facet of Nature on yourself to grant nearby allies enhancements based on your channeled legend.",
+  "icon": "https://render.guildwars2.com/file/590F7657AB11171A35304E5DDA6FDA5B2EC70350/1058606.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_2",
+  "flags": [],
+  "specialization": 52,
+  "id": 29371,
+  "chat_link": "[&BrtyAAA=]"
+}

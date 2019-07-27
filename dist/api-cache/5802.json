@@ -1,0 +1,25 @@
+{
+  "name": "Med Kit",
+  "description": "Engineering Kit. Equip a kit that replaces your weapon with healing skills.",
+  "icon": "https://render.guildwars2.com/file/206FCC2A05035FDB306AB5136E5F3AC0FC6467F3/103395.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Heal",
+  "toolbelt_skill": 29772,
+  "flip_skill": 6109,
+  "bundle_skills": [
+    58090,
+    30521,
+    29547,
+    49045,
+    49082,
+    58104,
+    50444
+  ],
+  "flags": [],
+  "id": 5802,
+  "chat_link": "[&BqoWAAA=]"
+}

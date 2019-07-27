@@ -1,0 +1,41 @@
+{
+  "name": "Litany of Wrath",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1640,
+      "target": "Healing"
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/77077EDEB2AF1F3D4062E6428000F44F77616ADE/699527.png",
+      "duration": 6,
+      "status": "Litany of Wrath",
+      "description": "Gain health based on damage dealt to enemies.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Meditation. Heal yourself. For a brief time, heal yourself based on a percentage of damage dealt to enemies.",
+  "icon": "https://render.guildwars2.com/file/77077EDEB2AF1F3D4062E6428000F44F77616ADE/699527.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 21664,
+  "chat_link": "[&BqBUAAA=]",
+  "categories": [
+    "Meditation"
+  ]
+}

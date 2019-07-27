@@ -1,0 +1,49 @@
+{
+  "name": "Signet of Malice",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 132,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 3275,
+      "target": "Healing"
+    }
+  ],
+  "description": "Signet Passive: Heals when you attack.\nSignet Active: Gain health.",
+  "icon": "https://render.guildwars2.com/file/D6640348CA7573A86818B9B4B00F0C0CC2FF5FDF/104077.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 13050,
+  "chat_link": "[&BvoyAAA=]",
+  "categories": [
+    "Signet"
+  ],
+  "traited_facts": [
+    {
+      "text": "Heal on Kill",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 532,
+      "requires_trait": 1267,
+      "target": "Healing"
+    }
+  ]
+}

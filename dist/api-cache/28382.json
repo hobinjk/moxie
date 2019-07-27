@@ -1,0 +1,17 @@
+{
+  "name": "Relinquish Power",
+  "description": "Legendary Assassin. End the Impossible Odds skill.",
+  "icon": "https://render.guildwars2.com/file/211A1045B4A90B8005652E35BF5BD6270CB239CC/1030007.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 28382,
+  "chat_link": "[&Bt5uAAA=]",
+  "categories": [
+    "LegendaryAssassin"
+  ]
+}

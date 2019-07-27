@@ -1,0 +1,23 @@
+{
+  "name": "Bomb Kit",
+  "description": "Engineering Kit. Equip a kit that replaces your weapon with bomb skills.",
+  "icon": "https://render.guildwars2.com/file/B06C59BBB1EC416859E04E7C9859BE020C4B3E17/103399.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Utility",
+  "toolbelt_skill": 5813,
+  "flip_skill": 6111,
+  "bundle_skills": [
+    5842,
+    5823,
+    5822,
+    5824,
+    5939
+  ],
+  "flags": [],
+  "id": 5812,
+  "chat_link": "[&BrQWAAA=]"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Overcharged Cartridges",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 15
+    },
+    {
+      "text": "Number of Hits",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    },
+    {
+      "text": "Maximum Count",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 2
+    },
+    {
+      "text": "Count Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/EF1D6D09A1B403972F721F1A073154E2F01CD0A5/2491652.png",
+      "duration": 10,
+      "status": "Overcharged Cartridges",
+      "description": "Your explosions do more damage.",
+      "apply_count": 5
+    }
+  ],
+  "description": "Armament. Your next few explosion attacks deal more damage. Using this skill while you already have stacks of Overcharged Cartridges causes you to use Detonate Cartridges instead.",
+  "icon": "https://render.guildwars2.com/file/EF1D6D09A1B403972F721F1A073154E2F01CD0A5/2491652.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Utility",
+  "flip_skill": 68128,
+  "flags": [],
+  "specialization": 68,
+  "id": 68085,
+  "chat_link": "[&BvUJAQA=]"
+}

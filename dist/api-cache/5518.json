@@ -1,0 +1,38 @@
+{
+  "name": "Chain Lightning",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.66
+    },
+    {
+      "text": "Number of Bounces",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Hit multiple foes with arcs of chain lightning.",
+  "icon": "https://render.guildwars2.com/file/01D310FE65DBA378CBAFD13B2BFEDE59939C5153/102964.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5518,
+  "chat_link": "[&Bo4VAAA=]"
+}

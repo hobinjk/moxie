@@ -1,0 +1,75 @@
+{
+  "name": "\"To the Limit!\"",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 50
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 100
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 9100,
+      "target": "Healing"
+    },
+    {
+      "text": "Adrenaline",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+      "value": 30
+    }
+  ],
+  "description": "Shout. Heal yourself and regain all adrenaline. Nearby allies gain endurance.",
+  "icon": "https://render.guildwars2.com/file/999EEC803BE421BD0835D8DC1EFE70C3A0EA0903/104117.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 14402,
+  "chat_link": "[&BkI4AAA=]",
+  "categories": [
+    "Shout"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+      "duration": 15,
+      "status": "Positive Flow",
+      "description": "Gain flow per second.",
+      "apply_count": 1,
+      "requires_trait": 2226,
+      "overrides": 6
+    }
+  ]
+}

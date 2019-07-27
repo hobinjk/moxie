@@ -1,0 +1,48 @@
+{
+  "name": "Soothing Stone",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 5501,
+      "target": "Healing"
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/D104A6B9344A2E2096424A3C300E46BC2926E4D7/2440718.png",
+      "duration": 5,
+      "status": "Resolution",
+      "description": "Incoming condition damage decreased by 33%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Conditions Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    }
+  ],
+  "description": "Legendary Dwarf. Remove conditions and heal yourself. Gain resolution.",
+  "icon": "https://render.guildwars2.com/file/6B0331B3BBEB4603BA7780911C950401E498B294/961448.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Heal",
+  "cost": 5,
+  "flags": [],
+  "id": 27372,
+  "chat_link": "[&BuxqAAA=]",
+  "categories": [
+    "LegendaryDwarf"
+  ]
+}

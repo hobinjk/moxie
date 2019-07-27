@@ -1,0 +1,42 @@
+{
+  "name": "Light Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 240
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Heat Gained",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "percent": 2
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Swing a holographic blade.",
+  "icon": "https://render.guildwars2.com/file/F42AE073CD260A5A14BE304D2D60EBA7F2F8FF64/1770398.png",
+  "type": "Weapon",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Downed_1",
+  "next_chain": 45756,
+  "flags": [],
+  "id": 44588,
+  "chat_link": "[&BiyuAAA=]"
+}

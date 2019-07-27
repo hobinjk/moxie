@@ -1,0 +1,65 @@
+{
+  "name": "Brutal Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.25
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.25
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Hit your foe with a final brutal strike.",
+  "icon": "https://render.guildwars2.com/file/4D07B5BBA8C206BE9D02B525C13AC9C2D3F93FEB/103020.png",
+  "type": "Weapon",
+  "weapon_type": "Greatsword",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 14373,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14374,
+  "chat_link": "[&BiY4AAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 1,
+      "dmg_multiplier": 1.375,
+      "overrides": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 1,
+      "dmg_multiplier": 1.375,
+      "overrides": 2
+    }
+  ]
+}

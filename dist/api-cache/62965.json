@@ -1,0 +1,50 @@
+{
+  "name": "Relentless Fire",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 10
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/BD6C4CEEC95711F20FC62A4CA310C5A6574F9664/2261523.png",
+      "duration": 5,
+      "status": "Unblockable",
+      "description": "Your attacks are unblockable",
+      "apply_count": 10
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 5
+    },
+    {
+      "text": "Duration Increase",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    }
+  ],
+  "description": "Augment. Your attacks and conditions deal increased damage, and your attacks are unblockable. If this is cast within range of your Fire Sphere, the duration is increased.",
+  "icon": "https://render.guildwars2.com/file/31372EE16EAB80BDB213EB99D1BF4C6C3B67B6AF/2491601.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 67,
+  "id": 62965,
+  "chat_link": "[&BvX1AAA=]"
+}

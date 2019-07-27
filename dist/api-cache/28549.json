@@ -1,0 +1,44 @@
+{
+  "name": "Hammer Bolt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.95
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Hurl your weapon at enemies, striking foes in its path.",
+  "icon": "https://render.guildwars2.com/file/C6A83F71A055385DEA0A20DE4DD99FED07D2CD6D/961480.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 28549,
+  "chat_link": "[&BoVvAAA=]"
+}

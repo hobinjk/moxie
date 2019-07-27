@@ -1,0 +1,16 @@
+{
+  "name": "Magic Blast",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1000
+    }
+  ],
+  "description": "Xera's magic blasts the arena, using the Keep Construct's body as a lens. Damage increases with more stacks of Magic Blast Intensity.",
+  "icon": "https://render.guildwars2.com/file/1D55D34FB4EE20B1962E315245E40CA5E1042D0E/62248.png",
+  "flags": [],
+  "id": 34894,
+  "chat_link": "[&Bk6IAAA=]"
+}

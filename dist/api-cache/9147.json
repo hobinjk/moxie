@@ -1,0 +1,66 @@
+{
+  "name": "Binding Blade",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B975D6E5B32392524C034114E2A2201097BFDA35/103274.png",
+      "duration": 10,
+      "status": "Binding Blade",
+      "description": "Inflicts damage over time. Activate Blinding Blade to pull foes to you.",
+      "apply_count": 1
+    },
+    {
+      "text": "Maximum Leash Range",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    },
+    {
+      "text": "Maximum Blade Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 10
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Whirl"
+    }
+  ],
+  "description": "Throw blades at your foes, causing damage over time. Bound foes can be pulled to you. The effect ends when a foe moves out of range.",
+  "icon": "https://render.guildwars2.com/file/B975D6E5B32392524C034114E2A2201097BFDA35/103274.png",
+  "type": "Weapon",
+  "weapon_type": "Greatsword",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_5",
+  "flip_skill": 9226,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9147,
+  "chat_link": "[&BrsjAAA=]"
+}

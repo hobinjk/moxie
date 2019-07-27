@@ -1,0 +1,44 @@
+{
+  "name": "Wastrel's Ruin",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 100
+    }
+  ],
+  "description": "Strike your target. Deals more damage to foes not using skills.",
+  "icon": "https://render.guildwars2.com/file/04677008EC13120C6201CF40DACE1B73D721FDBF/1770657.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 61,
+  "id": 44004,
+  "chat_link": "[&BuSrAAA=]"
+}

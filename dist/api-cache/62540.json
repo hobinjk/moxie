@@ -1,0 +1,14 @@
+{
+  "name": "Exit Harbinger Shroud",
+  "description": "Leave Harbinger Shroud and return to your normal form.",
+  "icon": "https://render.guildwars2.com/file/99465D6C7322FCB7B06AC7729F2A91BB243A09E4/2479401.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "id": 62540,
+  "chat_link": "[&Bkz0AAA=]"
+}

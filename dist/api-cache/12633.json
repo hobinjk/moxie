@@ -1,0 +1,91 @@
+{
+  "name": "\"Sic 'Em!\"",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 2000
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 35
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/0D6B235E679346723414607E61DE052576097545/104025.png",
+      "duration": 10,
+      "status": "\"Sic 'Em!\"",
+      "description": "Focus on a target for increased damage.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/62BFF65D1CE99B1B2B0928152BCC596EAC0D372B/102887.png",
+      "duration": 6,
+      "status": "Revealed",
+      "description": "You cannot stealth",
+      "apply_count": 1
+    }
+  ],
+  "description": "Command. Your pet rushes at your foe, revealing them and dealing increased damage.",
+  "icon": "https://render.guildwars2.com/file/0D6B235E679346723414607E61DE052576097545/104025.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 12633,
+  "chat_link": "[&BlkxAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/0D6B235E679346723414607E61DE052576097545/104025.png",
+      "duration": 10,
+      "status": "\"Sic 'Em!\"",
+      "description": "Focus on a target for increased damage.",
+      "apply_count": 1,
+      "requires_trait": 2151,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/905547F3499034F4680ADB272DE01FD2D45506DB/1770050.png"
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/0D6B235E679346723414607E61DE052576097545/104025.png",
+      "duration": 10,
+      "status": "\"Sic 'Em!\"",
+      "description": "Focus on a target for increased damage.",
+      "apply_count": 1,
+      "requires_trait": 2151,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/905547F3499034F4680ADB272DE01FD2D45506DB/1770050.png"
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/0D6B235E679346723414607E61DE052576097545/104025.png",
+      "duration": 10,
+      "status": "\"Sic 'Em!\"",
+      "description": "Focus on a target for increased damage.",
+      "apply_count": 1,
+      "requires_trait": 2151,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/28B3ACECA7560CFF34AFD1B82E2EB4D9A22EC2EB/156797.png"
+      },
+      "overrides": 2
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Fire Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.66
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Build elemental flames into your sword and strike your enemies.",
+  "icon": "https://render.guildwars2.com/file/01BBF5AFE8D46FAE7F3ABE04A7EA2065E203A010/1770361.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 40326,
+  "flip_skill": 40326,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 39964,
+  "chat_link": "[&BhycAAA=]"
+}

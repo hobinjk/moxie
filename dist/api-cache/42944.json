@@ -1,0 +1,23 @@
+{
+  "name": "Beastmode",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    }
+  ],
+  "description": "Meld with your pet.",
+  "icon": "https://render.guildwars2.com/file/905547F3499034F4680ADB272DE01FD2D45506DB/1770050.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Profession_5",
+  "flags": [],
+  "specialization": 55,
+  "id": 42944,
+  "chat_link": "[&BsCnAAA=]"
+}

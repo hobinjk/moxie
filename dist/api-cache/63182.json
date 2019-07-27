@@ -1,0 +1,32 @@
+{
+  "name": "Double Bolt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 2
+    }
+  ],
+  "description": "Fire two projectiles that hinder foes and help allies.",
+  "icon": "https://render.guildwars2.com/file/C7D7DF4CB2E9D52E4EDF735627063F0C41A878AC/2503735.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 63134,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 71,
+  "id": 63182,
+  "chat_link": "[&Bs72AAA=]"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Hammer Bash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.9
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Chain. Bash your foe again.",
+  "icon": "https://render.guildwars2.com/file/2D1D0B576D78A4B16A390BB035D1D9B34BB2D2C7/103179.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 14385,
+  "prev_chain": 14358,
+  "flip_skill": 14385,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14384,
+  "chat_link": "[&BjA4AAA=]",
+  "categories": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Legendary Alliance Stance",
+  "description": "Invoke the power of the legendary champions Archemorus and Saint Viktor.",
+  "icon": "https://render.guildwars2.com/file/E1910F4C5C74E0B00AB262D2D3DBA3FB51BE90CA/2491626.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "specialization": 69,
+  "id": 62891,
+  "chat_link": "[&Bqv1AAA=]"
+}

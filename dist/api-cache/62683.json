@@ -1,0 +1,39 @@
+{
+  "name": "Stonestrike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.9
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Arc your hammer, creating a ring of jagged rock to damage your enemies.",
+  "icon": "https://render.guildwars2.com/file/934D05DE73D0ECFF931C394B7CFA67686B0F639D/2491573.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "attunement": "Earth",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 67,
+  "id": 62683,
+  "chat_link": "[&Btv0AAA=]"
+}

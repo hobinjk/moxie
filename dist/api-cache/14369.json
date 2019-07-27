@@ -1,0 +1,40 @@
+{
+  "name": "Chop",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.7
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Chain. Chop your foe.",
+  "icon": "https://render.guildwars2.com/file/BDE6BF09D647B6FA9CA0B42A4B4DE8201C5D004F/103144.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 14370,
+  "flip_skill": 14370,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14369,
+  "chat_link": "[&BiE4AAA=]",
+  "categories": []
+}

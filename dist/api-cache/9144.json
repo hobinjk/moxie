@@ -1,0 +1,52 @@
+{
+  "name": "Line of Warding",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 10
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Light"
+    }
+  ],
+  "description": "Ward. Create a line in front of you that foes cannot cross.",
+  "icon": "https://render.guildwars2.com/file/62F8F469B1AEF1C440AAAB010B7268C2C32F364D/103658.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "id": 9144,
+  "chat_link": "[&BrgjAAA=]",
+  "categories": [
+    "Ward"
+  ]
+}

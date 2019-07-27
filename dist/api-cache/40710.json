@@ -1,0 +1,65 @@
+{
+  "name": "Deadly Aim",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1500
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.8
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 6,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+      "duration": 6,
+      "status": "Vulnerability",
+      "description": "Damage and condition damage taken are increased; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 20,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Kneel. Fire a shot that inflicts vulnerability on your target. Applies additional vulnerability against your marked target.",
+  "icon": "https://render.guildwars2.com/file/4E3F0B6E685229564C5E023C1367B257EA20D141/1770621.png",
+  "type": "Weapon",
+  "weapon_type": "Rifle",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 44087,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 58,
+  "id": 40710,
+  "chat_link": "[&BgafAAA=]"
+}

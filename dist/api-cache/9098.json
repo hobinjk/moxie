@@ -1,0 +1,38 @@
+{
+  "name": "Orb of Wrath",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.666
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.6
+    }
+  ],
+  "description": "Fire a slow-moving orb at your foe.",
+  "icon": "https://render.guildwars2.com/file/0F9DAB04690C9A01C80DEEE8D5792937F4EF6DC4/103642.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9098,
+  "chat_link": "[&BoojAAA=]"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Shadow Bolt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    }
+  ],
+  "description": "Fire a projectile that hinders foes and helps allies.",
+  "icon": "https://render.guildwars2.com/file/D6D1A6997E0E07ECC3A2CF61C0AC054B2102A369/2503744.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_1",
+  "flip_skill": 63314,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 71,
+  "id": 63066,
+  "chat_link": "[&Blr2AAA=]"
+}

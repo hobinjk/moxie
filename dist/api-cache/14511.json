@@ -1,0 +1,49 @@
+{
+  "name": "Backbreaker",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    },
+    {
+      "text": "Knockdown",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7632087376D36B0D100F1B07BE53F154BC337D7C/2440716.png",
+      "duration": 3
+    },
+    {
+      "text": "Weakened Foe Knockdown",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7632087376D36B0D100F1B07BE53F154BC337D7C/2440716.png",
+      "duration": 4
+    }
+  ],
+  "description": "Knock down your foe. Weakened foes stay knocked down longer. Recharges Fierce Blow if you control a foe with this ability.\n<c=reminder>Recharges Fierce Blow if striking a target with a defiance bar.</c>",
+  "icon": "https://render.guildwars2.com/file/3FB1611D020DAE0C082558D346BBF91148E2E223/103086.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14511,
+  "chat_link": "[&Bq84AAA=]"
+}

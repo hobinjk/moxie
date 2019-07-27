@@ -1,0 +1,68 @@
+{
+  "name": "Overheat",
+  "facts": [
+    {
+      "text": "Initial Self-Damage",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/ECAD5F2BBF2CD2D007D876007008D7D0400D080C/1770204.png",
+      "percent": 25
+    },
+    {
+      "text": "Self-Damage over Time",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/ECAD5F2BBF2CD2D007D876007008D7D0400D080C/1770204.png",
+      "percent": 5
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Increased Tool Belt Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 15
+    }
+  ],
+  "description": "Reaching the heat maximum results in a self-damaging explosion. Photon Forge is disabled until all heat is lost. Other tool belt skill cooldowns are increased.",
+  "icon": "https://render.guildwars2.com/file/5DC4E10CE03E4D78EFACEEDB6F5FCF4F206BA7E3/1770392.png",
+  "flags": [],
+  "id": 43937,
+  "chat_link": "[&BqGrAAA=]",
+  "traited_facts": [
+    {
+      "text": "Initial Self-Damage",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/ECAD5F2BBF2CD2D007D876007008D7D0400D080C/1770204.png",
+      "percent": 0,
+      "requires_trait": 2064,
+      "overrides": 0
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/19FE5C016ACFF174DE03752D40D202F9B75FB0C2/1769929.png",
+      "duration": 4,
+      "status": "Afterburner",
+      "description": "Your next attack sets the target on fire.",
+      "apply_count": 6,
+      "requires_trait": 2106
+    },
+    {
+      "text": "Increased Tool Belt Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 5,
+      "requires_trait": 2064,
+      "overrides": 4
+    }
+  ]
+}

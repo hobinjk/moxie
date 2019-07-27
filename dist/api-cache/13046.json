@@ -1,0 +1,55 @@
+{
+  "name": "Assassin's Signet",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/16BAE223E268B19ABFE66040F11706B7BC00EF79/104076.png",
+      "duration": 0,
+      "status": "Assassin's Signet",
+      "description": "Increased power.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/16BAE223E268B19ABFE66040F11706B7BC00EF79/104076.png",
+      "duration": 5,
+      "status": "Assassin's Signet",
+      "description": "Increased power.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Signet Passive: Grants increased power.\nSignet Active: Power is massively increased for a short duration.",
+  "icon": "https://render.guildwars2.com/file/16BAE223E268B19ABFE66040F11706B7BC00EF79/104076.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 13046,
+  "chat_link": "[&BvYyAAA=]",
+  "categories": [
+    "Signet"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 5,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 2,
+      "requires_trait": 1267
+    }
+  ]
+}

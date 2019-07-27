@@ -1,0 +1,88 @@
+{
+  "name": "Bear Stance",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 4963,
+      "target": "Healing"
+    },
+    {
+      "text": "Per Condition Removed",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 408,
+      "target": "Healing"
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/07944CB363A391A26B21C16F76F52111B32D96CD/1770561.png",
+      "duration": 4,
+      "status": "Bear Stance",
+      "description": "Conditions are consumed for healing every second.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/07944CB363A391A26B21C16F76F52111B32D96CD/1770561.png",
+      "duration": 5,
+      "status": "Bear Stance",
+      "description": "Conditions are consumed for healing every second.",
+      "apply_count": 1
+    },
+    {
+      "text": "Conditions Removed Each Second",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 2
+    }
+  ],
+  "description": "Stance. Heal yourself and your pet. Lose conditions while in this stance, healing for each condition lost.",
+  "icon": "https://render.guildwars2.com/file/07944CB363A391A26B21C16F76F52111B32D96CD/1770561.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "specialization": 55,
+  "id": 44948,
+  "chat_link": "[&BpSvAAA=]",
+  "categories": [
+    "Stance"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/07944CB363A391A26B21C16F76F52111B32D96CD/1770561.png",
+      "duration": 6,
+      "status": "Bear Stance",
+      "description": "Conditions are consumed for healing every second.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/07944CB363A391A26B21C16F76F52111B32D96CD/1770561.png",
+      "duration": 6,
+      "status": "Bear Stance",
+      "description": "Conditions are consumed for healing every second.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 4
+    }
+  ]
+}

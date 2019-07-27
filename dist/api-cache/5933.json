@@ -1,0 +1,24 @@
+{
+  "name": "Elixir Gun",
+  "description": "Engineering Kit. Arm yourself with an elixir gun that replaces your weapon skills.",
+  "icon": "https://render.guildwars2.com/file/5D6E07C3D17AD7C701B199684C641F0E024961C8/103437.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Utility",
+  "toolbelt_skill": 5966,
+  "flip_skill": 6115,
+  "bundle_skills": [
+    5934,
+    5935,
+    5965,
+    5936,
+    6102,
+    5937
+  ],
+  "flags": [],
+  "id": 5933,
+  "chat_link": "[&Bi0XAAA=]"
+}

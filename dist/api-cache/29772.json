@@ -1,0 +1,58 @@
+{
+  "name": "Bandage Self",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 17
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 4920,
+      "target": "Healing"
+    }
+  ],
+  "description": "Bandage your wounds and heal yourself.",
+  "icon": "https://render.guildwars2.com/file/0C982310320AC3E2584E20727CB645D1C53C1906/102826.png",
+  "type": "Toolbelt",
+  "weapon_type": "None",
+  "slot": "Toolbelt",
+  "professions": [
+    "Engineer"
+  ],
+  "flags": [],
+  "id": 29772,
+  "chat_link": "[&Bkx0AAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+      "duration": 12,
+      "status": "Superspeed",
+      "description": "Movement speed is greatly increased. Maximum duration: 10s",
+      "apply_count": 1,
+      "requires_trait": 2014
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+      "duration": 5,
+      "status": "Superspeed",
+      "description": "Movement speed is greatly increased. Maximum duration: 10s",
+      "apply_count": 1,
+      "requires_trait": 2014
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240,
+      "requires_trait": 2014
+    }
+  ]
+}

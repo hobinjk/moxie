@@ -1,0 +1,93 @@
+{
+  "name": "Axes of Symmetry",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.25
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.75
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 3,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 3,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 6,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+      "duration": 6,
+      "status": "Confusion",
+      "description": "Damage received on skill activation; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Breaks Enemy Targeting",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/5CDEFC52710349D705429F1D0555711E26A04254/1824231.png"
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Leap"
+    }
+  ],
+  "description": "You and all your axe clones shadowstep to a random location around your target and strike, applying confusion. This attack breaks enemy targeting, and your illusions change focus to the targeted foe.",
+  "icon": "https://render.guildwars2.com/file/516ED87B7FC703AC09DE924218CDB53D2FFF39C9/1770504.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 59,
+  "id": 43761,
+  "chat_link": "[&BvGqAAA=]"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Dragon Trigger",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Flow Cost",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+      "value": 15
+    },
+    {
+      "text": "Flow Drain per Interval",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "value": 5
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 0
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    },
+    {
+      "text": "Ammunition Used",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 0
+    }
+  ],
+  "description": "Prepare to use Dragon Slash. While channeling, you drain flow. Each interval increases the charge level of Dragon Slash.\nThis skill is canceled if you move.",
+  "icon": "https://render.guildwars2.com/file/A2B14ED1954FBE0B31E0C57DCB0107BBE0543764/2491645.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Profession_2",
+  "cost": 15,
+  "flip_skill": 62857,
+  "flags": [],
+  "specialization": 68,
+  "id": 62803,
+  "chat_link": "[&BlP1AAA=]"
+}

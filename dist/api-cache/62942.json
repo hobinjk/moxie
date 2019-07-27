@@ -1,0 +1,47 @@
+{
+  "name": "Spear of Archemorus",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 2000
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 3.5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 5,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to foes that aren't moving. Stacks intensity.",
+      "apply_count": 5
+    }
+  ],
+  "description": "Legendary Alliance. Call upon the spirit of Archemorus to hurl his spear at your foe, dealing significant damage.",
+  "icon": "https://render.guildwars2.com/file/75E2F0423C74594E045AF6A10A55065E3CE61037/2491622.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Elite",
+  "cost": 20,
+  "flip_skill": 62687,
+  "flags": [],
+  "specialization": 69,
+  "id": 62942,
+  "chat_link": "[&Bt71AAA=]"
+}

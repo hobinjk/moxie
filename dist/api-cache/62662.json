@@ -1,0 +1,34 @@
+{
+  "name": "Elixir of Anguish",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    }
+  ],
+  "description": "Elixir. Infuse the magical essence of anguish into an elixir, gaining swiftness and quickness, and then toss the elixir at the targeted area, inflicting cripple on foes. If you are in the splash area of the elixir, gain Blight.\n\nIf you are at or above the Blight threshold when you activate this skill, consume that amount of Blight to double the damage and condition duration.",
+  "icon": "https://render.guildwars2.com/file/DF014624472FAC17D6201AAF0591E0FB45B5DDE0/2479395.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Utility",
+  "flags": [
+    "GroundTargeted"
+  ],
+  "specialization": 64,
+  "id": 62662,
+  "chat_link": "[&Bsb0AAA=]",
+  "categories": [
+    "Elixir"
+  ]
+}

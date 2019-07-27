@@ -1,0 +1,63 @@
+{
+  "name": "Crescent Wind",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 18
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/A1154443E7FB75409FC77711E50D186D449670CF/2491579.png",
+      "duration": 15,
+      "status": "Crescent Wind",
+      "description": "Increased critical chance.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 2,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.001
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Summon a projectile of air that circles around you, striking enemies that it passes through. While this projectile is active, your chance to critically strike is increased. Summoning a circular projectile refreshes the duration of all other circular projectiles.",
+  "icon": "https://render.guildwars2.com/file/A1154443E7FB75409FC77711E50D186D449670CF/2491579.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 67,
+  "id": 62887,
+  "chat_link": "[&Bqf1AAA=]"
+}

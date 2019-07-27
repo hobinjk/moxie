@@ -1,0 +1,32 @@
+{
+  "name": "Ice Shards",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 3,
+      "dmg_multiplier": 0.24
+    }
+  ],
+  "description": "Fire three ice shards at your foe.",
+  "icon": "https://render.guildwars2.com/file/5DAC69FFBE4850EE6F9FA2532616C128D7AEF957/103309.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5693,
+  "chat_link": "[&Bj0WAAA=]"
+}

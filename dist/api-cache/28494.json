@@ -1,0 +1,14 @@
+{
+  "name": "Legendary Demon Stance",
+  "description": "Invoke the power of the legendary demon Mallyx the Unyielding.",
+  "icon": "https://render.guildwars2.com/file/1A1407F7D34E5ED41B59A25F39EBF728CC926423/961413.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "id": 28494,
+  "chat_link": "[&Bk5vAAA=]"
+}

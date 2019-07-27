@@ -1,0 +1,38 @@
+{
+  "name": "Lightning Strike",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 5
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.2
+    }
+  ],
+  "description": "Strike your foe with lightning.",
+  "icon": "https://render.guildwars2.com/file/9C090BF7E893030BABD5DC4BA4020262AD91CE2C/103134.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5561,
+  "chat_link": "[&BrkVAAA=]"
+}

@@ -1,0 +1,116 @@
+{
+  "name": "Moa Stance",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Duration Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "percent": 66
+    },
+    {
+      "text": "Duration Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "percent": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/12571D4103DE1DF91BB5D20E7DE34D4998337DDE/1770570.png",
+      "duration": 10,
+      "status": "Moa Stance",
+      "description": "Increase the duration of boons you grant.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/12571D4103DE1DF91BB5D20E7DE34D4998337DDE/1770570.png",
+      "duration": 10,
+      "status": "Moa Stance",
+      "description": "Increase the duration of boons you grant.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+      "duration": 3,
+      "status": "Protection",
+      "description": "Incoming strike damage decreased by 33%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 6,
+      "status": "Fury",
+      "description": "Critical Chance increased by 20%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+      "duration": 6,
+      "status": "Swiftness",
+      "description": "Movement speed increased by 33%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+      "duration": 8,
+      "status": "Regeneration",
+      "description": "Gain health every second; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Stance. Gain boons. Increase the duration of boons you grant while in this stance.",
+  "icon": "https://render.guildwars2.com/file/12571D4103DE1DF91BB5D20E7DE34D4998337DDE/1770570.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 55,
+  "id": 45970,
+  "chat_link": "[&BpKzAAA=]",
+  "categories": [
+    "Stance"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/12571D4103DE1DF91BB5D20E7DE34D4998337DDE/1770570.png",
+      "duration": 15,
+      "status": "Moa Stance",
+      "description": "Increase the duration of boons you grant.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/12571D4103DE1DF91BB5D20E7DE34D4998337DDE/1770570.png",
+      "duration": 12,
+      "status": "Moa Stance",
+      "description": "Increase the duration of boons you grant.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 4
+    }
+  ]
+}

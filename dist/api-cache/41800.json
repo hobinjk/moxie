@@ -1,0 +1,50 @@
+{
+  "name": "Serpent Stab",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+      "duration": 4,
+      "status": "Poisoned",
+      "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.44
+    }
+  ],
+  "description": "Slash across your foe, poisoning them.",
+  "icon": "https://render.guildwars2.com/file/080360524A4926B770065F99DDB57AB7FDFDC4AC/1770555.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 44278,
+  "prev_chain": 40301,
+  "flip_skill": 44278,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 55,
+  "id": 41800,
+  "chat_link": "[&BkijAAA=]"
+}

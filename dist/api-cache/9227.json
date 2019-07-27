@@ -1,0 +1,44 @@
+{
+  "name": "Sword Wave",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 3,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Send out waves of attacks that strike multiple targets.",
+  "icon": "https://render.guildwars2.com/file/EE60D5DCE54CEF6108417BD7AF5758806D2A4066/103705.png",
+  "type": "Weapon",
+  "weapon_type": "Sword",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 9106,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 9227,
+  "chat_link": "[&BgskAAA=]"
+}

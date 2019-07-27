@@ -1,0 +1,62 @@
+{
+  "name": "Bloodbane Path",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 8,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 3
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 3,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Conjure a portal through the Mists and fire barbed arrows to strike from unexpected directions at your enemy.",
+  "icon": "https://render.guildwars2.com/file/07F358B1429B2535C2C83454F235A99E0902A50E/1770597.png",
+  "type": "Weapon",
+  "weapon_type": "Shortbow",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Weapon_2",
+  "cost": 4,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 63,
+  "id": 40175,
+  "chat_link": "[&Bu+cAAA=]",
+  "traited_facts": [
+    {
+      "text": "Pierces",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/F833590B593E0C2D4948DFFE9951B91655250052/1770207.png",
+      "requires_trait": 2092
+    }
+  ]
+}

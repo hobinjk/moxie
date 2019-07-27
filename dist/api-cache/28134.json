@@ -1,0 +1,14 @@
+{
+  "name": "Legendary Assassin Stance",
+  "description": "Invoke the power of the legendary assassin Shiro Tagachi.",
+  "icon": "https://render.guildwars2.com/file/67CDD35F6BC3072E0837715A5E0A90646529BAA2/1030005.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "id": 28134,
+  "chat_link": "[&BuZtAAA=]"
+}

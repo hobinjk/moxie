@@ -1,0 +1,29 @@
+{
+  "name": "Hunter's Verdict",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 40
+    },
+    {
+      "text": "Pull",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/D5F6EBC4630F0E10F3DDB7A6DBB63592CD4B00BC/2440717.png",
+      "value": 1200
+    }
+  ],
+  "description": "Pull all enemies tethered by the Spear of Justice to you, breaking the link. This ability's recharge is separate from that of Spear of Justice.",
+  "icon": "https://render.guildwars2.com/file/02C8A032F60414D0FAB7D0AFD965B5BA0947D6F8/103703.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "specialization": 27,
+  "id": 33134,
+  "chat_link": "[&Bm6BAAA=]"
+}

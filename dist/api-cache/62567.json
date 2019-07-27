@@ -1,0 +1,60 @@
+{
+  "name": "Harbinger Shroud",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6B797B70EF545937F677BCD463BD23DC749B0801/2479350.png",
+      "duration": 25,
+      "status": "Blight",
+      "description": "Reduces your maximum health. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    }
+  ],
+  "description": "Enter Harbinger Shroud, granting powerful offensive skills but leaving you vulnerable to attack.\nAs you remain in Harbinger Shroud, you accumulate blight over time.\nBlight decreases your maximum health.",
+  "icon": "https://render.guildwars2.com/file/C9CA706909A104A509F594AADA150D680AA948BC/2479400.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Profession_1",
+  "flip_skill": 62540,
+  "flags": [],
+  "id": 62567,
+  "chat_link": "[&Bmf0AAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+      "duration": 5,
+      "status": "Stability",
+      "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+      "apply_count": 3,
+      "requires_trait": 2192
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+      "duration": 3,
+      "status": "Stability",
+      "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+      "apply_count": 1,
+      "requires_trait": 2192
+    }
+  ]
+}

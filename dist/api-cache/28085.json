@@ -1,0 +1,15 @@
+{
+  "name": "Legendary Dragon Stance",
+  "description": "Invoke the power of the legendary dragon Glint.",
+  "icon": "https://render.guildwars2.com/file/27B5D1D4127A2EE73866E54F5A43E9102618B90B/1058605.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_1",
+  "flags": [],
+  "specialization": 52,
+  "id": 28085,
+  "chat_link": "[&BrVtAAA=]"
+}

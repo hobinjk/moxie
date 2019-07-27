@@ -1,0 +1,92 @@
+{
+  "name": "Vulture Stance",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 4,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+      "duration": 4,
+      "status": "Poisoned",
+      "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/77A65F535049BFB5F209186B1E9BA125E6BE32B2/1770571.png",
+      "duration": 6,
+      "status": "Vulture Stance",
+      "description": "Striking foes grants you might and inflicts poison.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/77A65F535049BFB5F209186B1E9BA125E6BE32B2/1770571.png",
+      "duration": 6,
+      "status": "Vulture Stance",
+      "description": "Striking foes grants you might and inflicts poison.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 0
+    }
+  ],
+  "description": "Stance. While in this stance, striking a foe inflicts poison and grants you might.\nThis effect can occur once per interval.",
+  "icon": "https://render.guildwars2.com/file/77A65F535049BFB5F209186B1E9BA125E6BE32B2/1770571.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 55,
+  "id": 40498,
+  "chat_link": "[&BjKeAAA=]",
+  "categories": [
+    "Stance"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/77A65F535049BFB5F209186B1E9BA125E6BE32B2/1770571.png",
+      "duration": 9,
+      "status": "Vulture Stance",
+      "description": "Striking foes grants you might and inflicts poison.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/77A65F535049BFB5F209186B1E9BA125E6BE32B2/1770571.png",
+      "duration": 7,
+      "status": "Vulture Stance",
+      "description": "Striking foes grants you might and inflicts poison.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 4
+    }
+  ]
+}

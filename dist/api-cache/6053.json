@@ -1,0 +1,36 @@
+{
+  "name": "Magnetic Shield",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Reflects Missiles",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    }
+  ],
+  "description": "Create a magnetic field that reflects projectiles and can be released to knock back foes.",
+  "icon": "https://render.guildwars2.com/file/7F176FBD29DE3904651573F5161129AA5C4FD3D0/103473.png",
+  "type": "Weapon",
+  "weapon_type": "Shield",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_4",
+  "flip_skill": 6126,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 6053,
+  "chat_link": "[&BqUXAAA=]"
+}

@@ -1,0 +1,102 @@
+{
+  "name": "Hundred Blades",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 8,
+      "dmg_multiplier": 0.5775
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 8,
+      "dmg_multiplier": 0.5775
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.21
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.21
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Repeatedly strike multiple foes. The last strike does extra damage.",
+  "icon": "https://render.guildwars2.com/file/11BE3E07CBE85E00EF38022658CBFB40DC0F2808/103853.png",
+  "type": "Weapon",
+  "weapon_type": "Greatsword",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 14554,
+  "chat_link": "[&Bto4AAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 8,
+      "dmg_multiplier": 0.385,
+      "overrides": 2
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 8,
+      "dmg_multiplier": 0.63525,
+      "overrides": 3
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 1,
+      "dmg_multiplier": 0.88,
+      "overrides": 4
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 1338,
+      "hit_count": 1,
+      "dmg_multiplier": 1.331,
+      "overrides": 5
+    }
+  ]
+}

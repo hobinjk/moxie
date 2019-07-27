@@ -1,0 +1,24 @@
+{
+  "name": "Elite Mortar Kit",
+  "description": "Engineering Kit. Equip the mortar kit.",
+  "icon": "https://render.guildwars2.com/file/0EC010DE95064B13B756C11F94CB040DFACD627B/103443.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Elite",
+  "toolbelt_skill": 30599,
+  "bundle_skills": [
+    30371,
+    30885,
+    30307,
+    30121,
+    30032
+  ],
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 30800,
+  "chat_link": "[&BlB4AAA=]"
+}

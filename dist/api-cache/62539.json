@@ -1,0 +1,31 @@
+{
+  "name": "Voracious Arc",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    }
+  ],
+  "description": "Leap to your destination, evading through the air. Daze enemies near your impact point.\n\nIf you are at or above the Blight threshold when you activate this skill, consume that amount of Blight to double the damage and torment struck foes.",
+  "icon": "https://render.guildwars2.com/file/E338A042D7F5EDB705F5A5E033F330D3C25774C5/2479406.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Downed_4",
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "id": 62539,
+  "chat_link": "[&Bkv0AAA=]"
+}

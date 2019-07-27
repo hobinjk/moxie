@@ -1,0 +1,104 @@
+{
+  "name": "Dolyak Stance",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "StunBreak",
+      "type": "StunBreak",
+      "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+      "value": true
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/134103AEE929B7F0B4CE9B380A48B7A2DFB863FB/1770568.png",
+      "duration": 6,
+      "status": "Dolyak Stance",
+      "description": "Reduce incoming damage while preventing movement-impeding conditions from being inflicted on you.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/134103AEE929B7F0B4CE9B380A48B7A2DFB863FB/1770568.png",
+      "duration": 5,
+      "status": "Dolyak Stance",
+      "description": "Reduce incoming damage while preventing movement-impeding conditions from being inflicted on you.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+      "duration": 6,
+      "status": "Stability",
+      "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+      "apply_count": 6
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/397A613651BFCA2832B6469CE34735580A2C120E/102844.png",
+      "status": "Immobile",
+      "description": "Unable to move; stacks duration."
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration."
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+      "status": "Crippled",
+      "description": "Movement speed decreased by 50%; stacks duration."
+    }
+  ],
+  "description": "Stance. Enter a defensive stance and remove conditions that impede movement. Prevent application of such conditions while in this stance.",
+  "icon": "https://render.guildwars2.com/file/134103AEE929B7F0B4CE9B380A48B7A2DFB863FB/1770568.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 55,
+  "id": 45789,
+  "chat_link": "[&Bt2yAAA=]",
+  "categories": [
+    "Stance"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/134103AEE929B7F0B4CE9B380A48B7A2DFB863FB/1770568.png",
+      "duration": 9,
+      "status": "Dolyak Stance",
+      "description": "Reduce incoming damage while preventing movement-impeding conditions from being inflicted on you.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/134103AEE929B7F0B4CE9B380A48B7A2DFB863FB/1770568.png",
+      "duration": 6,
+      "status": "Dolyak Stance",
+      "description": "Reduce incoming damage while preventing movement-impeding conditions from being inflicted on you.",
+      "apply_count": 1,
+      "requires_trait": 2128,
+      "overrides": 3
+    }
+  ]
+}

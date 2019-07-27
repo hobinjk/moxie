@@ -1,0 +1,61 @@
+{
+  "name": "Static Shock",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 180
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/1999B9DB355005D2DD19F66DFFBAA6D466057508/522727.png",
+      "duration": 2
+    }
+  ],
+  "description": "Use your A.E.D. to stun an enemy.",
+  "icon": "https://render.guildwars2.com/file/C79E3806E41C32ABA80D6BCC274123F10BCF1AD7/699526.png",
+  "type": "Toolbelt",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Toolbelt",
+  "flags": [],
+  "id": 21661,
+  "chat_link": "[&Bp1UAAA=]",
+  "traited_facts": [
+    {
+      "text": "Stun",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/1999B9DB355005D2DD19F66DFFBAA6D466057508/522727.png",
+      "duration": 3,
+      "requires_trait": 2052,
+      "overrides": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+      "duration": 7,
+      "status": "Superspeed",
+      "description": "Movement speed is greatly increased. Maximum duration: 10s",
+      "apply_count": 1,
+      "requires_trait": 2014
+    }
+  ]
+}

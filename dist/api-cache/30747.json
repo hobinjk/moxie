@@ -1,0 +1,23 @@
+{
+  "name": "Continuum Shift",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 5000
+    }
+  ],
+  "description": "Revert back to the previous timeline. Your health, endurance and cooldowns are reverted to their previous states. You are transported back prematurely if the rift is destroyed.",
+  "icon": "https://render.guildwars2.com/file/4BD3BEF1DE31476B3E40002708049EA1026F1F0B/1012895.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Profession_4",
+  "flags": [],
+  "specialization": 40,
+  "id": 30747,
+  "chat_link": "[&Bht4AAA=]"
+}

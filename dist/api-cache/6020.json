@@ -1,0 +1,32 @@
+{
+  "name": "Grenade Kit",
+  "description": "Equip a kit that gives you grenade skills.",
+  "icon": "https://render.guildwars2.com/file/C2A603094B5709BE213D391AFD4D33293C19EA38/103396.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Utility",
+  "toolbelt_skill": 6172,
+  "bundle_skills": [
+    6171,
+    5882,
+    6170,
+    5807,
+    6169,
+    5808,
+    6168,
+    5809,
+    6167,
+    5806
+  ],
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 6020,
+  "chat_link": "[&BoQXAAA=]",
+  "categories": [
+    "Kit"
+  ]
+}

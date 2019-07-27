@@ -1,0 +1,38 @@
+{
+  "name": "Unseen Sword",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 4
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.2
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/15AA251708A19EC6E1CBA4B208D7502797C9D111/2604722.png",
+      "duration": 5,
+      "status": "Positive Flow",
+      "description": "Gain flow per second.",
+      "apply_count": 1
+    }
+  ],
+  "description": "After a delay, deliver a circular attack to foes around you. Increases flow rate if it hits.",
+  "icon": "https://render.guildwars2.com/file/6003B9BAF49D80F30D13E40453C145BF1159572B/103017.png",
+  "flags": [],
+  "id": 62847,
+  "chat_link": "[&Bn/1AAA=]"
+}

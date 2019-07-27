@@ -1,0 +1,59 @@
+{
+  "name": "Illusion of Life",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 75
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2D5057DE154D99382F4C6D6E1E6B06CCFEAA7AEF/103754.png",
+      "duration": 15,
+      "status": "Illusion of Life",
+      "description": "You are under the illusion that you are alive.",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Prevents Capture-Point Contribution",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    }
+  ],
+  "description": "Manipulation. Give allies Illusion of Life at the target location, allowing them to get up from downed state and keep fighting. Fully revives allies if they kill a foe.",
+  "icon": "https://render.guildwars2.com/file/2D5057DE154D99382F4C6D6E1E6B06CCFEAA7AEF/103754.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Utility",
+  "flags": [
+    "GroundTargeted"
+  ],
+  "id": 10244,
+  "chat_link": "[&BgQoAAA=]",
+  "categories": [
+    "Manipulation"
+  ]
+}

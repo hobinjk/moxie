@@ -1,0 +1,49 @@
+{
+  "name": "Chilling Crack",
+  "facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.2
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "duration": 2,
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Range",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    }
+  ],
+  "description": "Crack the ground to chill your foes.",
+  "icon": "https://render.guildwars2.com/file/4DC67D26F6130171F50398B50009AA321D9E1830/2491572.png",
+  "type": "Weapon",
+  "weapon_type": "Hammer",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 62694,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 67,
+  "id": 62862,
+  "chat_link": "[&Bo71AAA=]"
+}

@@ -1,0 +1,111 @@
+{
+  "name": "Weave Self",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 90
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E656D3A8B1339603A70BBB7237F2BA004258ED55/1770326.png",
+      "duration": 20,
+      "status": "Weave Self",
+      "description": "Gather the elements to become the ultimate being.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/0597C2D6803EBDB3E309A1AEA1F5B7D414D208D9/1770336.png",
+      "duration": 0,
+      "status": "Woven Fire",
+      "description": "Gain increased condition damage.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+        "status": "Fire Attunement",
+        "description": "Attune to fire, gaining heavy damage and burning abilities."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/490A54586F7D28AEE6E9A551F6B4DC0841B81AD0/1770340.png",
+      "duration": 0,
+      "status": "Woven Water",
+      "description": "Boon duration and outgoing healing to other allies is increased.",
+      "apply_count": 0,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png",
+        "status": "Water Attunement",
+        "description": "Attune to water, gaining superior support and healing abilities."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/CEE660D6BB939A06695643F5CEBA1F295B022305/1770333.png",
+      "duration": 0,
+      "status": "Woven Air",
+      "description": "You move quicker.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png",
+        "status": "Air Attunement",
+        "description": "Attune to air, gaining heavy damage and control abilities."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/2DDE45C45EFBF5CC6D0C0562AB730FBB58021547/1770342.png",
+      "duration": 0,
+      "status": "Woven Earth",
+      "description": "Incoming damage is reduced.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png",
+        "status": "Earth Attunement",
+        "description": "Attune to earth, gaining superior damage-over-time and defensive abilities."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E656D3A8B1339603A70BBB7237F2BA004258ED55/1770326.png",
+      "duration": 10,
+      "status": "Perfect Weave",
+      "description": "All elements are now tightly woven together.",
+      "apply_count": 1
+    },
+    {
+      "text": "Recharge Time",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 2
+    }
+  ],
+  "description": "Stance. Temporarily reduce the recharge time of attunements while gaining bonuses for attuning to new elements. Successfully attuning to all elements ends this stance and grants Perfect Weave.",
+  "icon": "https://render.guildwars2.com/file/E656D3A8B1339603A70BBB7237F2BA004258ED55/1770326.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Elite",
+  "flip_skill": 44637,
+  "flags": [],
+  "specialization": 56,
+  "id": 43638,
+  "chat_link": "[&BnaqAAA=]",
+  "categories": [
+    "Stance"
+  ]
+}
