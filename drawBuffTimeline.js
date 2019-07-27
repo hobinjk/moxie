@@ -111,9 +111,13 @@ function draw(board, legend, log, startRow, dimensions, showBoring) {
         rects.push(rect);
       }
       if (event.Remove) {
-        const rect = rects.pop();
+        let rect = rects.pop();
         if (!rect) {
-          continue;
+          rect = document.createElementNS('http://www.w3.org/2000/svg',
+                                          'rect');
+          rect.setAttribute('x', timeToX(log.start));
+          rect.setAttribute('y', (railHeight + railPad) * row);
+          rect.setAttribute('height', railHeight);
         }
         rect.setAttribute('width', timeToX(event.Remove) -
                           rect.getAttribute('x'));
