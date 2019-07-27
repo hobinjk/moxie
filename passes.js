@@ -18,7 +18,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkArcaneBlasts(log);
       checkAttunementTransitions(log);
       checkBuffUptime(log, SkillIds.ELEMENTS_OF_RAGE, 100);
-      checkFGSTiming(log);
+      checkFGSTiming(log, benchmark);
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
       break;
     case 'weaver_power_btth_large':
@@ -548,11 +548,11 @@ function checkBuffUptime(log, buffId, targetPerc) {
   addReportCardItem(log, grade, summary, mishaps);
 }
 
-function checkFGSTiming(log) {
-  let firstStart = -1, firstEnd;
-  let secondStart = -1, secondEnd;
+function getFGSTiming(casts) {
+  let firstStart = -1, firstEnd = -1;
+  let secondStart = -1, secondEnd = -1;
   let isFirstFGS = true;
-  for (const cast of log.casts) {
+  for (const cast of casts) {
     if (isFirstFGS) {
       // Conjure FGS
       if (cast.id === SkillIds.CONJURE_FIERY_GREATSWORD) {
@@ -563,16 +563,36 @@ function checkFGSTiming(log) {
         firstEnd = cast.end;
         isFirstFGS = false;
       }
-    } else {
+    } else if (secondEnd < 0) {
       // Fiery rush (fgs 4)
       if (cast.id === SkillIds.FIERY_GREATSWORD_FIERY_RUSH) {
+        console.log('secondStart', cast.start);
         secondStart = cast.start;
       }
       if (cast.id === SkillIds.FIERY_GREATSWORD_FIRESTORM) {
         secondEnd = cast.end;
       }
+    } else {
+      break;
     }
   }
+  return {
+    firstStart,
+    firstEnd,
+    secondStart,
+    secondEnd,
+  };
+}
+
+function checkFGSTiming(log, benchmark) {
+  let {
+    firstStart: benchFirstStart,
+    firstEnd: benchFirstEnd,
+    secondStart: benchSecondStart,
+    secondEnd: benchSecondEnd,
+  } = getFGSTiming(benchmark.casts);
+  let {firstStart, firstEnd, secondStart, secondEnd} = getFGSTiming(log.casts);
+  console.log(getFGSTiming(benchmark.casts), getFGSTiming(log.casts));
   if (firstStart < 0) {
     addReportCardItem(log, 'D', 'Didn\'t use FGS at all', []);
     return;
@@ -583,10 +603,8 @@ function checkFGSTiming(log) {
   }
   const firstDur = firstEnd - firstStart;
   const secondDur = secondEnd - secondStart;
-  const benchFirstStart = 2280;
-  const benchFirstDur = (4370 + 670) - benchFirstStart;
-  const benchSecondStart = 16840;
-  const benchSecondDur = (17810 + 620) - benchSecondStart;
+  const benchFirstDur = benchFirstEnd - benchFirstStart;
+  const benchSecondDur = benchSecondEnd - benchSecondStart;
 
   const diff = (firstStart - log.start - benchFirstStart) +
     (firstDur - benchFirstDur) +
@@ -606,9 +624,13 @@ function checkFGSTiming(log) {
     grade = 'C';
   }
 
+  function toSecStr(x) {
+    return `${Math.round(x / 10) * 10 / 1000}s`;
+  }
+  console.log('wait what', benchSecondStart);
   const mishaps = [
-    new Mishap(firstStart, firstEnd, 'First FGS (bench is 2.28s-5.04s)'),
-    new Mishap(secondStart, secondEnd, 'Second FGS (bench is 16.84s-18.43s)'),
+    new Mishap(firstStart, firstEnd, `First FGS (bench is ${toSecStr(benchFirstStart)}-${toSecStr(benchFirstEnd)})`),
+    new Mishap(secondStart, secondEnd, `Second FGS (bench is ${toSecStr(benchSecondStart)}-${toSecStr(benchSecondEnd)})`),
   ];
 
   addReportCardItem(log, grade, `Goofed around with FGS for ${(diff / 1000).toFixed(2)} seconds`, mishaps);

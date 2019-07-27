@@ -144,6 +144,9 @@ async function displayLog(log, selectedPlayer) {
 
   await SkillData.load(usedSkills);
   let benchmark = await getBenchmarkForPlayer(log, selectedPlayer);
+  benchmark.casts.sort(function(a, b) {
+    return a.start - b.start;
+  });
 
   document.querySelector('.container').classList.remove('hidden');
   const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
