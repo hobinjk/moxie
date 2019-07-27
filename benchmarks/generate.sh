@@ -9,7 +9,7 @@ curl https://dps.report/getJson?permalink=xu24-20190717-142553_golem > weaver_po
 # Fallen https://www.youtube.com/watch?v=PutZ0k_edMY
 curl https://dps.report/getJson?permalink=Zmyd-20190717-180216_golem > weaver_power_btth_large.json
 # Roul https://www.youtube.com/watch?v=es1-kSlDUNc&t=0s
-curl https://dps.report/UEAb-20190727-043623_golem > weaver_condi_sword.json
+curl https://dps.report/getJson?permalink=UEAb-20190727-043623_golem > weaver_condi_sword.json
 # Shetsa https://www.youtube.com/watch?v=dprp4S2uQ8c
 curl https://dps.report/getJson?permalink=eQCL-20190718-031003_golem > weaver_condi_dagger.json
 # Baguette https://www.youtube.com/watch?v=9uqpzD8lgHM
