@@ -27,11 +27,13 @@ const boringBuffs = {
 const profSpecificBuffs = {
   // Weaver
   'Fire/Fire': 0,
-  'Air/Fire': 1,
-  'Air/Air': 2,
-  'Fire/Air': 3,
-  'Elements of Rage': 4,
-  'Primordial Stance': 5,
+  'Water/Fire': 1,
+  'Air/Water': 2,
+  'Air/Fire': 3,
+  'Air/Air': 4,
+  'Fire/Air': 5,
+  'Primordial Stance': 6,
+  'Elements of Rage': 7,
   // Chrono
   'Fencer\'s Finess': 0,
   'Time Anchored': 1,
