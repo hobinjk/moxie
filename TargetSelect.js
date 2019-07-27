@@ -61,6 +61,7 @@ export default class TargetSelect {
   }
 
   remove() {
+    this.elt.parentNode.classList.add('hidden');
     this.elt.parentNode.removeChild(this.elt);
     this.playerSelect = null;
     this.elt = null;
