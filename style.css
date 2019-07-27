@@ -456,3 +456,23 @@ input[type="file"] + label:hover,
 .control-panel-item {
   padding: 24px;
 }
+
+.control-panel-label::before {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  left: -4px;
+  top: 6px;
+  content: '';
+  background-image: url(unchecked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.control-panel-checkbox:checked + .control-panel-label::before {
+  background-image: url(checked.svg);
+}
+
+.control-panel-checkbox {
+  opacity: 0;
+}
