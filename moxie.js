@@ -275,7 +275,7 @@ async function displayLog(log, selectedPlayer) {
                     log.start);
   });
 
-  generateReportCard(log, selectedPlayer);
+  generateReportCard(log, selectedPlayer, benchmark);
 
   EasterEgg.attach();
 }

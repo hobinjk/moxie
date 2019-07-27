@@ -4,14 +4,14 @@ import Mishap from './Mishap';
 
 const reportCardItems = document.querySelector('.report-card-items');
 
-export default function generateReportCard(log, selectedPlayer) {
+export default function generateReportCard(log, selectedPlayer, benchmark) {
   if (log.casts.length === 0) {
     console.warn('Log has no casts');
     return;
   }
-  const spec = selectedPlayer.agent.Player.prof_spec;
-  switch (spec) {
-    case 'Weaver':
+  switch (benchmark.id) {
+    case 'weaver_power_btth_small':
+    case 'weaver_power_fa_small':
       checkAutoChains(log);
       checkWasted(log);
       checkPrimordialAttunements(log);
@@ -21,7 +21,16 @@ export default function generateReportCard(log, selectedPlayer) {
       checkFGSTiming(log);
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
       break;
-    case 'Daredevil':
+    case 'weaver_power_btth_large':
+    case 'weaver_power_fa_large':
+      checkAutoChains(log);
+      checkWasted(log);
+      checkPrimordialAttunements(log);
+      checkAttunementTransitions(log);
+      checkBuffUptime(log, SkillIds.ELEMENTS_OF_RAGE, 100);
+      checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
+      break;
+    case 'daredevil_power':
       checkAutoChains(log, true);
       checkWasted(log);
       checkBuffUptime(log, SkillIds.ASSASSINS_SIGNET_ACTIVE, 30);
@@ -29,7 +38,7 @@ export default function generateReportCard(log, selectedPlayer) {
       // checkSkillUsage(log, SkillIds.steal);
       checkSkillUsage(log, SkillIds.FIST_FLURRY);
       break;
-    case 'Mirage':
+    case 'mirage':
       checkAutoChains(log);
       checkWasted(log);
       checkSkillFrequency(log, SkillIds.IMAGINARY_AXES, 42 / 144);
@@ -38,7 +47,7 @@ export default function generateReportCard(log, selectedPlayer) {
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
       break;
-    case 'Chronomancer': {
+    case 'chrono_power_domi': {
       checkAutoChains(log);
       checkWasted(log);
       const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
@@ -50,14 +59,13 @@ export default function generateReportCard(log, selectedPlayer) {
       checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
       break;
     }
-    case 'Renegade': {
-      // Energy simulation time :flex:
+    case 'renegade_kalla':
+    case 'renegade_shiro':
+    default:
+      console.warn('Nothing cool to do for', benchmark.id);
       checkAutoChains(log);
       checkWasted(log);
-      break;
-    }
-    default:
-      alert('Unsupported spec', spec);
+      apologizeForMissingPasses(log);
       break;
   }
 }
@@ -375,8 +383,10 @@ function checkArcaneBlasts(log) {
   let charges = 3;
   let overcaps = 0;
   const mishaps = [];
+  let anyFound = false;
   for (const cast of log.casts) {
     if (cast.id === SkillIds.ARCANE_BLAST) {
+      anyFound = true;
       let mishapStart = -1;
       while (cast.start > nextCharge && nextCharge >= 0) {
         if (charges < 3) {
@@ -400,6 +410,10 @@ function checkArcaneBlasts(log) {
   if (nextCharge < log.end) {
     overcaps += Math.floor((log.end - nextCharge) / recharge);
     mishaps.push(new Mishap(nextCharge, log.end));
+  }
+  if (!anyFound) {
+    // EI doesn't track instants
+    return;
   }
   let grade = 'D';
   if (overcaps < 1) {
@@ -686,4 +700,8 @@ function checkSkillFrequency(log, skillId, expectedCastsPerSecond) {
   const timePlural = casts === 1 ? 'time' : 'times';
   const summary = `Cast ${skillData.name} ${casts}/${expectedCasts} ${timePlural}`;
   addReportCardItem(log, grade, summary, []);
+}
+
+function apologizeForMissingPasses(log) {
+  addReportCardItem(log, 'S', 'Missing build-specific advice', []);
 }
