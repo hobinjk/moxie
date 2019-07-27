@@ -1,7 +1,7 @@
 import SkillIds from './SkillIds';
 import EIParser from './EIParser';
 
-async function get(id) {
+async function get(id, name) {
   const url = `./benchmarks/${id}.json`;
   const res = await fetch(url);
   const raw = await res.json();
@@ -10,6 +10,9 @@ async function get(id) {
   log.buffs = log.buffs[0];
   log.targetDamage1S = log.targetDamage1S[0];
   log.id = id;
+  if (!name) {
+    log.name = id.replace(/_/g, ' ');
+  }
   return log;
 }
 

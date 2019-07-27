@@ -451,6 +451,8 @@ input[type="file"] + label:hover,
   display: flex;
   flex-direction: row;
   grid-column: 1/-1;
+  align-items: center;
+  justify-content: center;
 }
 
 .control-panel-item {
@@ -475,4 +477,9 @@ input[type="file"] + label:hover,
 
 .control-panel-checkbox {
   opacity: 0;
+}
+
+#benchmark-name {
+  position: relative;
+  top: 3px;
 }
