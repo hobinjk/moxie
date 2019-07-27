@@ -33,7 +33,7 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Weaver') {
-    let isCondi = log.buffs.hasOwnProperty(SkillIds.WEAVE_SELF);
+    let isCondi = log.skills.hasOwnProperty(SkillIds.WEAVE_SELF);
     if (isCondi) {
       if (selectedPlayer.weapons.includes('Sword')) {
         return get('weaver_condi_sword');
