@@ -45,7 +45,7 @@ export default function(log, selectedPlayer) {
       // See if LH was cast
       if (hasCast(log, SkillIds.CONJURE_LIGHTNING_HAMMER)) {
         if (isFreshAir) {
-          return get('weaver_power_btth_large');
+          return get('weaver_power_fa_large');
         } else {
           return get('weaver_power_btth_large');
         }
