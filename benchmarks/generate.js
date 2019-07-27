@@ -37,7 +37,9 @@ let skills = {};
 
 for (const bench of benches) {
   const log = EIParser.parseJson(bench);
-  console.log(log);
+  for (let id in log.skills) {
+    skills[id] = true;
+  }
   for (let id in log.casts) {
     for (let cast of log.casts[id]) {
       skills[cast.id] = true;
