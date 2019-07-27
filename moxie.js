@@ -143,6 +143,7 @@ async function displayLog(log, selectedPlayer) {
   }
 
   await SkillData.load(usedSkills);
+  let benchmark = await getBenchmarkForPlayer(log, selectedPlayer);
 
   document.querySelector('.container').classList.remove('hidden');
   const width = (log.end - log.start) / 20; // 20 ms = 1 pixel
@@ -192,7 +193,6 @@ async function displayLog(log, selectedPlayer) {
     log.skills[id] = bonusSkills[id];
   }
 
-  let benchmark = getBenchmarkForPlayer(log, selectedPlayer);
   // Normalization, should be in other direction but that's difficult
   for (const cast of benchmark.casts) {
     cast.start += log.start;

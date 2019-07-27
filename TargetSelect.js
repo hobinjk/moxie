@@ -1,9 +1,22 @@
 const validSpecs = {
-  Daredevil: true,
+  Tempest: true,
   Weaver: true,
-  Mirage: true,
   Chronomancer: true,
+  Mirage: true,
+  Reaper: true,
+  Scourge: true,
+  Engineer: true,
+  Holosmith: true,
+  Soulbeast: true,
+  Daredevil: true,
+  Deadeye: true,
+  Dragonhunter: true,
+  Firebrand: true,
+  Herald: true,
   Renegade: true,
+  Warrior: true,
+  Berserker: true,
+  Spellbreaker: true,
 };
 
 export default class TargetSelect {
@@ -11,7 +24,7 @@ export default class TargetSelect {
     this.boss = log.boss || 'Unknown';
     console.log(log.players);
     this.players = log.players
-      .filter(player => validSpecs[player.agent.Player.prof_spec]);
+      .filter(player => validSpecs[player.profession]);
     this.onSelect = this.onSelect.bind(this);
     this.elt = null;
     this.playerSelect = null;

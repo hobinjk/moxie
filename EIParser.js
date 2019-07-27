@@ -38,15 +38,9 @@ function eiLogDataToLog(eiData, usedStuff) {
   let targetDamage1S = {};
 
   let players = eiData.players.map((player, i) => {
-    return {
+    return Object.assign({
       id: i,
-      name: player.name,
-      agent: {
-        Player: {
-          prof_spec: player.profession,
-        },
-      },
-    };
+    }, player);
   });
 
   let apiMode = false;
