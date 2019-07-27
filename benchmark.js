@@ -38,9 +38,9 @@ export default function(log, selectedPlayer) {
         return get('weaver_condi_dagger');
       }
     } else {
-      let isFreshAir = log.buffs.hasOwnProperty(SkillIds.ATTUNEMENT_FIRE_WATER);
+      let isFreshAir = log.buffs.hasOwnProperty(SkillIds.ATTUNEMENT_WATER_FIRE);
       // See if LH was cast
-      if (hasCast(log, SkillIds.LIGHTNING_HAMMER)) {
+      if (hasCast(log, SkillIds.CONJURE_LIGHTNING_HAMMER)) {
         if (isFreshAir) {
           return get('weaver_power_btth_large');
         } else {
@@ -143,7 +143,7 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Renegade') {
-    if (hasCast(log, SkillIds.ORDERS_FROM_ABOVE)) {
+    if (selectedPlayer.weapons.includes('Sword')) {
       return get('renegade_alac');
     }
 
