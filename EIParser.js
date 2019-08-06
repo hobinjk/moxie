@@ -141,7 +141,7 @@ function parseApiData(player) {
     for (let cast of skill.skills) {
       let start = cast.castTime;
       let end = start + cast.duration;
-      let fired = cast.duration + cast.timeGained >= 0;
+      let fired = cast.duration + cast.timeGained > 0;
       casts.push({
         id,
         start,
