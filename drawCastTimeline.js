@@ -42,13 +42,17 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
         if (data.prev_chain && !data.next_chain) {
           content += 'f';
         }
-      }
-      if (data.slot === 'Elite') {
+      } else if (data.slot === 'Elite') {
         content = 'E';
       } else if (data.slot === 'Utility') {
         content = 'U';
       } else if (data.slot === 'Heal') {
         content = 'H';
+      } else {
+        let profMatches = data.slot.match(/Profession_(\d)/);
+        if (profMatches && profMatches.length > 0) {
+          content = 'F' + profMatches[1];
+        }
       }
       skillLabel = content;
     } else if (log.skills[cast.id] === 'Dodge') {
