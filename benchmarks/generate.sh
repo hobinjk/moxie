@@ -1,5 +1,5 @@
 # Roul https://www.youtube.com/watch?v=fHhFUqkiWl4
-curl https://dps.report/getJson?permalink=9aK4-20190716-191110_golem > tempest_power_tempest.json
+curl https://dps.report/getJson?permalink=9aK4-20190716-191110_golem > tempest_power.json
 # Roul https://www.youtube.com/watch?v=I58GSMPyKBM
 curl https://dps.report/getJson?permalink=QlPM-20190717-022420_golem > weaver_power_fa_small.json
 # Shetsa https://www.youtube.com/watch?v=V0_9zFx7nFA

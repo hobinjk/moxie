@@ -24,7 +24,7 @@ let benches = [
   require('./renegade_kalla.json'),
   require('./renegade_shiro.json'),
   require('./soulbeast_power.json'),
-  require('./tempest_power_tempest.json'),
+  require('./tempest_power.json'),
   require('./weaver_condi_dagger.json'),
   require('./weaver_condi_sword.json'),
   require('./weaver_power_btth_large.json'),
