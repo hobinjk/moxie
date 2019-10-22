@@ -65,7 +65,7 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
           skillLabel = 'C' + chapter[1];
         }
       } else if (skillName.startsWith('Epilogue')) {
-        skillLabel = 'Ep';
+        skillLabel = 'C5'; // Based on feedback! :D
       }
     }
 
