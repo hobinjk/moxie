@@ -55,8 +55,18 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
         }
       }
       skillLabel = content;
-    } else if (log.skills[cast.id] === 'Dodge') {
-      skillLabel = 'D';
+    } else if (log.skills[cast.id]) {
+      let skillName = log.skills[cast.id];
+      if (skillName === 'Dodge') {
+        skillLabel = 'D';
+      } else if (skillName.startsWith('Chapter')) {
+        let chapter = skillName.match(/Chapter (\d)/);
+        if (chapter && chapter.length > 0) {
+          skillLabel = 'C' + chapter[1];
+        }
+      } else if (skillName.startsWith('Epilogue')) {
+        skillLabel = 'Ep';
+      }
     }
 
     let text = null;
