@@ -62,7 +62,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'firebrand_condi': {
       checkAutoChains(log);
       checkWasted(log);
-      checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE, 16000, 3);
+      checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE_ETERNAL_ARMORY,
+                          16000 / 1.25, 4);
       checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 6);
       checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2);
       break;
@@ -822,7 +823,7 @@ function checkAmmoSkillUsage(log, skillId, recharge, maxCharges) {
   const mishaps = [];
   let anyFound = false;
   for (const cast of log.casts) {
-    if (cast.id === SkillIds.ARCANE_BLAST) {
+    if (cast.id === skillId) {
       anyFound = true;
       let mishapStart = -1;
       while (cast.start > nextCharge && nextCharge >= 0) {
