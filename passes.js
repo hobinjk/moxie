@@ -59,6 +59,14 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
       break;
     }
+    case 'firebrand_condi': {
+      checkAutoChains(log);
+      checkWasted(log);
+      checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE, 16000, 3);
+      checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 6);
+      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2);
+      break;
+    }
     case 'renegade_kalla':
     case 'renegade_shiro':
     default:
@@ -726,4 +734,137 @@ function checkSkillFrequency(log, skillId, expectedCastsPerSecond) {
 
 function apologizeForMissingPasses(log) {
   addReportCardItem(log, 'S', 'Missing build-specific advice', []);
+}
+
+function checkBadSkillUsage(log, skillId, leniency) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+  const mishaps = [];
+  for (const cast of log.casts) {
+    if (!cast.fired) {
+      continue;
+    }
+    if (cast.id === skillId) {
+      mishaps.push(new Mishap(cast.start, cast.end));
+    }
+  }
+  let grade = 'D';
+  let badCasts = mishaps.length;
+  badCasts -= leniency;
+  if (badCasts < 1) {
+    grade = 'S';
+  } else if (badCasts < 2) {
+    grade = 'A';
+  } else if (badCasts < 4) {
+    grade = 'B';
+  } else if (badCasts < 6) {
+    grade = 'C';
+  }
+  badCasts += leniency;
+  const timePlural = badCasts === 1 ? 'time' : 'times';
+  const summary = `Cast bad skill ${skillData.name} ${badCasts} ${timePlural}`;
+  addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkNotChained(log, skillId, maxCasts) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+  const mishaps = [];
+  let chain = [];
+  let timeLost = 0;
+  for (const cast of log.casts) {
+    if (!cast.fired) {
+      continue;
+    }
+    if (cast.id !== skillId) {
+      chain = [];
+      continue;
+    }
+    chain.push(cast);
+    if (chain.length > maxCasts) {
+      mishaps.push(new Mishap(cast.start, cast.end));
+      timeLost += cast.end - cast.start;
+    }
+  }
+
+  let grade = 'D';
+  let badCasts = mishaps.length;
+  if (badCasts < 1) {
+    grade = 'S';
+  } else if (badCasts < 2) {
+    grade = 'A';
+  } else if (badCasts < 4) {
+    grade = 'B';
+  } else if (badCasts < 6) {
+    grade = 'C';
+  }
+  const timePlural = badCasts === 1 ? 'time' : 'times';
+  const summary = `Spammed ${skillData.name} too much ${badCasts} ${timePlural} (lost ${(timeLost / 1000).toFixed(2)}s)`;
+  addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkAmmoSkillUsage(log, skillId, recharge, maxCharges) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+
+  let charges = maxCharges;
+  let nextCharge = log.start + recharge;
+  let overcaps = 0;
+  const mishaps = [];
+  let anyFound = false;
+  for (const cast of log.casts) {
+    if (cast.id === SkillIds.ARCANE_BLAST) {
+      anyFound = true;
+      let mishapStart = -1;
+      while (cast.start > nextCharge && nextCharge >= 0) {
+        if (charges < maxCharges) {
+          charges += 1;
+        } else {
+          overcaps += 1;
+          mishapStart = Math.min(mishapStart, nextCharge);
+        }
+        nextCharge += recharge;
+      }
+      if (mishapStart > 0) {
+        mishaps.push(new Mishap(mishapStart, cast.start));
+      }
+
+      charges -= 1;
+      if (nextCharge < 0) {
+        nextCharge = cast.start + recharge;
+      }
+    }
+  }
+  if (nextCharge < log.end) {
+    overcaps += Math.floor((log.end - nextCharge) / recharge);
+    mishaps.push(new Mishap(nextCharge, log.end));
+  }
+  if (!anyFound) {
+    // EI doesn't track instants
+    return;
+  }
+  let grade = 'D';
+  if (overcaps < 1) {
+    grade = 'S';
+  } else if (overcaps < 2) {
+    grade = 'A';
+  } else if (overcaps < 4) {
+    grade = 'B';
+  } else if (overcaps < 6) {
+    grade = 'C';
+  }
+  if (nextCharge >= 0) {
+    const chargePlural = overcaps === 1 ? 'charge' : 'charges';
+    const summary = `Lost ${overcaps} ${chargePlural} of ${skillData.name}`;
+    addReportCardItem(log, grade, summary, mishaps);
+  }
 }
