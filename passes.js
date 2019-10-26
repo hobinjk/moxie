@@ -65,7 +65,9 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE_ETERNAL_ARMORY,
                           16000 / 1.25, 4);
       checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 6);
-      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2);
+      // Check for spamming zealot's fire which should be cast exactly twice
+      // every 10ish seconds
+      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 9000);
       break;
     }
     case 'renegade_kalla':
@@ -770,7 +772,7 @@ function checkBadSkillUsage(log, skillId, leniency) {
   addReportCardItem(log, grade, summary, mishaps);
 }
 
-function checkNotChained(log, skillId, maxCasts) {
+function checkNotChained(log, skillId, maxCasts, cooldown) {
   const skillData = SkillData.get(skillId);
   if (!skillData) {
     console.warn('Missing skill data', skillId);
@@ -784,10 +786,17 @@ function checkNotChained(log, skillId, maxCasts) {
       continue;
     }
     if (cast.id !== skillId) {
-      chain = [];
+      if (chain.length === 0) {
+        continue;
+      }
+
+      if (cast.start - chain[0].end > cooldown) {
+        chain = [];
+      }
       continue;
     }
     chain.push(cast);
+
     if (chain.length > maxCasts) {
       mishaps.push(new Mishap(cast.start, cast.end));
       timeLost += cast.end - cast.start;
