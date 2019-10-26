@@ -67,7 +67,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 6);
       // Check for spamming zealot's fire which should be cast exactly twice
       // every 10ish seconds
-      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 9000);
+      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 5000);
       break;
     }
     case 'renegade_kalla':
