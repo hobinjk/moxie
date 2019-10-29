@@ -5,6 +5,11 @@ const boringSkills = {
   [SkillIds.PRIMORDIAL_STANCE_EFFECT]: true, // Primordial Stance
 };
 
+const specialCaseSkillLabels = {
+  5663: '4', // FGS skill 4
+  43995: 'F2', // Gazelle charge
+};
+
 function drawCasts(board, log, casts, row, dimensions, rectClass) {
   const {railHeight, railPad, timeToX} = dimensions;
 
@@ -36,9 +41,10 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
     let data = SkillData.get(cast.id);
     if (data && data.slot) {
       let content = '';
-      let matches = data.slot.match(/Weapon_(\d)/);
+      // Downed_\d is for shroud/forge skills
+      let matches = data.slot.match(/(Weapon|Downed)_(\d)/);
       if (matches && matches.length > 0) {
-        content = matches[1];
+        content = matches[2];
         if (data.prev_chain && !data.next_chain) {
           content += 'f';
         }
@@ -48,6 +54,10 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
         content = 'U';
       } else if (data.slot === 'Heal') {
         content = 'H';
+      } else if (data.slot === 'Toolbelt') {
+        content = 'T';
+      } else if (specialCaseSkillLabels.hasOwnProperty(cast.id)) {
+        content = specialCaseSkillLabels[cast.id];
       } else {
         let profMatches = data.slot.match(/Profession_(\d)/);
         if (profMatches && profMatches.length > 0) {
@@ -76,6 +86,8 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
       text.setAttribute('y', (railHeight + railPad) * row + railHeight / 2);
       text.classList.add('name');
       text.textContent = skillLabel;
+    } else {
+      console.warn('No label for skill', cast.id, data, log.skills[cast.id]);
     }
 
     rect.setAttribute('x', timeToX(cast.start));
