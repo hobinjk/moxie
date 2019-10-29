@@ -56,8 +56,6 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
         content = 'H';
       } else if (data.slot === 'Toolbelt') {
         content = 'T';
-      } else if (specialCaseSkillLabels.hasOwnProperty(cast.id)) {
-        content = specialCaseSkillLabels[cast.id];
       } else {
         let profMatches = data.slot.match(/Profession_(\d)/);
         if (profMatches && profMatches.length > 0) {
@@ -77,6 +75,10 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
       } else if (skillName.startsWith('Epilogue')) {
         skillLabel = 'C5'; // Based on feedback! :D
       }
+    }
+
+    if (!skillLabel && specialCaseSkillLabels.hasOwnProperty(cast.id)) {
+      skillLabel = specialCaseSkillLabels[cast.id];
     }
 
     let text = null;
