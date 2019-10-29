@@ -142,8 +142,13 @@ async function displayLog(log, selectedPlayer) {
     usedSkills[id] = true;
   }
 
-  await SkillData.load(usedSkills);
   let benchmark = await getBenchmarkForPlayer(log, selectedPlayer);
+
+  for (let cast of benchmark.casts) {
+    usedSkills[cast.id] = true;
+  }
+  await SkillData.load(usedSkills);
+
   document.getElementById('benchmark-name').textContent = benchmark.name;
   benchmark.casts.sort(function(a, b) {
     return a.start - b.start;
