@@ -130,14 +130,12 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Firebrand') {
-    if (hasCast(log, SkillIds.MANTRA_OF_POTENCE)) {
-      if (selectedPlayer.weapons.includes('Greatsword')) {
-        return get('firebrand_power_quick');
-      } else {
-        return get('firebrand_condi_quick');
-      }
-    } else {
+    if (hasCast(log, SkillIds.RENEWED_FOCUS)) {
       return get('firebrand_condi');
+    } else if (selectedPlayer.weapons.includes('Greatsword')) {
+      return get('firebrand_power_quick');
+    } else {
+      return get('firebrand_condi_quick');
     }
   }
 
