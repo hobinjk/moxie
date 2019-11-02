@@ -70,6 +70,8 @@ const profSpecificBuffs = {
   // Soulbeast
   'One Wolf Pack': 0,
   'Sharpening Stone': 1,
+  'Sic \'Em!': 2,
+  'Twice as Vicious': 3,
 };
 
 function draw(board, legend, log, startRow, dimensions, showBoring) {

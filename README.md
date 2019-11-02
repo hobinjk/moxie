@@ -34,7 +34,7 @@ because otherwise I wouldn't have known what it looks like.
 
 ## Specialization support
 
-### Full support with specific feedback
+### Support with some specific feedback
  - Power sword weaver FA/BttH small/large hitbox
  - Domination power Chronomancer
  - Condition boon Chronomancer
@@ -44,6 +44,7 @@ because otherwise I wouldn't have known what it looks like.
  - Mirage
  - Condition Firebrand
  - Condition quickness Firebrand
+ - Power dagger Soulbeast
 
 ### Partial support with benchmark log
  - Condition Berserker with and without banners
@@ -58,7 +59,6 @@ because otherwise I wouldn't have known what it looks like.
  - Alacrity Renegade
  - Condition Kalla Renegade
  - Condition Shiro Renegade
- - Power dagger Soulbeast
  - Power Tempest
  - Condition Sword Weaver
  - Condition Dagger Weaver

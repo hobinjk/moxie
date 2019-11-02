@@ -102,6 +102,15 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 5000);
       break;
     }
+    case 'soulbeast_power': {
+      checkAutoChains(log);
+      checkWasted(log);
+      checkSkillUsage(log, SkillIds.ONE_WOLF_PACK);
+      checkSkillUsage(log, SkillIds.FROST_TRAP);
+      checkBuffUptime(log, SkillIds.SIC_EM, 45);
+      checkBuffUptime(log, SkillIds.TWICE_AS_VICIOUS, 97);
+      break;
+    }
     case 'renegade_kalla':
     case 'renegade_shiro':
     default:
