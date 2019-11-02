@@ -50,7 +50,10 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Berserker with and without banners
  - Power Berserker with and without banners
  - Condition Chronomancer
+ - Power Quickness Chronomancer with greatsword and with focus
  - Condition Daredevil
+ - Condition Deadeye
+ - Rifle Deadeye
  - Dragonhunter
  - Power quickness Firebrand
  - Boon Herald
@@ -62,10 +65,10 @@ because otherwise I wouldn't have known what it looks like.
  - Power Tempest
  - Condition Sword Weaver
  - Condition Dagger Weaver
+ - Power Staff Weaver
 
 ### Unsupported, recent logs welcome!
  - Dagger Deadeye
- - Rifle Deadeye
  - Condition Engineer
  - Scourge
  - Condition Soulbeast

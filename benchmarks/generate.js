@@ -10,8 +10,12 @@ let benches = [
   require('./chrono_power_boon.json'),
   require('./chrono_power_domi.json'),
   require('./chrono_power_illu.json'),
+  require('./chrono_power_quick_gs.json'),
+  require('./chrono_power_quick_focus.json'),
   require('./daredevil_condi.json'),
   require('./daredevil_power.json'),
+  require('./deadeye_condi.json'),
+  require('./deadeye_rifle.json'),
   require('./dragonhunter.json'),
   require('./firebrand_condi.json'),
   require('./firebrand_condi_quick.json'),
@@ -31,6 +35,7 @@ let benches = [
   require('./weaver_power_btth_small.json'),
   require('./weaver_power_fa_large.json'),
   require('./weaver_power_fa_small.json'),
+  require('./weaver_power_staff.json'),
 ];
 
 let skills = {};
@@ -48,5 +53,7 @@ for (const bench of benches) {
 }
 
 for (let id in skills) {
-  console.log(`curl https://api.guildwars2.com/v2/skills/${id} > ${id}.json`);
+  console.log(`if [ ! -e ${id}.json ]; then`);
+  console.log(`  curl https://api.guildwars2.com/v2/skills/${id} > ${id}.json`);
+  console.log(`fi`);
 }

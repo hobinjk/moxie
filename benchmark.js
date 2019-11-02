@@ -9,6 +9,12 @@ async function get(id, name) {
   log.casts = log.casts[0];
   log.buffs = log.buffs[0];
   log.targetDamage1S = log.targetDamage1S[0];
+  if (id === 'deadeye_rifle') {
+    // Adjust DPS for LN settings
+    for (let i = 0; i < log.targetDamage1S; i++) {
+      log.targetDamage1S[i] = log.targetDamage1S[i] * 38100 / 40720;
+    }
+  }
   log.id = id;
   if (!name) {
     log.name = id.replace(/_/g, ' ');
@@ -40,6 +46,8 @@ export default function(log, selectedPlayer) {
       } else if (selectedPlayer.weapons.includes('Dagger')) {
         return get('weaver_condi_dagger');
       }
+    } else if (selectedPlayer.weapons.includes('Staff')) {
+      return get('weaver_power_staff');
     } else {
       let isFreshAir = log.buffs.hasOwnProperty(SkillIds.ATTUNEMENT_WATER_FIRE);
       // See if LH was cast
@@ -65,10 +73,16 @@ export default function(log, selectedPlayer) {
         return get('chrono_power_boon');
       }
     }
-    if (hasCast(log, SkillIds.PHANTASMAL_BERSERKER)) {
-      return get('chrono_power_domi');
+    if (selectedPlayer.weapons.includes('Greatsword')) {
+      if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
+        return get('chrono_power_quick_gs');
+      } else {
+        return get('chrono_power_domi');
+      }
     } else if (selectedPlayer.weapons.includes('Scepter')) {
       return get('chrono_condi');
+    } else if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
+      return get('chrono_power_quick_focus');
     } else {
       return get('chrono_power_illu');
     }
@@ -116,14 +130,15 @@ export default function(log, selectedPlayer) {
     }
   }
 
-  // Deadeye benches are too old
-  // if (spec === 'Deadeye') {
-  //   if (selectedPlayer.weapons.includes('Rifle')) {
-  //     return get('deadeye_rifle');
-  //   } else {
+  if (spec === 'Deadeye') {
+    if (selectedPlayer.weapons.includes('Rifle')) {
+      return get('deadeye_rifle');
+    } else if (selectedPlayer.weapons.includes('Pistol')) {
+      return get('deadeye_condi');
+    }
+  }
+  // Deadeye dagger bench is too old
   //     return get('deadeye_dagger');
-  //   }
-  // }
 
   if (spec === 'Dragonhunter') {
     return get('dragonhunter');
