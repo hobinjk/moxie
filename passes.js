@@ -59,7 +59,39 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
       break;
     }
-    case 'firebrand_condi': {
+    case 'chrono_power_illu': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSigLeni);
+      break;
+    }
+    case 'chrono_power_boon': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSigLeni);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_INSPIRATION);
+      checkSkillUsage(log, SkillIds.WELL_OF_ACTION);
+      checkSkillUsage(log, SkillIds.WELL_OF_RECALL);
+      break;
+    }
+    case 'chrono_condi_boon': {
+      checkAutoChains(log);
+      checkWasted(log);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_INSPIRATION);
+      checkSkillUsage(log, SkillIds.WELL_OF_ACTION);
+      checkSkillUsage(log, SkillIds.WELL_OF_RECALL);
+      break;
+    }
+    case 'firebrand_condi':
+    case 'firebrand_condi_quick': {
       checkAutoChains(log);
       checkWasted(log);
       checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE_ETERNAL_ARMORY,

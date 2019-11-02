@@ -37,20 +37,20 @@ because otherwise I wouldn't have known what it looks like.
 ### Full support with specific feedback
  - Power sword weaver FA/BttH small/large hitbox
  - Domination power Chronomancer
+ - Condition boon Chronomancer
+ - Power boon Chronomancer
+ - Power illusions Chronomancer
  - Power Daredevil
  - Mirage
  - Condition Firebrand
+ - Condition quickness Firebrand
 
 ### Partial support with benchmark log
  - Condition Berserker with and without banners
  - Power Berserker with and without banners
  - Condition Chronomancer
- - Condition boon Chronomancer
- - Power boon Chronomancer
- - Power illusions Chronomancer
  - Condition Daredevil
  - Dragonhunter
- - Condition quickness Firebrand
  - Power quickness Firebrand
  - Boon Herald
  - Condition Holosmith
