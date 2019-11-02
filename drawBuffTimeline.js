@@ -62,6 +62,14 @@ const profSpecificBuffs = {
   'Impossible Odds': 4,
   'Razorclaw\'s Rage': 5,
   'Improved Kalla\'s Fervor': 6,
+  // Firebrand
+  'Zealot\'s Flame': 0,
+  'Renewed Focus': 1,
+  'Ashes of the Just': 2,
+
+  // Soulbeast
+  'One Wolf Pack': 0,
+  'Sharpening Stone': 1,
 };
 
 function draw(board, legend, log, startRow, dimensions, showBoring) {
