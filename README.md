@@ -2,10 +2,10 @@
 
 > "I guide others to a treasure I cannot possess"
 
-Tells you some of what you're doing wrong as a [Bolt to the Heart
-sword weaver](https://snowcrows.com/raids/elementalist/weaver/sword/),
-[Axe Mirage](https://snowcrows.com/raids/builds/mesmer/mirage/condition/), or
-[Power Daredevil](https://snowcrows.com/raids/builds/thief/daredevil/power/).
+Tells you some of what you're doing wrong as various Guild
+Wars 2 classes. See below for a detailed list of class
+support.
+
 This is pre-alpha code guaranteed to contain more bugs than all of Maguuma.
 
 ## Usage
@@ -27,6 +27,47 @@ much as you deserve.
 Thanks to [Elite
 Insights](https://github.com/baaron4/GW2-Elite-Insights-Parser) for being an
 awesome EVTC parser, [arcdps](https://www.deltaconnected.com/arcdps/) for
-generating the EVTC and having comprehensive documentation, and Kompa for
-giving me log files of good weaver
-gameplay because otherwise I wouldn't know what it looks like.
+generating the EVTC and having comprehensive documentation, [Snow
+Crows](https://snowcrows.com/) for most of the benchmark logs, and Kompa for
+giving me log files of good weaver gameplay at the start of this project
+because otherwise I wouldn't have known what it looks like.
+
+## Specialization support
+
+### Full support with specific feedback
+ - Power sword weaver FA/BttH small/large hitbox
+ - Domination power Chronomancer
+ - Power Daredevil
+ - Mirage
+ - Condition Firebrand
+
+### Partial support with benchmark log
+ - Condition Berserker with and without banners
+ - Power Berserker with and without banners
+ - Condition Chronomancer
+ - Condition boon Chronomancer
+ - Power boon Chronomancer
+ - Power illusions Chronomancer
+ - Condition Daredevil
+ - Dragonhunter
+ - Condition quickness Firebrand
+ - Power quickness Firebrand
+ - Boon Herald
+ - Condition Holosmith
+ - Reaper
+ - Alacrity Renegade
+ - Condition Kalla Renegade
+ - Condition Shiro Renegade
+ - Power dagger Soulbeast
+ - Power Tempest
+ - Condition Sword Weaver
+ - Condition Dagger Weaver
+
+### Unsupported, recent logs welcome!
+ - Dagger Deadeye
+ - Rifle Deadeye
+ - Condition Engineer
+ - Scourge
+ - Condition Soulbeast
+ - Banner Spellbreaker
+ - Banner Warrior
