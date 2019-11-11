@@ -94,8 +94,9 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
 
     rect.setAttribute('x', timeToX(cast.start));
     rect.setAttribute('y', (railHeight + railPad) * row);
-    if (cast.end - cast.start > 0) {
-      rect.setAttribute('width', timeToX(cast.end) - timeToX(cast.start));
+    const width = timeToX(cast.end) - timeToX(cast.start);
+    if (width > 6) {
+      rect.setAttribute('width', width);
     } else {
       rect.setAttribute('width', 2);
       rect.classList.add('cast-instant');

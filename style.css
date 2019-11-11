@@ -268,14 +268,14 @@ input[type="file"] + label:hover,
   stroke: none;
 }
 
-.cast-instant {
-  fill: #fff;
-  opacity: 0.5;
-}
-
 .cast.benchmark {
   fill: #5a5;
   stroke: none;
+}
+
+.cast-instant, .cast-instant.benchmark {
+  fill: #fff;
+  opacity: 0.5;
 }
 
 .legend {
