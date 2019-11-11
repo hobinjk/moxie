@@ -84,6 +84,9 @@ export default function(log, selectedPlayer) {
     } else if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
       return get('chrono_power_quick_focus');
     } else {
+      if (window.location.hash.includes('domifocus')) {
+        return get('chrono_power_domi_focus');
+      }
       return get('chrono_power_illu');
     }
   }
