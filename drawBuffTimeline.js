@@ -1,3 +1,5 @@
+import SkillIds from './SkillIds';
+
 const boringBuffs = {
   'Do Nothing Transformation Buff': true,
   'Conjure Fire Attributes': true,
@@ -66,6 +68,11 @@ const profSpecificBuffs = {
   'Zealot\'s Flame': 0,
   'Renewed Focus': 1,
   'Ashes of the Just': 2,
+  // Dragonhunter
+  'Symbolic Avenger': 0,
+  'Shield of Wrath': 1,
+  'Spear of Justice': 2,
+  Justice: 2, // TODO: recreate Justice from Spear info
 
   // Soulbeast
   'One Wolf Pack': 0,
@@ -74,10 +81,30 @@ const profSpecificBuffs = {
   'Twice as Vicious': 3,
 };
 
+function recreateJusticeFromSpearPassive(buffs) {
+  if (!buffs.hasOwnProperty(SkillIds.SPEAR_OF_JUSTICE)) {
+    return;
+  }
+  const soj = buffs[SkillIds.SPEAR_OF_JUSTICE];
+  const fakeJusticeEvents = [];
+  for (const buffEvent of soj) {
+    if (!buffEvent.hasOwnProperty('Remove')) {
+      continue;
+    }
+    const time = buffEvent.Remove;
+    const justiceDur = 6000 * 1.33; // 6000 base plus Big Game Hunter trait
+    fakeJusticeEvents.push({Apply: time});
+    fakeJusticeEvents.push({Remove: time + justiceDur});
+  }
+  buffs[SkillIds.JUSTICE] = fakeJusticeEvents;
+}
+
 function draw(board, legend, log, startRow, dimensions, showBoring) {
   const {railHeight, railPad, timeToX} = dimensions;
 
   let buffs = log.buffs;
+  recreateJusticeFromSpearPassive(buffs);
+
   if (!showBoring) {
     buffs = {};
     for (const id in log.buffs) {
