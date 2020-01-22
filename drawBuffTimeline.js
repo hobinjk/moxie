@@ -72,7 +72,7 @@ const profSpecificBuffs = {
   'Symbolic Avenger': 0,
   'Shield of Wrath': 1,
   'Spear of Justice': 2,
-  Justice: 2, // TODO: recreate Justice from Spear info
+  Justice: 3,
 
   // Soulbeast
   'One Wolf Pack': 0,
@@ -81,8 +81,10 @@ const profSpecificBuffs = {
   'Twice as Vicious': 3,
 };
 
-function recreateJusticeFromSpearPassive(buffs) {
+function recreateJusticeFromSpearPassive(log) {
+  const buffs = log.buffs;
   if (!buffs.hasOwnProperty(SkillIds.SPEAR_OF_JUSTICE)) {
+    console.log('no spear', log);
     return;
   }
   const soj = buffs[SkillIds.SPEAR_OF_JUSTICE];
@@ -92,18 +94,24 @@ function recreateJusticeFromSpearPassive(buffs) {
       continue;
     }
     const time = buffEvent.Remove;
+    if (time === 0) {
+      continue;
+    }
     const justiceDur = 6000 * 1.33; // 6000 base plus Big Game Hunter trait
     fakeJusticeEvents.push({Apply: time});
     fakeJusticeEvents.push({Remove: time + justiceDur});
   }
   buffs[SkillIds.JUSTICE] = fakeJusticeEvents;
+  log.skills[SkillIds.JUSTICE] = 'Justice';
+  console.log('did the thing', log);
 }
 
 function draw(board, legend, log, startRow, dimensions, showBoring) {
   const {railHeight, railPad, timeToX} = dimensions;
 
+  recreateJusticeFromSpearPassive(log);
+
   let buffs = log.buffs;
-  recreateJusticeFromSpearPassive(buffs);
 
   if (!showBoring) {
     buffs = {};
