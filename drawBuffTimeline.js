@@ -79,6 +79,8 @@ const profSpecificBuffs = {
   'Sharpening Stone': 1,
   'Sic \'Em!': 2,
   'Twice as Vicious': 3,
+  // Reaper
+  'Reaper\'s Shroud': 0,
 };
 
 function recreateJusticeFromSpearPassive(log) {
