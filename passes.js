@@ -19,7 +19,9 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkAttunementTransitions(log);
       checkBuffUptime(log, SkillIds.ELEMENTS_OF_RAGE, 100);
       checkFGSTiming(log, benchmark);
+      // Check for both since air might be used
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_FIRE);
+      checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
       break;
     case 'weaver_power_btth_large':
     case 'weaver_power_fa_large':
