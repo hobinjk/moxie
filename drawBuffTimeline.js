@@ -108,6 +108,22 @@ function recreateJusticeFromSpearPassive(log) {
   console.log('did the thing', log);
 }
 
+function createBuffElement(x, y, height) {
+  const group = document.createElementNS('http://www.w3.org/2000/svg',
+                                         'g');
+  const title = document.createElementNS('http://www.w3.org/2000/svg',
+                                         'title');
+  const rect = document.createElementNS('http://www.w3.org/2000/svg',
+                                        'rect');
+  rect.setAttribute('x', x);
+  rect.setAttribute('y', y);
+  rect.setAttribute('height', height);
+  rect.classList.add('buff');
+  group.appendChild(title);
+  group.appendChild(rect);
+  return group;
+}
+
 function draw(board, legend, log, startRow, dimensions, showBoring) {
   const {railHeight, railPad, timeToX} = dimensions;
 
@@ -156,35 +172,36 @@ function draw(board, legend, log, startRow, dimensions, showBoring) {
       continue;
     }
 
-    const rects = [];
+    const buffElements = [];
     for (const event of buffs[buffId]) {
       if (event.Apply) {
-        const rect = document.createElementNS('http://www.w3.org/2000/svg',
-                                              'rect');
-        rect.setAttribute('x', timeToX(event.Apply));
-        rect.setAttribute('y', (railHeight + railPad) * row);
-        rect.setAttribute('height', railHeight);
-        rects.push(rect);
+        const buffElement = createBuffElement(
+          timeToX(event.Apply), (railHeight + railPad) * row, railHeight);
+        buffElement.dataset.start = event.Apply;
+        buffElements.push(buffElement);
       }
       if (event.Remove) {
-        let rect = rects.pop();
-        if (!rect) {
-          rect = document.createElementNS('http://www.w3.org/2000/svg',
-                                          'rect');
-          rect.setAttribute('x', timeToX(log.start));
-          rect.setAttribute('y', (railHeight + railPad) * row);
-          rect.setAttribute('height', railHeight);
+        let buffElement = buffElements.pop();
+        if (!buffElement) {
+          buffElement = createBuffElement(
+            timeToX(log.start), (railHeight + railPad) * row, railHeight);
+          buffElement.dataset.start = log.start;
         }
+        const rect = buffElement.querySelector('rect');
         rect.setAttribute('width', timeToX(event.Remove) -
                           rect.getAttribute('x'));
-        rect.classList.add('buff');
-        board.appendChild(rect);
+        const start = parseFloat(buffElement.dataset.start);
+        const startStr =
+          (parseFloat(buffElement.dataset.start) / 1000).toFixed(2);
+        const duration = ((event.Remove - start) / 1000).toFixed(2);
+        buffElement.querySelector('title').textContent = `${startStr}s, ${duration}s`;
+        board.appendChild(buffElement);
       }
     }
-    for (const rect of rects.reverse()) {
+    for (const buffElement of buffElements.reverse()) {
+      let rect = buffElement.querySelector('rect');
       rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
-      rect.classList.add('buff');
-      board.appendChild(rect);
+      board.appendChild(buffElement);
     }
     const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     name.textContent = log.skills[buffId];
