@@ -114,7 +114,13 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       break;
     }
     case 'renegade_kalla':
-    case 'renegade_shiro':
+    case 'renegade_shiro': {
+      checkAutoChains(log);
+      checkWasted(log);
+      checkAverageSkillDuration(log, SkillIds.SEARING_FISSURE, 600);
+      apologizeForMissingPasses(log);
+      break;
+    }
     default:
       console.warn('Nothing cool to do for', benchmark.id);
       checkAutoChains(log);
@@ -920,4 +926,43 @@ function checkAmmoSkillUsage(log, skillId, recharge, maxCharges) {
     const summary = `Lost ${overcaps} ${chargePlural} of ${skillData.name}`;
     addReportCardItem(log, grade, summary, mishaps);
   }
+}
+
+function checkAverageSkillDuration(log, skillId, targetDuration) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+  let mishaps = [];
+  let castTimes = [];
+  for (const cast of log.casts) {
+    if (cast.id === skillId) {
+      castTimes.push(cast.end - cast.start);
+      if (cast.end - cast.start > targetDuration) {
+        let diff = (cast.end - cast.start - targetDuration) / 1000;
+        mishaps.push(new Mishap(cast.start + targetDuration, cast.end, `Over by ${diff.toFixed(2)}s`));
+      }
+    }
+  }
+
+  console.log('cast times', castTimes);
+
+  let totalDiff = 0;
+  for (let time of castTimes) {
+    totalDiff += time - targetDuration;
+  }
+
+  let grade = 'D';
+  if (totalDiff < 200) {
+    grade = 'S';
+  } else if (totalDiff < 500) {
+    grade = 'A';
+  } else if (totalDiff < 1000) {
+    grade = 'B';
+  } else if (totalDiff < 2000) {
+    grade = 'C';
+  }
+  const summary = `Left ${(totalDiff / 1000).toFixed(2)}s worth of ${skillData.name} uncancelled`;
+  addReportCardItem(log, grade, summary, mishaps);
 }

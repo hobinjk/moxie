@@ -68,4 +68,6 @@ export default {
   FROST_TRAP: 12492,
   SIC_EM: 33902,
   TWICE_AS_VICIOUS: 45600,
+
+  SEARING_FISSURE: 28357,
 };
