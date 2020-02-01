@@ -108,7 +108,7 @@ function recreateJusticeFromSpearPassive(log) {
   console.log('did the thing', log);
 }
 
-function createBuffElement(x, y, height) {
+function createBuffElement(x, y, height, outlineOnly) {
   const group = document.createElementNS('http://www.w3.org/2000/svg',
                                          'g');
   const title = document.createElementNS('http://www.w3.org/2000/svg',
@@ -119,12 +119,32 @@ function createBuffElement(x, y, height) {
   rect.setAttribute('y', y);
   rect.setAttribute('height', height);
   rect.classList.add('buff');
-  group.appendChild(title);
+  if (outlineOnly) {
+    rect.classList.add('buff-outline');
+  } else {
+    group.appendChild(title);
+  }
   group.appendChild(rect);
   return group;
 }
 
-function draw(board, legend, log, startRow, dimensions, showBoring) {
+function finalizeBuffElement(buffElement, timeToX, end) {
+  const rect = buffElement.querySelector('rect');
+  rect.setAttribute('width', timeToX(end) -
+                    rect.getAttribute('x'));
+  const title = buffElement.querySelector('title');
+  if (!title) {
+    return;
+  }
+  const start = parseFloat(buffElement.dataset.start);
+  const startStr =
+    (parseFloat(buffElement.dataset.start) / 1000).toFixed(2);
+  const duration = ((end - start) / 1000).toFixed(2);
+  title.textContent = `${startStr}s, ${duration}s`;
+}
+
+function draw(board, legend, log, startRow, dimensions, showBoring,
+              outlineOnly) {
   const {railHeight, railPad, timeToX} = dimensions;
 
   recreateJusticeFromSpearPassive(log);
@@ -176,7 +196,8 @@ function draw(board, legend, log, startRow, dimensions, showBoring) {
     for (const event of buffs[buffId]) {
       if (event.Apply) {
         const buffElement = createBuffElement(
-          timeToX(event.Apply), (railHeight + railPad) * row, railHeight);
+          timeToX(event.Apply), (railHeight + railPad) * row, railHeight,
+          outlineOnly);
         buffElement.dataset.start = event.Apply;
         buffElements.push(buffElement);
       }
@@ -184,31 +205,28 @@ function draw(board, legend, log, startRow, dimensions, showBoring) {
         let buffElement = buffElements.pop();
         if (!buffElement) {
           buffElement = createBuffElement(
-            timeToX(log.start), (railHeight + railPad) * row, railHeight);
+            timeToX(log.start), (railHeight + railPad) * row, railHeight,
+            outlineOnly);
           buffElement.dataset.start = log.start;
         }
-        const rect = buffElement.querySelector('rect');
-        rect.setAttribute('width', timeToX(event.Remove) -
-                          rect.getAttribute('x'));
-        const start = parseFloat(buffElement.dataset.start);
-        const startStr =
-          (parseFloat(buffElement.dataset.start) / 1000).toFixed(2);
-        const duration = ((event.Remove - start) / 1000).toFixed(2);
-        buffElement.querySelector('title').textContent = `${startStr}s, ${duration}s`;
+        finalizeBuffElement(buffElement, timeToX, event.Remove);
         board.appendChild(buffElement);
       }
     }
     for (const buffElement of buffElements.reverse()) {
-      let rect = buffElement.querySelector('rect');
-      rect.setAttribute('width', timeToX(log.end) - rect.getAttribute('x'));
+      finalizeBuffElement(buffElement, timeToX, log.end);
       board.appendChild(buffElement);
     }
-    const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    name.textContent = log.skills[buffId];
-    name.setAttribute('x', 0);
-    name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
-    name.classList.add('name');
-    legend.appendChild(name);
+
+    if (!outlineOnly) {
+      const name = document.createElementNS('http://www.w3.org/2000/svg',
+                                            'text');
+      name.textContent = log.skills[buffId];
+      name.setAttribute('x', 0);
+      name.setAttribute('y', row * (railHeight + railPad) + railHeight / 2);
+      name.classList.add('name');
+      legend.appendChild(name);
+    }
     row += 1;
   }
 

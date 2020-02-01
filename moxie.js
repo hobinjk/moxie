@@ -297,6 +297,18 @@ async function displayLog(log, selectedPlayer) {
   EasterEgg.attach();
 }
 
+function normalizeBuffOrder(log, benchmark) {
+  let newBenchBuffs = {};
+  for (let id in log.buffs) {
+    if (benchmark.buffs.hasOwnProperty(id)) {
+      newBenchBuffs[id] = benchmark.buffs[id];
+    } else {
+      newBenchBuffs[id] = [];
+    }
+  }
+  benchmark.buffs = newBenchBuffs;
+}
+
 function drawBoard(log, benchmark, player, dimensions, options) {
   const {railHeight, railPad} = dimensions;
 
@@ -332,11 +344,15 @@ function drawBoard(log, benchmark, player, dimensions, options) {
     legend.appendChild(name);
 
     row += 1;
+
+    normalizeBuffOrder(log, benchmark);
+    drawBuffTimeline(board, legend, benchmark, row + 1, dimensions,
+                     options.showBoringBuffs, true);
   }
 
   drawCastTimeline(board, log, log.casts, row, dimensions);
   const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions,
-                                     options.showBoringBuffs);
+                                     options.showBoringBuffs, false);
 
   const rowCount = buffCount + 1 + row;
   board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';

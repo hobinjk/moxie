@@ -259,6 +259,13 @@ input[type="file"] + label:hover,
   stroke: none;
 }
 
+.buff.buff-outline {
+  opacity: 0.5;
+  fill: none;
+  stroke: #5a5;
+}
+
+
 .cast.cancel {
   opacity: 0.3;
 }
