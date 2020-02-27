@@ -56,6 +56,7 @@ const profSpecificBuffs = {
   Revealed: 3,
   // Mirage
   'Mirage Cloak': 0,
+  'Compounding Power': 1,
   // Renegade
   'Legendary Demon Stance': 0,
   'Legendary Assassin Stance': 1,
