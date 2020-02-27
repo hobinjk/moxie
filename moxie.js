@@ -208,6 +208,7 @@ async function displayLog(log, selectedPlayer) {
 
   for (const id in bonusSkills) {
     log.skills[id] = bonusSkills[id];
+    benchmark.skills[id] = bonusSkills[id];
   }
 
   // Normalization, should be in other direction but that's difficult
