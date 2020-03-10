@@ -77,17 +77,14 @@ export default function(log, selectedPlayer) {
       if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
         return get('chrono_power_quick_gs');
       } else {
-        return get('chrono_power_domi');
+        return get('chrono_power_gs');
       }
     } else if (selectedPlayer.weapons.includes('Scepter')) {
       return get('chrono_condi');
     } else if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
       return get('chrono_power_quick_focus');
     } else {
-      if (window.location.hash.includes('domifocus')) {
-        return get('chrono_power_domi_focus');
-      }
-      return get('chrono_power_illu');
+      return get('chrono_power_focus');
     }
   }
 
@@ -115,14 +112,17 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Soulbeast') {
     // Soulbeast benches are too old
-    // if (selectedPlayer.weapons.includes('Shortbow')) {
-    //   if (hasCast(log, SkillIds.NARCOTIC_SPORES)) {
-    //     return get('soulbeast_condi_iboga');
-    //   } else {
-    //     return get('soulbeast_condi_lynx');
-    //   }
-    // } else {
-    return get('soulbeast_power');
+    if (selectedPlayer.weapons.includes('Shortbow')) {
+      return get('soulbeast_condi_sb');
+    } else if (selectedPlayer.weapons.includes('Torch')) {
+      return get('soulbeast_condi');
+    }
+
+    if (selectedPlayer.weapons.includes('Greatsword')) {
+      return get('soulbeast_power_moa_gs');
+    } else {
+      return get('soulbeast_power_moa_lb');
+    }
   }
 
   if (spec === 'Daredevil') {
@@ -144,7 +144,15 @@ export default function(log, selectedPlayer) {
   //     return get('deadeye_dagger');
 
   if (spec === 'Dragonhunter') {
-    return get('dragonhunter');
+    if (selectedPlayer.weapons.includes('Sword')) {
+      return get('dragonhunter_sword_virtues');
+    } else {
+      return get('dragonhunter_scepter');
+    }
+  }
+
+  if (spec === 'Guardian') {
+    return get('guardian');
   }
 
   if (spec === 'Firebrand') {

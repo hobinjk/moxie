@@ -52,6 +52,8 @@ curl https://dps.report/getJson?permalink=5NuM-20200308-111133_golem > soulbeast
 curl https://dps.report/getJson?permalink=czZC-20200307-005617_golem > soulbeast_power_moa_lb.json
 # Lederr https://www.youtube.com/watch?v=Zl7zGS0CkRE
 curl https://dps.report/getJson?permalink=rwSi-20200227-212937_golem > soulbeast_condi.json
+# Lederr https://www.youtube.com/watch?v=DblomOq_n2U
+curl https://dps.report/getJson?permalink=Ncfd-20200229-173213_golem > soulbeast_condi_sb.json
 
 # L E F T https://www.youtube.com/watch?v=LWEi_3kBqcM
 curl https://dps.report/getJson?permalink=fSxJ-20190720-152348_golem > daredevil_power.json
