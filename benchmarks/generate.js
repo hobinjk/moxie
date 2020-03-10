@@ -1,42 +1,14 @@
-let EIParser = require('../EIParser.js');
+const fs = require('fs');
+const EIParser = require('../EIParser.js');
 
-let benches = [
-  require('./berserker_condi.json'),
-  require('./berserker_condi_banners.json'),
-  require('./berserker_power.json'),
-  require('./berserker_power_banners.json'),
-  require('./chrono_condi.json'),
-  require('./chrono_condi_boon.json'),
-  require('./chrono_power_boon.json'),
-  require('./chrono_power_domi.json'),
-  require('./chrono_power_illu.json'),
-  require('./chrono_power_quick_gs.json'),
-  require('./chrono_power_quick_focus.json'),
-  require('./daredevil_condi.json'),
-  require('./daredevil_power.json'),
-  require('./deadeye_condi.json'),
-  require('./deadeye_rifle.json'),
-  require('./dragonhunter.json'),
-  require('./firebrand_condi.json'),
-  require('./firebrand_condi_quick.json'),
-  require('./firebrand_power_quick.json'),
-  require('./herald_boon.json'),
-  require('./holo_condi.json'),
-  require('./mirage.json'),
-  require('./reaper.json'),
-  require('./renegade_alac.json'),
-  require('./renegade_kalla.json'),
-  require('./renegade_shiro.json'),
-  require('./soulbeast_power.json'),
-  require('./tempest_power.json'),
-  require('./weaver_condi_dagger.json'),
-  require('./weaver_condi_sword.json'),
-  require('./weaver_power_btth_large.json'),
-  require('./weaver_power_btth_small.json'),
-  require('./weaver_power_fa_large.json'),
-  require('./weaver_power_fa_small.json'),
-  require('./weaver_power_staff.json'),
-];
+let benchPaths = fs.readdirSync('./');
+console.log(benchPaths);
+
+let benches = benchPaths.filter((benchPath) => {
+  return benchPath.endsWith('.json');
+}).map((benchPath) => {
+  return require(`./${benchPath}`);
+});
 
 let skills = {};
 

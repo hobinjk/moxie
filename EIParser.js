@@ -136,6 +136,9 @@ function parseApiData(player) {
     }
   }
 
+  if (!player.rotation) {
+    player.rotation = [];
+  }
   for (let skill of player.rotation) {
     let id = skill.id;
     for (let cast of skill.skills) {
