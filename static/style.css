@@ -19,16 +19,18 @@ body {
 
 .title {
   display: inline-block;
+  text-decoration: none;
 }
 
 .links {
   float: right;
 }
 
-.links a, .links a:visited {
+a, a:visited {
   color: #77f;
 }
-.links a:hover {
+
+a:hover {
   color: #aaf;
 }
 
