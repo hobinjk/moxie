@@ -49,7 +49,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
       break;
-    case 'chrono_power_domi': {
+    case 'chrono_power_gs': {
       checkAutoChains(log);
       checkWasted(log);
       const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
@@ -61,7 +61,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.WELL_OF_CALAMITY);
       break;
     }
-    case 'chrono_power_illu': {
+    case 'chrono_power_focus': {
       checkAutoChains(log);
       checkWasted(log);
       const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
@@ -104,7 +104,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 5000);
       break;
     }
-    case 'soulbeast_power': {
+    case 'soulbeast_power_moa_gs':
+    case 'soulbeast_power_moa_lb': {
       checkAutoChains(log);
       checkWasted(log);
       checkSkillUsage(log, SkillIds.ONE_WOLF_PACK);
