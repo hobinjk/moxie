@@ -35,7 +35,17 @@ export default function(log, selectedPlayer) {
   const spec = selectedPlayer.profession;
 
   if (spec === 'Tempest') {
-    return get('tempest_power');
+    if (selectedPlayer.weapons.includes('Focus')) {
+      let isGlyphOfStorms =
+        log.skills.hasOwnProperty(SkillIds.GLYPH_OF_STORMS_FIRE);
+      if (isGlyphOfStorms) {
+        return get('tempest_condi_gos');
+      } else {
+        return get('tempest_condi_ele');
+      }
+    } else {
+      return get('tempest_power');
+    }
   }
 
   if (spec === 'Weaver') {
