@@ -35,7 +35,7 @@ export default function(log, selectedPlayer) {
   const spec = selectedPlayer.profession;
 
   if (spec === 'Tempest') {
-    if (selectedPlayer.weapons.includes('Focus')) {
+    if (selectedPlayer.weapons.includes('Dagger')) {
       let isGlyphOfStorms =
         log.skills.hasOwnProperty(SkillIds.GLYPH_OF_STORMS_FIRE);
       if (isGlyphOfStorms) {
