@@ -281,7 +281,7 @@ function checkWasted(log) {
 
         // Nobody's frame-perfect
         if (wasted > 30) {
-          dsMishaps.push(new Mishap(lastEnd, cast.start));
+          dsMishaps.push(new Mishap(lastEnd, cast.start, log.skills[cast.id] || 'Unknown skill'));
         }
       }
     }
@@ -289,7 +289,7 @@ function checkWasted(log) {
       cancels += cast.end - cast.start;
       // Nobody's frame-perfect
       if (cast.end - cast.start > 30) {
-        cancelMishaps.push(new Mishap(cast.start, cast.end));
+        cancelMishaps.push(new Mishap(cast.start, cast.end, log.skills[cast.id] || 'Unknown skill'));
       }
     }
     lastEnd = cast.end;
