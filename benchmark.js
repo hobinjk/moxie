@@ -117,7 +117,13 @@ export default function(log, selectedPlayer) {
   // }
 
   if (spec === 'Holosmith') {
-    return get('holo_condi');
+    if (selectedPlayer.weapons.includes('Sword')) {
+      return get('holo_power_sword');
+    } else if (selectedPlayer.weapons.includes('Rifle')) {
+      return get('holo_power_rifle');
+    } else {
+      return get('holo_condi');
+    }
   }
 
   if (spec === 'Soulbeast') {
