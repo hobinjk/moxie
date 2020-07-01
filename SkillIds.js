@@ -62,6 +62,7 @@ export default {
   RENEWED_FOCUS: 9154,
   SPEAR_OF_JUSTICE: 29632,
   JUSTICE: 30232, // Not in EI but this would be the debuff to track
+  SHIELD_OF_COURAGE: 30029,
 
   SHARPENING_STONE: 9963,
   ONE_WOLF_PACK: 45717,

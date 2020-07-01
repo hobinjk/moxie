@@ -161,7 +161,11 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Dragonhunter') {
     if (selectedPlayer.weapons.includes('Sword')) {
-      return get('dragonhunter_sword_virtues');
+      if (hasCast(log, SkillIds.SHIELD_OF_COURAGE)) {
+        return get('dragonhunter_sword_virtues');
+      } else {
+        return get('dragonhunter_sword');
+      }
     } else {
       return get('dragonhunter_scepter');
     }
