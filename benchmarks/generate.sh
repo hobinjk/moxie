@@ -44,8 +44,8 @@ curl https://dps.report/getJson?permalink=l00S-20190310-143339_golem > scourge.j
 
 # Lunar https://www.youtube.com/watch?v=untWJ7jmam0
 curl https://dps.report/getJson?permalink=Ta2w-20190306-041734_golem > engineer.json
-# Lunar https://www.youtube.com/watch?v=i4JiTnk7pTs
-curl https://dps.report/getJson?permalink=cck4-20200309-014120_golem > holo_condi.json
+# Lunar https://www.youtube.com/watch?v=tU-xsajf9sc
+curl https://dps.report/getJson?permalink=TMgg-20200413-011211_golem > holo_condi.json
 # Fallen https://www.youtube.com/watch?v=9GSXkwyQUygj
 curl https://dps.report/getJson?permalink=qPZT-20200305-193820_golem > holo_power_rifle.json
 # TJ https://www.youtube.com/watch?v=p6mZtHhu7GM
