@@ -5,18 +5,18 @@ curl https://dps.report/getJson?permalink=1VA7-20200315-231351_golem > tempest_c
 # Crone https://www.youtube.com/watch?v=rZz6B47lOKA
 curl https://dps.report/getJson?permalink=8RR9-20200315-234152_golem > tempest_condi_ele.json
 
-# Roul https://www.youtube.com/watch?v=I58GSMPyKBM
-curl https://dps.report/getJson?permalink=QlPM-20190717-022420_golem > weaver_power_fa_small.json
-# Shetsa https://www.youtube.com/watch?v=V0_9zFx7nFA
-curl https://dps.report/getJson?permalink=cQzI-20190721-111114_golem > weaver_power_fa_large.json
+# Roul https://www.youtube.com/watch?v=9gTwIz3Ltl8 - current
+curl https://dps.report/getJson?permalink=4xf4-20200709-021453_golem > weaver_power_fa_small.json
+# Roul https://www.youtube.com/watch?v=zrtMoDkHqnQ - current
+curl https://dps.report/getJson?permalink=QAiv-20200708-194518_golem > weaver_power_fa_large.json
 # Fallen https://www.youtube.com/watch?v=GmV62nfPQvs
 curl https://dps.report/getJson?permalink=xu24-20190717-142553_golem > weaver_power_btth_small.json
 # Fallen https://www.youtube.com/watch?v=PutZ0k_edMY
 curl https://dps.report/getJson?permalink=Zmyd-20190717-180216_golem > weaver_power_btth_large.json
-# Roul https://www.youtube.com/watch?v=es1-kSlDUNc&t=0s
-curl https://dps.report/getJson?permalink=UEAb-20190727-043623_golem > weaver_condi_sword.json
-# Shetsa https://www.youtube.com/watch?v=dprp4S2uQ8c
-curl https://dps.report/getJson?permalink=eQCL-20190718-031003_golem > weaver_condi_dagger.json
+# Roul https://www.youtube.com/watch?v=vT1OBvueRSU - current
+curl https://dps.report/getJson?permalink=DGT0-20200709-133839_golem > weaver_condi_sword.json
+# Crone https://www.youtube.com/watch?v=is7uQC5tzGQ - current
+curl https://dps.report/getJson?permalink=kW84-20200709-165345_golem > weaver_condi_dagger.json
 # Roul https://www.youtube.com/watch?v=pnCh-VP5Jgc
 curl https://dps.report/getJson?permalink=axBT-20191102-155813_golem > weaver_power_staff.json
 
@@ -26,19 +26,19 @@ curl https://dps.report/getJson?permalink=GB5v-20200301-160829_golem > chrono_po
 curl https://dps.report/getJson?permalink=v3d4-20190724-162625_golem > chrono_condi_boon.json
 # Baguette https://www.youtube.com/watch?v=75R9eB_AOrY
 curl https://dps.report/getJson?permalink=Pcig-20190718-190432_golem > chrono_condi.json
-# Lawitz https://www.youtube.com/watch?v=t9KKC1pHZagj
-curl https://dps.report/getJson?permalink=ynsp-20200304-025111_golem > chrono_power_focus.json
-# Trace https://www.youtube.com/watch?v=zetW3gtVpCY
-curl https://dps.report/getJson?permalink=h0PK-20200227-010842_golem > chrono_power_gs.json
-# ZachAttack
-curl https://dps.report/getJson?permalink=nczG-20191005-164253_golem > chrono_power_quick_gs.json
-# Baguette https://www.youtube.com/watch?v=uMJvxIiXt_s
-curl https://dps.report/getJson?permalink=vmoF-20191010-195855_golem > chrono_power_quick_focus.json
+# CorporatePanda https://www.youtube.com/watch?v=1igIyQ5sI44 - current
+curl https://dps.report/getJson?permalink=vDzq-20200708-020910_golem > chrono_power_focus.json
+# Lawitz https://www.youtube.com/watch?v=fj1g_lM8frM - current
+curl https://dps.report/getJson?permalink=gHRP-20200712-040355_golem > chrono_power_gs.json
+# Daed Dee https://www.youtube.com/watch?v=52HRvWBxJUk - current
+curl https://dps.report/getJson?permalink=KMP0-20200710-221413_golem > chrono_power_quick_gs.json
+# Daed Dee https://www.youtube.com/watch?v=Z7VqDNh1IGg - current
+curl https://dps.report/getJson?permalink=TuMf-20200711-085128_golem > chrono_power_quick_focus.json
 # Baguette https://www.youtube.com/watch?v=s-JEUOI0Lis
 curl https://dps.report/getJson?permalink=qWJ5-20190502-134918_golem > mirage.json
 
-# MajesticNoodle https://www.youtube.com/watch?v=wPFrUrG0l0E
-curl https://dps.report/getJson?permalink=jUGs-20190424-144930_golem > reaper.json
+# Elusive https://www.youtube.com/watch?v=UzRH7KjYUuE - current
+curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
 # MajesticNoddle https://www.youtube.com/watch?v=hUkMwtQ0_9w
 curl https://dps.report/getJson?permalink=l00S-20190310-143339_golem > scourge.json
 
