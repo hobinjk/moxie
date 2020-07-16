@@ -31,6 +31,23 @@ function hasCast(log, id) {
   return false;
 }
 
+const QUICKNESS = 1187;
+function hasGeneration(selectedPlayer, buffId) {
+  for (let buff of selectedPlayer.buffUptimes) {
+    if (buff.id !== buffId) {
+      continue;
+    }
+    for (let buffData of buff.buffData) {
+      for (let agentName in buffData.generated) {
+        if (buffData.generated[agentName] > 0) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
 export default function(log, selectedPlayer) {
   const spec = selectedPlayer.profession;
 
@@ -84,14 +101,14 @@ export default function(log, selectedPlayer) {
       }
     }
     if (selectedPlayer.weapons.includes('Greatsword')) {
-      if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
+      if (hasGeneration(selectedPlayer, QUICKNESS)) {
         return get('chrono_power_quick_gs');
       } else {
         return get('chrono_power_gs');
       }
     } else if (selectedPlayer.weapons.includes('Scepter')) {
       return get('chrono_condi');
-    } else if (hasCast(log, SkillIds.SIGNET_OF_INSPIRATION)) {
+    } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
       return get('chrono_power_quick_focus');
     } else {
       return get('chrono_power_focus');
