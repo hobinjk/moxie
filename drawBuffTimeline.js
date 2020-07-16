@@ -150,6 +150,13 @@ function draw(board, legend, log, startRow, dimensions, showBoring,
 
   recreateJusticeFromSpearPassive(log);
 
+  for (let id in log.buffs) {
+    if (!log.skills[id]) {
+      console.warn('Missing skill name', id);
+      log.skills[id] = `${id}`;
+    }
+  }
+
   let buffs = log.buffs;
 
   if (!showBoring) {
