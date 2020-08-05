@@ -74,6 +74,11 @@ const profSpecificBuffs = {
   'Shield of Wrath': 1,
   'Spear of Justice': 2,
   Justice: 3,
+  // Guardian
+  'Inspiring Virtue': 4,
+  'Virtue of Courage': 5,
+  'Virtue of Justice': 6,
+  'Virtue of Resolve': 7,
 
   // Soulbeast
   'One Wolf Pack': 0,
