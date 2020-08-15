@@ -304,6 +304,7 @@ function normalizeBuffOrder(log, benchmark) {
     if (benchmark.buffs.hasOwnProperty(id)) {
       newBenchBuffs[id] = benchmark.buffs[id];
     } else {
+      benchmark.skills[id] = benchmark.skills[id] || log.skills[id];
       newBenchBuffs[id] = [];
     }
   }
