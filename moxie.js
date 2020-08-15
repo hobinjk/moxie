@@ -347,13 +347,14 @@ function drawBoard(log, benchmark, player, dimensions, options) {
     row += 1;
 
     normalizeBuffOrder(log, benchmark);
-    drawBuffTimeline(board, legend, benchmark, row + 1, dimensions,
+    drawBuffTimeline(board, legend, benchmark, player, row + 1, dimensions,
                      options.showBoringBuffs, true);
   }
 
   drawCastTimeline(board, log, log.casts, row, dimensions);
-  const buffCount = drawBuffTimeline(board, legend, log, row + 1, dimensions,
-                                     options.showBoringBuffs, false);
+  const buffCount = drawBuffTimeline(board, legend, log, player, row + 1,
+                                     dimensions, options.showBoringBuffs,
+                                     false);
 
   const rowCount = buffCount + 1 + row;
   board.style.height = rowCount * (railHeight + railPad) - railPad + 'px';

@@ -8,11 +8,6 @@ const boringBuffs = {
   'Ride the Lightning': true,
   'Signet of Restoration': true,
   'Elemental Refreshment': true,
-  'Fire Aura': true,
-  'Fire Attunement': true,
-  'Water Attunement': true,
-  'Air Attunement': true,
-  'Earth Attunement': true,
   'The Light of Deldrimor': true,
   'Hylek Language Effect': true,
   'Incoming!': true,
@@ -45,6 +40,14 @@ const profSpecificBuffs = {
   'Glyph of Elemental Power (Fire)': 14,
   'Magnetic Wave': 15,
   'Weaver\'s Prowess': 16,
+  'Persistent Flames': 17,
+  'Fire Aura': 18,
+  // Tempest
+  'Air Attunement': 0,
+  'Earth Attunement': 1,
+  'Fire Attunement': 2,
+  'Water Attunement': 3,
+  'Transcendent Tempest': 4,
   // Chrono
   'Fencer\'s Finess': 0,
   'Time Anchored': 1,
@@ -149,11 +152,20 @@ function finalizeBuffElement(buffElement, timeToX, end) {
   title.textContent = `${startStr}s, ${duration}s`;
 }
 
-function draw(board, legend, log, startRow, dimensions, showBoring,
+function draw(board, legend, log, player, startRow, dimensions, showBoring,
               outlineOnly) {
   const {railHeight, railPad, timeToX} = dimensions;
 
   recreateJusticeFromSpearPassive(log);
+
+  if (player.profession === 'Weaver') {
+    Object.assign(boringBuffs, {
+      'Fire Attunement': true,
+      'Water Attunement': true,
+      'Air Attunement': true,
+      'Earth Attunement': true,
+    });
+  }
 
   for (let id in log.buffs) {
     if (!log.skills[id]) {
