@@ -180,6 +180,9 @@ function draw(board, legend, log, player, startRow, dimensions, showBoring,
     buffs = {};
     for (const id in log.buffs) {
       const buffName = log.skills[id];
+      if (boringBuffs.hasOwnProperty(buffName)) {
+        continue;
+      }
       if (profSpecificBuffs.hasOwnProperty(buffName)) {
         buffs[id] = log.buffs[id];
       }
