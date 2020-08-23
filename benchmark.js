@@ -95,13 +95,17 @@ export default function(log, selectedPlayer) {
       }
     }
     if (selectedPlayer.weapons.includes('Greatsword')) {
-      if (hasGeneration(selectedPlayer, QUICKNESS)) {
+      if (hasCast(log, SkillIds.GRAVITY_WELL)) {
+        return get('chrono_power_gs');
+      } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
         return get('chrono_power_quick_gs');
       } else {
         return get('chrono_power_gs');
       }
     } else if (selectedPlayer.weapons.includes('Scepter')) {
       return get('chrono_condi');
+    } else if (hasCast(log, SkillIds.GRAVITY_WELL)) {
+      return get('chrono_power_focus');
     } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
       return get('chrono_power_quick_focus');
     } else {
