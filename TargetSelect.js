@@ -9,7 +9,7 @@ const validSpecs = {
   Reaper: true,
   // Scourge: true,
   // Engineer: true,
-  // Scrapper: true,
+  Scrapper: true,
   Holosmith: true,
   // Ranger: true,
   // Druid: true,

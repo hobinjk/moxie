@@ -141,6 +141,10 @@ export default function(log, selectedPlayer) {
     }
   }
 
+  if (spec === 'Scrapper') {
+    return get('scrapper');
+  }
+
   if (spec === 'Soulbeast') {
     // Soulbeast benches are too old
     if (selectedPlayer.weapons.includes('Shortbow')) {
