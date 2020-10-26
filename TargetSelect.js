@@ -16,7 +16,7 @@ const validSpecs = {
   Soulbeast: true,
   // Thief: true,
   Daredevil: true,
-  // Deadeye: true,
+  Deadeye: true,
   Guardian: true,
   Dragonhunter: true,
   Firebrand: true,
