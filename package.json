@@ -19,6 +19,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "gw2-data": "git+https://github.com/hobinjk/gw2-data.git"
+    "gw2-data": "git+https://github.com/hobinjk/gw2-data.git",
+    "ventaris-tablet": "git+https://github.com/hobinjk/ventaris-tablet.git"
   }
 }

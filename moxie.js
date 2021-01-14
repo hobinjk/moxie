@@ -4,9 +4,9 @@ import SkillIds from 'gw2-data/SkillIds';
 import TargetSelect from './TargetSelect';
 import EIParser from './EIParser';
 import getBenchmarkForPlayer from './benchmark';
-import drawCastTimeline from './drawCastTimeline';
-import drawBuffTimeline from './drawBuffTimeline';
-import drawDpsGraph from './drawDpsGraph';
+import drawCastTimeline from 'ventaris-tablet/drawCastTimeline';
+import drawBuffTimeline from 'ventaris-tablet/drawBuffTimeline';
+import drawDpsGraph from 'ventaris-tablet/drawDpsGraph';
 import EasterEgg from './EasterEgg';
 
 const setupContainer = document.querySelector('.setup-container');
