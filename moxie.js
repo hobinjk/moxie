@@ -336,7 +336,7 @@ function drawBoard(log, benchmark, player, dimensions, options) {
   }
 
   if (options.showBenchmark) {
-    drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark');
+    drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark', 'name');
 
     const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     name.textContent = 'Benchmark';
@@ -352,7 +352,7 @@ function drawBoard(log, benchmark, player, dimensions, options) {
                      options.showBoringBuffs, true);
   }
 
-  drawCastTimeline(board, log, log.casts, row, dimensions);
+  drawCastTimeline(board, log, log.casts, row, dimensions, null, 'name');
   const buffCount = drawBuffTimeline(board, legend, log, player, row + 1,
                                      dimensions, options.showBoringBuffs,
                                      false);

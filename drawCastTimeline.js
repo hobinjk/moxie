@@ -5,12 +5,66 @@ const boringSkills = {
   [SkillIds.PRIMORDIAL_STANCE_EFFECT]: true, // Primordial Stance
 };
 
-const specialCaseSkillLabels = {
+const specialCaseSkillNames = {
   5663: '4', // FGS skill 4
   43995: 'F2', // Gazelle charge
 };
 
-function drawCasts(board, log, casts, row, dimensions, rectClass) {
+function castSkillIcon(cast) {
+  let data = SkillData.get(cast.id);
+  if (!data || !data.icon) {
+    return;
+  }
+  return data.icon;
+}
+
+function castSkillName(cast, skills) {
+  let data = SkillData.get(cast.id);
+  if (data && data.slot) {
+    let content = '';
+    // Downed_\d is for shroud/forge skills
+    let matches = data.slot.match(/(Weapon|Downed)_(\d)/);
+    if (matches && matches.length > 0) {
+      content = matches[2];
+      if (data.prev_chain && !data.next_chain) {
+        content += 'f';
+      }
+    } else if (data.slot === 'Elite') {
+      content = 'E';
+    } else if (data.slot === 'Utility') {
+      content = 'U';
+    } else if (data.slot === 'Heal') {
+      content = 'H';
+    } else if (data.slot === 'Toolbelt') {
+      content = 'T';
+    } else {
+      let profMatches = data.slot.match(/Profession_(\d)/);
+      if (profMatches && profMatches.length > 0) {
+        content = 'F' + profMatches[1];
+      }
+    }
+    return content;
+  } else if (skills[cast.id]) {
+    let skillName = skills[cast.id];
+    if (skillName === 'Dodge') {
+      return 'D';
+    } else if (skillName.startsWith('Chapter')) {
+      let chapter = skillName.match(/Chapter (\d)/);
+      if (chapter && chapter.length > 0) {
+        return 'C' + chapter[1];
+      }
+    } else if (skillName.startsWith('Epilogue')) {
+      return 'C5'; // Based on feedback! :D
+    }
+  }
+
+  if (specialCaseSkillNames.hasOwnProperty(cast.id)) {
+    return specialCaseSkillNames[cast.id];
+  }
+}
+
+function drawCasts(board, log, casts, row, dimensions, rectClass,
+                   labelMode = 'icon') {
   const {railHeight, railPad, timeToX} = dimensions;
 
   for (const cast of casts) {
@@ -36,60 +90,35 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
       rect.classList.add(rectClass);
     }
 
-    let skillLabel = null;
+    let skillIcon = castSkillIcon(cast);
+    let icon = null;
 
-    let data = SkillData.get(cast.id);
-    if (data && data.slot) {
-      let content = '';
-      // Downed_\d is for shroud/forge skills
-      let matches = data.slot.match(/(Weapon|Downed)_(\d)/);
-      if (matches && matches.length > 0) {
-        content = matches[2];
-        if (data.prev_chain && !data.next_chain) {
-          content += 'f';
-        }
-      } else if (data.slot === 'Elite') {
-        content = 'E';
-      } else if (data.slot === 'Utility') {
-        content = 'U';
-      } else if (data.slot === 'Heal') {
-        content = 'H';
-      } else if (data.slot === 'Toolbelt') {
-        content = 'T';
+    if (labelMode === 'icon') {
+      if (skillIcon) {
+        icon = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+        icon.setAttribute('x', timeToX(cast.start));
+        icon.setAttribute('y', (railHeight + railPad) * row);
+        icon.setAttribute('width', railHeight);
+        icon.setAttribute('height', railHeight);
+        icon.classList.add('icon');
+        icon.setAttribute('href', skillIcon);
       } else {
-        let profMatches = data.slot.match(/Profession_(\d)/);
-        if (profMatches && profMatches.length > 0) {
-          content = 'F' + profMatches[1];
-        }
-      }
-      skillLabel = content;
-    } else if (log.skills[cast.id]) {
-      let skillName = log.skills[cast.id];
-      if (skillName === 'Dodge') {
-        skillLabel = 'D';
-      } else if (skillName.startsWith('Chapter')) {
-        let chapter = skillName.match(/Chapter (\d)/);
-        if (chapter && chapter.length > 0) {
-          skillLabel = 'C' + chapter[1];
-        }
-      } else if (skillName.startsWith('Epilogue')) {
-        skillLabel = 'C5'; // Based on feedback! :D
+        console.warn('No label for skill', cast.id, log.skills[cast.id]);
       }
     }
 
-    if (!skillLabel && specialCaseSkillLabels.hasOwnProperty(cast.id)) {
-      skillLabel = specialCaseSkillLabels[cast.id];
-    }
-
+    let skillName = castSkillName(cast, log.skills);
     let text = null;
-    if (skillLabel) {
-      text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      text.setAttribute('x', timeToX(cast.start));
-      text.setAttribute('y', (railHeight + railPad) * row + railHeight / 2);
-      text.classList.add('name');
-      text.textContent = skillLabel;
-    } else {
-      console.warn('No label for skill', cast.id, data, log.skills[cast.id]);
+    if (labelMode === 'name') {
+      if (skillName) {
+        text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', timeToX(cast.start));
+        text.setAttribute('y', (railHeight + railPad) * row + railHeight / 2);
+        text.classList.add('name');
+        text.textContent = skillName;
+      } else {
+        console.warn('No label for skill', cast.id, log.skills[cast.id]);
+      }
     }
 
     rect.setAttribute('x', timeToX(cast.start));
@@ -106,6 +135,9 @@ function drawCasts(board, log, casts, row, dimensions, rectClass) {
 
     g.appendChild(title);
     g.appendChild(rect);
+    if (icon) {
+      g.appendChild(icon);
+    }
     if (text) {
       g.appendChild(text);
     }
