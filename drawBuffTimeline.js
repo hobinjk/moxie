@@ -1,4 +1,4 @@
-import SkillIds from './SkillIds';
+import SkillIds from 'gw2-data/SkillIds';
 
 const boringBuffs = {
   'Do Nothing Transformation Buff': true,

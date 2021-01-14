@@ -1,5 +1,5 @@
-import SkillData from './SkillData';
-import SkillIds from './SkillIds';
+import SkillData from 'gw2-data/SkillData';
+import SkillIds from 'gw2-data/SkillIds';
 import Mishap from './Mishap';
 
 const reportCardItems = document.querySelector('.report-card-items');

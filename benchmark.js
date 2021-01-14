@@ -1,4 +1,4 @@
-import SkillIds from './SkillIds';
+import SkillIds from 'gw2-data/SkillIds';
 import EIParser from './EIParser';
 
 async function get(id, name) {
