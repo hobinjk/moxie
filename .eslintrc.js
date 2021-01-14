@@ -1,6 +1,5 @@
 module.exports = {
   'plugins': [
-    'html'
   ],
   'env': {
     'browser': true,
@@ -232,6 +231,7 @@ module.exports = {
       'error',
       'never'
     ],
+    'no-prototype-builtins': ['ignore'],
     'yoda': 'error'
   }
 };
