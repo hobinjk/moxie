@@ -118,7 +118,11 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Reaper') {
-    return get('reaper');
+    if (selectedPlayer.weapons.includes('Axe')) {
+      return get('reaper');
+    } else {
+      return get('reaper_condi');
+    }
   }
 
   // Scourge bench is too old

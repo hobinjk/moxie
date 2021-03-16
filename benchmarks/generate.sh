@@ -41,6 +41,8 @@ curl https://dps.report/getJson?permalink=qWJ5-20190502-134918_golem > mirage.js
 
 # Elusive https://www.youtube.com/watch?v=UzRH7KjYUuE - 2020-07-15
 curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
+# MajesticNoddle https://www.youtube.com/watch?v=B3VJa9XjsrE
+curl https://dps.report/getJson?permalink=3ud4-20210314-214743_golem > reaper_condi.json
 # MajesticNoddle https://www.youtube.com/watch?v=hUkMwtQ0_9w
 curl https://dps.report/getJson?permalink=l00S-20190310-143339_golem > scourge.json
 
