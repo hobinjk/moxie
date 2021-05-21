@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "gw2-data": "github:hobinjk/gw2-data",
-    "ventaris-tablet": "git+https://github.com/hobinjk/ventaris-tablet.git"
+    "ventaris-tablet": "github:hobinjk/ventaris-tablet"
   }
 }
