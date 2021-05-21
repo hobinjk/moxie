@@ -101,10 +101,10 @@ curl https://dps.report/getJson?permalink=Pu9s-20200228-002929_golem > guardian.
 curl https://dps.report/getJson?permalink=YvVi-20190721-160300_golem > herald_boon.json
 # Breke https://www.youtube.com/watch?v=WZDAbN716ww
 curl https://dps.report/getJson?permalink=XWPQ-20200308-100956_golem > renegade_kalla.json
+# Le Mós https://www.youtube.com/watch?v=YAiMfZGm_kg
+curl https://dps.report/getJson?permalink=MCWy-20210513-133103_golem > renegade_deva_kalla.json
 # WiizZ https://www.youtube.com/watch?v=JKd3sV5HfuY
 curl https://dps.report/getJson?permalink=eOwp-20200304-040848_golem > renegade_shiro.json
-# Le Mós https://www.youtube.com/watch?v=0AgddsoxDec
-# curl https://dps.report/getJson?permalink= no log T_T > renegade_deva.json
 # MajesticNoodle https://www.youtube.com/watch?v=p4D96l_GVPg no current log T_T
 curl https://dps.report/getJson?permalink=y17p-20190716-132027_golem > renegade_alac.json
 

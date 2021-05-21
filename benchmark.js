@@ -217,8 +217,12 @@ export default function(log, selectedPlayer) {
       return get('renegade_alac');
     }
 
+    let isDeva = log.buffs.hasOwnProperty(SkillIds.BATTLE_SCARS);
+
     if (log.buffs.hasOwnProperty(SkillIds.LEGENDARY_ASSASSIN_STANCE)) {
       return get('renegade_shiro');
+    } else if (isDeva) {
+      return get('renegade_deva_kalla');
     } else {
       return get('renegade_kalla');
     }
