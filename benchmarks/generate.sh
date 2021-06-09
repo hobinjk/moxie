@@ -72,8 +72,8 @@ curl https://dps.report/getJson?permalink=Ncfd-20200229-173213_golem > soulbeast
 
 # L E F T https://www.youtube.com/watch?v=LWEi_3kBqcM
 curl https://dps.report/getJson?permalink=fSxJ-20190720-152348_golem > daredevil_power.json
-# L E F T https://www.youtube.com/watch?v=jPmzV9NxA4g
-curl https://dps.report/getJson?permalink=pu1A-20190721-084720_golem > daredevil_condi.json
+# L E F T https://www.youtube.com/watch?v=sQAFzwt7aKI
+curl https://dps.report/getJson?permalink=WWBf-20210518-055850_golem > daredevil_condi.json
 # Derpy https://www.youtube.com/watch?v=qbcb5WbBCZ8
 # curl https://dps.report/getJson?permalink=I0g2-20190310-163454_golem > deadeye_dagger.json
 # Lunar https://www.youtube.com/watch?v=si71D-O4kf8 - 2020-07-21
