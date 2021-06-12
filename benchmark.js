@@ -108,27 +108,31 @@ export default function(log, selectedPlayer) {
       return get('chrono_power_focus');
     } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
       return get('chrono_power_quick_focus');
+    } else if (selectedPlayer.weapons.includes('Pistol')) {
+      return get('chrono_power_pistol');
     } else {
       return get('chrono_power_focus');
     }
   }
 
   if (spec === 'Mirage') {
+    if (selectedPlayer.weapons.includes('Staff')) {
+      return get('mirage_staff');
+    }
     return get('mirage');
   }
 
   if (spec === 'Reaper') {
-    if (selectedPlayer.weapons.includes('Axe')) {
-      return get('reaper');
-    } else {
+    if (selectedPlayer.weapons.includes('Scepter')) {
       return get('reaper_condi');
+    } else {
+      return get('reaper');
     }
   }
 
-  // Scourge bench is too old
-  // if (spec === 'Scourge') {
-  //   return get('scourge');
-  // }
+  if (spec === 'Scourge') {
+    return get('scourge');
+  }
 
   // Engi bench is too old
   // if (spec === 'Engineer') {
@@ -146,6 +150,9 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Scrapper') {
+    if (hasCast(log, SkillIds.SHREDDER_GYRO)) {
+      return get('scrapper_quick');
+    }
     return get('scrapper');
   }
 
@@ -154,6 +161,10 @@ export default function(log, selectedPlayer) {
     if (selectedPlayer.weapons.includes('Shortbow')) {
       return get('soulbeast_condi_sb');
     } else if (selectedPlayer.weapons.includes('Torch')) {
+      // Either offhand
+      if (selectedPlayer.weapons[1] === 'Axe' || selectedPlayer.weapons[3] === 'Axe') {
+        return get('soulbeast_hybrid');
+      }
       return get('soulbeast_condi');
     }
 
@@ -189,6 +200,8 @@ export default function(log, selectedPlayer) {
       } else {
         return get('dragonhunter_sword');
       }
+    } else if (selectedPlayer.weapons.includes('Longbow')) {
+      return get('dragonhunter_longbow');
     } else {
       return get('dragonhunter_scepter');
     }
@@ -202,14 +215,18 @@ export default function(log, selectedPlayer) {
     if (hasCast(log, SkillIds.RENEWED_FOCUS)) {
       return get('firebrand_condi');
     } else if (selectedPlayer.weapons.includes('Greatsword')) {
-      return get('firebrand_power_quick');
+      return get('firebrand_condi_gs');
     } else {
       return get('firebrand_condi_quick');
     }
   }
 
   if (spec === 'Herald') {
-    return get('herald_boon');
+    if (selectedPlayer.weapons.includes('Sword')) {
+      return get('herald_boon');
+    } else {
+      return get('herald_condi');
+    }
   }
 
   if (spec === 'Renegade') {
@@ -248,10 +265,10 @@ export default function(log, selectedPlayer) {
     }
   }
 
-  // Spellbreaker bench is too old
-  // if (spec === 'Spellbreaker') {
-  //   return get('spellbreaker');
-  // }
+  // Spellbreaker is hopefully banners
+  if (spec === 'Spellbreaker') {
+    return get('spellbreaker_banners');
+  }
 
   return Promise.resolve({
     targetDamage10S: [],
