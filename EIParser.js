@@ -85,15 +85,20 @@ function parseHtmlData(details) {
   let buffs = {};
   for (let boon of details.boonGraph[0]) {
     buffs[boon.id] = [];
+    let prevStacks = 0;
     for (let state of boon.states) {
       let time = state[0] * 1000;
       let stacks = state[1];
-      // TODO care about stack numbers
-      if (stacks === 0) {
-        buffs[boon.id].push({Remove: time});
-      } else {
-        buffs[boon.id].push({Apply: time});
+
+      for (let i = 0; i < Math.abs(stacks - prevStacks); i++) {
+        if (stacks > prevStacks) {
+          buffs[boon.id].push({Apply: time});
+        } else {
+          buffs[boon.id].push({Remove: time});
+        }
       }
+
+      prevStacks = stacks;
     }
   }
 
@@ -126,13 +131,19 @@ function parseApiData(player) {
 
   for (let buff of player.buffUptimes) {
     buffs[buff.id] = [];
+    let prevStacks = 0;
     for (let state of buff.states) {
       let [time, stacks] = state;
-      if (stacks === 0) {
-        buffs[buff.id].push({Remove: time});
-      } else {
-        buffs[buff.id].push({Apply: time});
+
+      for (let i = 0; i < Math.abs(stacks - prevStacks); i++) {
+        if (stacks > prevStacks) {
+          buffs[buff.id].push({Apply: time});
+        } else {
+          buffs[buff.id].push({Remove: time});
+        }
       }
+
+      prevStacks = stacks;
     }
   }
 
