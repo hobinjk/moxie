@@ -27,7 +27,7 @@ Comparing your casts to the bench casts you can view any discrepancies. These
 are usually downtime, accidental skills, or cancelled casts. An example of
 power daredevil advice possible with this tool is below:
 
-![power daredevil advice](./docs/thief advice.png)
+![power daredevil advice](./docs/thief%20advice.png)
 
 ## Minor notes
 You can also upload a gameplay video so you can see your mistakes in glorious
