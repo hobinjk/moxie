@@ -115,6 +115,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       break;
     }
     case 'renegade_kalla':
+    case 'renegade_deva_kalla':
     case 'renegade_shiro': {
       checkAutoChains(log);
       checkWasted(log);
