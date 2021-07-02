@@ -16,7 +16,21 @@ This is pre-alpha code guaranteed to contain more bugs than all of Maguuma.
 - Wait for parsing
 - Cry
 
-Optionally upload a gameplay video so you can see your mistakes in glorious
+## Interpreting the timeline
+
+The timeline consists of a series of skills and buffs represented as
+rectangles. Weapon skill rectangles have their number 1-5, heals marked as H,
+utilities as U, and elites as E (engineers and firebrands have their own
+special labels too). To view the full skill name mouse over the rectangle.
+
+Comparing your casts to the bench casts you can view any discrepancies. These
+are usually downtime, accidental skills, or cancelled casts. An example of
+power daredevil advice possible with this tool is below:
+
+![power daredevil advice](./docs/thief advice.png)
+
+## Minor notes
+You can also upload a gameplay video so you can see your mistakes in glorious
 360p. At least I recommend scaling down your video because I didn't optimize
 anything anywhere. If you select an Elite Insights HTML file moxie will try to
 parse it but half the buffs are missing so it won't be able to yell at you as
@@ -66,11 +80,11 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Sword Weaver
  - Condition Dagger Weaver
  - Power Staff Weaver
+ - Scourge
+ - Banner Spellbreaker
+ - Condition Soulbeast
 
 ### Unsupported, recent logs welcome!
  - Dagger Deadeye
  - Condition Engineer
- - Scourge
- - Condition Soulbeast
- - Banner Spellbreaker
  - Banner Warrior
