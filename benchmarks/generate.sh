@@ -52,8 +52,8 @@ curl https://dps.report/getJson?permalink=cH2D-20210612-210022_golem > mirage_st
 
 # Elusive https://www.youtube.com/watch?v=UzRH7KjYUuE - 2020-07-15
 curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
-# MajesticNoodle https://www.youtube.com/watch?v=ZHkR6_TwIEg
-curl https://dps.report/getJson?permalink=Gzer-20210513-162547_golem > reaper_condi.json
+# Incera https://www.youtube.com/watch?v=jfsfgzb_M5I
+curl https://dps.report/getJson?permalink=x2EE-20210822-051300_golem > reaper_condi.json
 # Prud https://www.youtube.com/watch?v=puvu4AbfVQU
 curl https://dps.report/getJson?permalink=OlFE-20210601-021247_golem > scourge.json
 
@@ -69,8 +69,8 @@ curl https://dps.report/getJson?permalink=8W5H-20210512-045910_golem > holo_powe
 curl https://dps.report/getJson?permalink=aAX4-20210520-193001_golem > holo_power_sword_pbm.json
 # Xyonon https://www.youtube.com/watch?v=yGg0pqSu8RA
 curl https://dps.report/getJson?permalink=iGev-20210526-215831_golem > scrapper.json
-# Xyonon https://www.youtube.com/watch?v=1KsB4Bf4oGk
-curl https://dps.report/getJson?permalink=nRVD-20210526-002600_golem > scrapper_quick.json
+# Xyonon https://www.youtube.com/watch?v=oD7fBTMmWFE
+curl https://dps.report/getJson?permalink=uRLc-20210823-152656_golem > scrapper_quick.json
 
 # L E F T https://www.youtube.com/watch?v=7FAAgTxUuc8
 curl https://dps.report/getJson?permalink=mywS-20200225-144958_golem > soulbeast_power_gazelle_gs.json
