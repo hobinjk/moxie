@@ -84,8 +84,8 @@ curl https://dps.report/getJson?permalink=zUfg-20210529-225956_golem > soulbeast
 curl https://dps.report/getJson?permalink=zzE6-20210514-155136_golem > soulbeast_condi.json
 # Frenzy https://www.youtube.com/watch?v=HdwqDoINnq0
 curl https://dps.report/getJson?permalink=SgbF-20210526-004829_golem > soulbeast_hybrid.json
-# Lederr https://www.youtube.com/watch?v=DblomOq_n2U
-curl https://dps.report/getJson?permalink=Ncfd-20200229-173213_golem > soulbeast_condi_sb.json
+# Talonflame https://www.youtube.com/watch?v=70F-uEOb-Bg
+curl https://dps.report/getJson?permalink=Oq8d-20210609-135312_golem > soulbeast_condi_sb.json
 
 # L E F T https://www.youtube.com/watch?v=LWEi_3kBqcM
 curl https://dps.report/getJson?permalink=fSxJ-20190720-152348_golem > daredevil_power.json
