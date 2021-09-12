@@ -54,8 +54,8 @@ curl https://dps.report/getJson?permalink=cH2D-20210612-210022_golem > mirage_st
 curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
 # Incera https://www.youtube.com/watch?v=jfsfgzb_M5I
 curl https://dps.report/getJson?permalink=x2EE-20210822-051300_golem > reaper_condi.json
-# Prud https://www.youtube.com/watch?v=puvu4AbfVQU
-curl https://dps.report/getJson?permalink=OlFE-20210601-021247_golem > scourge.json
+# Incera https://www.youtube.com/watch?v=x1dRcUqNIFo
+curl https://dps.report/getJson?permalink=y99d-20210830-203941_golem > scourge.json
 
 # Lunar https://www.youtube.com/watch?v=untWJ7jmam0
 curl https://dps.report/getJson?permalink=Ta2w-20190306-041734_golem > engineer.json
