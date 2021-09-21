@@ -230,7 +230,7 @@ async function displayLog(log, selectedPlayer) {
     showDps: true,
     showBoringBuffs: false,
     videoOffset: 1.8,
-    castLabelType: 'icons',
+    showIcons: false,
   };
   const showBenchmark = document.getElementById('show-benchmark');
   showBenchmark.checked = options.showBenchmark;
@@ -238,8 +238,8 @@ async function displayLog(log, selectedPlayer) {
   showDps.checked = options.showDps;
   const showBoringBuffs = document.getElementById('show-boring-buffs');
   showBoringBuffs.checked = options.showBoringBuffs;
-  const castLabelType = document.getElementById('cast-label-type');
-  castLabelType.value = options.castLabelType;
+  const showIcons = document.getElementById('show-icons');
+  showIcons.checked = options.showIcons;
 
   function onChange(key) {
     return function(event) {
@@ -251,9 +251,7 @@ async function displayLog(log, selectedPlayer) {
   showBenchmark.addEventListener('change', onChange('showBenchmark'));
   showDps.addEventListener('change', onChange('showDps'));
   showBoringBuffs.addEventListener('change', onChange('showBoringBuffs'));
-  castLabelType.addEventListener('change', function() {
-    options.castLabelType = castLabelType.value;
-  });
+  showIcons.addEventListener('change', onChange('showIcons'));
 
   drawBoard(log, benchmark, selectedPlayer, dimensions, options);
 
@@ -336,7 +334,8 @@ function drawBoard(log, benchmark, player, dimensions, options) {
   }
 
   if (options.showBenchmark) {
-    drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark', 'name');
+    drawCastTimeline(board, log, benchmark.casts, row, dimensions, 'benchmark',
+                     options.showIcons ? 'icon' : 'name');
 
     const name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     name.textContent = 'Benchmark';
@@ -352,7 +351,8 @@ function drawBoard(log, benchmark, player, dimensions, options) {
                      options.showBoringBuffs, true);
   }
 
-  drawCastTimeline(board, log, log.casts, row, dimensions, null, 'name');
+  drawCastTimeline(board, log, log.casts, row, dimensions, null,
+                   options.showIcons ? 'icon' : 'name');
   const buffCount = drawBuffTimeline(board, legend, log, player, row + 1,
                                      dimensions, options.showBoringBuffs,
                                      false);
