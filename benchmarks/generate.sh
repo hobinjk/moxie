@@ -52,8 +52,8 @@ curl https://dps.report/getJson?permalink=cH2D-20210612-210022_golem > mirage_st
 
 # Elusive https://www.youtube.com/watch?v=UzRH7KjYUuE - 2020-07-15
 curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
-# Incera https://www.youtube.com/watch?v=jfsfgzb_M5I
-curl https://dps.report/getJson?permalink=x2EE-20210822-051300_golem > reaper_condi.json
+# Incera https://www.youtube.com/watch?v=prk0ZwXwLlA
+curl https://dps.report/getJson?permalink=dlNX-20210928-041540_golem > reaper_condi.json
 # Incera https://www.youtube.com/watch?v=x1dRcUqNIFo
 curl https://dps.report/getJson?permalink=y99d-20210830-203941_golem > scourge.json
 
