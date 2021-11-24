@@ -61,16 +61,26 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Weaver') {
     let isCondi = log.skills.hasOwnProperty(SkillIds.WEAVE_SELF);
+    let isFreshAir = log.buffs.hasOwnProperty(SkillIds.FRESH_AIR);
     if (isCondi) {
+      if (isFreshAir) {
+        let isGlyphOfStorms =
+          log.skills.hasOwnProperty(SkillIds.GLYPH_OF_STORMS_FIRE);
+        if (isGlyphOfStorms) {
+          return get('weaver_hybrid_fa');
+        } else {
+          return get('weaver_hybrid_fa_elementals');
+        }
+      }
       if (selectedPlayer.weapons.includes('Sword')) {
         return get('weaver_condi_sword');
-      } else if (selectedPlayer.weapons.includes('Dagger')) {
+      }
+      if (selectedPlayer.weapons.includes('Dagger')) {
         return get('weaver_condi_dagger');
       }
     } else if (selectedPlayer.weapons.includes('Staff')) {
       return get('weaver_power_staff');
     } else {
-      let isFreshAir = log.buffs.hasOwnProperty(SkillIds.ATTUNEMENT_WATER_FIRE);
       // See if LH was cast
       if (hasCast(log, SkillIds.CONJURE_LIGHTNING_HAMMER)) {
         if (isFreshAir) {
