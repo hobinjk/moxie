@@ -7,7 +7,7 @@ const validSpecs = {
   Mirage: true,
   // Necromancer: true,
   Reaper: true,
-  // Scourge: true,
+  Scourge: true,
   // Engineer: true,
   Scrapper: true,
   Holosmith: true,
@@ -25,7 +25,7 @@ const validSpecs = {
   Renegade: true,
   // Warrior: true,
   Berserker: true,
-  // Spellbreaker: true,
+  Spellbreaker: true,
 };
 
 export default class TargetSelect {
