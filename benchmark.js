@@ -96,6 +96,13 @@ export default function(log, selectedPlayer) {
     }
   }
 
+  if (spec === 'Catalyst') {
+    if (hasCast(log, SkillIds.CONJURE_FIERY_GREATSWORD)) {
+      return get('catalyst_power');
+    }
+    return get('catalyst_power_quick');
+  }
+
   if (spec === 'Chronomancer') {
     if (selectedPlayer.weapons.includes('Shield')) {
       if (selectedPlayer.weapons.includes('Scepter')) {
@@ -132,6 +139,13 @@ export default function(log, selectedPlayer) {
     return get('mirage');
   }
 
+  if (spec === 'Virtuoso') {
+    if (selectedPlayer.weapons.includes('Greatsword')) {
+      return get('virtuoso_gs');
+    }
+    return get('virtuoso_focus');
+  }
+
   if (spec === 'Reaper') {
     if (selectedPlayer.weapons.includes('Scepter')) {
       return get('reaper_condi');
@@ -142,6 +156,11 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Scourge') {
     return get('scourge');
+  }
+
+  if (spec === 'Harbinger') {
+    // TODO check for quickness output?
+    return get('harbinger_condi');
   }
 
   // Engi bench is too old
@@ -203,6 +222,10 @@ export default function(log, selectedPlayer) {
   // Deadeye dagger bench is too old
   //     return get('deadeye_dagger');
 
+  if (spec === 'Specter') {
+    return get('specter_condi');
+  }
+
   if (spec === 'Dragonhunter') {
     if (selectedPlayer.weapons.includes('Sword')) {
       if (hasCast(log, SkillIds.SHIELD_OF_COURAGE)) {
@@ -229,6 +252,10 @@ export default function(log, selectedPlayer) {
     } else {
       return get('firebrand_condi_quick');
     }
+  }
+
+  if (spec === 'Willbender') {
+    return get('willbender_power_focus');
   }
 
   if (spec === 'Herald') {
