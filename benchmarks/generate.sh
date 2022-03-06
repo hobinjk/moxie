@@ -28,6 +28,10 @@ curl https://dps.report/getJson?permalink=IHIC-20210512-080416_golem > weaver_co
 curl https://dps.report/getJson?permalink=dlTT-20210517-230137_golem > weaver_condi_scepter.json
 # Roul https://www.youtube.com/watch?v=pnCh-VP5Jgc
 curl https://dps.report/getJson?permalink=axBT-20191102-155813_golem > weaver_power_staff.json
+# Roul https://www.youtube.com/watch?v=htZUaJFTUWQ
+curl https://dps.report/getJson?permalink=4qol-20220306-022309_golem > catalyst_power_quick.json
+# Roul https://www.youtube.com/watch?v=z4FHf28_Bts
+curl https://dps.report/getJson?permalink=O3xi-20220301-185337_golem > catalyst_power.json
 
 # Baguette https://www.youtube.com/watch?v=NRpE4NO_EKo
 curl https://dps.report/getJson?permalink=GB5v-20200301-160829_golem > chrono_power_boon.json
@@ -49,6 +53,10 @@ curl https://dps.report/getJson?permalink=DTL1-20210606-003610_golem > chrono_po
 curl https://dps.report/getJson?permalink=hRmq-20210520-164210_golem > mirage.json
 # Xyonon https://www.youtube.com/watch?v=LYYZvQKFxJk
 curl https://dps.report/getJson?permalink=cH2D-20210612-210022_golem > mirage_staff.json
+# Tipcat https://www.youtube.com/watch?v=2MjGkERIFlo
+curl https://dps.report/getJson?permalink=wH7X-20220305-190610_golem > virtuoso_focus.json
+# Tipcat https://www.youtube.com/watch?v=2SmXV9Yr1QM
+curl https://dps.report/getJson?permalink=iSbr-20211204-155756_golem > virtuoso_gs.json
 
 # Elusive https://www.youtube.com/watch?v=UzRH7KjYUuE - 2020-07-15
 curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.json
@@ -56,6 +64,10 @@ curl https://dps.report/getJson?permalink=71qO-20200711-020642_golem > reaper.js
 curl https://dps.report/getJson?permalink=dlNX-20210928-041540_golem > reaper_condi.json
 # Incera https://www.youtube.com/watch?v=x1dRcUqNIFo
 curl https://dps.report/getJson?permalink=y99d-20210830-203941_golem > scourge.json
+# Aphrodite Lady https://www.youtube.com/watch?v=n_QHl9fiqK4
+curl https://dps.report/getJson?permalink=g4vX-20220303-200556_golem > harbinger_condi_quick.json
+# Frenzy https://www.youtube.com/watch?v=Aj_IZxh0YFQ
+curl https://dps.report/getJson?permalink=2ZkE-20220305-170552_golem > harbinger_condi.json
 
 # Lunar https://www.youtube.com/watch?v=untWJ7jmam0
 curl https://dps.report/getJson?permalink=Ta2w-20190306-041734_golem > engineer.json
@@ -97,17 +109,20 @@ curl https://dps.report/getJson?permalink=zhzk-20210610-014301_golem > daredevil
 curl https://dps.report/getJson?permalink=9Bpy-20200721-034734_golem > deadeye_rifle.json
 # Incera https://www.youtube.com/watch?v=-Rk0Lu8QpbU
 curl https://dps.report/getJson?permalink=cPL4-20210529-142855_golem > deadeye_condi.json
+# Incera https://www.youtube.com/watch?v=7ZjQJmms_Dw
+curl https://dps.report/getJson?permalink=SwK5-20220306-013443_golem > specter_condi.json
+
 
 # Frenzy https://www.youtube.com/watch?v=-_W3BDYVCdc
 curl https://dps.report/getJson?permalink=avKW-20210515-172533_golem > firebrand_condi.json
-# support hero https://www.youtube.com/watch?v=AcbnsKtC8NA
-curl https://dps.report/getJson?permalink=ER2d-20210526-130123_golem > firebrand_condi_aow.json
+# support hero https://www.youtube.com/watch?v=_GFennqOKVg
+curl https://dps.report/getJson?permalink=haWS-20220303-114125_golem > firebrand_condi_aow.json
 # Frenzy https://www.youtube.com/watch?v=4uN6nfRtOck
 curl https://dps.report/getJson?permalink=upB3-20210518-034450_golem > firebrand_condi_gs.json
 # MajesticNoodle https://www.youtube.com/watch?v=G1Y1u4ZwJh8
 curl https://dps.report/getJson?permalink=oZqd-20190718-145708_golem > firebrand_power_quick.json
-# Kacodo https://www.youtube.com/watch?v=YQWvzNqcSJ8
-curl https://dps.report/getJson?permalink=FBF2-20210513-171633_golem > firebrand_condi_quick.json
+# support hero https://www.youtube.com/watch?v=4t5qwrBjMz0
+curl https://dps.report/getJson?permalink=bmvn-20220303-155938_golem > firebrand_condi_quick.json
 # Nagy https://www.youtube.com/watch?v=faIaiHFG1qI
 curl https://dps.report/getJson?permalink=kTCm-35501n_golem > dragonhunter_sword.json
 # Nagy https://www.youtube.com/watch?v=iaMQVvspJFE
@@ -118,6 +133,8 @@ curl https://dps.report/getJson?permalink=xODB-20200226-152327_golem > dragonhun
 curl https://dps.report/getJson?permalink=yLI2-20210515-223426_golem > dragonhunter_lb.json
 # Lunar https://www.youtube.com/watch?v=3nX_H0pJ6Dw
 curl https://dps.report/getJson?permalink=Pu9s-20200228-002929_golem > guardian.json
+# Nagy https://www.youtube.com/watch?v=Vo4Qs6KeUHE
+curl https://dps.report/getJson?permalink=2vW1-37326r_golem > willbender_power_focus.json
 
 # MajesticNoodle https://www.youtube.com/watch?v=to4VZ3xkzk4
 curl https://dps.report/getJson?permalink=YvVi-20190721-160300_golem > herald_boon.json
