@@ -97,10 +97,10 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Catalyst') {
-    if (hasCast(log, SkillIds.CONJURE_FIERY_GREATSWORD)) {
-      return get('catalyst_power');
-    }
-    return get('catalyst_power_quick');
+    // if (hasCast(log, SkillIds.CONJURE_FIERY_GREATSWORD)) {
+    return get('catalyst_power');
+    // }
+    // return get('catalyst_power_quick');
   }
 
   if (spec === 'Chronomancer') {
