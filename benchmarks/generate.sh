@@ -28,10 +28,10 @@ curl https://dps.report/getJson?permalink=IHIC-20210512-080416_golem > weaver_co
 curl https://dps.report/getJson?permalink=dlTT-20210517-230137_golem > weaver_condi_scepter.json
 # Roul https://www.youtube.com/watch?v=pnCh-VP5Jgc
 curl https://dps.report/getJson?permalink=axBT-20191102-155813_golem > weaver_power_staff.json
-# Roul https://www.youtube.com/watch?v=htZUaJFTUWQ
-curl https://dps.report/getJson?permalink=4qol-20220306-022309_golem > catalyst_power_quick.json
-# Roul https://www.youtube.com/watch?v=z4FHf28_Bts
-curl https://dps.report/getJson?permalink=O3xi-20220301-185337_golem > catalyst_power.json
+# Roul https://www.youtube.com/watch?v=b0mRrQ1fQFI
+curl https://dps.report/getJson?permalink=TbZW-20220330-160041_golem > catalyst_power_quick.json
+# Roul https://www.youtube.com/watch?v=FGZ67w2VUws
+curl https://dps.report/getJson?permalink=DLtw-20220330-164910_golem > catalyst_power.json
 
 # Baguette https://www.youtube.com/watch?v=NRpE4NO_EKo
 curl https://dps.report/getJson?permalink=GB5v-20200301-160829_golem > chrono_power_boon.json
