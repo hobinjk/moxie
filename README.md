@@ -60,29 +60,86 @@ because otherwise I wouldn't have known what it looks like.
  - Condition quickness Firebrand
  - Power dagger Soulbeast
 
-### Partial support with benchmark log
- - Condition Berserker with and without banners
- - Power Berserker with and without banners
- - Condition Chronomancer
- - Power Quickness Chronomancer with greatsword and with focus
- - Condition Daredevil
- - Condition Deadeye
- - Rifle Deadeye
- - Dragonhunter
- - Power quickness Firebrand
- - Boon Herald
- - Condition Holosmith
- - Reaper
- - Alacrity Renegade
- - Condition Kalla Renegade
- - Condition Shiro Renegade
+### Partial support with benchmark log (at least)
+
+#### Elementalist
+ - Condition Tempest - Glyph of Storms
+ - Condition Tempest - Glyph of Elementals
  - Power Tempest
- - Condition Sword Weaver
- - Condition Dagger Weaver
- - Power Staff Weaver
- - Scourge
- - Banner Spellbreaker
+ - Hybrid Weaver
+ - Hybrid Weaver - Glyph of Elementals
+ - Condition Weaver - Sword
+ - Condition Weaver - Dagger
+ - Power Weaver - Staff
+ - Power Weaver - Fresh Air Small/Large Hitbox
+ - Power Weaver - Bolt to the Heart Small/Large Hitbox
+ - Power Catalyst
+
+#### Mesmer
+ - Condition Quickness Chronomancer
+ - Condition Chronomancer
+ - Power Quickness Chronomancer - Focus
+ - Power Quickness Chronomancer - Greatsword
+ - Power Chronomancer - Focus
+ - Power Chronomancer - Pistol
+ - Power Chronomancer - Greatsword
+ - Condition Staff Mirage
+ - Condition Mirage
+ - Power Virtuoso - Focus
+ - Power Virtuoso - Greatsword
+
+#### Necromancer
+ - Condition Reaper
+ - Power Reaper
+ - Condition Scourge
+ - Condition Harbinger
+
+#### Engineer
+ - Power Holosmith - Sword
+ - Power Holosmith - Rifle
+ - Condition Holosmith
+ - Power Quickness Scrapper
+ - Power Scrapper
+
+#### Ranger
+ - Condition Soulbeast - Shortbow
  - Condition Soulbeast
+ - Hybrid Soulbeast
+ - Power Soulbeast - Moa Greatsword
+ - Power Soulbeast - Moa Longbow
+
+#### Thief
+ - Power Daredevil
+ - Condition Daredevil
+ - Power Deadeye - Rifle
+ - Condition Deadeye
+ - Condition Specter
+
+#### Guardian
+ - Power Dragonhunter - Sword Virtues
+ - Power Dragonhunter - Sword
+ - Power Dragonhunter - Longbow
+ - Power Dragonhunter - Scepter
+ - Power Guardian
+ - Condition Firebrand
+ - Condition Firebrand - Greatsword
+ - Condition Quickness Firebrand
+ - Power Willbender - Focus Virtues
+
+#### Revenant
+ - Power Boon Herald
+ - Condition Herald
+ - Power Alacrity Renegade
+ - Condition Renegade - Shiro Invocation
+ - Condition Renegade - Kalla Invocation
+ - Condition Renegade - Kalla Devastation
+
+#### Warrior
+ - Condition Berserker
+ - Condition Berserker - Banners
+ - Power Berserker
+ - Power Berserker - Banners
+ - Power Spellbreaker - Banners
 
 ### Unsupported, recent logs welcome!
  - Dagger Deadeye
