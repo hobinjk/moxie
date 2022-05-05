@@ -110,6 +110,8 @@ curl https://dps.report/getJson?permalink=zzE6-20210514-155136_golem > soulbeast
 curl https://dps.report/getJson?permalink=SgbF-20210526-004829_golem > soulbeast_hybrid.json
 # Talonflame https://www.youtube.com/watch?v=70F-uEOb-Bg
 curl https://dps.report/getJson?permalink=Oq8d-20210609-135312_golem > soulbeast_condi_sb.json
+# Ssalg Ele https://www.youtube.com/watch?v=uNvHK6EbsIQ
+curl https://dps.report/getJson?permalink=OjIU-20220324-183125_golem > untamed_power.json
 
 # L E F T https://www.youtube.com/watch?v=LWEi_3kBqcM
 curl https://dps.report/getJson?permalink=fSxJ-20190720-152348_golem > daredevil_power.json
