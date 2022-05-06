@@ -14,11 +14,11 @@ const validSpecs = {
   // Engineer: true,
   Scrapper: true,
   Holosmith: true,
-  // Mechanist: true,
+  Mechanist: true,
   // Ranger: true,
   // Druid: true,
   Soulbeast: true,
-  // Untamed: true,
+  Untamed: true,
   // Thief: true,
   Daredevil: true,
   Deadeye: true,
@@ -30,11 +30,11 @@ const validSpecs = {
   // Revenant: true,
   Herald: true,
   Renegade: true,
-  // Vindicator: true,
+  Vindicator: true,
   // Warrior: true,
   Berserker: true,
   Spellbreaker: true,
-  // Bladesworn: true,
+  Bladesworn: true,
 };
 
 export default class TargetSelect {
