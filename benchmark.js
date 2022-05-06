@@ -25,6 +25,15 @@ function hasCast(log, id) {
   return false;
 }
 
+function hasBuff(log, name) {
+  for (let key in log.buffMap) {
+    if (log.buffMap[key].name === name) {
+      return true;
+    }
+  }
+  return false;
+}
+
 const QUICKNESS = 1187;
 function hasGeneration(selectedPlayer, buffId) {
   for (let buff of selectedPlayer.buffUptimes) {
@@ -134,7 +143,11 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Mirage') {
     if (selectedPlayer.weapons.includes('Staff')) {
-      return get('mirage_staff');
+      if (selectedPlayer.weapons.includes('Axe')) {
+        return get('mirage_staxe');
+      } else {
+        return get('mirage_staff');
+      }
     }
     return get('mirage');
   }
@@ -143,7 +156,10 @@ export default function(log, selectedPlayer) {
     if (selectedPlayer.weapons.includes('Greatsword')) {
       return get('virtuoso_gs');
     }
-    return get('virtuoso_focus');
+    if (hasCast(log, SkillIds.PHANTASMAL_DISENCHANTER)) {
+      return get('virtuoso_focus');
+    }
+    return get('virtuoso_condi');
   }
 
   if (spec === 'Reaper') {
@@ -185,6 +201,19 @@ export default function(log, selectedPlayer) {
     return get('scrapper');
   }
 
+  if (spec === 'Mechanist') {
+    if (hasCast(log, SkillIds.SUPERCONDUCTING_SIGNET)) {
+      return get('mechanist_condi_signets');
+    }
+    if (selectedPlayer.weapons.includes('Mace')) {
+      return get('mechanist_power_alac');
+    }
+    if (hasCast(log, SkillIds.FLAME_BLAST)) {
+      return get('mechanist_condi_alac');
+    }
+    return get('mechanist_condi');
+  }
+
   if (spec === 'Soulbeast') {
     // Soulbeast benches are too old
     if (selectedPlayer.weapons.includes('Shortbow')) {
@@ -202,6 +231,10 @@ export default function(log, selectedPlayer) {
     } else {
       return get('soulbeast_power_moa_lb');
     }
+  }
+
+  if (spec === 'Untamed') {
+    return get('untamed_power');
   }
 
   if (spec === 'Daredevil') {
@@ -223,6 +256,9 @@ export default function(log, selectedPlayer) {
   //     return get('deadeye_dagger');
 
   if (spec === 'Specter') {
+    if (hasCast(log, SkillIds.WELL_OF_BOUNTY)) {
+      return get('specter_condi_alac');
+    }
     return get('specter_condi');
   }
 
@@ -255,6 +291,15 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Willbender') {
+    if (hasCast(log, SkillIds.PURGING_FLAMES)) {
+      if (selectedPlayer.weapons.includes('Greatsword')) {
+        return get('willbender_condi_gs');
+      }
+      if (hasBuff(log, 'Flowing Resolve')) {
+        return get('willbender_condi_alac_sword');
+      }
+      return get('willbender_condi_sword');
+    }
     return get('willbender_power_focus');
   }
 
@@ -282,6 +327,13 @@ export default function(log, selectedPlayer) {
     }
   }
 
+  if (spec === 'Vindicator') {
+    if (selectedPlayer.weapons.includes('Sword')) {
+      return get('vindicator_power_sword');
+    }
+    return get('vindicator_power_gs');
+  }
+
   // Warrior bench is too old
   // if (spec === 'Warrior') {
   //   return get('warrior_banners');
@@ -305,6 +357,13 @@ export default function(log, selectedPlayer) {
   // Spellbreaker is hopefully banners
   if (spec === 'Spellbreaker') {
     return get('spellbreaker_banners');
+  }
+
+  if (spec === 'Bladesworn') {
+    if (hasBuff(log, 'Signet of Fury')) {
+      return get('bladesworn_power');
+    }
+    return get('bladesworn_banners');
   }
 
   return Promise.resolve({

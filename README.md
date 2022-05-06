@@ -84,9 +84,11 @@ because otherwise I wouldn't have known what it looks like.
  - Power Chronomancer - Pistol
  - Power Chronomancer - Greatsword
  - Condition Staff Mirage
+ - Condition Staxe Mirage
  - Condition Mirage
  - Power Virtuoso - Focus
  - Power Virtuoso - Greatsword
+ - Condition Virtuoso
 
 #### Necromancer
  - Condition Reaper
@@ -100,6 +102,10 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Holosmith
  - Power Quickness Scrapper
  - Power Scrapper
+ - Condition Mechanist - J-Drive
+ - Condition Mechanist - Jade Dynamo
+ - Condition Alacrity Mechanist
+ - Power Alacrity Mechanist
 
 #### Ranger
  - Condition Soulbeast - Shortbow
@@ -107,6 +113,7 @@ because otherwise I wouldn't have known what it looks like.
  - Hybrid Soulbeast
  - Power Soulbeast - Moa Greatsword
  - Power Soulbeast - Moa Longbow
+ - Power Untamed - Really.
 
 #### Thief
  - Power Daredevil
@@ -114,6 +121,7 @@ because otherwise I wouldn't have known what it looks like.
  - Power Deadeye - Rifle
  - Condition Deadeye
  - Condition Specter
+ - Condition Alacrity Specter
 
 #### Guardian
  - Power Dragonhunter - Sword Virtues
@@ -125,6 +133,9 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Firebrand - Greatsword
  - Condition Quickness Firebrand
  - Power Willbender - Focus Virtues
+ - Condition Willbender - Sword
+ - Condition Willbender - Greatsword
+ - Condition Alac Willbender
 
 #### Revenant
  - Power Boon Herald
@@ -133,6 +144,8 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Renegade - Shiro Invocation
  - Condition Renegade - Kalla Invocation
  - Condition Renegade - Kalla Devastation
+ - Power Vindicator
+ - Power Vindicator - GS Only
 
 #### Warrior
  - Condition Berserker
@@ -140,6 +153,8 @@ because otherwise I wouldn't have known what it looks like.
  - Power Berserker
  - Power Berserker - Banners
  - Power Spellbreaker - Banners
+ - Power Bladesworn
+ - Power Bladesworn - Banners
 
 ### Unsupported, recent logs welcome!
  - Dagger Deadeye
