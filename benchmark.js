@@ -26,11 +26,21 @@ function hasCast(log, id) {
 }
 
 function hasBuff(log, name) {
-  for (let key in log.buffMap) {
-    if (log.buffMap[key].name === name) {
-      return true;
+  if (log.buffMap) {
+    for (let key in log.buffMap) {
+      if (log.buffMap[key].name === name) {
+        return true;
+      }
     }
   }
+  if (log.skills) {
+    for (let key in log.skills) {
+      if (log.skills[key] === name) {
+        return true;
+      }
+    }
+  }
+
   return false;
 }
 
