@@ -59,6 +59,7 @@ because otherwise I wouldn't have known what it looks like.
  - Condition Firebrand
  - Condition quickness Firebrand
  - Power dagger Soulbeast
+ - Power Catalyst
 
 ### Partial support with benchmark log (at least)
 

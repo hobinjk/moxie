@@ -32,6 +32,22 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkBuffUptime(log, SkillIds.ELEMENTS_OF_RAGE, 100);
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
       break;
+    case 'catalyst_power':
+      checkWasted(log);
+      checkAttunementTransitions(log);
+
+      checkSkillFrequency(log, SkillIds.STONESTRIKE, 54 / 93.5);
+
+      checkBuffUptime(log, SkillIds.CRESCENT_WIND_BUFF, 89.2);
+      checkBuffUptime(log, SkillIds.FLAME_WHEEL_BUFF, 98.6);
+      checkBuffUptime(log, SkillIds.ICY_COIL_BUFF, 75.6);
+      checkBuffUptime(log, SkillIds.ROCKY_LOOP_BUFF, 60.5);
+
+      checkBuffUptime(log, SkillIds.RELENTLESS_FIRE_BUFF, 51.3);
+      checkSkillUsage(log, SkillIds.SHATTERING_ICE);
+
+      checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
+      break;
     case 'daredevil_power':
       checkAutoChains(log, true);
       checkWasted(log);
