@@ -112,6 +112,9 @@ curl https://dps.report/getJson?permalink=SgbF-20210526-004829_golem > soulbeast
 curl https://dps.report/getJson?permalink=Oq8d-20210609-135312_golem > soulbeast_condi_sb.json
 # Ssalg Ele https://www.youtube.com/watch?v=uNvHK6EbsIQ
 curl https://dps.report/getJson?permalink=OjIU-20220324-183125_golem > untamed_power.json
+# Incera https://www.youtube.com/watch?v=_ljvkPAt88g
+curl https://dps.report/getJson?permalink=Mjqr-20220704-023114_golem > untamed_condi.json
+
 
 # L E F T https://www.youtube.com/watch?v=LWEi_3kBqcM
 curl https://dps.report/getJson?permalink=fSxJ-20190720-152348_golem > daredevil_power.json

@@ -244,7 +244,10 @@ export default function(log, selectedPlayer) {
   }
 
   if (spec === 'Untamed') {
-    return get('untamed_power');
+    if (selectedPlayer.weapons.includes('Hammer')) {
+      return get('untamed_power');
+    }
+    return get('untamed_condi');
   }
 
   if (spec === 'Daredevil') {
