@@ -318,7 +318,11 @@ export default function(log, selectedPlayer) {
 
   if (spec === 'Herald') {
     if (selectedPlayer.weapons.includes('Sword')) {
-      return get('herald_boon');
+      if (hasCast(log, SkillIds.FACET_OF_LIGHT)) {
+        return get('herald_boon');
+      } else {
+        return get('herald_power');
+      }
     } else {
       return get('herald_condi');
     }

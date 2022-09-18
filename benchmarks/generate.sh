@@ -157,8 +157,10 @@ curl https://dps.report/getJson?permalink=z9OQ-20220708-145241_golem > willbende
 # suppport hero https://www.youtube.com/watch?v=cu8N1ZDKmzU
 curl https://dps.report/getJson?permalink=rEUF-20220329-113027_golem > willbender_condi_alac_sword.json
 
-# Umbra https://www.youtube.com/watch?v=0-2SkSgZafc
-curl https://dps.report/getJson?permalink=jcrR-20220701-030632_golem > herald_boon.json
+# Umbra https://www.youtube.com/watch?v=nJLZUoI7NgA
+curl https://dps.report/getJson?permalink=ZD1f-20220826-122357_golem > herald_power.json
+# Umbra https://www.youtube.com/watch?v=0m0_JMW9TFE
+curl https://dps.report/getJson?permalink=NGpa-20220826-012124_golem > herald_boon.json
 # lederr https://www.youtube.com/watch?v=zdfRVJxWWZ4
 curl https://dps.report/getJson?permalink=BhB9-20210516-172118_golem > herald_condi.json
 # Le Mós https://www.youtube.com/watch?v=FHNDzb2nVpI
