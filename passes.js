@@ -108,6 +108,31 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.WELL_OF_RECALL);
       break;
     }
+    case 'virtuoso_gs': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSigLeni = Object.assign({leniency: 5}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
+      checkSkillUsage(log, SkillIds['Rain of Swords']);
+      break;
+    }
+    case 'virtuoso_focus': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSigLeni = Object.assign({leniency: 3}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSigLeni);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
+      checkSkillUsage(log, SkillIds['Rain of Swords']);
+      break;
+    }
+
     case 'firebrand_condi':
     case 'firebrand_condi_quick': {
       checkAutoChains(log);
