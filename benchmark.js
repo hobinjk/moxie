@@ -169,7 +169,10 @@ export default function(log, selectedPlayer) {
     if (hasCast(log, SkillIds.PHANTASMAL_DISENCHANTER)) {
       return get('virtuoso_focus');
     }
-    return get('virtuoso_condi');
+    if (hasCast(log, SkillIds.PHANTASMAL_WARDEN)) {
+      return get('virtuoso_condi');
+    }
+    return get('virtuoso_condi_chaos');
   }
 
   if (spec === 'Reaper') {

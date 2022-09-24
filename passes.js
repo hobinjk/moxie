@@ -114,10 +114,16 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
       const optsEtherSigLeni = Object.assign({leniency: 5}, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
-      checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSigLeni);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillUsage(log, SkillIds['Rain of Swords']);
+      checkSkillUsage(log, SkillIds['Bladesong Harmony']);
+      checkSkillUsage(log, SkillIds['Mantra of Pain'])
+      checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 116);
+      checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 116);
+      checkSkillFrequency(log, SkillIds['Mind Stab'], 8 / 116);
+      checkSkillFrequency(log, SkillIds['Mirror Blade'], 13 / 116);
       break;
     }
     case 'virtuoso_focus': {
@@ -130,6 +136,40 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillUsage(log, SkillIds['Rain of Swords']);
+      checkSkillUsage(log, SkillIds['Bladesong Harmony']);
+      checkSkillUsage(log, SkillIds['Mantra of Pain'])
+      checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 114);
+      checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 114);
+      break;
+    }
+    case 'virtuoso_condi': {
+      checkAutoChains(log);
+      checkWasted(log);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsIlluSig = {resets: new Set([SkillIds['Signet of Illusions']])};
+      // const optsEtherSigLeni = Object.assign({leniency: 3}, optsEtherSig);
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSig);
+      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillUsage(log, SkillIds['Signet of Illusions']);
+      // TODO this skill has two charges
+      checkSkillUsage(log, SkillIds['Bladesong Harmony'], optsIlluSig);
+      checkSkillUsage(log, SkillIds['Bladesong Sorrow'], optsIlluSig);
+      checkSkillFrequency(log, SkillIds['Bladecall'], 23 / 105);
+      checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 11 / 105);
+      break;
+    }
+    case 'virtuoso_condi_chaos': {
+      checkAutoChains(log);
+      checkWasted(log);
+      // const optsEtherSigLeni = Object.assign({leniency: 3}, optsEtherSig);
+      // TODO this skill has two charges
+      checkSkillUsage(log, SkillIds['Bladesong Harmony']);
+      checkSkillUsage(log, SkillIds['Bladesong Sorrow']);
+      checkSkillUsage(log, SkillIds['Rain of Swords']);
+      checkSkillUsage(log, SkillIds['Bladecall']);
+      checkSkillUsage(log, SkillIds['Unstable Bladestorm']);
+      // checkSkillUsage(log, SkillIds['The Prestige']);
       break;
     }
 
@@ -748,15 +788,21 @@ function checkSkillUsage(log, skillId, options = {}) {
   }
 
   let recharge;
+  let countRecharge = 0;
   for (let fact of skillData.facts) {
     if (fact.type === 'Recharge') {
       recharge = fact.value * 1000 / 1.25;
+    }
+    if (fact.text === 'Count Recharge') {
+      countRecharge = fact.duration * 1000 / 1.25;
     }
   }
   if (!recharge) {
     console.warn('Missing skill recharge', skillId, skillData);
     return;
   }
+  // TODO handle countRecharge more correctly
+  recharge = Math.max(countRecharge, recharge);
 
   let nextCast = log.start + recharge;
   let wastedTime = 0;
