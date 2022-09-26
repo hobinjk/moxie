@@ -112,18 +112,22 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkAutoChains(log);
       checkWasted(log);
       const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsEtherSigLeni = Object.assign({leniency: 5}, optsEtherSig);
+      // const optsEtherSigLeni = Object.assign({leniency: 5}, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
-      checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSigLeni);
-      checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
+      checkSkillPerWeaponSwap(log, SkillIds.PHANTASMAL_BERSERKER, 3);
+      checkSkillPerWeaponSwap(log, SkillIds.PHANTASMAL_SWORDSMAN, 2);
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladesong Harmony']);
       checkSkillUsage(log, SkillIds['Mantra of Pain'])
-      checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 116);
-      checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 116);
-      checkSkillFrequency(log, SkillIds['Mind Stab'], 8 / 116);
-      checkSkillFrequency(log, SkillIds['Mirror Blade'], 13 / 116);
+      // checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 116);
+      // checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 116);
+      // checkSkillFrequency(log, SkillIds['Mind Stab'], 8 / 116);
+      // checkSkillFrequency(log, SkillIds['Mirror Blade'], 13 / 116);
+      checkSkillPerWeaponSwap(log, SkillIds['Unstable Bladestorm'], 2);
+      checkSkillPerWeaponSwap(log, SkillIds['Bladecall'], 3);
+      checkSkillPerWeaponSwap(log, SkillIds['Mind Stab'], 2);
+      checkSkillPerWeaponSwap(log, SkillIds['Mirror Blade'], 3);
       break;
     }
     case 'virtuoso_focus': {
@@ -138,8 +142,10 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladesong Harmony']);
       checkSkillUsage(log, SkillIds['Mantra of Pain'])
-      checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 114);
-      checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 114);
+      // checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 114);
+      // checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 114);
+      checkSkillPerWeaponSwap(log, SkillIds['Unstable Bladestorm'], 2);
+      checkSkillPerWeaponSwap(log, SkillIds['Bladecall'], 4);
       break;
     }
     case 'virtuoso_condi': {
@@ -839,6 +845,69 @@ function checkSkillUsage(log, skillId, options = {}) {
   wastedCasts += leniency;
   const castPlural = wastedCasts === 1 ? 'cast' : 'casts';
   const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name}`;
+  addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkSkillPerWeaponSwap(log, skillId, expectedCasts) {
+  // Use on cooldown after first use
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+  let isFirstWeaponSwap = true;
+  let isInWeapon = false;
+
+  let castsInWeapon = 0;
+  let start = 0;
+  let results = [];
+
+  for (const cast of log.casts) {
+    if (cast.id === SkillIds.WEAPON_SWAP) {
+      isFirstWeaponSwap = false;
+      if (isInWeapon) {
+        isInWeapon = false;
+        results.push({
+          start,
+          end: cast.end,
+          castsInWeapon
+        });
+      }
+      start = cast.start;
+    }
+    if (isFirstWeaponSwap) {
+      continue;
+    }
+    if (cast.id === skillId) {
+      if (!isInWeapon) {
+        isInWeapon = true;
+        castsInWeapon = 0;
+      }
+      castsInWeapon += 1;
+    }
+  }
+  let grade = 'D';
+  let successes = 0;
+  let mishaps = [];
+  for (let result of results) {
+    if (result.castsInWeapon === expectedCasts) {
+      successes += 1;
+      continue;
+    }
+    mishaps.push(new Mishap(result.start, result.end, `Cast ${result.castsInWeapon}/${expectedCasts} times`));
+  }
+
+  if (results.length - successes === 0) {
+    grade = 'S';
+  } else if (results.length - successes < 2) {
+    grade = 'A';
+  } else if (results.length - successes < 4) {
+    grade = 'B';
+  } else if (results.length - successes < 6) {
+    grade = 'C';
+  }
+  const timePlural = results.length === 1 ? 'time' : 'times';
+  const summary = `Cast ${skillData.name} ${expectedCasts} per swap ${successes}/${results.length} ${timePlural}`;
   addReportCardItem(log, grade, summary, mishaps);
 }
 
