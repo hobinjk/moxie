@@ -390,20 +390,24 @@ function checkWasted(log) {
   console.log('kills your deeps by', 1 - (dur - deadspace - cancels) / dur);
 
   const dsSummary = `Did nothing for ${(deadspace / 1000).toFixed(2)} seconds`;
-  let dsGrade = 'B';
-  if (deadspace < 5000) {
+  let dsGrade = 'C';
+  if (deadspace < 500) {
     dsGrade = 'S';
-  } else if (deadspace < 10000) {
+  } else if (deadspace < 1000) {
     dsGrade = 'A';
+  } else if (deadspace < 2000) {
+    dsGrade = 'B';
   }
   addReportCardItem(log, dsGrade, dsSummary, dsMishaps);
 
   const cancelSummary = `Canceled skills for ${(cancels / 1000).toFixed(2)} seconds`;
-  let cancelGrade = 'B';
-  if (cancels < 5000) {
+  let cancelGrade = 'C';
+  if (cancels < 500) {
     cancelGrade = 'S';
-  } else if (cancels < 10000) {
+  } else if (cancels < 1000) {
     cancelGrade = 'A';
+  } else if (cancels < 2000) {
+    cancelGrade = 'B';
   }
   addReportCardItem(log, cancelGrade, cancelSummary, cancelMishaps);
 }
