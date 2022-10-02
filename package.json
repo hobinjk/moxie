@@ -4,19 +4,18 @@
   "description": "",
   "main": "moxie.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js"
   },
   "author": "hobinjk@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "^0.2.7",
     "babel-eslint": "^10.1.0",
-    "copy-webpack-plugin": "^5.1.1",
+    "esbuild": "^0.15.10",
+    "esbuild-copy-static-files": "^0.1.0",
     "eslint": "^7.17.0",
     "express": "^4.17.1",
-    "text-encoding": "^0.7.0",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "text-encoding": "^0.7.0"
   },
   "dependencies": {
     "gw2-data": "github:hobinjk/gw2-data",
