@@ -418,7 +418,7 @@ input[type="file"] + label:hover,
   color: #f70;
 }
 
-.grade-d {
+.grade-d, .grade-f {
   border-color: #f00;
   color: #f00;
 }

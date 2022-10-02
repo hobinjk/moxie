@@ -119,15 +119,21 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladesong Harmony']);
-      checkSkillUsage(log, SkillIds['Mantra of Pain'])
-      // checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 116);
-      // checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 116);
-      // checkSkillFrequency(log, SkillIds['Mind Stab'], 8 / 116);
-      // checkSkillFrequency(log, SkillIds['Mirror Blade'], 13 / 116);
       checkSkillPerWeaponSwap(log, SkillIds['Unstable Bladestorm'], 2);
       checkSkillPerWeaponSwap(log, SkillIds['Bladecall'], 3);
       checkSkillPerWeaponSwap(log, SkillIds['Mind Stab'], 2);
       checkSkillPerWeaponSwap(log, SkillIds['Mirror Blade'], 3);
+      checkWeaponSwapCadence(log, [
+        {
+          dur: 13300,
+          label: 'GS',
+        },
+        {
+          dur: 12100,
+          label: 'D/S',
+        }
+      ], SkillIds.PHANTASMAL_BERSERKER);
+      // checkSkillUsage(log, SkillIds['Mantra of Pain'])
       break;
     }
     case 'virtuoso_focus': {
@@ -139,13 +145,11 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSigLeni);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
-      checkSkillUsage(log, SkillIds['Rain of Swords']);
-      checkSkillUsage(log, SkillIds['Bladesong Harmony']);
-      checkSkillUsage(log, SkillIds['Mantra of Pain'])
-      // checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 9 / 114);
-      // checkSkillFrequency(log, SkillIds['Bladecall'], 18 / 114);
       checkSkillPerWeaponSwap(log, SkillIds['Unstable Bladestorm'], 2);
       checkSkillPerWeaponSwap(log, SkillIds['Bladecall'], 4);
+      checkSkillUsage(log, SkillIds['Rain of Swords']);
+      checkSkillUsage(log, SkillIds['Bladesong Harmony']);
+      // checkSkillUsage(log, SkillIds['Mantra of Pain'])
       break;
     }
     case 'virtuoso_condi': {
@@ -1127,4 +1131,61 @@ function checkAverageSkillDuration(log, skillId, targetDuration) {
   }
   const summary = `Left ${(totalDiff / 1000).toFixed(2)}s worth of ${skillData.name} uncancelled`;
   addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkWeaponSwapCadence(log, durations, startSkillId) {
+  let durI = 0;
+  let isStarted = false;
+  let lastWs = 0;
+  let results = [];
+
+  for (const cast of log.casts) {
+    if (cast.id === startSkillId) {
+      isStarted = true;
+    }
+
+    if (cast.id === SkillIds.WEAPON_SWAP) {
+      if (isStarted) {
+        let targetDur = durations[durI];
+        results.push({
+          start: lastWs,
+          end: cast.end,
+          target: targetDur,
+        });
+        durI = (durI + 1) % durations.length;
+      }
+      lastWs = cast.end;
+    }
+  }
+
+  let grade = 'F';
+  let successes = 0;
+  let mishaps = [];
+  let over = 0;
+  for (let result of results) {
+    let dur = result.end - result.start;
+    if (result.target.dur > dur) {
+      successes += 1;
+      continue;
+    }
+    let amount = dur - result.target.dur;
+    over += amount;
+    mishaps.push(new Mishap(result.start, result.end, `Spent ${amount} ms too long in ${result.target.label}`));
+  }
+
+  if (over < 50) {
+    grade = 'S';
+  } else if (over < 200) {
+    grade = 'A';
+  } else if (over < 800) {
+    grade = 'B';
+  } else if (over < 2000) {
+    grade = 'C';
+  } else if (over < 5000) {
+    grade = 'D';
+  }
+  const swapPlural = results.length === 1 ? 'swap' : 'swaps';
+  const summary = `Swapped late by ${over} ms (${successes}/${results.length} ${swapPlural})`;
+  addReportCardItem(log, grade, summary, mishaps);
+
 }
