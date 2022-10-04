@@ -5,7 +5,7 @@
   "main": "moxie.js",
   "scripts": {
     "build": "node build.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "hobinjk@gmail.com",
   "license": "MIT",
