@@ -94,10 +94,16 @@ export default function(log, selectedPlayer) {
       if (selectedPlayer.weapons.includes('Sword')) {
         return get('weaver_condi_sword');
       }
+      if (selectedPlayer.weapons.includes('Scepter')) {
+        return get('weaver_condi_scepter');
+      }
       if (selectedPlayer.weapons.includes('Dagger')) {
         return get('weaver_condi_dagger');
       }
     } else if (selectedPlayer.weapons.includes('Staff')) {
+      if (isCondi) {
+        return get('weaver_condi_staff');
+      }
       return get('weaver_power_staff');
     } else {
       // See if LH was cast
@@ -110,7 +116,7 @@ export default function(log, selectedPlayer) {
       } else if (isFreshAir) {
         return get('weaver_power_fa_small');
       } else {
-        return get('weaver_power_btth_small');
+        return get('weaver_power_btth');
       }
     }
   }
