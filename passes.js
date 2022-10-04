@@ -232,7 +232,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     }
     case 'mechanist_condi_signets': {
       checkWasted(log);
-      checkSkillUsage(log, SkillIds['Shrapnel Grenade']);
+      checkSkillUsage(log, SkillIds['Shrapnel Grenade'], {leniency: 3});
       checkSkillUsage(log, SkillIds['Blowtorch']);
       checkSkillUsage(log, SkillIds['Superconducting Signet']);
       checkSkillUsage(log, SkillIds['Poison Grenade']);
