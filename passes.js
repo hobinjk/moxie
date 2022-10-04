@@ -10,7 +10,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     return;
   }
   switch (benchmark.id) {
-    case 'weaver_power_btth_small':
+    case 'weaver_power_btth':
     case 'weaver_power_fa_small':
       checkAutoChains(log);
       checkWasted(log);
