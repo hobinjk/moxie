@@ -230,6 +230,14 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       apologizeForMissingPasses(log);
       break;
     }
+    case 'mechanist_condi_signets': {
+      checkWasted(log);
+      checkSkillUsage(log, SkillIds['Shrapnel Grenade']);
+      checkSkillUsage(log, SkillIds['Blowtorch']);
+      checkSkillUsage(log, SkillIds['Superconducting Signet']);
+      checkSkillUsage(log, SkillIds['Poison Grenade']);
+      break;
+    }
     default:
       console.warn('Nothing cool to do for', benchmark.id);
       checkAutoChains(log);
