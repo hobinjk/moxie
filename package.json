@@ -4,7 +4,8 @@
   "description": "",
   "main": "moxie.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "hobinjk@gmail.com",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "esbuild-copy-static-files": "^0.1.0",
     "eslint": "^7.17.0",
     "express": "^4.17.1",
+    "gh-pages": "^4.0.0",
     "text-encoding": "^0.7.0"
   },
   "dependencies": {
