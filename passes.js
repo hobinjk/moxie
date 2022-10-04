@@ -61,9 +61,25 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkWasted(log);
       checkSkillFrequency(log, SkillIds.IMAGINARY_AXES, 42 / 144);
       checkSkillFrequency(log, SkillIds.AXES_OF_SYMMETRY, 16 / 144);
+      checkWeaponSwapCadence(log, [
+        {
+          dur: 11600,
+          label: 'A/P',
+        },
+        {
+          dur: 11600,
+          label: 'A/T',
+        }
+      ], SkillIds['Phantasmal Duelist'], true);
+
       checkSkillUsage(log, SkillIds.THE_PRESTIGE);
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
+      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
+      checkSkillUsage(log, SkillIds['Phantasmal Duelist'], optsEtherSig);
+      checkSkillUsage(log, SkillIds['Phantasmal Mage'], optsEtherSig);
+
       break;
     case 'chrono_power_gs': {
       checkAutoChains(log);
@@ -1133,7 +1149,7 @@ function checkAverageSkillDuration(log, skillId, targetDuration) {
   addReportCardItem(log, grade, summary, mishaps);
 }
 
-function checkWeaponSwapCadence(log, durations, startSkillId) {
+function checkWeaponSwapCadence(log, durations, startSkillId, lenient) {
   let durI = 0;
   let isStarted = false;
   let lastWs = 0;
@@ -1162,6 +1178,7 @@ function checkWeaponSwapCadence(log, durations, startSkillId) {
   let successes = 0;
   let mishaps = [];
   let over = 0;
+  let maxOver = 0;
   for (let result of results) {
     let dur = result.end - result.start;
     if (result.target.dur > dur) {
@@ -1170,7 +1187,12 @@ function checkWeaponSwapCadence(log, durations, startSkillId) {
     }
     let amount = dur - result.target.dur;
     over += amount;
+    maxOver = Math.max(maxOver, amount);
     mishaps.push(new Mishap(result.start, result.end, `Spent ${amount} ms too long in ${result.target.label}`));
+  }
+
+  if (lenient) {
+    over -= maxOver;
   }
 
   if (over < 50) {
@@ -1185,7 +1207,10 @@ function checkWeaponSwapCadence(log, durations, startSkillId) {
     grade = 'D';
   }
   const swapPlural = results.length === 1 ? 'swap' : 'swaps';
-  const summary = `Swapped late by ${over} ms (${successes}/${results.length} ${swapPlural})`;
+  let leniencyExplanation = '';
+  if (lenient) {
+    leniencyExplanation = `, ignored ${maxOver} ms`;
+  }
+  const summary = `Swapped late by ${over} ms (${successes}/${results.length} ${swapPlural}${leniencyExplanation})`;
   addReportCardItem(log, grade, summary, mishaps);
-
 }
