@@ -177,10 +177,10 @@ curl https://dps.report/getJson?permalink=Qjk1-20210516-182413_golem > renegade_
 curl https://dps.report/getJson?permalink=Bwnj-20210511-235826_golem > renegade_alac.json
 # dayburack https://www.youtube.com/watch?v=UXb8KGTYlSU
 curl https://dps.report/getJson?permalink=eJZb-20210513-141623_golem > renegade_power.json
-# beng https://www.youtube.com/watch?v=WXhEmtID_HA
-curl https://dps.report/getJson?permalink=Vu0Y-20220311-215918_golem > vindicator_power_sword.json
-# beng https://www.youtube.com/watch?v=5PIp2OzWkKs
-curl https://dps.report/getJson?permalink=Dh2q-20220304-125244_golem > vindicator_power_gs.json
+# beng https://www.youtube.com/watch?v=zrF72ja-W-U
+curl https://dps.report/getJson?permalink=ONMZ-20221007-144545_golem > vindicator_power_sword.json
+# beng https://www.youtube.com/watch?v=Xj3ty22Daqk
+curl https://dps.report/getJson?permalink=2eGS-20221009-123358_golem > vindicator_power_gs.json
 
 # Baseraver https://www.youtube.com/watch?v=XuJMk3L9Is0
 curl https://dps.report/getJson?permalink=sSdR-20210514-153504_golem > berserker_power.json
