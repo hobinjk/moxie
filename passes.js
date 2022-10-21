@@ -132,6 +132,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillPerWeaponSwap(log, SkillIds.PHANTASMAL_BERSERKER, 3);
       checkSkillPerWeaponSwap(log, SkillIds.PHANTASMAL_SWORDSMAN, 2);
+      checkBuffUptime(log, SkillIds.DEADLY_BLADES, 75)
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladesong Harmony']);
@@ -163,6 +164,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
       checkSkillPerWeaponSwap(log, SkillIds['Unstable Bladestorm'], 2);
       checkSkillPerWeaponSwap(log, SkillIds['Bladecall'], 4);
+      checkBuffUptime(log, SkillIds.DEADLY_BLADES, 69)
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladesong Harmony']);
       // checkSkillUsage(log, SkillIds['Mantra of Pain'])
@@ -183,6 +185,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Bladesong Sorrow'], optsIlluSig);
       checkSkillFrequency(log, SkillIds['Bladecall'], 23 / 105);
       checkSkillFrequency(log, SkillIds['Unstable Bladestorm'], 11 / 105);
+      checkBuffUptime(log, SkillIds.DEADLY_BLADES, 95)
       break;
     }
     case 'virtuoso_condi_chaos': {
@@ -195,6 +198,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Rain of Swords']);
       checkSkillUsage(log, SkillIds['Bladecall']);
       checkSkillUsage(log, SkillIds['Unstable Bladestorm']);
+      checkBuffUptime(log, SkillIds.DEADLY_BLADES, 95)
       // checkSkillUsage(log, SkillIds['The Prestige']);
       break;
     }
