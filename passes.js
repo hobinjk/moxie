@@ -250,6 +250,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Phantom\'s Onslaught'], {leniency: 3});
       checkSkillUsage(log, SkillIds['Eternity\'s Requiem']);
       checkSkillFrequency(log, SkillIds['Death Drop'], 17 / 109);
+      break;
     }
     default:
       console.warn('Nothing cool to do for', benchmark.id);
