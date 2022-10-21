@@ -242,6 +242,15 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Poison Grenade']);
       break;
     }
+    case 'vindicator_power_gs': {
+      checkAutoChains(log);
+      checkWasted(log);
+      checkBuffUptime(log, SkillIds.FORERUNNER_OF_DEATH, 100);
+      checkSkillUsage(log, SkillIds['Mist Unleashed'], {leniency: 5});
+      checkSkillUsage(log, SkillIds['Phantom\'s Onslaught'], {leniency: 3});
+      checkSkillUsage(log, SkillIds['Eternity\'s Requiem']);
+      checkSkillFrequency(log, SkillIds['Death Drop'], 17 / 109);
+    }
     default:
       console.warn('Nothing cool to do for', benchmark.id);
       checkAutoChains(log);
