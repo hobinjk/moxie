@@ -250,6 +250,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds['Phantom\'s Onslaught'], {leniency: 3});
       checkSkillUsage(log, SkillIds['Eternity\'s Requiem']);
       checkSkillFrequency(log, SkillIds['Death Drop'], 17 / 109);
+      checkAverageSkillDuration(log, SkillIds['Mist Unleashed'], 780, 2000);
       break;
     }
     default:
@@ -1132,7 +1133,7 @@ function checkAmmoSkillUsage(log, skillId, recharge, maxCharges) {
   }
 }
 
-function checkAverageSkillDuration(log, skillId, targetDuration) {
+function checkAverageSkillDuration(log, skillId, targetDuration, leniency) {
   const skillData = SkillData.get(skillId);
   if (!skillData) {
     console.warn('Missing skill data', skillId);
@@ -1158,6 +1159,9 @@ function checkAverageSkillDuration(log, skillId, targetDuration) {
   }
 
   let grade = 'D';
+  if (typeof leniency === 'number') {
+    totalDiff -= leniency;
+  }
   if (totalDiff < 200) {
     grade = 'S';
   } else if (totalDiff < 500) {
@@ -1166,6 +1170,9 @@ function checkAverageSkillDuration(log, skillId, targetDuration) {
     grade = 'B';
   } else if (totalDiff < 2000) {
     grade = 'C';
+  }
+  if (typeof leniency === 'number') {
+    totalDiff += leniency;
   }
   const summary = `Left ${(totalDiff / 1000).toFixed(2)}s worth of ${skillData.name} uncancelled`;
   addReportCardItem(log, grade, summary, mishaps);
