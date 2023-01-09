@@ -1,0 +1,62 @@
+{
+  "name": "Signet of Fury",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2F34F119A12F4608685DF0B76106F7B6EABCCBF8/104119.png",
+      "duration": 0,
+      "status": "Signet of Fury",
+      "description": "Improved precision.",
+      "apply_count": 1
+    },
+    {
+      "text": "Adrenaline",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+      "value": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2F34F119A12F4608685DF0B76106F7B6EABCCBF8/104119.png",
+      "duration": 4,
+      "status": "Signet of Fury",
+      "description": "Improves precision and ferocity.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Signet Passive: Improves precision.\nSignet Active: Gain adrenaline and improve your precision and ferocity.",
+  "icon": "https://render.guildwars2.com/file/2F34F119A12F4608685DF0B76106F7B6EABCCBF8/104119.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 14410,
+  "chat_link": "[&Bko4AAA=]",
+  "categories": [
+    "Signet"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/15AA251708A19EC6E1CBA4B208D7502797C9D111/2604722.png",
+      "duration": 15,
+      "status": "Positive Flow",
+      "description": "Gain flow per second.",
+      "apply_count": 1,
+      "requires_trait": 2226,
+      "overrides": 2
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "name": "Impaling Lotus",
+  "facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.1875
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.0625
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 15,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+      "duration": 2,
+      "status": "Bleeding",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 6,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to foes that aren't moving. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 2,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to foes that aren't moving. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+      "duration": 3,
+      "status": "Crippled",
+      "description": "Movement speed decreased by 50%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+      "duration": 1,
+      "status": "Crippled",
+      "description": "Movement speed decreased by 50%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Missile Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 360
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Combat Only",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
+      "text": "Distance Traveled",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "distance": 300
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Whirl"
+    }
+  ],
+  "description": "Evade attacks and hurl damaging daggers, dealing multiple conditions to enemies.",
+  "icon": "https://render.guildwars2.com/file/0D7324A22F580F3DA3F244C466770FB69292C307/1058553.png",
+  "flags": [],
+  "id": 31267,
+  "chat_link": "[&BiN6AAA=]"
+}

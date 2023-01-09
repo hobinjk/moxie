@@ -1,0 +1,23 @@
+{
+  "name": "Unleash Ranger",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    }
+  ],
+  "description": "Unleash the raw power of your primal bond with nature and your pet, enhancing your offensive power.",
+  "icon": "https://render.guildwars2.com/file/EFC812F33C2A9ECA91F0C1F966E1715FF35E2BDF/2503729.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Profession_5",
+  "flags": [],
+  "specialization": 72,
+  "id": 63147,
+  "chat_link": "[&Bqv2AAA=]"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Burning Retreat",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 2,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Duration",
+      "type": "Duration",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 6
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Fire"
+    }
+  ],
+  "description": "Quickly roll backward, leaving behind a line of fire that burns.",
+  "icon": "https://render.guildwars2.com/file/45A8C3A3F534C7E8E371D41C693AC87A019D2E65/103204.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 5680,
+  "chat_link": "[&BjAWAAA=]",
+  "traited_facts": [
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 8,
+      "requires_trait": 1510,
+      "overrides": 4
+    }
+  ]
+}

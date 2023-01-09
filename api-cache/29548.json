@@ -1,0 +1,77 @@
+{
+  "name": "Heat Sync",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 10,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 0,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 0,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Give stacks of might to yourself, then spread boons you have to allies.",
+  "icon": "https://render.guildwars2.com/file/6B4C0B3DFDB4FDDCB22552719D980D9E4AE2C9D1/1029998.png",
+  "type": "Weapon",
+  "weapon_type": "Warhorn",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 48,
+  "id": 29548,
+  "chat_link": "[&BmxzAAA=]"
+}

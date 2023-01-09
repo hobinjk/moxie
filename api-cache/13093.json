@@ -1,0 +1,67 @@
+{
+  "name": "Devourer Venom",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 40
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/C9A1784C4333E851F69AC53BC6E1EE1FF5FEB577/104097.png",
+      "duration": 30,
+      "status": "Devourer Venom",
+      "description": "Your attacks immobilize foes.",
+      "apply_count": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/397A613651BFCA2832B6469CE34735580A2C120E/102844.png",
+      "duration": 1,
+      "status": "Immobile",
+      "description": "Unable to move; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Attacks",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 2
+    },
+    {
+      "text": "Venom Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 30
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    }
+  ],
+  "description": "Venom. Your next few attacks immobilize foes.",
+  "icon": "https://render.guildwars2.com/file/C9A1784C4333E851F69AC53BC6E1EE1FF5FEB577/104097.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 13093,
+  "chat_link": "[&BiUzAAA=]",
+  "categories": [
+    "Venom"
+  ]
+}

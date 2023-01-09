@@ -1,0 +1,54 @@
+{
+  "name": "Furious Pounce",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 400
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 10,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Beast. Pounce on your target and grant fury to nearby allies.",
+  "icon": "https://render.guildwars2.com/file/ACDDD2A75BEE6C4FDDA26D0C9F3D4F94C85C9412/1128614.png",
+  "type": "Pet",
+  "weapon_type": "None",
+  "professions": [],
+  "slot": "Pet",
+  "flags": [],
+  "id": 31451,
+  "chat_link": "[&Btt6AAA=]"
+}

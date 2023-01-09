@@ -1,0 +1,47 @@
+{
+  "name": "Call of the Dragon",
+  "facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.75
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 3,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "duration": 3,
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Strike enemies around you, inflicting multiple conditions.",
+  "icon": "https://render.guildwars2.com/file/27B5D1D4127A2EE73866E54F5A43E9102618B90B/1058605.png",
+  "flags": [],
+  "id": 46857,
+  "chat_link": "[&Bgm3AAA=]"
+}

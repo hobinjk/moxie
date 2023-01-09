@@ -1,0 +1,23 @@
+{
+  "name": "Unleash Pet",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    }
+  ],
+  "description": "Unleash your pet to draw on the raw power of its bond with nature, granting it new abilities.",
+  "icon": "https://render.guildwars2.com/file/A5E324616977BF624698CA610628B7C3D73ADB1C/2503728.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Profession_5",
+  "flags": [],
+  "specialization": 72,
+  "id": 63344,
+  "chat_link": "[&BnD3AAA=]"
+}

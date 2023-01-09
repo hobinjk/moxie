@@ -1,0 +1,114 @@
+{
+  "name": "Winds of Disenchantment",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 90
+    },
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.2
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.45
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/0C185490CB6D7215360704CA345150D807444968/1770659.png",
+      "duration": 1,
+      "status": "Disenchantment",
+      "description": "Incoming boon duration is reduced.",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 360
+    },
+    {
+      "text": "Boons Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 1
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 5
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 10
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Blocks Missiles",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
+      "text": "Duration Decreased",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "percent": 100
+    },
+    {
+      "text": "Duration Decreased",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "percent": 33
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Lightning"
+    }
+  ],
+  "description": "Meditation. Create an area of calm in which foes have reduced incoming boon duration and lose boons every interval. Enemy missiles entering this area are blocked.",
+  "icon": "https://render.guildwars2.com/file/0C185490CB6D7215360704CA345150D807444968/1770659.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Elite",
+  "flags": [],
+  "specialization": 61,
+  "id": 45333,
+  "chat_link": "[&BhWxAAA=]",
+  "categories": [
+    "Meditation"
+  ]
+}

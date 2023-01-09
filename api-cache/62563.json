@@ -1,0 +1,53 @@
+{
+  "name": "Vital Draw",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Float",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/18F6E20EB4F7A812FD2C13723F130166BC54C6D1/2440713.png",
+      "duration": 3
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 3,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Life Force",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    }
+  ],
+  "description": "Twist the souls of nearby enemies, suspending them in the air while you siphon their life force. Gain life force for each target struck.",
+  "icon": "https://render.guildwars2.com/file/71A90FD69C7E5F319B1E26F1A72CC7D65E93A84A/2479405.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_5",
+  "flags": [],
+  "id": 62563,
+  "chat_link": "[&BmP0AAA=]"
+}

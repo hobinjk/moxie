@@ -1,0 +1,75 @@
+{
+  "name": "Sand Squall",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/33D27C7FE0017F70749DE84576F56F381DDF0C30/2261524.png",
+      "duration": 4,
+      "status": "Magnetic Aura",
+      "description": "Reflect projectiles with magnetic energy.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+      "duration": 2,
+      "status": "Protection",
+      "description": "Incoming strike damage decreased by 33%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Duration Increase",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 600
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Blast"
+    }
+  ],
+  "description": "Apply protection to you and your allies, then increase the duration of all boons currently existing on you and your allies. Gain magnetic aura.",
+  "icon": "https://render.guildwars2.com/file/7B047DE80C026DCF420E43DD16D80409E8C679A4/1029996.png",
+  "type": "Weapon",
+  "weapon_type": "Warhorn",
+  "attunement": "Earth",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 48,
+  "id": 29453,
+  "chat_link": "[&Bg1zAAA=]"
+}

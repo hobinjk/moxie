@@ -1,0 +1,17 @@
+{
+  "name": "Resist the Darkness",
+  "description": "Legendary Demon. End Embrace the Darkness early.",
+  "icon": "https://render.guildwars2.com/file/330609F64410624EEE5B24FD7E46CC23F70B7D0E/961440.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Elite",
+  "flags": [],
+  "id": 26693,
+  "chat_link": "[&BkVoAAA=]",
+  "categories": [
+    "LegendaryDemon"
+  ]
+}
