@@ -1,6 +1,6 @@
 // Simple server with correct content-type from stackoverflow
 
-const express = require('express');
+import express from 'express';
 const app = express();
 
 express.static.mime.define({'application/wasm': ['wasm']});

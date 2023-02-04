@@ -19,6 +19,7 @@
     "gh-pages": "^4.0.0",
     "text-encoding": "^0.7.0"
   },
+  "type": "module",
   "dependencies": {
     "gw2-data": "github:hobinjk/gw2-data",
     "ventaris-tablet": "github:hobinjk/ventaris-tablet"

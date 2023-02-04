@@ -2,7 +2,7 @@ import generateReportCard from './passes';
 import SkillData from 'gw2-data/SkillData';
 import SkillIds from 'gw2-data/SkillIds';
 import TargetSelect from './TargetSelect';
-import EIParser from './EIParser';
+import * as EIParser from './EIParser';
 import getBenchmarkForPlayer from './benchmark';
 import drawCastTimeline from 'ventaris-tablet/drawCastTimeline';
 import drawBuffTimeline from 'ventaris-tablet/drawBuffTimeline';

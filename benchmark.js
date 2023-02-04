@@ -1,5 +1,5 @@
 import SkillIds from 'gw2-data/SkillIds';
-import EIParser from './EIParser';
+import * as EIParser from './EIParser';
 
 async function get(id, name) {
   const url = `./benchmarks/${id}.json`;

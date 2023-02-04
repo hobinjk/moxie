@@ -1,5 +1,5 @@
-const esbuild = require('esbuild')
-const copyStaticFiles = require('esbuild-copy-static-files')
+import * as esbuild from 'esbuild';
+import copyStaticFiles from 'esbuild-copy-static-files';
 
 esbuild.build({
   entryPoints: ['./moxie.js'],

@@ -1,4 +1,4 @@
-import {benchmarks} from './benchmarks.mjs';
+import {benchmarks} from './benchmarks.js';
 
 for (const benchmarkKey in benchmarks) {
   const benchmark = benchmarks[benchmarkKey];

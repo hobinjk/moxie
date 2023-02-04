@@ -168,7 +168,7 @@ function parseApiData(player) {
   return {buffs, casts};
 }
 
-module.exports = {
+export {
   parseJson,
   getJson,
 };

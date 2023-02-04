@@ -1,5 +1,5 @@
-const fs = require('fs');
-const EIParser = require('../EIParser.js');
+import * as fs from 'fs';
+import * as EIParser from '../EIParser.js';
 
 let benchPaths = fs.readdirSync('./');
 console.log(benchPaths);
