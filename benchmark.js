@@ -1,7 +1,8 @@
 import SkillIds from 'gw2-data/SkillIds';
 import * as EIParser from './EIParser';
+import {benchmarks} from './benchmarks/benchmarks';
 
-async function get(id, name) {
+async function get(id) {
   const url = `./benchmarks/${id}.json`;
   const res = await fetch(url);
   const raw = await res.json();
@@ -10,9 +11,8 @@ async function get(id, name) {
   log.buffs = log.buffs[0];
   log.targetDamage1S = log.targetDamage1S[0];
   log.id = id;
-  if (!name) {
-    log.name = id.replace(/_/g, ' ');
-  }
+  log.name = id.replace(/_/g, ' ');
+  log.benchmarkMeta = benchmarks[id];
   return log;
 }
 
@@ -61,7 +61,7 @@ function hasGeneration(selectedPlayer, buffId) {
   return false;
 }
 
-export default function(log, selectedPlayer) {
+export function getBenchmarkForPlayer(log, selectedPlayer) {
   const spec = selectedPlayer.profession;
 
   if (spec === 'Tempest') {

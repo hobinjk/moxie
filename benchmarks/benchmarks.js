@@ -217,11 +217,6 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=dMdGeWnKaRA',
     log: 'https://dps.report/Hjvb-20220312-192709_golem',
   },
-  mechanist_condi_alac: {
-    author: 'Xyonon',
-    link: 'https://www.youtube.com/watch?v=dMdGeWnKaRA',
-    log: 'https://dps.report/Hjvb-20220312-192709_golem',
-  },
   mechanist_condi_signets: {
     author: 'Cam',
     link: 'https://www.youtube.com/watch?v=i6VSD0Fuz2A',

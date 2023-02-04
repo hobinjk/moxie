@@ -3,7 +3,7 @@ import SkillData from 'gw2-data/SkillData';
 import SkillIds from 'gw2-data/SkillIds';
 import TargetSelect from './TargetSelect';
 import * as EIParser from './EIParser';
-import getBenchmarkForPlayer from './benchmark';
+import {getBenchmarkForPlayer} from './benchmark';
 import drawCastTimeline from 'ventaris-tablet/drawCastTimeline';
 import drawBuffTimeline from 'ventaris-tablet/drawBuffTimeline';
 import drawDpsGraph from 'ventaris-tablet/drawDpsGraph';
@@ -149,7 +149,10 @@ async function displayLog(log, selectedPlayer) {
   }
   await SkillData.load(usedSkills);
 
-  document.getElementById('benchmark-name').textContent = benchmark.name;
+  document.getElementById('benchmark-name').textContent =
+    `${benchmark.name} by ${benchmark.benchmarkMeta.author}`;
+  document.getElementById('benchmark-name').href = benchmark.benchmarkMeta.link;
+
   benchmark.casts.sort(function(a, b) {
     return a.start - b.start;
   });
