@@ -1,11 +1,11 @@
 export const benchmarks = {
   tempest_power: {
-    author: 'Roul',
-    link: 'https://www.youtube.com/watch?v=5IXjEP0fSsw',
-    log: 'https://dps.report/9aK4-20190716-191110_golem',
+    author: '[SC] Roul',
+    link: 'https://www.youtube.com/watch?v=4i5TFegDNXg',
+    log: 'https://dps.report/6Kzq-20221201-114817_golem',
   },
   tempest_condi: {
-    author: 'Danmander',
+    author: 'Dánmander',
     link: 'https://www.youtube.com/watch?v=jw8AlS_KphU',
     log: 'https://dps.report/WRmO-20221001-135318_golem',
   },
@@ -25,9 +25,9 @@ export const benchmarks = {
     log: 'https://dps.report/QAiv-20200708-194518_golem',
   },
   weaver_hybrid_fa: {
-    author: 'Roul',
-    link: 'https://www.youtube.com/watch?v=s7ASBjZq5GY',
-    log: 'https://dps.report/gVsR-20210516-155431_golem',
+    author: '[SC] Roul',
+    link: 'https://www.youtube.com/watch?v=jCE0CjrS4z4',
+    log: 'https://dps.report/vJAR-20221202-184528_golem',
   },
   weaver_power_btth: {
     author: 'Fennec',
@@ -40,7 +40,7 @@ export const benchmarks = {
     log: 'https://dps.report/NeQ8-20221130-115328_golem',
   },
   weaver_condi_scepter: {
-    author: 'Roul',
+    author: '[SC] Roul',
     link: 'https://www.youtube.com/watch?v=C98z6HwLkog',
     log: 'https://dps.report/1a54-20221130-171715_golem',
   },
@@ -70,20 +70,19 @@ export const benchmarks = {
     log: 'https://dps.report/MtKD-20221221-124558_golem',
   },
   catalyst_power: {
-    author: 'Roul',
+    author: '[SC] Roul',
     link: 'https://www.youtube.com/watch?v=a405zazuMZw',
     log: 'https://dps.report/9pYO-20221213-215347_golem',
   },
-
   chrono_power_boon: {
     author: 'Tipcat',
     link: 'https://www.youtube.com/watch?v=9tixM2uDez4',
     log: 'https://dps.report/JtMD-20220814-133654_golem',
   },
   chrono_condi_boon: {
-    author: 'Nico',
-    link: 'https://www.youtube.com/watch?v=FgIWv4NmhqM',
-    log: 'https://dps.report/HhuG-20210520-135838_golem',
+    author: '[Vs] Nico',
+    link: 'https://www.youtube.com/watch?v=wvL3EvG7iZs',
+    log: 'https://dps.report/WItI-20220804-134453_golem',
   },
   chrono_condi: {
     author: 'Nico',
@@ -96,14 +95,14 @@ export const benchmarks = {
     log: 'https://dps.report/4U2Z-20221207-132946_golem',
   },
   chrono_power_quick_gs: {
-    author: 'Tipcat',
+    author: '[CnD] Tipcat',
     link: 'https://www.youtube.com/watch?v=XRPqrOi7tMo',
     log: 'https://dps.report/aj9k-20221206-110420_golem',
   },
   chrono_power_quick_focus: {
-    author: 'Daed Dee',
-    link: 'https://www.youtube.com/watch?v=VaiEZ71xefs',
-    log: 'https://dps.report/DTL1-20210606-003610_golem',
+    author: '[CnD] Tipcat',
+    link: 'https://www.youtube.com/watch?v=yK0MNj1WIHo',
+    log: 'https://dps.report/ffej-20220817-160705_golem',
   },
   mirage: {
     author: 'Ryan',
@@ -140,9 +139,8 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=cPTDrcTpPTo',
     log: 'https://dps.report/ljwo-20220701-194156_golem',
   },
-
   reaper: {
-    author: 'Westet',
+    author: '[SC] Westet',
     link: 'https://www.youtube.com/watch?v=KT39EH2gspw',
     log: 'https://dps.report/rgyk-20221201-104257_golem',
   },
@@ -185,7 +183,7 @@ export const benchmarks = {
   holo_power_sword: {
     author: 'Cody',
     link: 'https://www.youtube.com/watch?v=iKpNrLWJchU',
-    log: 'https://dps.report/Xk87-20221130-224702_golem',
+    log: 'https://dps.report/C8rh-20230112-212337_golem',
   },
   holo_power_sword_pbm: {
     author: 'ster',
@@ -208,12 +206,12 @@ export const benchmarks = {
     log: 'https://dps.report/KFDY-20220802-203113_golem',
   },
   mechanist_power_alac: {
-    author: 'Xyonon',
+    author: '[CnD] Xyonon',
     link: 'https://www.youtube.com/watch?v=xjCNAyzVmQM',
     log: 'https://dps.report/PRXW-20220416-225625_golem',
   },
   mechanist_condi_alac: {
-    author: 'Xyonon',
+    author: '[CnD] Xyonon',
     link: 'https://www.youtube.com/watch?v=dMdGeWnKaRA',
     log: 'https://dps.report/Hjvb-20220312-192709_golem',
   },
@@ -227,7 +225,6 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=sDGeusAX6gM',
     log: 'https://dps.report/Tiay-20220804-190000_golem',
   },
-
   soulbeast_power_gazelle_lb: {
     author: 'vpo',
     link: 'https://www.youtube.com/watch?v=kHk1W5KpYG0',
@@ -270,8 +267,8 @@ export const benchmarks = {
   },
   untamed_condi: {
     author: 'Incera',
-    link: 'https://www.youtube.com/watch?v=1YbHIGelFQM',
-    log: 'https://dps.report/eY6D-20221027-005909_golem',
+    link: 'https://www.youtube.com/watch?v=N59qd6lNOhA',
+    log: 'https://dps.report/Mgwd-20220826-160333_golem',
   },
   untamed_condi_alac_hammer: {
     author: 'Baym',
@@ -283,14 +280,13 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=BUi_qBRTuiU',
     log: 'https://dps.report/cQOk-20220707-195649_golem',
   },
-
   daredevil_power: {
-    author: 'L E F T',
+    author: 'Left',
     link: 'https://www.youtube.com/watch?v=5AekaqupaN8',
     log: 'https://dps.report/wYRI-20220824-133048_golem',
   },
   daredevil_condi: {
-    author: 'L E F T',
+    author: 'Left',
     link: 'https://www.youtube.com/watch?v=2v69_eHCMO8',
     log: 'https://dps.report/RMdK-20220827-073203_golem',
   },
@@ -300,9 +296,9 @@ export const benchmarks = {
     log: 'https://dps.report/ZuuL-20221130-040247_golem',
   },
   deadeye_rifle: {
-    author: 'Lunar',
-    link: 'https://www.youtube.com/watch?v=si71D-O4kf8',
-    log: 'https://dps.report/9Bpy-20200721-034734_golem',
+    author: 'Iskarel',
+    link: 'https://www.youtube.com/watch?v=qkbodbKnhwc',
+    log: 'https://dps.report/f1kw-20220826-220619_golem',
   },
   deadeye_condi: {
     author: 'Incera',
@@ -319,14 +315,13 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=m24fDZee1bc',
     log: 'https://dps.report/nVbR-20220902-120538_golem',
   },
-
   firebrand_condi: {
-    author: 'support hero',
+    author: 'Support Hero',
     link: 'https://www.youtube.com/watch?v=xOZ85aMWWVI',
     log: 'https://dps.report/5khD-20221215-172651_golem',
   },
   firebrand_condi_aow: {
-    author: 'support hero',
+    author: 'Support Hero',
     link: 'https://www.youtube.com/watch?v=_GFennqOKVg',
     log: 'https://dps.report/haWS-20220303-114125_golem',
   },
@@ -341,7 +336,7 @@ export const benchmarks = {
     log: 'https://dps.report/oZqd-20190718-145708_golem',
   },
   firebrand_condi_quick: {
-    author: 'support hero',
+    author: 'Support Hero',
     link: 'https://www.youtube.com/watch?v=LBxfNYeAqXU',
     log: 'https://dps.report/nQw1-20221217-170857_golem',
   },
@@ -361,9 +356,9 @@ export const benchmarks = {
     log: 'https://dps.report/xODB-20200226-152327_golem',
   },
   dragonhunter_lb: {
-    author: 'Shetsa',
-    link: 'https://www.youtube.com/watch?v=w9SDBW9DsG0',
-    log: 'https://dps.report/yLI2-20210515-223426_golem',
+    author: 'Derm',
+    link: 'https://www.youtube.com/watch?v=5TeoWaya2xs',
+    log: 'https://dps.report/SNuX-20230111-015647_golem',
   },
   guardian: {
     author: 'Lunar',
@@ -386,21 +381,20 @@ export const benchmarks = {
     log: 'https://dps.report/Zkc4-20220307-143025_golem',
   },
   willbender_condi_gs: {
-    author: 'DaedDee',
-    link: 'https://www.youtube.com/watch?v=PxVfw3TgWro',
-    log: 'https://dps.report/ewHs-20220309-152154_golem',
+    author: '[CnD] DaedDee',
+    link: 'https://www.youtube.com/watch?v=mCOEGlJkRJ0',
+    log: 'https://dps.report/z2Zl-20220316-172733_golem',
   },
   willbender_condi_sword: {
-    author: 'support hero',
+    author: 'Support Hero',
     link: 'https://www.youtube.com/watch?v=6Ub2Rlz9V-s',
     log: 'https://dps.report/eo3D-20221204-132527_golem',
   },
   willbender_condi_alac_sword: {
-    author: 'support hero',
+    author: 'Support Hero',
     link: 'https://www.youtube.com/watch?v=cu8N1ZDKmzU',
     log: 'https://dps.report/rEUF-20220329-113027_golem',
   },
-
   herald_power: {
     author: 'Umbra',
     link: 'https://www.youtube.com/watch?v=DJtoo1abq9U',
@@ -422,7 +416,7 @@ export const benchmarks = {
     log: 'https://dps.report/EU7k-20221203-213656_golem',
   },
   renegade_kalla: {
-    author: 'Laoshi',
+    author: '[InS] Laoshi',
     link: 'https://www.youtube.com/watch?v=9wOyiE2Bvts',
     log: 'https://dps.report/EeYd-20221008-182313_golem',
   },
@@ -437,9 +431,9 @@ export const benchmarks = {
     log: 'https://dps.report/Qjk1-20210516-182413_golem',
   },
   renegade_alac: {
-    author: 'Daemu',
-    link: 'https://www.youtube.com/watch?v=YQrDHGWMkjo',
-    log: 'https://dps.report/Bwnj-20210511-235826_golem',
+    author: '[dT/XVII] Seatek',
+    link: 'https://www.youtube.com/watch?v=8AjCfDsKJnw',
+    log: 'https://dps.report/MLi6-20220406-015848_golem',
   },
   renegade_power: {
     author: 'dayburack',
@@ -456,19 +450,18 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=Xj3ty22Daqk',
     log: 'https://dps.report/2eGS-20221009-123358_golem',
   },
-
   berserker_power: {
     author: 'Baseraver',
     link: 'https://www.youtube.com/watch?v=_w7l8a4cbBM',
     log: 'https://dps.report/sXWQ-20221130-191047_golem',
   },
   berserker_condi: {
-    author: 'Costa',
+    author: 'Costa Primo',
     link: 'https://www.youtube.com/watch?v=QN7prnuoWj4',
     log: 'https://dps.report/LCY0-20221203-210602_golem',
   },
   berserker_condi_quick: {
-    author: 'Costa',
+    author: 'Costa Primo',
     link: 'https://www.youtube.com/watch?v=ubcps4VBviU',
     log: 'https://dps.report/M6J4-20220825-123005_golem',
   },
@@ -483,7 +476,7 @@ export const benchmarks = {
     log: 'https://dps.report/brm9-20220810-112155_golem',
   },
   bladesworn_power_quick: {
-    author: 'Costa',
+    author: 'Costa Primo',
     link: 'https://www.youtube.com/watch?v=QPrh0p0k-G8',
     log: 'https://dps.report/cmft-20220807-174306_golem',
   },
