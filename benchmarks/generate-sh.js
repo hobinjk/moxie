@@ -5,4 +5,5 @@ for (const benchmarkKey in benchmarks) {
   console.log(`# ${benchmark.author} ${benchmark.link}`);
   let slug = benchmark.log.match(/dps.report\/(.+)$/)[1];
   console.log(`curl https://dps.report/getJson?permalink=${slug} > ${benchmarkKey}.json`);
+  console.log(`sleep 1`);
 }
