@@ -23,7 +23,7 @@ const dtDistToBench = {
   // 'CFB (8 Page, Allies)': '',
   // 'CFB (8 page, no allies)': 'firebrand_condi_aow',
   // 'Condi Quickbrand (Allies)': '',
-  'Condi Quickbrand (No Allies)': 'firebrand_condi_quick',
+  'Condi Quickbrand (LL, No Allies)': 'firebrand_condi_quick',
   'Condi Alacrity Willbender': 'willbender_condi_alac_sword',
   'Power Weaver (BTTH, small)': '', // weaver_power_btth_unravel
   'Condi Weaver Sword': 'weaver_condi_sword',
@@ -63,11 +63,12 @@ const dtDistToBench = {
   'Power Chrono IA GS': 'chrono_power_gs',
   'Quickness Power Chrono GS': 'chrono_power_quick_gs',
   'Quickness Power Chrono GS+Focus': 'chrono_power_quick_focus',
-  'Alacrity Power Chrono GS': '',
+  'Alacrity Power Chrono GS': 'chrono_power_alac_gs',
   'Power Chrono DT Focus': '',
   'Power Chrono IA Focus': '',
   'Power Quickness Chrono': '',
   'Alacrity Staff Mirage': 'mirage_staff',
+  'Alacrity Staff / Axe Mirage': 'mirage_staxe',
   'Axe Mirage (Deception Torch)': 'mirage',
   'Quickness Condi Chrono': 'chrono_condi_boon',
   'Condi Virtuoso Dueling': 'virtuoso_condi',
@@ -98,7 +99,9 @@ function getName(name) {
 
 for (let build of dtBenchmarks) {
   if (build.hasOwnProperty('credit')) {
-    // console.log(`  '${build.name}': '',`);
+    if (!dtDistToBench.hasOwnProperty(build.name)) {
+      console.log(`  '${build.name}': '',`);
+    }
     let benchmarkName = getName(build.name);
     if (!benchmarkName) {
       continue;
