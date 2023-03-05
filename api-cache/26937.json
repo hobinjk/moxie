@@ -1,0 +1,78 @@
+{
+  "name": "Enchanted Daggers",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Siphon Damage",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 968,
+      "target": "Power"
+    },
+    {
+      "text": "Siphon Damage",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 808,
+      "target": "Power"
+    },
+    {
+      "text": "Siphon Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 768,
+      "target": "Healing"
+    },
+    {
+      "text": "Initial Heal",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1560,
+      "target": "Healing"
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Number of Hits",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 6
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 15
+    }
+  ],
+  "description": "Legendary Assassin. Summon enchanted daggers that will attack as you attack, siphoning life from targets hit.",
+  "icon": "https://render.guildwars2.com/file/A01907F923B160E6261174BEF5975D070D4D6511/1012989.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Heal",
+  "cost": 5,
+  "flags": [],
+  "id": 26937,
+  "chat_link": "[&BjlpAAA=]",
+  "categories": [
+    "LegendaryAssassin"
+  ]
+}

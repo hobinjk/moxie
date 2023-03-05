@@ -1,0 +1,92 @@
+{
+  "name": "Water Trident",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.6
+    },
+    {
+      "text": "First-Hit Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1832,
+      "target": "Healing"
+    },
+    {
+      "text": "Additional-Hit Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 916,
+      "target": "Healing"
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 180
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Maximum Count",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 2
+    },
+    {
+      "text": "Count Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 10
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 50
+    }
+  ],
+  "description": "Cast a water trident that damages foes. Deal more damage to chilled foes and heal for each target struck. Heal for a lesser amount for each target struck beyond the first.",
+  "icon": "https://render.guildwars2.com/file/43AF784618DAC97FFAB43518A9F7B204A32335FA/103081.png",
+  "type": "Weapon",
+  "weapon_type": "Scepter",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 5510,
+  "chat_link": "[&BoYVAAA=]",
+  "traited_facts": [
+    {
+      "text": "Count Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 8,
+      "requires_trait": 1676,
+      "overrides": 8
+    }
+  ]
+}
