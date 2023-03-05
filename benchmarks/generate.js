@@ -2,13 +2,17 @@ import * as fs from 'fs';
 import * as EIParser from '../EIParser.js';
 
 let benchPaths = fs.readdirSync('./');
-console.log(benchPaths);
 
 let benches = benchPaths.filter((benchPath) => {
   return benchPath.endsWith('.json');
 }).map((benchPath) => {
-  return require(`./${benchPath}`);
-});
+  let text = fs.readFileSync(`./${benchPath}`, {encoding: 'utf8'});
+  let data = JSON.parse(text);
+  if (data.error) {
+    console.log('log error', benchPath);
+  }
+  return data;
+}).filter(log => !log.error);
 
 let skills = {};
 
