@@ -17,7 +17,8 @@
     "eslint": "^7.17.0",
     "express": "^4.17.1",
     "gh-pages": "^4.0.0",
-    "text-encoding": "^0.7.0"
+    "text-encoding": "^0.7.0",
+    "yaml": "^2.2.1"
   },
   "type": "module",
   "dependencies": {
