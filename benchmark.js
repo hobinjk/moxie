@@ -386,10 +386,10 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
   }
 
   if (spec === 'Bladesworn') {
-    if (hasBuff(log, 'Signet of Fury')) {
-      return get('bladesworn_power');
-    }
-    return get('bladesworn_banners');
+    return get('bladesworn_power');
+    // if (hasBuff(log, 'Signet of Fury')) {
+    // }
+    // return get('bladesworn_power_quick');
   }
 
   return Promise.resolve({
