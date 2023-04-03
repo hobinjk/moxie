@@ -9,10 +9,10 @@ const dtBenchmarks = parse(buildsRaw).list;
 const dtDistToBench = {
   'Power Berserker': 'berserker_power',
   'Power Spellbreaker GS': 'spellbreaker',
-  'Power Spellbreaker Hammer': '',
+  'Power Spellbreaker Hammer': 'spellbreaker_hammer',
   'Condi Quickness Bers': 'berserker_condi_quick',
   'Condi Berserker': 'berserker_condi',
-  'Power Quickness Spellbreaker': '',
+  'Power Quickness Spellbreaker': 'spellbreaker_banners',
   'Power Quickness Bladesworn': 'bladesworn_power_quick',
   'DPS Bladesworn Tactics': 'bladesworn_power',
   'DH Radiance': 'dragonhunter_lb',
@@ -25,7 +25,7 @@ const dtDistToBench = {
   // 'Condi Quickbrand (Allies)': '',
   'Condi Quickbrand (LL, No Allies)': 'firebrand_condi_quick',
   'Condi Alacrity Willbender': 'willbender_condi_alac_sword',
-  'Power Weaver (BTTH, small)': '', // weaver_power_btth_unravel
+  'Power Weaver (BTTH, small)': 'weaver_power_btth', // weaver_power_btth_unravel
   'Condi Weaver Sword': 'weaver_condi_sword',
   'Condi Weaver (Dagger)': 'weaver_condi_dagger',
   'Condi Weaver Staff (Large)': 'weaver_condi_staff',

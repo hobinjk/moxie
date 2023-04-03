@@ -1,0 +1,104 @@
+{
+  "name": "Crashing Courage",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Initial Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3AD50BA43AA00EA97C6152D5EC6092FE0F0979D0/2479369.png",
+      "duration": 6,
+      "status": "Crashing Courage",
+      "description": "Consecutive attacks grant boons.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/DFB4D1B50AE4D6A275B349E15B179261EE3EB0AF/102854.png",
+      "duration": 4,
+      "status": "Aegis",
+      "description": "Block the next incoming attack; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Attacks to Trigger",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+      "duration": 4,
+      "status": "Stability",
+      "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Virtue. Shadowstep a short distance while gaining boons and emanating Willbender Flames from your location. Gain courage.",
+  "icon": "https://render.guildwars2.com/file/3AD50BA43AA00EA97C6152D5EC6092FE0F0979D0/2479369.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Profession_3",
+  "flip_skill": 62532,
+  "flags": [
+    "GroundTargeted"
+  ],
+  "specialization": 65,
+  "id": 62648,
+  "chat_link": "[&Brj0AAA=]",
+  "categories": [
+    "Virtue"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/3AD50BA43AA00EA97C6152D5EC6092FE0F0979D0/2479369.png",
+      "duration": 4,
+      "status": "Crashing Courage",
+      "description": "Consecutive attacks grant boons.",
+      "apply_count": 1,
+      "requires_trait": 2198,
+      "overrides": 3
+    },
+    {
+      "text": "Courage Increase per Kill",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 2,
+      "requires_trait": 2198,
+      "overrides": 4
+    },
+    {
+      "text": "Maximum Allowed Increase",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 4,
+      "requires_trait": 2198,
+      "overrides": 5
+    }
+  ]
+}

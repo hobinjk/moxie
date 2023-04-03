@@ -30,9 +30,9 @@ export const benchmarks = {
     log: 'https://dps.report/vJAR-20221202-184528_golem'
   },
   weaver_power_btth: {
-    author: 'Fennec',
-    link: 'https://www.youtube.com/watch?v=WnteRwBjWKs',
-    log: 'https://dps.report/uIm3-20220918-161524_golem'
+    author: 'Ryan',
+    link: 'https://www.youtube.com/watch?v=nS-udOqtqAQ',
+    log: 'https://dps.report/jpIq-20230218-140800_golem'
   },
   weaver_power_btth_unravel: {
     author: 'Fallen',
@@ -386,8 +386,8 @@ export const benchmarks = {
   },
   willbender_condi_sword: {
     author: 'Support Hero',
-    link: 'https://www.youtube.com/watch?v=6Ub2Rlz9V-s',
-    log: 'https://dps.report/eo3D-20221204-132527_golem'
+    link: 'https://www.youtube.com/watch?v=5q-ZnzbZ89A',
+    log: 'https://dps.report/OVsj-20230314-233458_golem'
   },
   willbender_condi_alac_sword: {
     author: 'Support Hero',
@@ -483,5 +483,15 @@ export const benchmarks = {
     author: '[CnD] Tipcat',
     link: 'https://www.youtube.com/watch?v=jWuZI03lVaM',
     log: 'https://dps.report/rXY9-20230225-232150_golem'
+  },
+  spellbreaker_hammer: {
+    author: 'DaniDomum',
+    link: 'https://www.youtube.com/watch?v=cLXtPAzTzKw',
+    log: 'https://dps.report/hj0c-20221204-150307_golem'
+  },
+  spellbreaker_banners: {
+    author: 'Baym',
+    link: 'https://www.youtube.com/watch?v=xT9DZDcwBzI',
+    log: 'https://dps.report/HzZk-20221213-184016_golem'
   }
 };
