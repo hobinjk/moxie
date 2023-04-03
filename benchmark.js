@@ -382,14 +382,20 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
 
   // Spellbreaker is hopefully banners
   if (spec === 'Spellbreaker') {
-    return get('spellbreaker_banners');
+    if (hasCast(log, 'Banner of Strength')) {
+      return get('spellbreaker_banners');
+    }
+    if (selectedPlayer.weapons.includes('Hammer')) {
+      return get('spellbreaker_hammer');
+    }
+    return get('spellbreaker');
   }
 
   if (spec === 'Bladesworn') {
+    if (hasCast(log, 'Banner of Strength')) {
+      return get('bladesworn_power_quick');
+    }
     return get('bladesworn_power');
-    // if (hasBuff(log, 'Signet of Fury')) {
-    // }
-    // return get('bladesworn_power_quick');
   }
 
   return Promise.resolve({
