@@ -207,12 +207,19 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'firebrand_condi_quick': {
       checkAutoChains(log);
       checkWasted(log);
-      checkAmmoSkillUsage(log, SkillIds.SWORD_OF_JUSTICE_ETERNAL_ARMORY,
-                          16000 / 1.25, 4);
-      checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 6);
-      // Check for spamming zealot's fire which should be cast exactly twice
-      // every 10ish seconds
-      checkNotChained(log, SkillIds.ZEALOTS_FIRE, 2, 5000);
+      checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 18);
+      checkSkillUsage(log, SkillIds['"Feel My Wrath!"']);
+      checkSkillUsage(log, SkillIds['Mantra of Flame'], {onlyNonInstant: true});
+      checkSkillUsage(log, SkillIds['Purging Flames']);
+      checkSkillUsage(log, SkillIds.EPILOGUE_ASHES_OF_THE_JUST, {
+        recharge: 20 * 1000 / 1.25,
+        name: 'Epilogue: Ashes of the Just',
+      });
+      checkSkillUsage(log, SkillIds.CHAPTER_FOUR_SCORCHED_AFTERMATH, {
+        recharge: 15 * 1000 / 1.25,
+        name: 'Chapter 4: Scorched Aftermath',
+        leniency: 1,
+      });
       break;
     }
     case 'soulbeast_power_moa_gs':
@@ -840,13 +847,16 @@ function checkSkillUsage(log, skillId, options = {}) {
     return;
   }
 
-  let recharge;
+  let recharge = options.recharge || 0;
   let countRecharge = 0;
+  if (!skillData.facts) {
+    skillData.facts = [];
+  }
   for (let fact of skillData.facts) {
     if (fact.type === 'Recharge') {
       recharge = fact.value * 1000 / 1.25;
     }
-    if (fact.text === 'Count Recharge') {
+    if (fact.text === 'Count Recharge' || fact.text === 'Charge Recovery') {
       countRecharge = fact.duration * 1000 / 1.25;
     }
   }
@@ -865,16 +875,29 @@ function checkSkillUsage(log, skillId, options = {}) {
     if (resets && resets.has(cast.id)) {
       nextCast = cast.end;
     }
-    if (cast.id === skillId) {
-      if (cast.start > nextCast) {
-        let wasted = cast.start - nextCast;
-        if (wasted > 200) {
-          mishaps.push(new Mishap(nextCast, cast.start));
-        }
-        wastedTime += wasted;
-      }
-      nextCast = cast.end + recharge;
+
+    if (cast.id !== skillId) {
+      continue;
     }
+
+    if (options.onlyNonInstant) {
+      if (cast.end - cast.start < 100) {
+        continue;
+      }
+    }
+
+    if (cast.start > nextCast) {
+      let wasted = cast.start - nextCast;
+      if (wasted > 200) {
+        mishaps.push(new Mishap(nextCast, cast.start));
+      }
+      wastedTime += wasted;
+    }
+    nextCast = cast.end + recharge;
+  }
+  if (nextCast === log.start + recharge) {
+    console.warn('Skill never used', skillId)
+    return;
   }
   let wastedCasts = Math.floor(wastedTime / recharge);
   let grade = 'D';
@@ -891,7 +914,7 @@ function checkSkillUsage(log, skillId, options = {}) {
   }
   wastedCasts += leniency;
   const castPlural = wastedCasts === 1 ? 'cast' : 'casts';
-  const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name}`;
+  const summary = `Lost ${wastedCasts} ${castPlural} of ${skillData.name || options.name}`;
   addReportCardItem(log, grade, summary, mishaps);
 }
 

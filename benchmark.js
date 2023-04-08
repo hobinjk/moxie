@@ -303,12 +303,12 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
   }
 
   if (spec === 'Firebrand') {
-    if (hasCast(log, SkillIds.RENEWED_FOCUS)) {
-      return get('firebrand_condi');
+    if (hasCast(log, SkillIds['"Feel My Wrath!"'])) {
+      return get('firebrand_condi_quick');
     } else if (selectedPlayer.weapons.includes('Greatsword')) {
       return get('firebrand_condi_gs');
     } else {
-      return get('firebrand_condi_quick');
+      return get('firebrand_condi');
     }
   }
 
