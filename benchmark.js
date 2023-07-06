@@ -79,7 +79,7 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
   }
 
   if (spec === 'Weaver') {
-    let isCondi = log.skills.hasOwnProperty(SkillIds.WEAVE_SELF);
+    let isCondi = log.skills.hasOwnProperty(SkillIds['Signet of Fire']);
     let isFreshAir = log.buffs.hasOwnProperty(SkillIds.FRESH_AIR);
     if (isCondi) {
       if (isFreshAir) {

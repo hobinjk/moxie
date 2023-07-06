@@ -797,7 +797,7 @@ function checkFGSTiming(log, benchmark) {
   let {firstStart, firstEnd, secondStart, secondEnd} = getFGSTiming(log.casts);
   console.log(getFGSTiming(benchmark.casts), getFGSTiming(log.casts));
   if (firstStart < 0) {
-    addReportCardItem(log, 'D', 'Didn\'t use FGS at all', []);
+    // addReportCardItem(log, 'D', 'Didn\'t use FGS at all', []);
     return;
   }
   if (secondStart < 0) {
