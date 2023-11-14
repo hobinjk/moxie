@@ -91,7 +91,7 @@ input[type="file"] {
 }
 
 input[type="file"] + label, .target-select-submit,
-.target-select-player-select, .dpsreport-text, .dpsreport-submit {
+.target-select-select, .dpsreport-text, .dpsreport-submit {
   border: 1px solid #77f;
   background: none;
   color: #77f;
@@ -108,7 +108,7 @@ input[type="file"] + label, .target-select-submit,
   height: auto;
 }
 
-.target-select-player-select, .dpsreport-text {
+.target-select-select, .dpsreport-text {
   -moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -123,7 +123,7 @@ input[type="file"] + label, .target-select-submit,
   text-transform: none;
 }
 
-.target-select-player-select {
+.target-select-select {
   padding-right: 48px;
   background-image: url(caret.svg);
   background-position: right;
@@ -147,7 +147,7 @@ input[type="file"] + label, .target-select-submit,
 input[type="file"]:focus + label,
 input[type="file"] + label:hover,
 .target-select-submit:hover,
-.target-select-player-select:hover {
+.target-select-select:hover {
   border-color: white;
   color: white;
   outline: none;
