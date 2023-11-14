@@ -2,8 +2,7 @@ import SkillIds from 'gw2-data/SkillIds';
 import * as EIParser from './EIParser';
 import {benchmarks} from './benchmarks/benchmarks';
 
-async function get(id) {
-  const url = `./benchmarks/${id}.json`;
+export async function downloadBenchLog(url, id) {
   const res = await fetch(url);
   const raw = await res.json();
   const log = EIParser.parseJson(raw);
@@ -12,7 +11,11 @@ async function get(id) {
   log.targetDamage1S = log.targetDamage1S[0];
   log.id = id;
   log.name = id.replace(/_/g, ' ');
-  log.benchmarkMeta = benchmarks[id];
+  log.benchmarkMeta = benchmarks[id] || {
+    author: 'custom',
+    link: '#',
+    log: url,
+  };
   return log;
 }
 
@@ -61,7 +64,7 @@ function hasGeneration(selectedPlayer, buffId) {
   return false;
 }
 
-export function getBenchmarkForPlayer(log, selectedPlayer) {
+export function guessBenchmarkForPlayer(log, selectedPlayer) {
   const spec = selectedPlayer.profession;
 
   if (spec === 'Tempest') {
@@ -69,12 +72,12 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
       let isGlyphOfStorms =
         log.skills.hasOwnProperty(SkillIds.GLYPH_OF_STORMS_FIRE);
       if (isGlyphOfStorms) {
-        return get('tempest_condi_gos');
+        return 'tempest_condi_gos';
       } else {
-        return get('tempest_condi_ele');
+        return 'tempest_condi_ele';
       }
     } else {
-      return get('tempest_power');
+      return 'tempest_power';
     }
   }
 
@@ -86,318 +89,325 @@ export function getBenchmarkForPlayer(log, selectedPlayer) {
         let isGlyphOfStorms =
           log.skills.hasOwnProperty(SkillIds.GLYPH_OF_STORMS_FIRE);
         if (isGlyphOfStorms) {
-          return get('weaver_hybrid_fa');
+          return 'weaver_hybrid_fa';
         } else {
-          return get('weaver_hybrid_fa_elementals');
+          return 'weaver_hybrid_fa_elementals';
         }
       }
       if (selectedPlayer.weapons.includes('Sword')) {
-        return get('weaver_condi_sword');
+        return 'weaver_condi_sword';
       }
       if (selectedPlayer.weapons.includes('Scepter')) {
-        return get('weaver_condi_scepter');
+        return 'weaver_condi_scepter';
       }
       if (selectedPlayer.weapons.includes('Dagger')) {
-        return get('weaver_condi_dagger');
+        return 'weaver_condi_dagger';
       }
     } else if (selectedPlayer.weapons.includes('Staff')) {
       if (isCondi) {
-        return get('weaver_condi_staff');
+        return 'weaver_condi_staff';
       }
-      return get('weaver_power_staff');
+      return 'weaver_power_staff';
     } else {
       // See if LH was cast
       if (hasCast(log, SkillIds.CONJURE_LIGHTNING_HAMMER)) {
         if (isFreshAir) {
-          return get('weaver_power_fa_large');
+          return 'weaver_power_fa_large';
         } else {
-          return get('weaver_power_btth_large');
+          return 'weaver_power_btth_large';
         }
       } else if (isFreshAir) {
-        return get('weaver_power_fa_small');
+        return 'weaver_power_fa_small';
       } else {
-        return get('weaver_power_btth');
+        return 'weaver_power_btth';
       }
     }
   }
 
   if (spec === 'Catalyst') {
     // if (hasCast(log, SkillIds.CONJURE_FIERY_GREATSWORD)) {
-    return get('catalyst_power');
+    return 'catalyst_power';
     // }
-    // return get('catalyst_power_quick');
+    // return 'catalyst_power_quick';
   }
 
   if (spec === 'Chronomancer') {
     if (selectedPlayer.weapons.includes('Shield')) {
       if (selectedPlayer.weapons.includes('Scepter')) {
-        return get('chrono_condi_boon');
+        return 'chrono_condi_boon';
       } else {
-        return get('chrono_power_boon');
+        return 'chrono_power_boon';
       }
     }
     if (selectedPlayer.weapons.includes('Greatsword')) {
       if (hasCast(log, SkillIds.GRAVITY_WELL)) {
-        return get('chrono_power_gs');
+        return 'chrono_power_gs';
       } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
-        return get('chrono_power_quick_gs');
+        return 'chrono_power_quick_gs';
       } else {
-        return get('chrono_power_gs');
+        return 'chrono_power_gs';
       }
     } else if (selectedPlayer.weapons.includes('Scepter')) {
-      return get('chrono_condi');
+      return 'chrono_condi';
     } else if (hasCast(log, SkillIds.GRAVITY_WELL)) {
-      return get('chrono_power_focus');
+      return 'chrono_power_focus';
     } else if (hasGeneration(selectedPlayer, QUICKNESS)) {
-      return get('chrono_power_quick_focus');
+      return 'chrono_power_quick_focus';
     } else if (selectedPlayer.weapons.includes('Pistol')) {
-      return get('chrono_power_pistol');
+      return 'chrono_power_pistol';
     } else {
-      return get('chrono_power_focus');
+      return 'chrono_power_focus';
     }
   }
 
   if (spec === 'Mirage') {
     if (selectedPlayer.weapons.includes('Staff')) {
       if (selectedPlayer.weapons.includes('Axe')) {
-        return get('mirage_staxe');
+        return 'mirage_staxe';
       } else {
-        return get('mirage_staff');
+        return 'mirage_staff';
       }
     }
-    return get('mirage');
+    return 'mirage';
   }
 
   if (spec === 'Virtuoso') {
     if (selectedPlayer.weapons.includes('Greatsword')) {
-      return get('virtuoso_gs');
+      return 'virtuoso_gs';
     }
     if (hasCast(log, SkillIds.PHANTASMAL_DISENCHANTER)) {
-      return get('virtuoso_focus');
+      return 'virtuoso_focus';
     }
     if (hasCast(log, SkillIds.PHANTASMAL_WARDEN)) {
-      return get('virtuoso_condi');
+      return 'virtuoso_condi';
     }
-    return get('virtuoso_condi_chaos');
+    return 'virtuoso_condi_chaos';
   }
 
   if (spec === 'Reaper') {
     if (selectedPlayer.weapons.includes('Scepter')) {
-      return get('reaper_condi');
+      return 'reaper_condi';
     } else {
-      return get('reaper');
+      return 'reaper';
     }
   }
 
   if (spec === 'Scourge') {
-    return get('scourge');
+    return 'scourge';
   }
 
   if (spec === 'Harbinger') {
     // TODO check for quickness output?
-    return get('harbinger_condi');
+    return 'harbinger_condi';
   }
 
   // Engi bench is too old
   // if (spec === 'Engineer') {
-  //   return get('engineer');
+  //   return 'engineer';
   // }
 
   if (spec === 'Holosmith') {
     if (selectedPlayer.weapons.includes('Sword')) {
-      return get('holo_power_sword');
+      return 'holo_power_sword';
     } else if (selectedPlayer.weapons.includes('Rifle')) {
-      return get('holo_power_rifle');
+      return 'holo_power_rifle';
     } else {
-      return get('holo_condi');
+      return 'holo_condi';
     }
   }
 
   if (spec === 'Scrapper') {
     if (hasCast(log, SkillIds.SHREDDER_GYRO)) {
-      return get('scrapper_quick');
+      return 'scrapper_quick';
     }
-    return get('scrapper');
+    return 'scrapper';
   }
 
   if (spec === 'Mechanist') {
     if (hasCast(log, SkillIds.SUPERCONDUCTING_SIGNET)) {
-      return get('mechanist_condi_signets');
+      return 'mechanist_condi_signets';
     }
     if (selectedPlayer.weapons.includes('Mace')) {
-      return get('mechanist_power_alac');
+      return 'mechanist_power_alac';
     }
     if (hasCast(log, SkillIds.FLAME_BLAST)) {
-      return get('mechanist_condi_alac');
+      return 'mechanist_condi_alac';
     }
-    return get('mechanist_condi');
+    return 'mechanist_condi';
   }
 
   if (spec === 'Soulbeast') {
     // Soulbeast benches are too old
     if (selectedPlayer.weapons.includes('Shortbow')) {
-      return get('soulbeast_condi_sb');
+      return 'soulbeast_condi_sb';
     } else if (selectedPlayer.weapons.includes('Torch')) {
       // Either offhand
       if (selectedPlayer.weapons[1] === 'Axe' || selectedPlayer.weapons[3] === 'Axe') {
-        return get('soulbeast_hybrid');
+        return 'soulbeast_hybrid';
       }
-      return get('soulbeast_condi');
+      return 'soulbeast_condi';
     }
 
     if (selectedPlayer.weapons.includes('Greatsword')) {
-      return get('soulbeast_power_moa_gs');
+      return 'soulbeast_power_moa_gs';
     } else {
-      return get('soulbeast_power_moa_lb');
+      return 'soulbeast_power_moa_lb';
     }
   }
 
   if (spec === 'Untamed') {
     if (selectedPlayer.weapons.includes('Hammer')) {
-      return get('untamed_power');
+      return 'untamed_power';
     }
-    return get('untamed_condi');
+    return 'untamed_condi';
   }
 
   if (spec === 'Daredevil') {
     if (selectedPlayer.weapons.includes('Staff')) {
-      return get('daredevil_power');
+      return 'daredevil_power';
     } else {
-      return get('daredevil_condi');
+      return 'daredevil_condi';
     }
   }
 
   if (spec === 'Deadeye') {
     if (selectedPlayer.weapons.includes('Rifle')) {
-      return get('deadeye_rifle');
+      return 'deadeye_rifle';
     } else if (selectedPlayer.weapons.includes('Pistol')) {
-      return get('deadeye_condi');
+      return 'deadeye_condi';
     }
   }
   // Deadeye dagger bench is too old
-  //     return get('deadeye_dagger');
+  //     return 'deadeye_dagger';
 
   if (spec === 'Specter') {
     if (hasCast(log, SkillIds.WELL_OF_BOUNTY)) {
-      return get('specter_condi_alac');
+      return 'specter_condi_alac';
     }
-    return get('specter_condi');
+    return 'specter_condi';
   }
 
   if (spec === 'Dragonhunter') {
     if (selectedPlayer.weapons.includes('Sword')) {
       if (hasCast(log, SkillIds.SHIELD_OF_COURAGE)) {
-        return get('dragonhunter_sword_virtues');
+        return 'dragonhunter_sword_virtues';
       } else {
-        return get('dragonhunter_sword');
+        return 'dragonhunter_sword';
       }
     } else if (selectedPlayer.weapons.includes('Longbow')) {
-      return get('dragonhunter_longbow');
+      return 'dragonhunter_longbow';
     } else {
-      return get('dragonhunter_scepter');
+      return 'dragonhunter_scepter';
     }
   }
 
   if (spec === 'Guardian') {
-    return get('guardian');
+    return 'guardian';
   }
 
   if (spec === 'Firebrand') {
     if (hasCast(log, SkillIds['"Feel My Wrath!"'])) {
-      return get('firebrand_condi_quick');
+      return 'firebrand_condi_quick';
     } else if (selectedPlayer.weapons.includes('Greatsword')) {
-      return get('firebrand_condi_gs');
+      return 'firebrand_condi_gs';
     } else {
-      return get('firebrand_condi');
+      return 'firebrand_condi';
     }
   }
 
   if (spec === 'Willbender') {
     if (hasCast(log, SkillIds.PURGING_FLAMES)) {
       if (selectedPlayer.weapons.includes('Greatsword')) {
-        return get('willbender_condi_gs');
+        return 'willbender_condi_gs';
       }
       if (hasBuff(log, 'Flowing Resolve')) {
-        return get('willbender_condi_alac_sword');
+        return 'willbender_condi_alac_sword';
       }
-      return get('willbender_condi_sword');
+      return 'willbender_condi_sword';
     }
-    return get('willbender_power_focus');
+    return 'willbender_power_focus';
   }
 
   if (spec === 'Herald') {
     if (selectedPlayer.weapons.includes('Sword')) {
       if (hasCast(log, SkillIds.FACET_OF_LIGHT)) {
-        return get('herald_boon');
+        return 'herald_boon';
       } else {
-        return get('herald_power');
+        return 'herald_power';
       }
     } else {
-      return get('herald_condi');
+      return 'herald_condi';
     }
   }
 
   if (spec === 'Renegade') {
     if (selectedPlayer.weapons.includes('Sword')) {
-      return get('renegade_alac');
+      return 'renegade_alac';
     }
 
     let isDeva = log.buffs.hasOwnProperty(SkillIds.BATTLE_SCARS);
 
     if (log.buffs.hasOwnProperty(SkillIds.LEGENDARY_ASSASSIN_STANCE)) {
-      return get('renegade_shiro');
+      return 'renegade_shiro';
     } else if (isDeva) {
-      return get('renegade_deva_kalla');
+      return 'renegade_deva_kalla';
     } else {
-      return get('renegade_kalla');
+      return 'renegade_kalla';
     }
   }
 
   if (spec === 'Vindicator') {
     if (selectedPlayer.weapons.includes('Sword')) {
-      return get('vindicator_power_sword');
+      return 'vindicator_power_sword';
     }
-    return get('vindicator_power_gs');
+    return 'vindicator_power_gs';
   }
 
   // Warrior bench is too old
   // if (spec === 'Warrior') {
-  //   return get('warrior_banners');
+  //   return 'warrior_banners';
   // }
 
   if (spec === 'Berserker') {
     let isCondi = selectedPlayer.weapons.includes('Longbow');
     if (isCondi) {
       if (hasCast(log, SkillIds.SUNDERING_LEAP)) {
-        return get('berserker_condi');
+        return 'berserker_condi';
       } else {
-        return get('berserker_condi_banners');
+        return 'berserker_condi_banners';
       }
     } else if (hasCast(log, SkillIds.THROW_BOLAS)) {
-      return get('berserker_power');
+      return 'berserker_power';
     } else {
-      return get('berserker_power_banners');
+      return 'berserker_power_banners';
     }
   }
 
   // Spellbreaker is hopefully banners
   if (spec === 'Spellbreaker') {
     if (hasCast(log, 'Banner of Strength')) {
-      return get('spellbreaker_banners');
+      return 'spellbreaker_banners';
     }
     if (selectedPlayer.weapons.includes('Hammer')) {
-      return get('spellbreaker_hammer');
+      return 'spellbreaker_hammer';
     }
-    return get('spellbreaker');
+    return 'spellbreaker';
   }
 
   if (spec === 'Bladesworn') {
     if (hasCast(log, 'Banner of Strength')) {
-      return get('bladesworn_power_quick');
+      return 'bladesworn_power_quick';
     }
-    return get('bladesworn_power');
+    return 'bladesworn_power';
   }
+}
 
+export function getBenchmarkForPlayer(log, selectedPlayer) {
+  let guess = guessBenchmarkForPlayer(log, selectedPlayer);
+  if (guess) {
+    const url = `./benchmarks/${guess}.json`;
+    return downloadBenchLog(url, guess);
+  }
   return Promise.resolve({
     targetDamage10S: [],
     casts: [],

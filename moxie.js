@@ -2,8 +2,9 @@ import generateReportCard from './passes';
 import SkillData from 'gw2-data/SkillData';
 import SkillIds from 'gw2-data/SkillIds';
 import TargetSelect from './TargetSelect';
+import ComparisonSelect from './ComparisonSelect';
 import * as EIParser from './EIParser';
-import {getBenchmarkForPlayer} from './benchmark';
+import {downloadBenchLog} from './benchmark';
 import drawCastTimeline from 'ventaris-tablet/drawCastTimeline';
 import drawBuffTimeline from 'ventaris-tablet/drawBuffTimeline';
 import drawDpsGraph from 'ventaris-tablet/drawDpsGraph';
@@ -116,12 +117,12 @@ function displayHeader(log) {
   console.log('log', log);
   let targetSelect = new TargetSelect(log);
   targetSelect.listener = function(selectedPlayer) {
-    displayLog(log, selectedPlayer);
+    displayComparisonSelect(log, selectedPlayer);
   };
   targetSelect.render();
 }
 
-async function displayLog(log, selectedPlayer) {
+function displayComparisonSelect(log, selectedPlayer) {
   console.log(selectedPlayer, log);
   log.casts = log.casts[selectedPlayer.id];
   log.buffs = log.buffs[selectedPlayer.id];
@@ -130,6 +131,16 @@ async function displayLog(log, selectedPlayer) {
   log.casts.sort(function(a, b) {
     return a.start - b.start;
   });
+
+  let comparisonSelect = new ComparisonSelect(log, selectedPlayer);
+  comparisonSelect.listener = function(logSlug, logId) {
+    let logUrl = `https://dps.report/getJson?permalink=${logSlug}`;
+    displayLog(log, selectedPlayer, logUrl, logId);
+  };
+  comparisonSelect.render();
+}
+
+async function displayLog(log, selectedPlayer, logUrl, logId) {
   const usedSkills = {};
   for (let cast of log.casts) {
     usedSkills[cast.id] = true;
@@ -142,7 +153,7 @@ async function displayLog(log, selectedPlayer) {
     usedSkills[id] = true;
   }
 
-  let benchmark = await getBenchmarkForPlayer(log, selectedPlayer);
+  let benchmark = await downloadBenchLog(logUrl, logId);
 
   for (let cast of benchmark.casts) {
     usedSkills[cast.id] = true;

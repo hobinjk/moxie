@@ -59,7 +59,7 @@ export default class TargetSelect {
     this.elt.appendChild(bossLabel);
 
     this.playerSelect = document.createElement('select');
-    this.playerSelect.classList.add('target-select-player-select');
+    this.playerSelect.classList.add('target-select-select');
     for (let player of this.players) {
       let playerOption = document.createElement('option');
       playerOption.textContent = player.name;
