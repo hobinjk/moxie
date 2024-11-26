@@ -59,7 +59,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkBuffUptime(log, SkillIds.FRESH_AIR, 69.8);
 
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
-      checkSkillUsage(log, SkillIds.FEEL_THE_BURN);
+      checkSkillUsage(log, SkillIds['"Feel the Burn!"']);
       break;
 
     case 'daredevil_power':
