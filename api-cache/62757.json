@@ -1,0 +1,55 @@
+{
+  "name": "Energy Meld",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 25
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 15
+    }
+  ],
+  "description": "Gain endurance.",
+  "icon": "https://render.guildwars2.com/file/CABAB825B746117F51E4F35844622D3A3862D3E4/2491610.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_2",
+  "cost": 10,
+  "flip_skill": 62729,
+  "flags": [],
+  "specialization": 69,
+  "id": 62757,
+  "chat_link": "[&BiX1AAA=]",
+  "traited_facts": [
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 65,
+      "requires_trait": 2255,
+      "overrides": 1
+    },
+    {
+      "text": "Endurance Gained",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 25,
+      "requires_trait": 2255,
+      "overrides": 2
+    }
+  ]
+}

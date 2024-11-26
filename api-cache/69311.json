@@ -1,0 +1,111 @@
+{
+  "name": "Bladecall",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Outgoing Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Returning Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Daggers Thrown",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    },
+    {
+      "text": "Pierces",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/F833590B593E0C2D4948DFFE9951B91655250052/1770207.png"
+    },
+    {
+      "text": "Blade",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/D6CAECEA0FD5FADE04DD6970384ADC5DE309C506/2229322.png"
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 20,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Throw a fan of daggers that return to you. Summon a clone if this attack hits at least one target.",
+  "icon": "https://render.guildwars2.com/file/45B04E5D30ADD8D1B3086A98D40BE506E313B646/2479379.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 69311,
+  "chat_link": "[&Br8OAQA=]",
+  "traited_facts": [
+    {
+      "text": "Outgoing Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 2206,
+      "hit_count": 1,
+      "dmg_multiplier": 0.55,
+      "overrides": 3
+    },
+    {
+      "text": "Outgoing Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 2206,
+      "hit_count": 1,
+      "dmg_multiplier": 0.11,
+      "overrides": 3
+    },
+    {
+      "text": "Returning Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 2206,
+      "hit_count": 1,
+      "dmg_multiplier": 0.55,
+      "overrides": 4
+    },
+    {
+      "text": "Returning Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 2206,
+      "hit_count": 1,
+      "dmg_multiplier": 0.605,
+      "overrides": 4
+    }
+  ]
+}

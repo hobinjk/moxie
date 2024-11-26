@@ -1,0 +1,69 @@
+{
+  "name": "Life Siphon",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 600
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 9,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Pulse Heal",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 450,
+      "target": "Healing"
+    },
+    {
+      "text": "Pulse Heal",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 300,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing Increased While Bleeding",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "percent": 20
+    },
+    {
+      "text": "Damage Increased While Bleeding",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 50
+    },
+    {
+      "text": "Damage Increased While Bleeding",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 20
+    }
+  ],
+  "description": "Siphon health from your foe. Healing effectiveness increases if you are bleeding. Damage increases if your foe is bleeding.",
+  "icon": "https://render.guildwars2.com/file/DC2F5B32DF6D77CF2B7C3B9AAF30381FE11A97FE/103037.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 69302,
+  "chat_link": "[&BrYOAQA=]"
+}

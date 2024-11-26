@@ -1,0 +1,40 @@
+{
+  "name": "Phase Retreat",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Leap"
+    }
+  ],
+  "description": "Clone. Teleport away from your target, summoning a clone that casts Winds of Chaos.",
+  "icon": "https://render.guildwars2.com/file/56B7F719F90C04523796611A75BF960E539EB79A/103775.png",
+  "type": "Weapon",
+  "weapon_type": "Staff",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10310,
+  "chat_link": "[&BkYoAAA=]",
+  "categories": [
+    "Clone"
+  ]
+}

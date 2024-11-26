@@ -1,0 +1,59 @@
+{
+  "name": "Flow Stabilizer",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/15AA251708A19EC6E1CBA4B208D7502797C9D111/2604722.png",
+      "duration": 8,
+      "status": "Positive Flow",
+      "description": "Gain flow per second.",
+      "apply_count": 2
+    },
+    {
+      "text": "Additional Flow",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "value": 15
+    },
+    {
+      "text": "Maximum Count",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 2
+    },
+    {
+      "text": "Count Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 8,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Armament. Increase flow rate and gain fury. If you already have fury, gain additional flow.",
+  "icon": "https://render.guildwars2.com/file/A0CBE13DC629FAD69645FBB9CFDEFC5AC82061E3/2491651.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Warrior"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "specialization": 68,
+  "id": 62967,
+  "chat_link": "[&Bvf1AAA=]"
+}

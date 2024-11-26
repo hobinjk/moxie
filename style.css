@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('trebuchet_ms.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #010104;
   font-family: 'Open Sans', sans-serif;
+  --base-text-color: #77f;
+  --base-line-color: #77f;
 }
 
 .header {
@@ -13,8 +20,8 @@ body {
   box-sizing: border-box;
   width: 100%;
   padding: 4px 24px;
-  font-family: 'Poiret One', sans-serif;
-  color: #77f;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: var(--base-text-color);
 }
 
 .title {
@@ -27,7 +34,7 @@ body {
 }
 
 a, a:visited {
-  color: #77f;
+  color: var(--base-text-color);
 }
 
 a:hover {
@@ -54,22 +61,22 @@ a:hover {
 }
 
 .separator {
-  color: #77f;
+  color: var(--base-text-color);
   padding-bottom: 16px;
   margin: 16px;
 }
 
 .target-select {
-  color: #77f;
+  color: var(--base-text-color);
   padding: 16px;
   text-align: center;
-  font-family: 'Poiret One', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   font-weight: lighter;
   font-size: 24px;
 }
 
 .target-select-boss-label {
-  border-bottom: 1px solid #77f;
+  border-bottom: 1px solid var(--base-line-color);
   padding-bottom: 2px;
   margin-bottom: 16px;
 }
@@ -92,10 +99,10 @@ input[type="file"] {
 
 input[type="file"] + label, .target-select-submit,
 .target-select-select, .dpsreport-text, .dpsreport-submit {
-  border: 1px solid #77f;
+  border: 1px solid var(--base-line-color);
   background: none;
-  color: #77f;
-  font-family: 'Poiret One', sans-serif;
+  color: var(--base-text-color);
+  font-family: 'Trebuchet MS', sans-serif;
   font-weight: lighter;
   font-size: 24px;
   height: 32px;
@@ -191,8 +198,8 @@ input[type="file"] + label:hover,
   height: 100%;
   display: none;
   border: 1px solid #aaf;
-  color: #77f;
-  font-family: 'Poiret One', sans-serif;
+  color: var(--base-text-color);
+  font-family: 'Trebuchet MS', sans-serif;
 }
 .gameplay-video-container.no-video > .gameplay-no-video {
   display: block;
@@ -257,7 +264,7 @@ input[type="file"] + label:hover,
 
 .buff {
   opacity: 0.5;
-  fill: #77f;
+  fill: var(--base-line-color);
   stroke: none;
 }
 
@@ -273,7 +280,7 @@ input[type="file"] + label:hover,
 }
 
 .cast {
-  fill: #77f;
+  fill: var(--base-line-color);
   stroke: none;
 }
 
@@ -364,7 +371,7 @@ input[type="file"] + label:hover,
   float: right;
   padding-right: 8px;
   font-size: 12px;
-  color: #77f;
+  color: var(--base-text-color);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -425,7 +432,7 @@ input[type="file"] + label:hover,
 
 .dps-path {
   fill: none;
-  stroke: #77f;
+  stroke: var(--base-line-color);
   stroke-width: 2px;
 }
 
@@ -454,7 +461,7 @@ input[type="file"] + label:hover,
 }
 
 .control-panel {
-  border: 1px solid #77f;
+  border: 1px solid var(--base-line-color);
   background: none;
   color: white;
   display: flex;

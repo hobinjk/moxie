@@ -1,0 +1,37 @@
+{
+  "name": "Incendiary Ammo",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 6,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Incendiary Ammo Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 45
+    }
+  ],
+  "description": "Burn foes with your next three attacks.",
+  "icon": "https://render.guildwars2.com/file/9FD24A39C91355664B9C4FDEA7A1A40662C2E1AF/103461.png",
+  "type": "Toolbelt",
+  "weapon_type": "None",
+  "slot": "Toolbelt",
+  "professions": [
+    "Engineer"
+  ],
+  "flags": [],
+  "id": 5977,
+  "chat_link": "[&BlkXAAA=]"
+}

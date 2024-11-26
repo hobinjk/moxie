@@ -1,0 +1,47 @@
+{
+  "name": "Photon Wall",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "<c=@abilitytype>Heat Threshold</c>",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+      "value": 50
+    },
+    {
+      "text": "Blocks Missiles",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 3
+    },
+    {
+      "text": "<c=@abilitytype>Reflects Missiles</c>",
+      "type": "NoData",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    }
+  ],
+  "description": "Exceed. A defensive barrier appears in front of you that blocks you and your allies from incoming attacks. Reactivate Exceed to fire the barrier at foes as an attack. This skill grants projectile reflection if you are above the heat threshold.",
+  "icon": "https://render.guildwars2.com/file/17FCB62A75625CDE2DC279FB9209D65974C8F435/1770412.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Utility",
+  "toolbelt_skill": 45732,
+  "flip_skill": 40533,
+  "flags": [],
+  "specialization": 57,
+  "id": 43739,
+  "chat_link": "[&BtuqAAA=]"
+}

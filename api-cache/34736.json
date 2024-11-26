@@ -1,0 +1,108 @@
+{
+  "name": "Glyph of Elemental Power",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "StunBreak",
+      "type": "StunBreak",
+      "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+      "value": true
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 3,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+        "status": "Fire Attunement",
+        "description": "Cast fire spells."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 2,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 1,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+        "status": "Fire Attunement",
+        "description": "Cast fire spells."
+      }
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 25
+    },
+    {
+      "text": "Number of Strikes",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    }
+  ],
+  "description": "Glyph. Inflict conditions on your next few strikes based on your attunement. Each strike deals increased damage.",
+  "icon": "https://render.guildwars2.com/file/0805084EF739CEDD5C9678561C331D7F0B01590B/1424236.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 34736,
+  "chat_link": "[&BrCHAAA=]",
+  "categories": [
+    "Glyph"
+  ],
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 10,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 1,
+      "requires_trait": 229,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+        "status": "Fire Attunement",
+        "description": "Cast fire spells."
+      }
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "PrefixedBuff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 6,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 3,
+      "requires_trait": 229,
+      "prefix": {
+        "text": "Apply Buff/Condition",
+        "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+        "status": "Fire Attunement",
+        "description": "Cast fire spells."
+      }
+    }
+  ]
+}

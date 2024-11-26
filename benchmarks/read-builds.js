@@ -1,9 +1,9 @@
 import * as fs from 'fs';
-import {parse} from 'yaml';
-import {benchmarks} from './benchmarks.js';
+import { parse } from 'yaml';
+import { benchmarks } from './benchmarks.js';
 
 
-const buildsRaw = fs.readFileSync('../../discretize-gear-optimizer/src/assets/presetdata/preset-distribution.yaml', {encoding: 'utf8'});
+const buildsRaw = fs.readFileSync('../../discretize-gear-optimizer/src/assets/presetdata/preset-distribution.yaml', { encoding: 'utf8' });
 const dtBenchmarks = parse(buildsRaw).list;
 
 const dtDistToBench = {
@@ -33,7 +33,7 @@ const dtDistToBench = {
   'Hybrid Weaver': 'weaver_hybrid_fa',
   'Alacrity Hybrid Tempest': '',
   'Condi Tempest': 'tempest_condi',
-  'Power Tempest': 'tempest_power',
+  'Power Tempest Scepter': 'tempest_power',
   'Power Catalyst': 'catalyst_power',
   'Power Quickness Catalyst': 'catalyst_power_quick',
   'Alacrity Renegade': 'renegade_alac',

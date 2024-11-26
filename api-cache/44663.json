@@ -1,0 +1,139 @@
+{
+  "name": "Desert Shroud",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/10BABF2708CA3575730AC662A2E72EC292565B08/598887.png",
+      "duration": 5,
+      "status": "Torment",
+      "description": "Deals damage every second. Deals additional damage to foes that aren't moving. Stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 6
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 180
+    },
+    {
+      "text": "Interval",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+      "duration": 1
+    },
+    {
+      "text": "Barrier",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/357922487919E8E84B914EAC13D5796DDDC42D14/1770209.png",
+      "value": 2188,
+      "target": "Healing"
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 7,
+      "dmg_multiplier": 0.45
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 7,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    },
+    {
+      "text": "Pulses",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 7
+    },
+    {
+      "text": "Life Force Cost",
+      "icon": "https://render.guildwars2.com/file/7F20920A42951A471352CE56CBD1F15257C10757/1770200.png",
+      "percent": 50
+    }
+  ],
+  "description": "Shade. Enter the desert shroud, gaining a powerful barrier and pulsing necrotic energy around your sand shades.\nTargets affected by this ability can only be affected once per pulse.",
+  "icon": "https://render.guildwars2.com/file/69DCF8665579C993C2C50AD9073009712FC344EE/1770535.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Profession_5",
+  "flip_skill": 54870,
+  "flags": [],
+  "specialization": 60,
+  "id": 44663,
+  "chat_link": "[&BneuAAA=]",
+  "traited_facts": [
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 300,
+      "requires_trait": 2112,
+      "overrides": 3
+    },
+    {
+      "text": "Barrier",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/357922487919E8E84B914EAC13D5796DDDC42D14/1770209.png",
+      "value": 323,
+      "requires_trait": 2123,
+      "target": "Healing",
+      "overrides": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+      "duration": 5,
+      "status": "Fury",
+      "description": "Critical chance increased; stacks duration.",
+      "apply_count": 1,
+      "requires_trait": 803
+    },
+    {
+      "text": "Conditions Removed",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 1,
+      "requires_trait": 1922
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5,
+      "requires_trait": 2112,
+      "overrides": 8
+    }
+  ]
+}

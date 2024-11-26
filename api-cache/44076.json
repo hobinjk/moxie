@@ -1,0 +1,78 @@
+{
+  "name": "Heroic Command",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/4DDE151C71EDB6120E3454036C4C3504EADB02D8/1770161.png",
+      "duration": 8,
+      "status": "Kalla's Fervor",
+      "description": "Kalla's legend inspires you, increasing all damage dealt; stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 300
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 8,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 2
+    }
+  ],
+  "description": "Citadel Order. Refresh the duration of your Kalla's Fervor and grant nearby allies might for every stack.",
+  "icon": "https://render.guildwars2.com/file/A0C51CE345E94C7DA7300B2505920FC145730BBD/1770594.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Revenant"
+  ],
+  "slot": "Profession_2",
+  "cost": 10,
+  "flags": [],
+  "specialization": 63,
+  "id": 44076,
+  "chat_link": "[&BiysAAA=]",
+  "traited_facts": [
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/4DDE151C71EDB6120E3454036C4C3504EADB02D8/1770161.png",
+      "duration": 12,
+      "status": "Improved Kalla's Fervor",
+      "description": "Kalla's legend inspires you, increasing all damage dealt; stacks intensity.",
+      "apply_count": 1,
+      "requires_trait": 2100,
+      "overrides": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+      "duration": 12,
+      "status": "Might",
+      "description": "Increased outgoing damage; stacks intensity.",
+      "apply_count": 3,
+      "requires_trait": 2100,
+      "overrides": 4
+    }
+  ]
+}

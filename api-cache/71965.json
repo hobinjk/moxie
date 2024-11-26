@@ -1,0 +1,80 @@
+{
+  "name": "Orchestrated Assault",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 33
+    },
+    {
+      "text": "Number of Hits",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/397A613651BFCA2832B6469CE34735580A2C120E/102844.png",
+      "duration": 2,
+      "status": "Immobile",
+      "description": "Unable to move; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 1,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Damage Increase",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "percent": 7
+    }
+  ],
+  "description": "Pull spinning axes to your target. Axes deal increased strike damage, and enemies struck by a number of axes will be immobilized.",
+  "icon": "https://render.guildwars2.com/file/EDAA6A645279109A6FD7064A4439ECE3DDBE05F4/3256390.png",
+  "type": "Weapon",
+  "weapon_type": "Axe",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_3",
+  "dual_wield": "Pistol",
+  "initiative": 4,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 71965,
+  "chat_link": "[&Bh0ZAQA=]",
+  "traited_facts": [
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 604,
+      "requires_trait": 1238,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 756,
+      "requires_trait": 1238,
+      "target": "Healing"
+    }
+  ]
+}

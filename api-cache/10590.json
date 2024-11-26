@@ -1,0 +1,85 @@
+{
+  "name": "Haunt",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.4
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+      "duration": 5,
+      "status": "Blinded",
+      "description": "Next outgoing attack misses; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "duration": 3,
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 5,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Life Force",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 10
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 300
+    }
+  ],
+  "description": "Command your shadow fiend to teleport to a foe and attack all nearby foes, inflicting conditions.",
+  "icon": "https://render.guildwars2.com/file/457C16DE0EBA0205D501FF265593EAC377806F15/103102.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 10590,
+  "chat_link": "[&Bl4pAAA=]",
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 858,
+      "hit_count": 1,
+      "dmg_multiplier": 0.5,
+      "overrides": 2
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Power Return",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 1640,
+      "target": "Healing"
+    },
+    {
+      "text": "Healing below 50%",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 2620,
+      "target": "Healing"
+    },
+    {
+      "text": "Count Recharge",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "duration": 20
+    },
+    {
+      "text": "Maximum Count",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+      "value": 2
+    },
+    {
+      "text": "Health Threshold",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "percent": 50
+    }
+  ],
+  "description": "Instantly heal yourself. Receive increased healing if you are below the health threshold.",
+  "icon": "https://render.guildwars2.com/file/A999116605543595AEF225D26026127828AED66B/103745.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Heal",
+  "flags": [],
+  "id": 10214,
+  "chat_link": "[&BuYnAAA=]"
+}

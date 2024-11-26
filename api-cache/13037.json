@@ -1,0 +1,91 @@
+{
+  "name": "Spider Venom",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 30
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/39320C2D4AED963861F4540F59AEBB5E05AD2E1C/103513.png",
+      "duration": 24,
+      "status": "Spider Venom",
+      "description": "Your attacks poison foes.",
+      "apply_count": 6
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+      "duration": 3,
+      "status": "Poisoned",
+      "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+      "duration": 3,
+      "status": "Poisoned",
+      "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+      "duration": 3,
+      "status": "Poisoned",
+      "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+      "apply_count": 1
+    },
+    {
+      "text": "Number of Attacks",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 6
+    },
+    {
+      "text": "Number of Attacks",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    },
+    {
+      "text": "Venom Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 24
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    }
+  ],
+  "description": "Venom. Poison foes with your next few attacks.",
+  "icon": "https://render.guildwars2.com/file/39320C2D4AED963861F4540F59AEBB5E05AD2E1C/103513.png",
+  "type": "Utility",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Utility",
+  "flags": [],
+  "id": 13037,
+  "chat_link": "[&Bu0yAAA=]",
+  "categories": [
+    "Venom"
+  ]
+}

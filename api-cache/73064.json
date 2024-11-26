@@ -1,0 +1,40 @@
+{
+  "name": "Focused Devastation",
+  "facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 6,
+      "dmg_multiplier": 0.2
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+      "duration": 2,
+      "status": "Burning",
+      "description": "Deals damage every second; stacks intensity.",
+      "apply_count": 6
+    },
+    {
+      "text": "Number of Hits",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 6
+    }
+  ],
+  "description": "Repeatedly strike your foe, inflicting conditions.",
+  "icon": "https://render.guildwars2.com/file/0D9EF8DA5BAE16F60602985D223AA01D1394A0CF/3379118.png",
+  "type": "Weapon",
+  "weapon_type": "Spear",
+  "professions": [
+    "Engineer"
+  ],
+  "slot": "Weapon_5",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 73064,
+  "chat_link": "[&BmgdAQA=]"
+}

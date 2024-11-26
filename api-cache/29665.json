@@ -1,0 +1,49 @@
+{
+  "name": "Bypass Coating",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "StunBreak",
+      "type": "StunBreak",
+      "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+      "value": true
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+      "duration": 3,
+      "status": "Superspeed",
+      "description": "Movement speed is greatly increased. Maximum duration: 10s",
+      "apply_count": 1
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 240
+    },
+    {
+      "text": "Number of Allied Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Splash a hypercoating on nearby allies, granting superspeed.",
+  "icon": "https://render.guildwars2.com/file/9980FCE89CC479C45825F1E362DED036A9EC7164/1128589.png",
+  "type": "Toolbelt",
+  "weapon_type": "None",
+  "slot": "Toolbelt",
+  "professions": [
+    "Engineer"
+  ],
+  "flags": [],
+  "id": 29665,
+  "chat_link": "[&BuFzAAA=]"
+}

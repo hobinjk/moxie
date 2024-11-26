@@ -1,0 +1,40 @@
+{
+  "name": "Necrotic Slash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 2,
+      "dmg_multiplier": 0.45
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 2
+    }
+  ],
+  "description": "Chain. Slash your foe twice.",
+  "icon": "https://render.guildwars2.com/file/05EE0A5CE7B645C83F3008FCD8C9AD2002C744D1/103095.png",
+  "type": "Weapon",
+  "weapon_type": "Dagger",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_1",
+  "next_chain": 10703,
+  "flip_skill": 10703,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 10702,
+  "chat_link": "[&Bs4pAAA=]",
+  "categories": []
+}
