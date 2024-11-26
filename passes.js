@@ -48,6 +48,20 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
 
       checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
       break;
+    case 'tempest_power':
+      checkWasted(log);
+
+      checkSkillMinDuration(log, SkillIds['Overload Air'], 3190);
+      checkSkillMaxDuration(log, SkillIds['Overload Air'], 3300);
+
+      checkBuffUptime(log, SkillIds.TEMPESTUOUS_ARIA, 98.2);
+      checkBuffUptime(log, SkillIds.TRANSCENDENT_TEMPEST, 98.2);
+      checkBuffUptime(log, SkillIds.FRESH_AIR, 69.8);
+
+      checkSkillUsage(log, SkillIds.GLYPH_OF_STORMS_AIR);
+      checkSkillUsage(log, SkillIds.FEEL_THE_BURN);
+      break;
+
     case 'daredevil_power':
       checkAutoChains(log, true);
       checkWasted(log);
@@ -1265,4 +1279,76 @@ function checkWeaponSwapCadence(log, durations, startSkillId, lenient) {
   }
   const summary = `Swapped late by ${over} ms (${successes}/${results.length} ${swapPlural}${leniencyExplanation})`;
   addReportCardItem(log, grade, summary, mishaps);
+}
+
+function checkSkillMinDuration(log, skillId, minDurationMs) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+
+  let mishaps = [];
+  let castsTotal = 0;
+  for (const cast of log.casts) {
+    if (cast.id !== skillId) {
+      continue;
+    }
+    castsTotal += 1;
+    let duration = cast.end - cast.start;
+    if (duration > minDurationMs) {
+      continue;
+    }
+    // Cancelled at cast.end when it should've been later
+    mishaps.push(new Mishap(cast.end, cast.start + minDurationMs));
+  }
+  let grade = 'D';
+  if (mishaps.length < 1) {
+    grade = 'S';
+  } else if (mishaps.length < 3) {
+    grade = 'A';
+  } else if (mishaps.length < 5) {
+    grade = 'B';
+  } else if (mishaps.length < 8) {
+    grade = 'C';
+  }
+  const timePlural = mishaps.length === 1 ? 'time' : 'times';
+  const summary = `Cancelled ${skillData.name} early ${mishaps.length}/${castsTotal} ${timePlural}`;
+  addReportCardItem(log, grade, summary, []);
+}
+
+function checkSkillMaxDuration(log, skillId, maxDurationMs) {
+  const skillData = SkillData.get(skillId);
+  if (!skillData) {
+    console.warn('Missing skill data', skillId);
+    return;
+  }
+
+  let mishaps = [];
+  let castsTotal = 0;
+  for (const cast of log.casts) {
+    if (cast.id !== skillId) {
+      continue;
+    }
+    castsTotal += 1;
+    let duration = cast.end - cast.start;
+    if (duration < maxDurationMs) {
+      continue;
+    }
+    // Cancelled at cast.end when it should've been earlier
+    mishaps.push(new Mishap(cast.start + maxDurationMs, cast.end));
+  }
+  let grade = 'D';
+  if (mishaps.length < 1) {
+    grade = 'S';
+  } else if (mishaps.length < 3) {
+    grade = 'A';
+  } else if (mishaps.length < 5) {
+    grade = 'B';
+  } else if (mishaps.length < 8) {
+    grade = 'C';
+  }
+  const timePlural = mishaps.length === 1 ? 'time' : 'times';
+  const summary = `Cancelled ${skillData.name} late ${mishaps.length}/${castsTotal} ${timePlural}`;
+  addReportCardItem(log, grade, summary, []);
 }
