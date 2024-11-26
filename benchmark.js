@@ -1,6 +1,6 @@
 import SkillIds from 'gw2-data/SkillIds';
 import * as EIParser from './EIParser';
-import {benchmarks} from './benchmarks/benchmarks';
+import { benchmarks } from './benchmarks/benchmarks';
 
 export async function downloadBenchLog(url, id) {
   const res = await fetch(url);
@@ -395,9 +395,6 @@ export function guessBenchmarkForPlayer(log, selectedPlayer) {
   }
 
   if (spec === 'Bladesworn') {
-    if (hasCast(log, 'Banner of Strength')) {
-      return 'bladesworn_power_quick';
-    }
     return 'bladesworn_power';
   }
 }

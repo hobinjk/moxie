@@ -259,25 +259,10 @@ export const benchmarks = {
     link: 'https://www.youtube.com/watch?v=zx1-V-HauV0',
     log: 'https://dps.report/YaET-20221228-195030_golem'
   },
-  untamed_power_alac: {
-    author: 'Ssalg Ele',
-    link: 'https://www.youtube.com/watch?v=-8yzK_kRElk',
-    log: 'https://dps.report/EwoV-20221209-040658_golem'
-  },
   untamed_condi: {
     author: 'Incera',
     link: 'https://www.youtube.com/watch?v=N59qd6lNOhA',
     log: 'https://dps.report/Mgwd-20220826-160333_golem'
-  },
-  untamed_condi_alac_hammer: {
-    author: 'Baym',
-    link: 'https://www.youtube.com/watch?v=qt7y7K4kPao',
-    log: 'https://dps.report/48qt-20220824-193816_golem'
-  },
-  untamed_condi_alac: {
-    author: 'Incera',
-    link: 'https://www.youtube.com/watch?v=BUi_qBRTuiU',
-    log: 'https://dps.report/cQOk-20220707-195649_golem'
   },
   daredevil_power: {
     author: 'Left',
@@ -473,11 +458,6 @@ export const benchmarks = {
     author: 'Evo',
     link: 'https://www.youtube.com/watch?v=0uJWLIKmN_c',
     log: 'https://dps.report/Kan2-20230824-061419_golem'
-  },
-  bladesworn_power_quick: {
-    author: 'Costa Primo',
-    link: 'https://www.youtube.com/watch?v=QPrh0p0k-G8',
-    log: 'https://dps.report/cmft-20220807-174306_golem'
   },
   chrono_power_alac_gs: {
     author: '[CnD] Tipcat',
