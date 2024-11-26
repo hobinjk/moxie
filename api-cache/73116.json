@@ -1,0 +1,45 @@
+{
+  "name": "Distress",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1200
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/7FD7260567C1DAD4A2ACE5B6E8B57078E17A3E0A/3379000.png",
+      "duration": 10,
+      "status": "Soul Shards",
+      "description": "Striking an enemy with Perforate siphons health from them.",
+      "apply_count": 3
+    },
+    {
+      "text": "Additional Shards vs. Isolated",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    },
+    {
+      "text": "Recharge Reduced",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+      "percent": 100
+    }
+  ],
+  "description": "Teleport to the foe marked by Isolate, recharge Perforate, and gain soul shards. Gain additional soul shards if there are no other enemies nearby.",
+  "icon": "https://render.guildwars2.com/file/08B9D63645B11ACD3404B2F50539EDE8916CEE25/3379165.png",
+  "type": "Weapon",
+  "weapon_type": "Spear",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_4",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 73116,
+  "chat_link": "[&BpwdAQA=]"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Raging Ricochet",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 6
+    }
+  ],
+  "description": "Conjure a bullet that bounces to nearby enemies. Gain might for each target struck.\n\nIf you have a fire bullet, consume it to increase your outgoing condition damage for a duration. If not, create a fire bullet.",
+  "icon": "https://render.guildwars2.com/file/7ED653511F5A3F3E6D705FF706265D3370647644/3256329.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 71828,
+  "chat_link": "[&BpQYAQA=]"
+}

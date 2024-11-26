@@ -1,0 +1,63 @@
+{
+  "name": "Sinister Stab",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.8
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+      "duration": 2,
+      "status": "Chilled",
+      "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+      "apply_count": 1
+    },
+    {
+      "text": "Life Force",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "percent": 5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/7FD7260567C1DAD4A2ACE5B6E8B57078E17A3E0A/3379000.png",
+      "duration": 10,
+      "status": "Soul Shards",
+      "description": "Striking an enemy with Perforate siphons health from them.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Chain. Stab foes and chill them. Gain a soul shard if you strike a foe.",
+  "icon": "https://render.guildwars2.com/file/37E10170BBC70563DE1F0DF8CA66F11E28412860/3379161.png",
+  "type": "Weapon",
+  "weapon_type": "Spear",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 73040,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 73047,
+  "chat_link": "[&BlcdAQA=]",
+  "categories": []
+}

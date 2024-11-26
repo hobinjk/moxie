@@ -1,0 +1,82 @@
+{
+  "name": "Vampiric Slash",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.4
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 1
+    },
+    {
+      "text": "Life Siphon Damage",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 1210,
+      "target": "Power"
+    },
+    {
+      "text": "Life Siphon Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 2410,
+      "target": "Healing"
+    },
+    {
+      "text": "Life Siphon Damage",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 1210,
+      "target": "Power"
+    },
+    {
+      "text": "Life Siphon Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "value": 1210,
+      "target": "Healing"
+    },
+    {
+      "text": "Bonus Lifesteal vs. Vulnerable",
+      "type": "Percent",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "percent": 50
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 3,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Follow Up. Strike your foes and siphon health from them. Siphon additional health from vulnerable foes.\nStriking an enemy with a follow-up attack enables finisher attacks.",
+  "icon": "https://render.guildwars2.com/file/60071334EC9B38397C03A5290B372D6FF3E831B0/3379193.png",
+  "type": "Weapon",
+  "weapon_type": "Spear",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Weapon_3",
+  "dual_wield": "None",
+  "initiative": 1,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 73063,
+  "chat_link": "[&BmcdAQA=]"
+}

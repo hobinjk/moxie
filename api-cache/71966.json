@@ -1,0 +1,31 @@
+{
+  "name": "Dazing Discharge",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 8
+    }
+  ],
+  "description": "Fire a shot that dazes your foe and leaves them vulnerable. \n\nIf you have an air bullet, consume it to reduce the cooldown of your next pistol skill. If not, create an air bullet.",
+  "icon": "https://render.guildwars2.com/file/43FE5D1C5B3D70422F324071037AC844CE9C01F3/3256327.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 71966,
+  "chat_link": "[&Bh4ZAQA=]"
+}

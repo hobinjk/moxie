@@ -1,0 +1,43 @@
+{
+  "name": "Frozen Fusillade",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    },
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Ice"
+    }
+  ],
+  "description": "Fire a shot that freezes the ground underneath it, creating an area that speeds up allies while slowing enemy movement.\n\nIf you have an ice bullet, consume it to cause the frozen ground to shatter when it expires. If not, create an ice bullet.",
+  "icon": "https://render.guildwars2.com/file/12144A540D981D6AC7010A7A34C1B3EF0A02D7F5/3256336.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 71935,
+  "chat_link": "[&Bv8YAQA=]"
+}

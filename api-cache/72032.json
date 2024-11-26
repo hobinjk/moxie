@@ -1,0 +1,31 @@
+{
+  "name": "Shattering Stone",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 6
+    }
+  ],
+  "description": "Fire a shot that shatters into multiple shards.\n\nIf you have an earth bullet, consume it to enhance your next few attacks to inflict bleeding. If not, create an earth bullet.",
+  "icon": "https://render.guildwars2.com/file/387446B9ED09274D20200C2F066BF4311E6D0C93/3256328.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Earth",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_2",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 72032,
+  "chat_link": "[&BmAZAQA=]"
+}

@@ -7,15 +7,55 @@ const buildsRaw = fs.readFileSync('../../discretize-gear-optimizer/src/assets/pr
 const dtBenchmarks = parse(buildsRaw).list;
 
 const dtDistToBench = {
+  'Quickness Power Berserker GS A/A': 'berserker_power_quick',
+  'Power Alacrity Bladesworn': 'bladesworn_power_alac',
+  'Condi Willbender P/T P/P': 'willbender_condi',
+  'Quickess Condi Firebrand P/T P/P': 'firebrand_condi_quick',
+  'Condi Firebrand A/T P/P (No Allies)': 'firebrand_condi',
+  'Power Willbender Virtues': 'willbender_power',
+  'Condi Weaver Pistol': 'weaver_condi_pistol',
+  'Alacrity Condi Tempest Pistol': 'tempest_condi_alac',
+  'Condi Tempest Pistol': 'tempest_condi_pistol',
+  'Condi Tempest Hammer': 'tempest_condi_hammer',
+  'Alacrity Condi Renegade': 'renegade_condi_alac',
+  'Condi Quickness Herald SB M/A': 'herald_condi_quick',
+  'Condi Quickness Untamed': 'untamed_condi_quick',
+  'Power Soulbeast': 'soulbeast_power',
+  'Condi Slb D/D SB': 'soulbeast_condi',
+  'Hybrid Slb A/T D/A': 'soulbeast_hybrid',
+  'Condi Druid': 'druid_condi',
+  'Power Holo PBM': 'holo_power_sword_pbm',
+  'Condi Mechanist J-Drive (approx.)': 'mechanist_condi_signets',
+  'Quickness Condi Scrapper': 'scrapper_condi_quick',
+  'Boon Power Chrono Spear': 'chrono_power_quick_spear',
+  'Boon Power Chrono GS': 'chrono_power_quick_gs',
+  'Condi Staff / Axe Mirage': 'mirage_staxe',
+  'Boon Condi Chrono': 'chrono_condi_boon',
+  'Power Virtuoso Spear': 'virtuoso_power_spear',
+  'Condi Alacrity Scourge': 'scourge_condi_alac',
+  'Condi Reaper Spear': 'reaper_condi_spear',
+  'Condi Reaper Scepter': 'reaper_condi_scepter',
+  'Quickness Condi Harbinger': 'harbinger_condi_quick',
+  'Quickness Power Harbinger': 'harbinger_power_quick',
+  'Power Harbinger': 'harbinger_power',
+  'Condi Deadeye A/D (no allies)': 'deadeye_condi_axe',
+  'Quickness Condi Deadeye Spear': 'deadeye_condi_quick_spear',
+  'Condi Daredevil (No Allies)': 'daredevil_condi',
+  'Power Deadeye Rifle': 'deadeye_rifle',
+  'Power Deadeye Spear': 'deadeye_power_spear',
+  'Quickness Power Deadeye Spear': 'deadeye_power_quick_spear',
+  'Power Deadeye Rifle Silent Scope': 'deadeye_rifle_ss',
+
   'Power Berserker': 'berserker_power',
+  'Power Berserker GS A/A': 'berserker_power',
   'Power Spellbreaker GS': 'spellbreaker',
   'Power Spellbreaker Hammer': 'spellbreaker_hammer',
   'Condi Quickness Bers': 'berserker_condi_quick',
   'Condi Berserker': 'berserker_condi',
   'Power Quickness Spellbreaker': 'spellbreaker_banners',
-  'Power Quickness Bladesworn': 'bladesworn_power_quick',
   'DPS Bladesworn Tactics': 'bladesworn_power',
   'DH Radiance': 'dragonhunter_lb',
+  'DH Virtues': 'dragonhunter_virtues',
   'Condi Willbender Sword': 'willbender_condi_sword',
   'Condi Willbender GS': 'willbender_condi_gs',
   // 'CFB (5 Page RF, Allies)': '',
@@ -47,7 +87,6 @@ const dtDistToBench = {
   'Power Herald FP': 'herald_power',
   'Condi Quickness Herald': 'herald_condi_boon',
   'DPS Vindicator': 'vindicator_power_sword',
-  'Condi Alacrity Untamed A/A Hammer': 'untamed_condi_alac_hammer',
   'Condi Untamed Axe': 'untamed_condi',
   'Condi Slb (D/T SB)': '',
   'Condi Slb (D/T A/D)': '', // soulbeast_condi
@@ -97,6 +136,8 @@ function getName(name) {
   return dtDistToBench[name];
 }
 
+let unused = JSON.parse(JSON.stringify(dtDistToBench));
+
 for (let build of dtBenchmarks) {
   if (build.hasOwnProperty('credit')) {
     if (!dtDistToBench.hasOwnProperty(build.name)) {
@@ -106,6 +147,7 @@ for (let build of dtBenchmarks) {
     if (!benchmarkName) {
       continue;
     }
+    delete unused[build.name];
     const credit = build.credit[0];
     benchmarks[benchmarkName] = {
       author: credit.author,
@@ -115,3 +157,5 @@ for (let build of dtBenchmarks) {
   }
 }
 console.log(benchmarks);
+
+console.log(unused);

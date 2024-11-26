@@ -1,0 +1,33 @@
+{
+  "name": "Echoing Erosion",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    }
+  ],
+  "description": "Dual Attack. Bleed your foe with ice and stone.\n\nIf you have an ice bullet, consume it to heal yourself. If you have an earth bullet, consume it to grant yourself barrier.",
+  "icon": "https://render.guildwars2.com/file/C278C6CDF006FFA5F375499C6011803AB9741CBC/3256343.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Water",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "dual_attunement": "Earth",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 72062,
+  "chat_link": "[&Bn4ZAQA=]"
+}

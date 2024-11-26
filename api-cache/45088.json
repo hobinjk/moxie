@@ -1,0 +1,47 @@
+{
+  "name": "Malicious Restoration",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 1500
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 25
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 7200,
+      "target": "Healing"
+    },
+    {
+      "text": "Conditions Transferred",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 3
+    }
+  ],
+  "description": "Cantrip. Transfer your conditions to your marked target and then heal yourself.",
+  "icon": "https://render.guildwars2.com/file/C1E7E96F22330A9AF3DBDAF5245430CBA17FB0A3/1770611.png",
+  "type": "Heal",
+  "weapon_type": "None",
+  "professions": [
+    "Thief"
+  ],
+  "slot": "Heal",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 58,
+  "id": 45088,
+  "chat_link": "[&BiCwAAA=]",
+  "categories": [
+    "Cantrip"
+  ]
+}

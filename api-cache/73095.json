@@ -1,0 +1,47 @@
+{
+  "name": "Mind Pierce",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 130
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 1.5
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 3
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+      "duration": 2,
+      "status": "Weakness",
+      "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Deliver a finishing thrust, breaking your opponent's mind and inflicting weakness.",
+  "icon": "https://render.guildwars2.com/file/3C543ADB3D7EF49DE574040241F1B206B20CB7A0/3379154.png",
+  "type": "Weapon",
+  "weapon_type": "Spear",
+  "professions": [
+    "Mesmer"
+  ],
+  "slot": "Weapon_1",
+  "prev_chain": 73066,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 73095,
+  "chat_link": "[&BocdAQA=]"
+}

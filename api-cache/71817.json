@@ -1,0 +1,43 @@
+{
+  "name": "Jurisdiction",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 20
+    },
+    {
+      "text": "Knockback",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/400B7FD39724FBD700B94AB8AB52B5B9167646F4/2440715.png",
+      "distance": 300
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    }
+  ],
+  "description": "Charge up a ball of blue flame and activate this skill again to fire it. The ball damages, burns, and knocks targets it hits a short distance. Deals bonus defiance bar damage when fully charged. Projectile behavior changes slightly based on charge level.",
+  "icon": "https://render.guildwars2.com/file/18E2D752067BEAC1E47A2928DFF2A1CE13B8DE3B/3256355.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "professions": [
+    "Guardian"
+  ],
+  "slot": "Weapon_5",
+  "flip_skill": 71832,
+  "flags": [
+    "NoUnderwater"
+  ],
+  "id": 71817,
+  "chat_link": "[&BokYAQA=]"
+}

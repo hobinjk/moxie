@@ -1,0 +1,33 @@
+{
+  "name": "Frostfire Flurry",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 15
+    }
+  ],
+  "description": "Dual Attack. Fire multiple bullets of fire and ice, inflicting conditions.\n\nIf you have a fire bullet, consume it to gain fire aura. If you have an ice bullet, consume it to cause the ice shots to inflict additional conditions.",
+  "icon": "https://render.guildwars2.com/file/94A852009195CE9727D9BC463622A0C3566E0AF6/3256341.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "dual_attunement": "Water",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 71863,
+  "chat_link": "[&BrcYAQA=]"
+}

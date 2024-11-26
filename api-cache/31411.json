@@ -1,0 +1,15 @@
+{
+  "name": "Release Celestial Avatar",
+  "description": "Leave the celestial avatar form.",
+  "icon": "https://render.guildwars2.com/file/695007D6D2010F49499B43A7EDC3A4701D450F4C/1128602.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Profession_5",
+  "flags": [],
+  "specialization": 5,
+  "id": 31411,
+  "chat_link": "[&BrN6AAA=]"
+}

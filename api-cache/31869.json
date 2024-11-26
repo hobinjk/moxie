@@ -1,0 +1,43 @@
+{
+  "name": "Celestial Avatar",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 10
+    },
+    {
+      "text": "Duration",
+      "type": "Time",
+      "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+      "duration": 15
+    }
+  ],
+  "description": "Consume your accumulated astral force to become a celestial avatar.",
+  "icon": "https://render.guildwars2.com/file/0C47C53B414ADB3DA62C47679A6C09B4FB0534D3/1128603.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [
+    "Ranger"
+  ],
+  "slot": "Profession_5",
+  "cost": 100,
+  "flip_skill": 31411,
+  "flags": [],
+  "specialization": 5,
+  "id": 31869,
+  "chat_link": "[&Bn18AAA=]",
+  "transform_skills": [
+    32253,
+    31796,
+    31406,
+    32242,
+    31318,
+    32364,
+    31894,
+    33387,
+    31503,
+    34070
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Enervating Earth",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    },
+    {
+      "text": "Combo Finisher",
+      "type": "ComboFinisher",
+      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+      "percent": 100,
+      "finisher_type": "Projectile"
+    }
+  ],
+  "description": "Dual Attack. Fire a quick shot that debilitates your target. \n\nIf you have an air bullet, consume it to also inflict daze. If you have an earth bullet, consume it to also inflict bleeding on your target.",
+  "icon": "https://render.guildwars2.com/file/0552325DD95B09D569414E04D060120EE1EFA109/3256338.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Air",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "dual_attunement": "Earth",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 72023,
+  "chat_link": "[&BlcZAQA=]"
+}

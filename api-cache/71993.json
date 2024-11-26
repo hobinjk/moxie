@@ -1,0 +1,33 @@
+{
+  "name": "Molten Meteor",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 12
+    }
+  ],
+  "description": "Dual Attack. Bombard your foe with a meteor that inflicts multiple conditions.\n\nIf you have a fire bullet, consume it to cause the shot to explode when it strikes an enemy, damaging other foes in the blast. If you have an earth bullet, consume it to inflict additional bleeding.",
+  "icon": "https://render.guildwars2.com/file/04A87E6C08F06B1F909CD52D4CF62106FD1D2B97/3256340.png",
+  "type": "Weapon",
+  "weapon_type": "Pistol",
+  "attunement": "Fire",
+  "professions": [
+    "Elementalist"
+  ],
+  "slot": "Weapon_3",
+  "dual_attunement": "Earth",
+  "flags": [
+    "NoUnderwater"
+  ],
+  "specialization": 56,
+  "id": 71993,
+  "chat_link": "[&BjkZAQA=]"
+}
