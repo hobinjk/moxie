@@ -1,9 +1,9 @@
 import * as fs from 'fs';
-import {parse} from 'yaml';
-import {benchmarks} from './benchmarks.js';
+import { parse } from 'yaml';
+import { benchmarks } from './benchmarks.js';
 
 
-const buildsRaw = fs.readFileSync('../../discretize-gear-optimizer/src/assets/presetdata/preset-distribution.yaml', {encoding: 'utf8'});
+const buildsRaw = fs.readFileSync('../../discretize-gear-optimizer/src/assets/presetdata/preset-distribution.yaml', { encoding: 'utf8' });
 const dtBenchmarks = parse(buildsRaw).list;
 
 const dtDistToBench = {

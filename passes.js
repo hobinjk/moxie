@@ -89,7 +89,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkSkillUsage(log, SkillIds.THE_PRESTIGE);
       checkSkillUsage(log, SkillIds.MAGIC_BULLET);
       checkSkillUsage(log, SkillIds.CRY_OF_FRUSTRATION);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds['Phantasmal Duelist'], optsEtherSig);
       checkSkillUsage(log, SkillIds['Phantasmal Mage'], optsEtherSig);
@@ -98,8 +98,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'chrono_power_gs': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
+      const optsEtherSigLeni = Object.assign({ leniency: 2 }, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds.PHANTASMAL_BERSERKER, optsEtherSigLeni);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
@@ -110,8 +110,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'chrono_power_focus': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
+      const optsEtherSigLeni = Object.assign({ leniency: 2 }, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
       checkSkillUsage(log, SkillIds.PHANTASMAL_DISENCHANTER, optsEtherSig);
@@ -121,8 +121,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'chrono_power_boon': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsEtherSigLeni = Object.assign({leniency: 2}, optsEtherSig);
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
+      const optsEtherSigLeni = Object.assign({ leniency: 2 }, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSigLeni);
       checkSkillUsage(log, SkillIds.SIGNET_OF_INSPIRATION);
@@ -141,7 +141,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'virtuoso_gs': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
       // const optsEtherSigLeni = Object.assign({leniency: 5}, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillPerWeaponSwap(log, SkillIds.PHANTASMAL_BERSERKER, 3);
@@ -170,8 +170,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'virtuoso_focus': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsEtherSigLeni = Object.assign({leniency: 3}, optsEtherSig);
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
+      const optsEtherSigLeni = Object.assign({ leniency: 3 }, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSigLeni);
       checkSkillUsage(log, SkillIds.PHANTASMAL_SWORDSMAN, optsEtherSig);
@@ -187,8 +187,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     case 'virtuoso_condi': {
       checkAutoChains(log);
       checkWasted(log);
-      const optsEtherSig = {resets: new Set([SkillIds.SIGNET_OF_THE_ETHER])};
-      const optsIlluSig = {resets: new Set([SkillIds['Signet of Illusions']])};
+      const optsEtherSig = { resets: new Set([SkillIds.SIGNET_OF_THE_ETHER]) };
+      const optsIlluSig = { resets: new Set([SkillIds['Signet of Illusions']]) };
       // const optsEtherSigLeni = Object.assign({leniency: 3}, optsEtherSig);
       checkSkillUsage(log, SkillIds.SIGNET_OF_THE_ETHER);
       checkSkillUsage(log, SkillIds.PHANTASMAL_WARDEN, optsEtherSig);
@@ -223,7 +223,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkWasted(log);
       checkBadSkillUsage(log, SkillIds.ORB_OF_WRATH, 18);
       checkSkillUsage(log, SkillIds['"Feel My Wrath!"']);
-      checkSkillUsage(log, SkillIds['Mantra of Flame'], {onlyNonInstant: true});
+      checkSkillUsage(log, SkillIds['Mantra of Flame'], { onlyNonInstant: true });
       checkSkillUsage(log, SkillIds['Purging Flames']);
       checkSkillUsage(log, SkillIds.EPILOGUE_ASHES_OF_THE_JUST, {
         recharge: 20 * 1000 / 1.25,
@@ -257,7 +257,7 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
     }
     case 'mechanist_condi_signets': {
       checkWasted(log);
-      checkSkillUsage(log, SkillIds['Shrapnel Grenade'], {leniency: 3});
+      checkSkillUsage(log, SkillIds['Shrapnel Grenade'], { leniency: 3 });
       checkSkillUsage(log, SkillIds['Blowtorch']);
       checkSkillUsage(log, SkillIds['Superconducting Signet']);
       checkSkillUsage(log, SkillIds['Poison Grenade']);
@@ -267,8 +267,8 @@ export default function generateReportCard(log, selectedPlayer, benchmark) {
       checkAutoChains(log);
       checkWasted(log);
       checkBuffUptime(log, SkillIds.FORERUNNER_OF_DEATH, 100);
-      checkSkillUsage(log, SkillIds['Mist Unleashed'], {leniency: 5});
-      checkSkillUsage(log, SkillIds['Phantom\'s Onslaught'], {leniency: 3});
+      checkSkillUsage(log, SkillIds['Mist Unleashed'], { leniency: 5 });
+      checkSkillUsage(log, SkillIds['Phantom\'s Onslaught'], { leniency: 3 });
       checkSkillUsage(log, SkillIds['Eternity\'s Requiem']);
       checkSkillFrequency(log, SkillIds['Death Drop'], 17 / 109);
       checkAverageSkillDuration(log, SkillIds['Mist Unleashed'], 780, 2000);
@@ -346,8 +346,8 @@ function checkAutoChains(log, strict) {
       }
     }
   }
-  let wastedOne = {chains: [], total: 0};
-  let wastedTwo = {chains: [], total: 0};
+  let wastedOne = { chains: [], total: 0 };
+  let wastedTwo = { chains: [], total: 0 };
   for (let chain of chains) {
     if (chain.length === 3) {
       continue;
@@ -808,7 +808,7 @@ function checkFGSTiming(log, benchmark) {
     secondStart: benchSecondStart,
     secondEnd: benchSecondEnd,
   } = getFGSTiming(benchmark.casts);
-  let {firstStart, firstEnd, secondStart, secondEnd} = getFGSTiming(log.casts);
+  let { firstStart, firstEnd, secondStart, secondEnd } = getFGSTiming(log.casts);
   console.log(getFGSTiming(benchmark.casts), getFGSTiming(log.casts));
   if (firstStart < 0) {
     // addReportCardItem(log, 'D', 'Didn\'t use FGS at all', []);
