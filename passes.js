@@ -722,6 +722,11 @@ function checkAttunementTransitions(log) {
 function checkBuffUptime(log, buffId, targetPerc) {
   const elements = log.buffs[buffId];
 
+  if (!elements) {
+    console.error('Missing buff uptime', buffId);
+    return;
+  }
+
   let downtime = 0;
   let lastApply = -1;
   let lastRemove = -1;
